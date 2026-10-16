@@ -188,7 +188,40 @@ Key rules encoded: 401/402 = durable-dead (auto-disable), 403/429/5xx = transien
 
 _Status per model from last live probe: **active** = answered, **dead (CODE)** = terminal failure, **untested** = in rotation, never directly probed, **router** = auto-route (fans out live). Generated 2026-10-16._
 
-### `combo/all-best` — priority, 130 legs
+| Combo | Legs |
+|---|---|
+| [`combo/all-best`](#combo-all-best) | 131 |
+| [`combo/apinex-best`](#combo-apinex-best) | 9 |
+| [`combo/claude-best`](#combo-claude-best) | 34 |
+| [`combo/claude-code`](#combo-claude-code) | 4 |
+| [`combo/claude-fast`](#combo-claude-fast) | 4 |
+| [`combo/claude-max`](#combo-claude-max) | 5 |
+| [`combo/cleanapis-best`](#combo-cleanapis-best) | 24 |
+| [`combo/codex-best`](#combo-codex-best) | 5 |
+| [`combo/deepseek-best`](#combo-deepseek-best) | 44 |
+| [`combo/gemini-best`](#combo-gemini-best) | 30 |
+| [`combo/gemma-best`](#combo-gemma-best) | 21 |
+| [`combo/glm-best`](#combo-glm-best) | 39 |
+| [`combo/gpt-best`](#combo-gpt-best) | 127 |
+| [`combo/grok-best`](#combo-grok-best) | 18 |
+| [`combo/keep-trying`](#combo-keep-trying) | 5 |
+| [`combo/kilocode-best`](#combo-kilocode-best) | 7 |
+| [`combo/kimi-best`](#combo-kimi-best) | 18 |
+| [`combo/kiro-best`](#combo-kiro-best) | 8 |
+| [`combo/literouter-best`](#combo-literouter-best) | 7 |
+| [`combo/llama-best`](#combo-llama-best) | 21 |
+| [`combo/mistral-best`](#combo-mistral-best) | 50 |
+| [`combo/nara-best`](#combo-nara-best) | 3 |
+| [`combo/nvidia-best`](#combo-nvidia-best) | 33 |
+| [`combo/ollama-best`](#combo-ollama-best) | 3 |
+| [`combo/openrouter-best`](#combo-openrouter-best) | 10 |
+| [`combo/qwen-best`](#combo-qwen-best) | 58 |
+| [`combo/steady-coding`](#combo-steady-coding) | 3 |
+| [`combo/trae-best`](#combo-trae-best) | 3 |
+| [`combo/xkiro-best`](#combo-xkiro-best) | 18 |
+
+
+### combo/all-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -323,7 +356,7 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 129 | `nara/nemotron-3.5-lightning-free` | untested |
 | 130 | `auto/best-coding` | router (live) |
 
-### `combo/apinex-best` — priority, 9 legs
+### combo/apinex-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -337,7 +370,7 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 8 | `openai/free/deepseek-v4-flash-0731` | untested |
 | 9 | `auto/best-coding` | router (live) |
 
-### `combo/claude-best` — priority, 34 legs
+### combo/claude-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -376,7 +409,7 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 33 | `claude-web/claude-haiku-4-5-20251001-low` | dead (FAIL-429) |
 | 34 | `auto/best-coding` | router (live) |
 
-### `combo/claude-code` — priority, 4 legs
+### combo/claude-code
 
 | # | Model | Status |
 |---|-------|--------|
@@ -385,7 +418,7 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 3 | `gemini/gemini-3.8-flash` | dead (FAIL) |
 | 4 | `auto/best-coding` | router (live) |
 
-### `combo/claude-fast` — priority, 4 legs
+### combo/claude-fast
 
 | # | Model | Status |
 |---|-------|--------|
@@ -394,7 +427,7 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 3 | `auto/best-fast` | router (live) |
 | 4 | `auto/best-coding` | router (live) |
 
-### `combo/claude-max` — priority, 5 legs
+### combo/claude-max
 
 | # | Model | Status |
 |---|-------|--------|
@@ -404,7 +437,7 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 4 | `gemini/gemini-3.8-flash` | dead (FAIL) |
 | 5 | `auto/best-coding` | router (live) |
 
-### `combo/cleanapis-best` — priority, 24 legs
+### combo/cleanapis-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -433,7 +466,7 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 23 | `openai/free/mimo-v2.6-pro` | untested |
 | 24 | `auto/best-coding` | router (live) |
 
-### `combo/codex-best` — priority, 5 legs
+### combo/codex-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -443,7 +476,7 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 4 | `codex/gpt-5.5` | active |
 | 5 | `auto/best-coding` | router (live) |
 
-### `combo/deepseek-best` — priority, 44 legs
+### combo/deepseek-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -492,7 +525,7 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 43 | `xkiro/deepseek/deepseek-v4-flash` | dead (FAIL) |
 | 44 | `auto/best-coding` | router (live) |
 
-### `combo/gemini-best` — priority, 30 legs
+### combo/gemini-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -527,7 +560,7 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 29 | `cline/~google/gemini-flash-latest` | untested |
 | 30 | `auto/best-coding` | router (live) |
 
-### `combo/gemma-best` — priority, 21 legs
+### combo/gemma-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -553,7 +586,7 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 20 | `nvidia/google/recurrentgemma-2b` | untested |
 | 21 | `auto/best-coding` | router (live) |
 
-### `combo/glm-best` — priority, 39 legs
+### combo/glm-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -597,7 +630,7 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 38 | `cline/~z-ai/glm-latest` | untested |
 | 39 | `auto/best-coding` | router (live) |
 
-### `combo/gpt-best` — priority, 127 legs
+### combo/gpt-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -729,7 +762,7 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 126 | `cline/openai/gpt-4o-mini:batch` | untested |
 | 127 | `auto/best-coding` | router (live) |
 
-### `combo/grok-best` — priority, 18 legs
+### combo/grok-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -752,7 +785,7 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 17 | `grok-web/heavy` | dead (FAIL-403) |
 | 18 | `auto/best-coding` | router (live) |
 
-### `combo/keep-trying` — priority, 5 legs
+### combo/keep-trying
 
 | # | Model | Status |
 |---|-------|--------|
@@ -762,7 +795,7 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 4 | `gemini/gemini-3.8-flash` | dead (FAIL) |
 | 5 | `auto/best-coding` | router (live) |
 
-### `combo/kilocode-best` — priority, 7 legs
+### combo/kilocode-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -774,7 +807,7 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 6 | `kilocode/cohere/north-mini-code:free` | active |
 | 7 | `auto/best-coding` | router (live) |
 
-### `combo/kimi-best` — priority, 18 legs
+### combo/kimi-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -797,7 +830,7 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 17 | `nvidia/moonshotai/kimi-k3` | untested |
 | 18 | `auto/best-coding` | router (live) |
 
-### `combo/kiro-best` — priority, 8 legs
+### combo/kiro-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -810,7 +843,7 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 7 | `kiro/minimax-m2.1` | untested |
 | 8 | `auto/best-coding` | router (live) |
 
-### `combo/literouter-best` — priority, 7 legs
+### combo/literouter-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -822,7 +855,7 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 6 | `literouter/gpt-oss-120b:free` | active |
 | 7 | `literouter/qwen3-coder-next:free` | active |
 
-### `combo/llama-best` — priority, 21 legs
+### combo/llama-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -848,7 +881,7 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 20 | `nvidia/meta/llama2-70b` | untested |
 | 21 | `auto/best-coding` | router (live) |
 
-### `combo/mistral-best` — priority, 50 legs
+### combo/mistral-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -903,7 +936,7 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 49 | `xkiro/mistralai/ministral-8b` | untested |
 | 50 | `auto/best-coding` | router (live) |
 
-### `combo/nara-best` — priority, 3 legs
+### combo/nara-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -911,7 +944,7 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 2 | `nara/nemotron-3.5-lightning-free` | untested |
 | 3 | `auto/best-coding` | router (live) |
 
-### `combo/nvidia-best` — priority, 33 legs
+### combo/nvidia-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -949,7 +982,7 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 32 | `nvidia/nvidia/nemotron-parse` | untested |
 | 33 | `auto/best-coding` | router (live) |
 
-### `combo/ollama-best` — priority, 3 legs
+### combo/ollama-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -957,7 +990,7 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 2 | `ollama-cloud/gemma4:31b` | active |
 | 3 | `auto/best-coding` | router (live) |
 
-### `combo/openrouter-best` — priority, 10 legs
+### combo/openrouter-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -972,7 +1005,7 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 9 | `openrouter/poolside/laguna-xs-2.1:free` | untested |
 | 10 | `auto/best-coding` | router (live) |
 
-### `combo/qwen-best` — priority, 58 legs
+### combo/qwen-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -1035,7 +1068,7 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 57 | `xkiro/qwen/qwen3-omni-flash:free` | untested |
 | 58 | `auto/best-coding` | router (live) |
 
-### `combo/steady-coding` — priority, 3 legs
+### combo/steady-coding
 
 | # | Model | Status |
 |---|-------|--------|
@@ -1043,7 +1076,7 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 2 | `gemini/gemini-3.8-flash` | dead (FAIL) |
 | 3 | `auto/best-coding` | router (live) |
 
-### `combo/trae-best` — priority, 3 legs
+### combo/trae-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -1051,7 +1084,7 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 2 | `trae/gpt-5.2` | active |
 | 3 | `auto/best-coding` | router (live) |
 
-### `combo/xkiro-best` — priority, 18 legs
+### combo/xkiro-best
 
 | # | Model | Status |
 |---|-------|--------|
