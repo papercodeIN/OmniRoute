@@ -234,6 +234,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | [`combo/xkiro-best`](#comboxkiro-best) | 18 |
 
 <a id="combo-all-best"></a>
+<a id="comboall-best"></a>
 ### combo/all-best · [back to list](#8-combo-catalog-live)
 
 
@@ -372,6 +373,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 131 | `auto/best-coding` | router (live) |
 
 <a id="combo-apinex-best"></a>
+<a id="comboapinex-best"></a>
 ### combo/apinex-best · [back to list](#8-combo-catalog-live)
 
 
@@ -388,6 +390,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 9 | `auto/best-coding` | router (live) |
 
 <a id="combo-claude-best"></a>
+<a id="comboclaude-best"></a>
 ### combo/claude-best · [back to list](#8-combo-catalog-live)
 
 
@@ -428,6 +431,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 33 | `auto/best-coding` | router (live) |
 
 <a id="combo-claude-code"></a>
+<a id="comboclaude-code"></a>
 ### combo/claude-code · [back to list](#8-combo-catalog-live)
 
 
@@ -439,6 +443,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 4 | `auto/best-coding` | router (live) |
 
 <a id="combo-claude-fast"></a>
+<a id="comboclaude-fast"></a>
 ### combo/claude-fast · [back to list](#8-combo-catalog-live)
 
 
@@ -450,6 +455,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 4 | `auto/best-coding` | router (live) |
 
 <a id="combo-claude-max"></a>
+<a id="comboclaude-max"></a>
 ### combo/claude-max · [back to list](#8-combo-catalog-live)
 
 
@@ -462,6 +468,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 5 | `auto/best-coding` | router (live) |
 
 <a id="combo-cleanapis-best"></a>
+<a id="combocleanapis-best"></a>
 ### combo/cleanapis-best · [back to list](#8-combo-catalog-live)
 
 
@@ -493,6 +500,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 24 | `auto/best-coding` | router (live) |
 
 <a id="combo-codex-best"></a>
+<a id="combocodex-best"></a>
 ### combo/codex-best · [back to list](#8-combo-catalog-live)
 
 
@@ -505,6 +513,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 5 | `auto/best-coding` | router (live) |
 
 <a id="combo-deepseek-best"></a>
+<a id="combodeepseek-best"></a>
 ### combo/deepseek-best · [back to list](#8-combo-catalog-live)
 
 
@@ -556,6 +565,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 44 | `auto/best-coding` | router (live) |
 
 <a id="combo-gemini-best"></a>
+<a id="combogemini-best"></a>
 ### combo/gemini-best · [back to list](#8-combo-catalog-live)
 
 
@@ -593,6 +603,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 30 | `auto/best-coding` | router (live) |
 
 <a id="combo-gemma-best"></a>
+<a id="combogemma-best"></a>
 ### combo/gemma-best · [back to list](#8-combo-catalog-live)
 
 
@@ -621,6 +632,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 21 | `auto/best-coding` | router (live) |
 
 <a id="combo-glm-best"></a>
+<a id="comboglm-best"></a>
 ### combo/glm-best · [back to list](#8-combo-catalog-live)
 
 
@@ -667,6 +679,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 39 | `auto/best-coding` | router (live) |
 
 <a id="combo-gpt-best"></a>
+<a id="combogpt-best"></a>
 ### combo/gpt-best · [back to list](#8-combo-catalog-live)
 
 
@@ -800,6 +813,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 126 | `auto/best-coding` | router (live) |
 
 <a id="combo-grok-best"></a>
+<a id="combogrok-best"></a>
 ### combo/grok-best · [back to list](#8-combo-catalog-live)
 
 
@@ -825,6 +839,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 18 | `auto/best-coding` | router (live) |
 
 <a id="combo-keep-trying"></a>
+<a id="combokeep-trying"></a>
 ### combo/keep-trying · [back to list](#8-combo-catalog-live)
 
 
@@ -837,6 +852,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 5 | `auto/best-coding` | router (live) |
 
 <a id="combo-kilocode-best"></a>
+<a id="combokilocode-best"></a>
 ### combo/kilocode-best · [back to list](#8-combo-catalog-live)
 
 
@@ -851,6 +867,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 7 | `auto/best-coding` | router (live) |
 
 <a id="combo-kimi-best"></a>
+<a id="combokimi-best"></a>
 ### combo/kimi-best · [back to list](#8-combo-catalog-live)
 
 
@@ -875,6 +892,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 17 | `auto/best-coding` | router (live) |
 
 <a id="combo-kiro-best"></a>
+<a id="combokiro-best"></a>
 ### combo/kiro-best · [back to list](#8-combo-catalog-live)
 
 
@@ -889,6 +907,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 7 | `auto/best-coding` | router (live) |
 
 <a id="combo-literouter-best"></a>
+<a id="comboliterouter-best"></a>
 ### combo/literouter-best · [back to list](#8-combo-catalog-live)
 
 
@@ -903,6 +922,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 7 | `literouter/qwen3-coder-next:free` | OK |
 
 <a id="combo-llama-best"></a>
+<a id="combollama-best"></a>
 ### combo/llama-best · [back to list](#8-combo-catalog-live)
 
 
@@ -930,6 +950,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 20 | `auto/best-coding` | router (live) |
 
 <a id="combo-mistral-best"></a>
+<a id="combomistral-best"></a>
 ### combo/mistral-best · [back to list](#8-combo-catalog-live)
 
 
@@ -987,6 +1008,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 50 | `auto/best-coding` | router (live) |
 
 <a id="combo-nara-best"></a>
+<a id="combonara-best"></a>
 ### combo/nara-best · [back to list](#8-combo-catalog-live)
 
 
@@ -997,6 +1019,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 3 | `auto/best-coding` | router (live) |
 
 <a id="combo-nvidia-best"></a>
+<a id="combonvidia-best"></a>
 ### combo/nvidia-best · [back to list](#8-combo-catalog-live)
 
 
@@ -1037,6 +1060,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 33 | `auto/best-coding` | router (live) |
 
 <a id="combo-ollama-best"></a>
+<a id="comboollama-best"></a>
 ### combo/ollama-best · [back to list](#8-combo-catalog-live)
 
 
@@ -1047,6 +1071,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 3 | `auto/best-coding` | router (live) |
 
 <a id="combo-openrouter-best"></a>
+<a id="comboopenrouter-best"></a>
 ### combo/openrouter-best · [back to list](#8-combo-catalog-live)
 
 
@@ -1064,6 +1089,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 10 | `auto/best-coding` | router (live) |
 
 <a id="combo-qwen-best"></a>
+<a id="comboqwen-best"></a>
 ### combo/qwen-best · [back to list](#8-combo-catalog-live)
 
 
@@ -1112,6 +1138,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 41 | `auto/best-coding` | router (live) |
 
 <a id="combo-steady-coding"></a>
+<a id="combosteady-coding"></a>
 ### combo/steady-coding · [back to list](#8-combo-catalog-live)
 
 
@@ -1122,6 +1149,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 3 | `auto/best-coding` | router (live) |
 
 <a id="combo-trae-best"></a>
+<a id="combotrae-best"></a>
 ### combo/trae-best · [back to list](#8-combo-catalog-live)
 
 
@@ -1132,6 +1160,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 3 | `auto/best-coding` | router (live) |
 
 <a id="combo-xkiro-best"></a>
+<a id="comboxkiro-best"></a>
 ### combo/xkiro-best · [back to list](#8-combo-catalog-live)
 
 
