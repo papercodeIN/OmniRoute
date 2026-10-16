@@ -190,35 +190,35 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 
 | Combo | Legs |
 |---|---|
-| [`combo/all-best`](#combo-all-best) | 131 |
-| [`combo/apinex-best`](#combo-apinex-best) | 9 |
-| [`combo/claude-best`](#combo-claude-best) | 34 |
-| [`combo/claude-code`](#combo-claude-code) | 4 |
-| [`combo/claude-fast`](#combo-claude-fast) | 4 |
-| [`combo/claude-max`](#combo-claude-max) | 5 |
-| [`combo/cleanapis-best`](#combo-cleanapis-best) | 24 |
-| [`combo/codex-best`](#combo-codex-best) | 5 |
-| [`combo/deepseek-best`](#combo-deepseek-best) | 44 |
-| [`combo/gemini-best`](#combo-gemini-best) | 30 |
-| [`combo/gemma-best`](#combo-gemma-best) | 21 |
-| [`combo/glm-best`](#combo-glm-best) | 39 |
-| [`combo/gpt-best`](#combo-gpt-best) | 127 |
-| [`combo/grok-best`](#combo-grok-best) | 18 |
-| [`combo/keep-trying`](#combo-keep-trying) | 5 |
-| [`combo/kilocode-best`](#combo-kilocode-best) | 7 |
-| [`combo/kimi-best`](#combo-kimi-best) | 18 |
-| [`combo/kiro-best`](#combo-kiro-best) | 8 |
-| [`combo/literouter-best`](#combo-literouter-best) | 7 |
-| [`combo/llama-best`](#combo-llama-best) | 21 |
-| [`combo/mistral-best`](#combo-mistral-best) | 50 |
-| [`combo/nara-best`](#combo-nara-best) | 3 |
-| [`combo/nvidia-best`](#combo-nvidia-best) | 33 |
-| [`combo/ollama-best`](#combo-ollama-best) | 3 |
-| [`combo/openrouter-best`](#combo-openrouter-best) | 10 |
-| [`combo/qwen-best`](#combo-qwen-best) | 58 |
-| [`combo/steady-coding`](#combo-steady-coding) | 3 |
-| [`combo/trae-best`](#combo-trae-best) | 3 |
-| [`combo/xkiro-best`](#combo-xkiro-best) | 18 |
+| [`combo/all-best`](#comboall-best) | 131 |
+| [`combo/apinex-best`](#comboapinex-best) | 9 |
+| [`combo/claude-best`](#comboclaude-best) | 34 |
+| [`combo/claude-code`](#comboclaude-code) | 4 |
+| [`combo/claude-fast`](#comboclaude-fast) | 4 |
+| [`combo/claude-max`](#comboclaude-max) | 5 |
+| [`combo/cleanapis-best`](#combocleanapis-best) | 24 |
+| [`combo/codex-best`](#combocodex-best) | 5 |
+| [`combo/deepseek-best`](#combodeepseek-best) | 44 |
+| [`combo/gemini-best`](#combogemini-best) | 30 |
+| [`combo/gemma-best`](#combogemma-best) | 21 |
+| [`combo/glm-best`](#comboglm-best) | 39 |
+| [`combo/gpt-best`](#combogpt-best) | 127 |
+| [`combo/grok-best`](#combogrok-best) | 18 |
+| [`combo/keep-trying`](#combokeep-trying) | 5 |
+| [`combo/kilocode-best`](#combokilocode-best) | 7 |
+| [`combo/kimi-best`](#combokimi-best) | 18 |
+| [`combo/kiro-best`](#combokiro-best) | 8 |
+| [`combo/literouter-best`](#comboliterouter-best) | 7 |
+| [`combo/llama-best`](#combollama-best) | 21 |
+| [`combo/mistral-best`](#combomistral-best) | 50 |
+| [`combo/nara-best`](#combonara-best) | 3 |
+| [`combo/nvidia-best`](#combonvidia-best) | 33 |
+| [`combo/ollama-best`](#comboollama-best) | 3 |
+| [`combo/openrouter-best`](#comboopenrouter-best) | 10 |
+| [`combo/qwen-best`](#comboqwen-best) | 58 |
+| [`combo/steady-coding`](#combosteady-coding) | 3 |
+| [`combo/trae-best`](#combotrae-best) | 3 |
+| [`combo/xkiro-best`](#comboxkiro-best) | 18 |
 
 
 ### combo/all-best
