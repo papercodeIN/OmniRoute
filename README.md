@@ -221,7 +221,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | [`combo/xkiro-best`](#comboxkiro-best) | 18 |
 
 
-<a id="combo-all-best"></a>
 ### combo/all-best · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
@@ -358,7 +357,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 130 | `auto/best-coding` | router (live) |
 
 
-<a id="combo-apinex-best"></a>
 ### combo/apinex-best · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
@@ -374,7 +372,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 9 | `auto/best-coding` | router (live) |
 
 
-<a id="combo-claude-best"></a>
 ### combo/claude-best · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
@@ -415,7 +412,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 34 | `auto/best-coding` | router (live) |
 
 
-<a id="combo-claude-code"></a>
 ### combo/claude-code · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
@@ -426,7 +422,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 4 | `auto/best-coding` | router (live) |
 
 
-<a id="combo-claude-fast"></a>
 ### combo/claude-fast · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
@@ -437,7 +432,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 4 | `auto/best-coding` | router (live) |
 
 
-<a id="combo-claude-max"></a>
 ### combo/claude-max · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
@@ -449,7 +443,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 5 | `auto/best-coding` | router (live) |
 
 
-<a id="combo-cleanapis-best"></a>
 ### combo/cleanapis-best · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
@@ -480,7 +473,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 24 | `auto/best-coding` | router (live) |
 
 
-<a id="combo-codex-best"></a>
 ### combo/codex-best · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
@@ -492,7 +484,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 5 | `auto/best-coding` | router (live) |
 
 
-<a id="combo-deepseek-best"></a>
 ### combo/deepseek-best · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
@@ -543,7 +534,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 44 | `auto/best-coding` | router (live) |
 
 
-<a id="combo-gemini-best"></a>
 ### combo/gemini-best · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
@@ -580,7 +570,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 30 | `auto/best-coding` | router (live) |
 
 
-<a id="combo-gemma-best"></a>
 ### combo/gemma-best · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
@@ -608,7 +597,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 21 | `auto/best-coding` | router (live) |
 
 
-<a id="combo-glm-best"></a>
 ### combo/glm-best · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
@@ -654,7 +642,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 39 | `auto/best-coding` | router (live) |
 
 
-<a id="combo-gpt-best"></a>
 ### combo/gpt-best · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
@@ -788,7 +775,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 127 | `auto/best-coding` | router (live) |
 
 
-<a id="combo-grok-best"></a>
 ### combo/grok-best · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
@@ -813,7 +799,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 18 | `auto/best-coding` | router (live) |
 
 
-<a id="combo-keep-trying"></a>
 ### combo/keep-trying · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
@@ -825,7 +810,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 5 | `auto/best-coding` | router (live) |
 
 
-<a id="combo-kilocode-best"></a>
 ### combo/kilocode-best · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
@@ -839,7 +823,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 7 | `auto/best-coding` | router (live) |
 
 
-<a id="combo-kimi-best"></a>
 ### combo/kimi-best · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
@@ -864,7 +847,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 18 | `auto/best-coding` | router (live) |
 
 
-<a id="combo-kiro-best"></a>
 ### combo/kiro-best · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
@@ -879,7 +861,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 8 | `auto/best-coding` | router (live) |
 
 
-<a id="combo-literouter-best"></a>
 ### combo/literouter-best · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
@@ -893,7 +874,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 7 | `literouter/qwen3-coder-next:free` | active |
 
 
-<a id="combo-llama-best"></a>
 ### combo/llama-best · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
@@ -921,7 +901,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 21 | `auto/best-coding` | router (live) |
 
 
-<a id="combo-mistral-best"></a>
 ### combo/mistral-best · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
@@ -978,7 +957,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 50 | `auto/best-coding` | router (live) |
 
 
-<a id="combo-nara-best"></a>
 ### combo/nara-best · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
@@ -988,7 +966,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 3 | `auto/best-coding` | router (live) |
 
 
-<a id="combo-nvidia-best"></a>
 ### combo/nvidia-best · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
@@ -1028,7 +1005,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 33 | `auto/best-coding` | router (live) |
 
 
-<a id="combo-ollama-best"></a>
 ### combo/ollama-best · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
@@ -1038,7 +1014,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 3 | `auto/best-coding` | router (live) |
 
 
-<a id="combo-openrouter-best"></a>
 ### combo/openrouter-best · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
@@ -1055,7 +1030,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 10 | `auto/best-coding` | router (live) |
 
 
-<a id="combo-qwen-best"></a>
 ### combo/qwen-best · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
@@ -1120,7 +1094,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 58 | `auto/best-coding` | router (live) |
 
 
-<a id="combo-steady-coding"></a>
 ### combo/steady-coding · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
@@ -1130,7 +1103,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 3 | `auto/best-coding` | router (live) |
 
 
-<a id="combo-trae-best"></a>
 ### combo/trae-best · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
@@ -1140,7 +1112,6 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 3 | `auto/best-coding` | router (live) |
 
 
-<a id="combo-xkiro-best"></a>
 ### combo/xkiro-best · [back to list](#8-combo-catalog-live)
 
 | # | Model | Status |
