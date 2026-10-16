@@ -789,24 +789,17 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 7 | `kiro/minimax-m2.1` | untested |
 | 8 | `auto/best-coding` | router (live) |
 
-### `combo/literouter-best` — priority, 14 legs
+### `combo/literouter-best` — priority, 7 legs
 
 | # | Model | Status |
 |---|-------|--------|
 | 1 | `literouter/glm-5.3-flash:free` | active |
-| 2 | `groq/qwen/qwen3.8-27b` | active |
-| 3 | `literouter/llama-3.3-70b-instruct-turbo:free` | active |
-| 4 | `literouter/deepseek-v3.2:free` | active |
-| 5 | `literouter/kimi-k2.7-code-cheap:free` | active |
-| 6 | `groq/openai/gpt-oss-120b` | active |
-| 7 | `groq/openai/gpt-oss-20b` | active |
-| 8 | `kilocode/cohere/north-mini-code:free` | active |
-| 9 | `literouter/glm-5:free` | active |
-| 10 | `literouter/gpt-oss-120b:free` | active |
-| 11 | `literouter/qwen3-coder-next:free` | active |
-| 12 | `openrouter/cohere/north-mini-code:free` | active |
-| 13 | `gemini/gemini-3.8-flash` | dead (FAIL) |
-| 14 | `auto/best-coding` | router (live) |
+| 2 | `literouter/llama-3.3-70b-instruct-turbo:free` | active |
+| 3 | `literouter/deepseek-v3.2:free` | active |
+| 4 | `literouter/kimi-k2.7-code-cheap:free` | active |
+| 5 | `literouter/glm-5:free` | active |
+| 6 | `literouter/gpt-oss-120b:free` | active |
+| 7 | `literouter/qwen3-coder-next:free` | active |
 
 ### `combo/llama-best` — priority, 21 legs
 
@@ -1060,4 +1053,4 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 17 | `xkiro/mistralai/ministral-3b` | active |
 | 18 | `xkiro/sensenova/sensenova-6.8-flash-lite` | active |
 
-_Total routed legs: 748 across 29 combos_
+_Total routed legs: 741 across 29 combos_
