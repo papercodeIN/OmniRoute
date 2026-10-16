@@ -201,42 +201,42 @@ Key rules encoded: 401/402 = durable-dead (auto-disable), 403/429/5xx = transien
 
 _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed probe (kept: may recover), **untested** = never directly probed. Dead rows removed._
 
-| Combo | Legs | Smoke |
-|---|---|---|
-| [`combo/all-best`](#combo-all-best) | 131 | OK via codestral/codestral-latest |
-| [`combo/apinex-best`](#combo-apinex-best) | 9 | FAIL: HTTP Error 403: Forbidden |
-| [`combo/claude-best`](#combo-claude-best) | 34 | OK via antigravity/claude-opus-4-6-thinking |
-| [`combo/claude-code`](#combo-claude-code) | 4 | FAIL: HTTP Error 403: Forbidden |
-| [`combo/claude-fast`](#combo-claude-fast) | 4 | FAIL: HTTP Error 403: Forbidden |
-| [`combo/claude-max`](#combo-claude-max) | 5 | FAIL: HTTP Error 429: Too Many Requests |
-| [`combo/cleanapis-best`](#combo-cleanapis-best) | 24 | ? |
-| [`combo/codex-best`](#combo-codex-best) | 5 | OK via codex/gpt-6-luna |
-| [`combo/deepseek-best`](#combo-deepseek-best) | 44 | OK via cloudflare-playground/deepseek-ai/deepseek-v4-pro-0813 |
-| [`combo/gemini-best`](#combo-gemini-best) | 30 | OK via antigravity/gemini-3.8-flash-low |
-| [`combo/gemma-best`](#combo-gemma-best) | 21 | OK via cloudflare-playground/google/gemma-4-26b-a4b-it |
-| [`combo/glm-best`](#combo-glm-best) | 39 | FAIL: timed out |
-| [`combo/gpt-best`](#combo-gpt-best) | 127 | OK via codex/gpt-6-luna |
-| [`combo/grok-best`](#combo-grok-best) | 18 | OK via grok-cli/grok-4.7 |
-| [`combo/keep-trying`](#combo-keep-trying) | 5 | OK via openrouter/nvidia/nemotron-3-super-120b-a12b:free |
-| [`combo/kilocode-best`](#combo-kilocode-best) | 7 | OK via kilocode/nvidia/nemotron-3.5-lightning:free |
-| [`combo/kimi-best`](#combo-kimi-best) | 18 | OK via cloudflare-playground/moonshotai/kimi-k2.7-code |
-| [`combo/kiro-best`](#combo-kiro-best) | 8 | FAIL: HTTP Error 503: Service Unavailable |
-| [`combo/literouter-best`](#combo-literouter-best) | 7 | FAIL: HTTP Error 403: Forbidden |
-| [`combo/llama-best`](#combo-llama-best) | 21 | OK via ollama-cloud/gemma4:31b |
-| [`combo/mistral-best`](#combo-mistral-best) | 50 | OK via codestral/codestral-latest |
-| [`combo/nara-best`](#combo-nara-best) | 3 | ? |
-| [`combo/nvidia-best`](#combo-nvidia-best) | 33 | OK via kilocode/nvidia/nemotron-3.5-content-safety:free |
-| [`combo/ollama-best`](#combo-ollama-best) | 3 | OK via ollama-cloud/nemotron-3-super |
-| [`combo/openrouter-best`](#combo-openrouter-best) | 10 | OK via openrouter/nvidia/nemotron-3.5-lightning:free |
-| [`combo/qwen-best`](#combo-qwen-best) | 43 | OK via cloudflare-playground/qwen/qwen2.5-coder-32b-instruct |
-| [`combo/steady-coding`](#combo-steady-coding) | 3 | FAIL: HTTP Error 403: Forbidden |
-| [`combo/trae-best`](#combo-trae-best) | 3 | FAIL: HTTP Error 503: Service Unavailable |
-| [`combo/xkiro-best`](#combo-xkiro-best) | 18 | FAIL: HTTP Error 403: Forbidden |
+| Combo | Legs |
+|---|---|
+| [`combo/all-best`](#comboall-best) | 143 |
+| [`combo/apinex-best`](#comboapinex-best) | 9 |
+| [`combo/claude-best`](#comboclaude-best) | 34 |
+| [`combo/claude-code`](#comboclaude-code) | 4 |
+| [`combo/claude-fast`](#comboclaude-fast) | 4 |
+| [`combo/claude-max`](#comboclaude-max) | 5 |
+| [`combo/cleanapis-best`](#combocleanapis-best) | 24 |
+| [`combo/codex-best`](#combocodex-best) | 5 |
+| [`combo/deepseek-best`](#combodeepseek-best) | 44 |
+| [`combo/gemini-best`](#combogemini-best) | 30 |
+| [`combo/gemma-best`](#combogemma-best) | 21 |
+| [`combo/glm-best`](#comboglm-best) | 39 |
+| [`combo/gpt-best`](#combogpt-best) | 127 |
+| [`combo/grok-best`](#combogrok-best) | 18 |
+| [`combo/keep-trying`](#combokeep-trying) | 5 |
+| [`combo/kilocode-best`](#combokilocode-best) | 7 |
+| [`combo/kimi-best`](#combokimi-best) | 18 |
+| [`combo/kiro-best`](#combokiro-best) | 8 |
+| [`combo/literouter-best`](#comboliterouter-best) | 7 |
+| [`combo/llama-best`](#combollama-best) | 21 |
+| [`combo/mistral-best`](#combomistral-best) | 50 |
+| [`combo/nara-best`](#combonara-best) | 3 |
+| [`combo/nvidia-best`](#combonvidia-best) | 33 |
+| [`combo/ollama-best`](#comboollama-best) | 3 |
+| [`combo/openrouter-best`](#comboopenrouter-best) | 10 |
+| [`combo/qwen-best`](#comboqwen-best) | 43 |
+| [`combo/spark-best`](#combospark-best) | 6 |
+| [`combo/steady-coding`](#combosteady-coding) | 3 |
+| [`combo/trae-best`](#combotrae-best) | 3 |
+| [`combo/xkiro-best`](#comboxkiro-best) | 18 |
 
 <a id="combo-all-best"></a>
-### combo/all-best · [back to list](#8-combo-catalog-live)
+### combo/all-best - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via codestral/codestral-latest
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -370,12 +370,23 @@ Smoke: OK via codestral/codestral-latest
 | 128 | `nara/laguna-s-2.1` | OK |
 | 129 | `nara/nemotron-3.5-lightning-free` | OK |
 | 130 | `morph/morph-v3-fast` | OK |
-| 131 | `auto/best-coding` | router (live) |
+| 131 | `cline/meta/muse-spark-1.1` | untested |
+| 132 | `cline/meta/muse-spark-1.3-contributor` | untested |
+| 133 | `cline/meta/muse-spark-1.2-contributor` | untested |
+| 134 | `cline/deepseek/deepseek-r1` | OK |
+| 135 | `cline/qwen/qwen3-coder-30b-a3b-instruct` | OK |
+| 136 | `cline/google/gemini-3.8-flash` | OK |
+| 137 | `cline/meta-llama/llama-3.3-70b-instruct` | OK |
+| 138 | `cline/mistralai/codestral-2508` | OK |
+| 139 | `cline/z-ai/glm-5.2` | OK |
+| 140 | `cline/moonshotai/kimi-k2.5` | OK |
+| 141 | `cline/openai/gpt-oss-20b` | OK |
+| 142 | `cline/google/gemma-3-27b-it` | OK |
+| 143 | `auto/best-coding` | router (live) |
 
 <a id="combo-apinex-best"></a>
-### combo/apinex-best · [back to list](#8-combo-catalog-live)
+### combo/apinex-best - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: FAIL: HTTP Error 403: Forbidden
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -390,9 +401,8 @@ Smoke: FAIL: HTTP Error 403: Forbidden
 | 9 | `auto/best-coding` | router (live) |
 
 <a id="combo-claude-best"></a>
-### combo/claude-best · [back to list](#8-combo-catalog-live)
+### combo/claude-best - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via antigravity/claude-opus-4-6-thinking
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -431,9 +441,8 @@ Smoke: OK via antigravity/claude-opus-4-6-thinking
 | 33 | `auto/best-coding` | router (live) |
 
 <a id="combo-claude-code"></a>
-### combo/claude-code · [back to list](#8-combo-catalog-live)
+### combo/claude-code - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: FAIL: HTTP Error 403: Forbidden
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -443,9 +452,8 @@ Smoke: FAIL: HTTP Error 403: Forbidden
 | 4 | `auto/best-coding` | router (live) |
 
 <a id="combo-claude-fast"></a>
-### combo/claude-fast · [back to list](#8-combo-catalog-live)
+### combo/claude-fast - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: FAIL: HTTP Error 403: Forbidden
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -455,9 +463,8 @@ Smoke: FAIL: HTTP Error 403: Forbidden
 | 4 | `auto/best-coding` | router (live) |
 
 <a id="combo-claude-max"></a>
-### combo/claude-max · [back to list](#8-combo-catalog-live)
+### combo/claude-max - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: FAIL: HTTP Error 429: Too Many Requests
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -468,9 +475,8 @@ Smoke: FAIL: HTTP Error 429: Too Many Requests
 | 5 | `auto/best-coding` | router (live) |
 
 <a id="combo-cleanapis-best"></a>
-### combo/cleanapis-best · [back to list](#8-combo-catalog-live)
+### combo/cleanapis-best - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: not tested
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -500,9 +506,8 @@ Smoke: not tested
 | 24 | `auto/best-coding` | router (live) |
 
 <a id="combo-codex-best"></a>
-### combo/codex-best · [back to list](#8-combo-catalog-live)
+### combo/codex-best - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via codex/gpt-6-luna
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -513,9 +518,8 @@ Smoke: OK via codex/gpt-6-luna
 | 5 | `auto/best-coding` | router (live) |
 
 <a id="combo-deepseek-best"></a>
-### combo/deepseek-best · [back to list](#8-combo-catalog-live)
+### combo/deepseek-best - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via cloudflare-playground/deepseek-ai/deepseek-v4-pro-0813
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -552,9 +556,9 @@ Smoke: OK via cloudflare-playground/deepseek-ai/deepseek-v4-pro-0813
 | 31 | `xkiro/deepseek/deepseek-v4-pro` | FAIL |
 | 32 | `cfp/deepseek-ai/deepseek-r1-distill-qwen-32b` | OK |
 | 33 | `cfp/deepseek-ai/deepseek-v4-flash-0731` | OK |
-| 34 | `cline/deepseek/deepseek-chat` | untested |
+| 34 | `cline/deepseek/deepseek-chat` | FAIL |
 | 35 | `cline/deepseek/deepseek-chat-v3-0324` | untested |
-| 36 | `cline/deepseek/deepseek-r1` | untested |
+| 36 | `cline/deepseek/deepseek-r1` | OK |
 | 37 | `cline/deepseek/deepseek-r1-0528` | untested |
 | 38 | `cline/deepseek/deepseek-v4-flash` | untested |
 | 39 | `cline/deepseek/deepseek-v4-flash-0731` | untested |
@@ -565,15 +569,14 @@ Smoke: OK via cloudflare-playground/deepseek-ai/deepseek-v4-pro-0813
 | 44 | `auto/best-coding` | router (live) |
 
 <a id="combo-gemini-best"></a>
-### combo/gemini-best · [back to list](#8-combo-catalog-live)
+### combo/gemini-best - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via antigravity/gemini-3.8-flash-low
 
 | # | Model | OK? |
 |---|-------|-----|
 | 1 | `gemini/gemini-3.7-flash` | OK |
 | 2 | `agy/gemini-3.8-flash-low` | OK |
-| 3 | `cline/google/gemini-3.8-flash` | untested |
+| 3 | `cline/google/gemini-3.8-flash` | OK |
 | 4 | `gemini/gemini-3.8-flash` | FAIL |
 | 5 | `agy/gemini-3.7-flash-low` | FAIL |
 | 6 | `cline/google/gemini-3.7-flash` | untested |
@@ -603,9 +606,8 @@ Smoke: OK via antigravity/gemini-3.8-flash-low
 | 30 | `auto/best-coding` | router (live) |
 
 <a id="combo-gemma-best"></a>
-### combo/gemma-best · [back to list](#8-combo-catalog-live)
+### combo/gemma-best - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via cloudflare-playground/google/gemma-4-26b-a4b-it
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -618,7 +620,7 @@ Smoke: OK via cloudflare-playground/google/gemma-4-26b-a4b-it
 | 7 | `openrouter/google/gemma-4-26b-a4b-it:free` | FAIL |
 | 8 | `openrouter/google/gemma-4-31b-it:free` | FAIL |
 | 9 | `cline/google/gemma-3-12b-it` | untested |
-| 10 | `cline/google/gemma-3-27b-it` | untested |
+| 10 | `cline/google/gemma-3-27b-it` | OK |
 | 11 | `cline/google/gemma-3-4b-it` | untested |
 | 12 | `nvidia/google/gemma-3-12b-it` | FAIL |
 | 13 | `nvidia/google/gemma-3-4b-it` | FAIL |
@@ -632,9 +634,8 @@ Smoke: OK via cloudflare-playground/google/gemma-4-26b-a4b-it
 | 21 | `auto/best-coding` | router (live) |
 
 <a id="combo-glm-best"></a>
-### combo/glm-best · [back to list](#8-combo-catalog-live)
+### combo/glm-best - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: FAIL: timed out
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -661,7 +662,7 @@ Smoke: FAIL: timed out
 | 21 | `zai-web/glm-5.2-high` | FAIL |
 | 22 | `aug/glm-5.2` | untested |
 | 23 | `cfp/zai-org/glm-5.2` | OK |
-| 24 | `cline/z-ai/glm-5.2` | untested |
+| 24 | `cline/z-ai/glm-5.2` | OK |
 | 25 | `cline/z-ai/glm-5.1` | untested |
 | 26 | `cline/z-ai/glm-5-turbo` | untested |
 | 27 | `cfp/zai-org/glm-4.7-flash` | OK |
@@ -679,9 +680,8 @@ Smoke: FAIL: timed out
 | 39 | `auto/best-coding` | router (live) |
 
 <a id="combo-gpt-best"></a>
-### combo/gpt-best · [back to list](#8-combo-catalog-live)
+### combo/gpt-best - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via codex/gpt-6-luna
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -802,7 +802,7 @@ Smoke: OK via codex/gpt-6-luna
 | 115 | `cline/openai/gpt-5` | untested |
 | 116 | `cline/openai/gpt-5:batch` | untested |
 | 117 | `cline/openai/gpt-oss-120b:batch` | untested |
-| 118 | `cline/openai/gpt-oss-20b` | untested |
+| 118 | `cline/openai/gpt-oss-20b` | OK |
 | 119 | `cline/openai/gpt-oss-20b:batch` | untested |
 | 120 | `ddgw/tinfoil/gpt-oss-120b` | OK |
 | 121 | `nvidia/openai/gpt-oss-20b` | OK |
@@ -813,9 +813,8 @@ Smoke: OK via codex/gpt-6-luna
 | 126 | `auto/best-coding` | router (live) |
 
 <a id="combo-grok-best"></a>
-### combo/grok-best · [back to list](#8-combo-catalog-live)
+### combo/grok-best - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via grok-cli/grok-4.7
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -839,9 +838,8 @@ Smoke: OK via grok-cli/grok-4.7
 | 18 | `auto/best-coding` | router (live) |
 
 <a id="combo-keep-trying"></a>
-### combo/keep-trying · [back to list](#8-combo-catalog-live)
+### combo/keep-trying - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via openrouter/nvidia/nemotron-3-super-120b-a12b:free
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -852,9 +850,8 @@ Smoke: OK via openrouter/nvidia/nemotron-3-super-120b-a12b:free
 | 5 | `auto/best-coding` | router (live) |
 
 <a id="combo-kilocode-best"></a>
-### combo/kilocode-best · [back to list](#8-combo-catalog-live)
+### combo/kilocode-best - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via kilocode/nvidia/nemotron-3.5-lightning:free
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -867,9 +864,8 @@ Smoke: OK via kilocode/nvidia/nemotron-3.5-lightning:free
 | 7 | `auto/best-coding` | router (live) |
 
 <a id="combo-kimi-best"></a>
-### combo/kimi-best · [back to list](#8-combo-catalog-live)
+### combo/kimi-best - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via cloudflare-playground/moonshotai/kimi-k2.7-code
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -882,7 +878,7 @@ Smoke: OK via cloudflare-playground/moonshotai/kimi-k2.7-code
 | 7 | `cfp/moonshotai/kimi-k2.6` | OK |
 | 8 | `cline/moonshotai/kimi-k2.6` | untested |
 | 9 | `nvidia/moonshotai/kimi-k2.6` | FAIL |
-| 10 | `cline/moonshotai/kimi-k2.5` | untested |
+| 10 | `cline/moonshotai/kimi-k2.5` | OK |
 | 11 | `cline/moonshotai/kimi-k2` | untested |
 | 12 | `cline/moonshotai/kimi-k2-0905` | untested |
 | 13 | `cline/moonshotai/kimi-k2-thinking` | untested |
@@ -892,9 +888,8 @@ Smoke: OK via cloudflare-playground/moonshotai/kimi-k2.7-code
 | 17 | `auto/best-coding` | router (live) |
 
 <a id="combo-kiro-best"></a>
-### combo/kiro-best · [back to list](#8-combo-catalog-live)
+### combo/kiro-best - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: FAIL: HTTP Error 503: Service Unavailable
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -907,9 +902,8 @@ Smoke: FAIL: HTTP Error 503: Service Unavailable
 | 7 | `auto/best-coding` | router (live) |
 
 <a id="combo-literouter-best"></a>
-### combo/literouter-best · [back to list](#8-combo-catalog-live)
+### combo/literouter-best - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: FAIL: HTTP Error 403: Forbidden
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -922,9 +916,8 @@ Smoke: FAIL: HTTP Error 403: Forbidden
 | 7 | `literouter/qwen3-coder-next:free` | OK |
 
 <a id="combo-llama-best"></a>
-### combo/llama-best · [back to list](#8-combo-catalog-live)
+### combo/llama-best - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via ollama-cloud/gemma4:31b
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -933,7 +926,7 @@ Smoke: OK via ollama-cloud/gemma4:31b
 | 3 | `cline/meta-llama/llama-4-maverick` | untested |
 | 4 | `cline/meta-llama/llama-4-scout` | untested |
 | 5 | `cfp/meta-llama/llama-3.3-70b-instruct-fp8-fast` | OK |
-| 6 | `cline/meta-llama/llama-3.3-70b-instruct` | untested |
+| 6 | `cline/meta-llama/llama-3.3-70b-instruct` | OK |
 | 7 | `cline/meta-llama/llama-3.2-1b-instruct` | untested |
 | 8 | `cline/meta-llama/llama-3.2-3b-instruct` | untested |
 | 9 | `nvidia/meta/llama-3.2-11b-vision-instruct` | OK |
@@ -950,9 +943,8 @@ Smoke: OK via ollama-cloud/gemma4:31b
 | 20 | `auto/best-coding` | router (live) |
 
 <a id="combo-mistral-best"></a>
-### combo/mistral-best · [back to list](#8-combo-catalog-live)
+### combo/mistral-best - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via codestral/codestral-latest
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -977,7 +969,7 @@ Smoke: OK via codestral/codestral-latest
 | 19 | `nvidia/mistralai/codestral-22b-instruct-v0.1` | FAIL |
 | 20 | `nvidia/mistralai/mixtral-8x22b-v0.1` | FAIL |
 | 21 | `cline/cognitivecomputations/dolphin-mistral-24b-venice-edition` | untested |
-| 22 | `cline/mistralai/codestral-2508` | untested |
+| 22 | `cline/mistralai/codestral-2508` | OK |
 | 23 | `cline/mistralai/codestral-2508:batch` | untested |
 | 24 | `cline/mistralai/devstral-2512` | untested |
 | 25 | `cline/mistralai/mistral-large` | untested |
@@ -1008,9 +1000,8 @@ Smoke: OK via codestral/codestral-latest
 | 50 | `auto/best-coding` | router (live) |
 
 <a id="combo-nara-best"></a>
-### combo/nara-best · [back to list](#8-combo-catalog-live)
+### combo/nara-best - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: not tested
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -1019,9 +1010,8 @@ Smoke: not tested
 | 3 | `auto/best-coding` | router (live) |
 
 <a id="combo-nvidia-best"></a>
-### combo/nvidia-best · [back to list](#8-combo-catalog-live)
+### combo/nvidia-best - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via kilocode/nvidia/nemotron-3.5-content-safety:free
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -1060,9 +1050,8 @@ Smoke: OK via kilocode/nvidia/nemotron-3.5-content-safety:free
 | 33 | `auto/best-coding` | router (live) |
 
 <a id="combo-ollama-best"></a>
-### combo/ollama-best · [back to list](#8-combo-catalog-live)
+### combo/ollama-best - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via ollama-cloud/nemotron-3-super
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -1071,9 +1060,8 @@ Smoke: OK via ollama-cloud/nemotron-3-super
 | 3 | `auto/best-coding` | router (live) |
 
 <a id="combo-openrouter-best"></a>
-### combo/openrouter-best · [back to list](#8-combo-catalog-live)
+### combo/openrouter-best - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via openrouter/nvidia/nemotron-3.5-lightning:free
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -1089,9 +1077,8 @@ Smoke: OK via openrouter/nvidia/nemotron-3.5-lightning:free
 | 10 | `auto/best-coding` | router (live) |
 
 <a id="combo-qwen-best"></a>
-### combo/qwen-best · [back to list](#8-combo-catalog-live)
+### combo/qwen-best - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via cloudflare-playground/qwen/qwen2.5-coder-32b-instruct
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -1132,15 +1119,27 @@ Smoke: OK via cloudflare-playground/qwen/qwen2.5-coder-32b-instruct
 | 35 | `cline/qwen/qwen3-30b-a3b` | untested |
 | 36 | `cline/qwen/qwen3-30b-a3b-instruct-2507` | untested |
 | 37 | `cline/qwen/qwen3-32b` | untested |
-| 38 | `cline/qwen/qwen3-coder-30b-a3b-instruct` | untested |
+| 38 | `cline/qwen/qwen3-coder-30b-a3b-instruct` | OK |
 | 39 | `cline/qwen/qwen3-next-80b-a3b-instruct` | untested |
 | 40 | `cline/qwen/qwen3-next-80b-a3b-thinking` | untested |
 | 41 | `auto/best-coding` | router (live) |
 
-<a id="combo-steady-coding"></a>
-### combo/steady-coding · [back to list](#8-combo-catalog-live)
+<a id="combo-spark-best"></a>
+### combo/spark-best - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: FAIL: HTTP Error 403: Forbidden
+
+| # | Model | OK? |
+|---|-------|-----|
+| 1 | `cline/meta/muse-spark-1.3` | OK |
+| 2 | `cline/meta/muse-spark-1.2` | OK |
+| 3 | `cline/meta/muse-spark-1.1` | untested |
+| 4 | `cline/meta/muse-spark-1.3-contributor` | untested |
+| 5 | `cline/meta/muse-spark-1.2-contributor` | untested |
+| 6 | `auto/best-coding` | router (live) |
+
+<a id="combo-steady-coding"></a>
+### combo/steady-coding - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
+
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -1149,9 +1148,8 @@ Smoke: FAIL: HTTP Error 403: Forbidden
 | 3 | `auto/best-coding` | router (live) |
 
 <a id="combo-trae-best"></a>
-### combo/trae-best · [back to list](#8-combo-catalog-live)
+### combo/trae-best - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: FAIL: HTTP Error 503: Service Unavailable
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -1160,9 +1158,8 @@ Smoke: FAIL: HTTP Error 503: Service Unavailable
 | 3 | `auto/best-coding` | router (live) |
 
 <a id="combo-xkiro-best"></a>
-### combo/xkiro-best · [back to list](#8-combo-catalog-live)
+### combo/xkiro-best - [back to list](#8-combo-catalog-live) · [back to list](#8-combo-catalog-live)
 
-Smoke: FAIL: HTTP Error 403: Forbidden
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -1185,4 +1182,4 @@ Smoke: FAIL: HTTP Error 403: Forbidden
 | 17 | `xkiro/mistralai/ministral-3b` | OK |
 | 18 | `xkiro/sensenova/sensenova-6.8-flash-lite` | OK |
 
-_Showing 720 of 727 legs (7 terminal-dead rows removed)_
+_Showing 738 of 745 legs (7 terminal-dead rows removed)_
