@@ -202,7 +202,7 @@ Key rules encoded: 401/402 = durable-dead (auto-disable), 403/429/5xx = transien
 _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed probe (kept: may recover), **untested** = never directly probed. Dead rows removed._
 
 | Combo | Legs |
-|---|---|---|
+|---|---|
 | [`combo/all-best`](#comboall-best) | 131 |
 | [`combo/apinex-best`](#comboapinex-best) | 9 |
 | [`combo/claude-best`](#comboclaude-best) | 34 |
