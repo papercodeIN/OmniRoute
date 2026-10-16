@@ -1037,45 +1037,27 @@ _Status per model from last live probe: **active** = answered, **dead (CODE)** =
 | 2 | `trae/gpt-5.2` | active |
 | 3 | `auto/best-coding` | router (live) |
 
-### `combo/xkiro-best` — priority, 36 legs
+### `combo/xkiro-best` — priority, 18 legs
 
 | # | Model | Status |
 |---|-------|--------|
 | 1 | `xkiro/qwen/qwen3-coder-plus:free` | active |
-| 2 | `groq/qwen/qwen3.8-27b` | active |
-| 3 | `xkiro/mistralai/codestral-2508` | active |
-| 4 | `openrouter/cohere/north-mini-code:free` | active |
-| 5 | `xkiro/mistralai/devstral-medium` | active |
-| 6 | `groq/openai/gpt-oss-20b` | active |
-| 7 | `xkiro/qwen/qwen3-max:free` | active |
-| 8 | `kilocode/cohere/north-mini-code:free` | active |
-| 9 | `xkiro/qwen/qwen3.8-max:free` | active |
-| 10 | `groq/openai/gpt-oss-120b` | active |
-| 11 | `xkiro/qwen/qwen3.7-max:free` | active |
-| 12 | `openrouter/poolside/laguna-s-2.1:free` | active |
-| 13 | `xkiro/qwen/qwen3.6-max-preview:free` | active |
-| 14 | `kilocode/poolside/laguna-s-2.1:free` | active |
-| 15 | `xkiro/qwen/qwen3.5-plus:free` | active |
-| 16 | `openrouter/poolside/laguna-xs-2.1:free` | untested |
-| 17 | `xkiro/qwen/qwen3.7-plus:free` | active |
-| 18 | `kilocode/poolside/laguna-xs-2.1:free` | active |
-| 19 | `xkiro/qwen/qwen3.6-27b:free` | active |
-| 20 | `gemini/gemini-3.8-flash` | dead (FAIL) |
-| 21 | `xkiro/qwen/qwen-plus-2025-07-28:free` | active |
-| 22 | `gemini/gemini-3.7-flash` | active |
-| 23 | `xkiro/mistralai/mistral-large-2512` | active |
-| 24 | `openrouter/nvidia/nemotron-3-super-120b-a12b:free` | active |
-| 25 | `xkiro/mistralai/mistral-medium-3.5` | active |
-| 26 | `kilocode/nvidia/nemotron-3-super-120b-a12b:free` | active |
-| 27 | `xkiro/mistralai/mistral-small-2603` | active |
-| 28 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free` | active |
-| 29 | `xkiro/mistralai/ministral-14b` | active |
-| 30 | `kilocode/nvidia/nemotron-3-ultra-550b-a55b:free` | active |
-| 31 | `xkiro/mistralai/ministral-8b` | untested |
-| 32 | `openrouter/nvidia/nemotron-3.5-lightning:free` | active |
-| 33 | `xkiro/mistralai/ministral-3b` | active |
-| 34 | `kilocode/nvidia/nemotron-3.5-lightning:free` | active |
-| 35 | `xkiro/sensenova/sensenova-6.8-flash-lite` | active |
-| 36 | `auto/best-coding` | router (live) |
+| 2 | `xkiro/mistralai/codestral-2508` | active |
+| 3 | `xkiro/mistralai/devstral-medium` | active |
+| 4 | `xkiro/qwen/qwen3-max:free` | active |
+| 5 | `xkiro/qwen/qwen3.8-max:free` | active |
+| 6 | `xkiro/qwen/qwen3.7-max:free` | active |
+| 7 | `xkiro/qwen/qwen3.6-max-preview:free` | active |
+| 8 | `xkiro/qwen/qwen3.5-plus:free` | active |
+| 9 | `xkiro/qwen/qwen3.7-plus:free` | active |
+| 10 | `xkiro/qwen/qwen3.6-27b:free` | active |
+| 11 | `xkiro/qwen/qwen-plus-2025-07-28:free` | active |
+| 12 | `xkiro/mistralai/mistral-large-2512` | active |
+| 13 | `xkiro/mistralai/mistral-medium-3.5` | active |
+| 14 | `xkiro/mistralai/mistral-small-2603` | active |
+| 15 | `xkiro/mistralai/ministral-14b` | active |
+| 16 | `xkiro/mistralai/ministral-8b` | untested |
+| 17 | `xkiro/mistralai/ministral-3b` | active |
+| 18 | `xkiro/sensenova/sensenova-6.8-flash-lite` | active |
 
-_Total routed legs: 766 across 29 combos_
+_Total routed legs: 748 across 29 combos_
