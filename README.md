@@ -126,6 +126,27 @@ Legend: ✅ tested answering · ⏳ quota-flaky (recovers) · ❌ dead/paid · �
 
 ---
 
+
+### Also connected (minor/dead/tool providers)
+
+| Provider | Status |
+|----------|--------|
+| morph | ✅ `morph-v3-fast` tested, in `all-best` |
+| kimi-web | ✅ k3/k2d6 (tokens expire — watcher alerts) |
+| llm7 | ❌ 402, needs top-up |
+| gemini-web | tool bridge, no chat models |
+| ollama-search | search tool, no LLMs |
+| tinyfish / firecrawl | search tools, no LLMs |
+| adobe-firefly | image/video only (own Adobe credits), not in chat combos |
+| amazon-q / lmarena / copilot-web | 400s, need login/setup |
+| api-airforce / arcee-ai | connected, no usable free models |
+| bazaarlink / orcarouter | free pools spent |
+| opencode / oc pool | terminal dead (401/402/403) |
+| devin / openference / muse-spark-web | connections removed |
+| xai-oauth / zed-hosted / zenmux(-free) / clinepass | connected, marginal use |
+| qoder / cerebras / siliconflow / together / pollinations | cataloged free tiers, not yet connected |
+
+
 ## 5. Automation (all in `%USERPROFILE%\.config\opencode\`)
 
 | Script | Schedule | What |
