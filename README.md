@@ -150,7 +150,7 @@ Legend: ✅ tested answering · ⏳ quota-flaky (recovers) · ❌ dead/paid · �
 
 ## Provider status snapshot (2026-10-17)
 
-135 connections, 42 families. Smoke: 17/27 combos answering.
+135 connections, 42 families.
 Failing now: glm-best (timeout), trae-best (503 dead conn),
 xkiro/literouter/apinex-best (403 throttled), claude-code/max/fast
 + steady-coding (429/403 quota wave). Inactive conns (27): kimi x2,
@@ -201,42 +201,41 @@ Key rules encoded: 401/402 = durable-dead (auto-disable), 403/429/5xx = transien
 
 _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed probe (kept: may recover), **untested** = never directly probed. Dead rows removed._
 
-| Combo | Legs | Smoke |
+| Combo | Legs |
 |---|---|---|
-| [`combo/all-best`](#comboall-best) | 131 | OK via codestral/codestral-latest |
-| [`combo/apinex-best`](#comboapinex-best) | 9 | FAIL: HTTP Error 403: Forbidden |
-| [`combo/claude-best`](#comboclaude-best) | 34 | OK via antigravity/claude-opus-4-6-thinking |
-| [`combo/claude-code`](#comboclaude-code) | 4 | FAIL: HTTP Error 403: Forbidden |
-| [`combo/claude-fast`](#comboclaude-fast) | 4 | FAIL: HTTP Error 403: Forbidden |
-| [`combo/claude-max`](#comboclaude-max) | 5 | FAIL: HTTP Error 429: Too Many Requests |
-| [`combo/cleanapis-best`](#combocleanapis-best) | 24 | ? |
-| [`combo/codex-best`](#combocodex-best) | 5 | OK via codex/gpt-6-luna |
-| [`combo/deepseek-best`](#combodeepseek-best) | 44 | OK via cloudflare-playground/deepseek-ai/deepseek-v4-pro-0813 |
-| [`combo/gemini-best`](#combogemini-best) | 30 | OK via antigravity/gemini-3.8-flash-low |
-| [`combo/gemma-best`](#combogemma-best) | 21 | OK via cloudflare-playground/google/gemma-4-26b-a4b-it |
-| [`combo/glm-best`](#comboglm-best) | 39 | FAIL: timed out |
-| [`combo/gpt-best`](#combogpt-best) | 127 | OK via codex/gpt-6-luna |
-| [`combo/grok-best`](#combogrok-best) | 18 | OK via grok-cli/grok-4.7 |
-| [`combo/keep-trying`](#combokeep-trying) | 5 | OK via openrouter/nvidia/nemotron-3-super-120b-a12b:free |
-| [`combo/kilocode-best`](#combokilocode-best) | 7 | OK via kilocode/nvidia/nemotron-3.5-lightning:free |
-| [`combo/kimi-best`](#combokimi-best) | 18 | OK via cloudflare-playground/moonshotai/kimi-k2.7-code |
-| [`combo/kiro-best`](#combokiro-best) | 8 | FAIL: HTTP Error 503: Service Unavailable |
-| [`combo/literouter-best`](#comboliterouter-best) | 7 | FAIL: HTTP Error 403: Forbidden |
-| [`combo/llama-best`](#combollama-best) | 21 | OK via ollama-cloud/gemma4:31b |
-| [`combo/mistral-best`](#combomistral-best) | 50 | OK via codestral/codestral-latest |
-| [`combo/nara-best`](#combonara-best) | 3 | ? |
-| [`combo/nvidia-best`](#combonvidia-best) | 33 | OK via kilocode/nvidia/nemotron-3.5-content-safety:free |
-| [`combo/ollama-best`](#comboollama-best) | 3 | OK via ollama-cloud/nemotron-3-super |
-| [`combo/openrouter-best`](#comboopenrouter-best) | 10 | OK via openrouter/nvidia/nemotron-3.5-lightning:free |
-| [`combo/qwen-best`](#comboqwen-best) | 43 | OK via cloudflare-playground/qwen/qwen2.5-coder-32b-instruct |
-| [`combo/steady-coding`](#combosteady-coding) | 3 | FAIL: HTTP Error 403: Forbidden |
-| [`combo/trae-best`](#combotrae-best) | 3 | FAIL: HTTP Error 503: Service Unavailable |
-| [`combo/xkiro-best`](#comboxkiro-best) | 18 | FAIL: HTTP Error 403: Forbidden |
+| [`combo/all-best`](#comboall-best) | 131 |
+| [`combo/apinex-best`](#comboapinex-best) | 9 |
+| [`combo/claude-best`](#comboclaude-best) | 34 |
+| [`combo/claude-code`](#comboclaude-code) | 4 |
+| [`combo/claude-fast`](#comboclaude-fast) | 4 |
+| [`combo/claude-max`](#comboclaude-max) | 5 |
+| [`combo/cleanapis-best`](#combocleanapis-best) | 24 |
+| [`combo/codex-best`](#combocodex-best) | 5 |
+| [`combo/deepseek-best`](#combodeepseek-best) | 44 |
+| [`combo/gemini-best`](#combogemini-best) | 30 |
+| [`combo/gemma-best`](#combogemma-best) | 21 |
+| [`combo/glm-best`](#comboglm-best) | 39 |
+| [`combo/gpt-best`](#combogpt-best) | 127 |
+| [`combo/grok-best`](#combogrok-best) | 18 |
+| [`combo/keep-trying`](#combokeep-trying) | 5 |
+| [`combo/kilocode-best`](#combokilocode-best) | 7 |
+| [`combo/kimi-best`](#combokimi-best) | 18 |
+| [`combo/kiro-best`](#combokiro-best) | 8 |
+| [`combo/literouter-best`](#comboliterouter-best) | 7 |
+| [`combo/llama-best`](#combollama-best) | 21 |
+| [`combo/mistral-best`](#combomistral-best) | 50 |
+| [`combo/nara-best`](#combonara-best) | 3 |
+| [`combo/nvidia-best`](#combonvidia-best) | 33 |
+| [`combo/ollama-best`](#comboollama-best) | 3 |
+| [`combo/openrouter-best`](#comboopenrouter-best) | 10 |
+| [`combo/qwen-best`](#comboqwen-best) | 43 |
+| [`combo/steady-coding`](#combosteady-coding) | 3 |
+| [`combo/trae-best`](#combotrae-best) | 3 |
+| [`combo/xkiro-best`](#comboxkiro-best) | 18 |
 
 <a id="combo-all-best"></a>
 ### combo/all-best · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via codestral/codestral-latest
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -375,7 +374,6 @@ Smoke: OK via codestral/codestral-latest
 <a id="combo-apinex-best"></a>
 ### combo/apinex-best · [back to list](#8-combo-catalog-live)
 
-Smoke: FAIL: HTTP Error 403: Forbidden
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -392,7 +390,6 @@ Smoke: FAIL: HTTP Error 403: Forbidden
 <a id="combo-claude-best"></a>
 ### combo/claude-best · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via antigravity/claude-opus-4-6-thinking
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -433,7 +430,6 @@ Smoke: OK via antigravity/claude-opus-4-6-thinking
 <a id="combo-claude-code"></a>
 ### combo/claude-code · [back to list](#8-combo-catalog-live)
 
-Smoke: FAIL: HTTP Error 403: Forbidden
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -445,7 +441,6 @@ Smoke: FAIL: HTTP Error 403: Forbidden
 <a id="combo-claude-fast"></a>
 ### combo/claude-fast · [back to list](#8-combo-catalog-live)
 
-Smoke: FAIL: HTTP Error 403: Forbidden
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -457,7 +452,6 @@ Smoke: FAIL: HTTP Error 403: Forbidden
 <a id="combo-claude-max"></a>
 ### combo/claude-max · [back to list](#8-combo-catalog-live)
 
-Smoke: FAIL: HTTP Error 429: Too Many Requests
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -470,7 +464,6 @@ Smoke: FAIL: HTTP Error 429: Too Many Requests
 <a id="combo-cleanapis-best"></a>
 ### combo/cleanapis-best · [back to list](#8-combo-catalog-live)
 
-Smoke: not tested
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -502,7 +495,6 @@ Smoke: not tested
 <a id="combo-codex-best"></a>
 ### combo/codex-best · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via codex/gpt-6-luna
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -515,7 +507,6 @@ Smoke: OK via codex/gpt-6-luna
 <a id="combo-deepseek-best"></a>
 ### combo/deepseek-best · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via cloudflare-playground/deepseek-ai/deepseek-v4-pro-0813
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -567,7 +558,6 @@ Smoke: OK via cloudflare-playground/deepseek-ai/deepseek-v4-pro-0813
 <a id="combo-gemini-best"></a>
 ### combo/gemini-best · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via antigravity/gemini-3.8-flash-low
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -605,7 +595,6 @@ Smoke: OK via antigravity/gemini-3.8-flash-low
 <a id="combo-gemma-best"></a>
 ### combo/gemma-best · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via cloudflare-playground/google/gemma-4-26b-a4b-it
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -634,7 +623,6 @@ Smoke: OK via cloudflare-playground/google/gemma-4-26b-a4b-it
 <a id="combo-glm-best"></a>
 ### combo/glm-best · [back to list](#8-combo-catalog-live)
 
-Smoke: FAIL: timed out
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -681,7 +669,6 @@ Smoke: FAIL: timed out
 <a id="combo-gpt-best"></a>
 ### combo/gpt-best · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via codex/gpt-6-luna
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -815,7 +802,6 @@ Smoke: OK via codex/gpt-6-luna
 <a id="combo-grok-best"></a>
 ### combo/grok-best · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via grok-cli/grok-4.7
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -841,7 +827,6 @@ Smoke: OK via grok-cli/grok-4.7
 <a id="combo-keep-trying"></a>
 ### combo/keep-trying · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via openrouter/nvidia/nemotron-3-super-120b-a12b:free
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -854,7 +839,6 @@ Smoke: OK via openrouter/nvidia/nemotron-3-super-120b-a12b:free
 <a id="combo-kilocode-best"></a>
 ### combo/kilocode-best · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via kilocode/nvidia/nemotron-3.5-lightning:free
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -869,7 +853,6 @@ Smoke: OK via kilocode/nvidia/nemotron-3.5-lightning:free
 <a id="combo-kimi-best"></a>
 ### combo/kimi-best · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via cloudflare-playground/moonshotai/kimi-k2.7-code
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -894,7 +877,6 @@ Smoke: OK via cloudflare-playground/moonshotai/kimi-k2.7-code
 <a id="combo-kiro-best"></a>
 ### combo/kiro-best · [back to list](#8-combo-catalog-live)
 
-Smoke: FAIL: HTTP Error 503: Service Unavailable
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -909,7 +891,6 @@ Smoke: FAIL: HTTP Error 503: Service Unavailable
 <a id="combo-literouter-best"></a>
 ### combo/literouter-best · [back to list](#8-combo-catalog-live)
 
-Smoke: FAIL: HTTP Error 403: Forbidden
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -924,7 +905,6 @@ Smoke: FAIL: HTTP Error 403: Forbidden
 <a id="combo-llama-best"></a>
 ### combo/llama-best · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via ollama-cloud/gemma4:31b
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -952,7 +932,6 @@ Smoke: OK via ollama-cloud/gemma4:31b
 <a id="combo-mistral-best"></a>
 ### combo/mistral-best · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via codestral/codestral-latest
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -1010,7 +989,6 @@ Smoke: OK via codestral/codestral-latest
 <a id="combo-nara-best"></a>
 ### combo/nara-best · [back to list](#8-combo-catalog-live)
 
-Smoke: not tested
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -1021,7 +999,6 @@ Smoke: not tested
 <a id="combo-nvidia-best"></a>
 ### combo/nvidia-best · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via kilocode/nvidia/nemotron-3.5-content-safety:free
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -1062,7 +1039,6 @@ Smoke: OK via kilocode/nvidia/nemotron-3.5-content-safety:free
 <a id="combo-ollama-best"></a>
 ### combo/ollama-best · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via ollama-cloud/nemotron-3-super
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -1073,7 +1049,6 @@ Smoke: OK via ollama-cloud/nemotron-3-super
 <a id="combo-openrouter-best"></a>
 ### combo/openrouter-best · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via openrouter/nvidia/nemotron-3.5-lightning:free
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -1091,7 +1066,6 @@ Smoke: OK via openrouter/nvidia/nemotron-3.5-lightning:free
 <a id="combo-qwen-best"></a>
 ### combo/qwen-best · [back to list](#8-combo-catalog-live)
 
-Smoke: OK via cloudflare-playground/qwen/qwen2.5-coder-32b-instruct
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -1140,7 +1114,6 @@ Smoke: OK via cloudflare-playground/qwen/qwen2.5-coder-32b-instruct
 <a id="combo-steady-coding"></a>
 ### combo/steady-coding · [back to list](#8-combo-catalog-live)
 
-Smoke: FAIL: HTTP Error 403: Forbidden
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -1151,7 +1124,6 @@ Smoke: FAIL: HTTP Error 403: Forbidden
 <a id="combo-trae-best"></a>
 ### combo/trae-best · [back to list](#8-combo-catalog-live)
 
-Smoke: FAIL: HTTP Error 503: Service Unavailable
 
 | # | Model | OK? |
 |---|-------|-----|
@@ -1162,7 +1134,6 @@ Smoke: FAIL: HTTP Error 503: Service Unavailable
 <a id="combo-xkiro-best"></a>
 ### combo/xkiro-best · [back to list](#8-combo-catalog-live)
 
-Smoke: FAIL: HTTP Error 403: Forbidden
 
 | # | Model | OK? |
 |---|-------|-----|
