@@ -199,7 +199,7 @@ Key rules encoded: 401/402 = durable-dead (auto-disable), 403/429/5xx = transien
 
 ## 8. Combo catalog (live)
 
-_Per-model probe status 2026-10-17: **OK** = answered live, **NOT OK** = terminal failure (removed below), **untested** = never directly probed. Dead rows removed._
+_Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed probe (kept: may recover), **untested** = never directly probed. Dead rows removed._
 
 | Combo | Legs | Smoke |
 |---|---|---|
@@ -228,7 +228,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **NOT OK** = termina
 | [`combo/nvidia-best`](#combonvidia-best) | 33 | OK via kilocode/nvidia/nemotron-3.5-content-safety:free |
 | [`combo/ollama-best`](#comboollama-best) | 3 | OK via ollama-cloud/nemotron-3-super |
 | [`combo/openrouter-best`](#comboopenrouter-best) | 10 | OK via openrouter/nvidia/nemotron-3.5-lightning:free |
-| [`combo/qwen-best`](#comboqwen-best) | 58 | OK via cloudflare-playground/qwen/qwen2.5-coder-32b-instruct |
+| [`combo/qwen-best`](#comboqwen-best) | 43 | OK via cloudflare-playground/qwen/qwen2.5-coder-32b-instruct |
 | [`combo/steady-coding`](#combosteady-coding) | 3 | FAIL: HTTP Error 403: Forbidden |
 | [`combo/trae-best`](#combotrae-best) | 3 | FAIL: HTTP Error 503: Service Unavailable |
 | [`combo/xkiro-best`](#comboxkiro-best) | 18 | FAIL: HTTP Error 403: Forbidden |
@@ -242,13 +242,13 @@ Smoke: OK via codestral/codestral-latest
 |---|-------|-----|
 | 1 | `codestral/codestral-latest` | OK |
 | 2 | `codestral/codestral-2508` | OK |
-| 3 | `antigravity/claude-opus-4-6-thinking-low` | NOT OK (FAIL) |
+| 3 | `antigravity/claude-opus-4-6-thinking-low` | FAIL |
 | 4 | `antigravity/claude-opus-4-6-thinking` | OK |
-| 5 | `antigravity/claude-sonnet-4-6-low` | NOT OK (FAIL) |
-| 6 | `agy/claude-opus-4-6-thinking-low` | NOT OK (FAIL) |
-| 7 | `agy/claude-sonnet-4-6-low` | NOT OK (FAIL) |
-| 8 | `claude-web/claude-opus-4-6` | NOT OK (FAIL-429) |
-| 9 | `claude-web/claude-sonnet-4-6-low` | NOT OK (FAIL-429) |
+| 5 | `antigravity/claude-sonnet-4-6-low` | FAIL |
+| 6 | `agy/claude-opus-4-6-thinking-low` | FAIL |
+| 7 | `agy/claude-sonnet-4-6-low` | FAIL |
+| 8 | `claude-web/claude-opus-4-6` | FAIL |
+| 9 | `claude-web/claude-sonnet-4-6-low` | FAIL |
 | 10 | `claude-web/claude-opus-5-low` | OK |
 | 11 | `deepseek-web/deepseek-chat` | OK |
 | 12 | `gemini/gemini-3.8-flash-lite-tts` | untested |
@@ -404,31 +404,31 @@ Smoke: OK via antigravity/claude-opus-4-6-thinking
 | 6 | `claude-web/claude-opus-5-xhigh` | untested |
 | 7 | `claude-web/claude-opus-5-medium` | untested |
 | 8 | `antigravity/claude-opus-4-6-thinking` | OK |
-| 9 | `claude-web/claude-opus-4-6` | NOT OK (FAIL-429) |
-| 10 | `agy/claude-opus-4-6-thinking-low` | NOT OK (FAIL) |
-| 11 | `antigravity/claude-opus-4-6-thinking-low` | NOT OK (FAIL) |
-| 12 | `claude-web/claude-opus-4-6-low` | NOT OK (FAIL) |
-| 13 | `claude-web/claude-opus-4-7-low` | NOT OK (FAIL-429) |
-| 14 | `claude-web/claude-opus-4-8-low` | NOT OK (FAIL-429) |
+| 9 | `claude-web/claude-opus-4-6` | FAIL |
+| 10 | `agy/claude-opus-4-6-thinking-low` | FAIL |
+| 11 | `antigravity/claude-opus-4-6-thinking-low` | FAIL |
+| 12 | `claude-web/claude-opus-4-6-low` | FAIL |
+| 13 | `claude-web/claude-opus-4-7-low` | FAIL |
+| 14 | `claude-web/claude-opus-4-8-low` | FAIL |
 | 15 | `claude-web/claude-opus-5` | untested |
 | 16 | `claude-web/claude-sonnet-5-high` | untested |
 | 17 | `claude-web/claude-sonnet-5-xhigh` | untested |
 | 18 | `claude-web/claude-sonnet-5-medium` | untested |
-| 19 | `claude-web/claude-sonnet-5-low` | NOT OK (FAIL-429) |
-| 20 | `kiro/claude-sonnet-4.5` | NOT OK (FAIL-429) |
+| 19 | `claude-web/claude-sonnet-5-low` | FAIL |
+| 20 | `kiro/claude-sonnet-4.5` | FAIL |
 | 21 | `agy/claude-sonnet-4-6` | untested |
 | 22 | `antigravity/claude-sonnet-4-6` | untested |
 | 23 | `claude-web/claude-sonnet-4-6` | untested |
-| 24 | `agy/claude-sonnet-4-6-low` | NOT OK (FAIL) |
-| 25 | `antigravity/claude-sonnet-4-6-low` | NOT OK (FAIL) |
-| 26 | `claude-web/claude-sonnet-4-6-low` | NOT OK (FAIL-429) |
-| 27 | `claude-web/claude-sonnet-5` | NOT OK (FAIL-429) |
+| 24 | `agy/claude-sonnet-4-6-low` | FAIL |
+| 25 | `antigravity/claude-sonnet-4-6-low` | FAIL |
+| 26 | `claude-web/claude-sonnet-4-6-low` | FAIL |
+| 27 | `claude-web/claude-sonnet-5` | FAIL |
 | 28 | `cline/anthropic/claude-sonnet-5` | untested |
-| 29 | `claude-web/claude-fable-5-1-low` | NOT OK (FAIL-429) |
-| 30 | `claude-web/claude-fable-5-low` | NOT OK (FAIL-429) |
+| 29 | `claude-web/claude-fable-5-1-low` | FAIL |
+| 30 | `claude-web/claude-fable-5-low` | FAIL |
 | 31 | `cline/anthropic/claude-fable-5-low` | untested |
 | 32 | `kiro/claude-haiku-4.5` | untested |
-| 33 | `claude-web/claude-haiku-4-5-20251001-low` | NOT OK (FAIL-429) |
+| 33 | `claude-web/claude-haiku-4-5-20251001-low` | FAIL |
 | 34 | `auto/best-coding` | router (live) |
 
 <a id="combo-claude-code"></a>
@@ -440,7 +440,7 @@ Smoke: FAIL: HTTP Error 403: Forbidden
 |---|-------|-----|
 | 1 | `groq/openai/gpt-oss-120b` | OK |
 | 2 | `auto/claude-sonnet` | router (live) |
-| 3 | `gemini/gemini-3.8-flash` | NOT OK (FAIL) |
+| 3 | `gemini/gemini-3.8-flash` | FAIL |
 | 4 | `auto/best-coding` | router (live) |
 
 <a id="combo-claude-fast"></a>
@@ -451,7 +451,7 @@ Smoke: FAIL: HTTP Error 403: Forbidden
 | # | Model | OK? |
 |---|-------|-----|
 | 1 | `groq/openai/gpt-oss-120b` | OK |
-| 2 | `gemini/gemini-3.8-flash` | NOT OK (FAIL) |
+| 2 | `gemini/gemini-3.8-flash` | FAIL |
 | 3 | `auto/best-fast` | router (live) |
 | 4 | `auto/best-coding` | router (live) |
 
@@ -465,7 +465,7 @@ Smoke: FAIL: HTTP Error 429: Too Many Requests
 | 1 | `auto/claude-opus` | OK |
 | 2 | `groq/openai/gpt-oss-120b` | OK |
 | 3 | `auto/claude-sonnet` | router (live) |
-| 4 | `gemini/gemini-3.8-flash` | NOT OK (FAIL) |
+| 4 | `gemini/gemini-3.8-flash` | FAIL |
 | 5 | `auto/best-coding` | router (live) |
 
 <a id="combo-cleanapis-best"></a>
@@ -478,7 +478,7 @@ Smoke: not tested
 | 1 | `openai/claude-sonnet-5` | untested |
 | 2 | `groq/openai/gpt-oss-120b` | OK |
 | 3 | `openai/claude-opus-5.5` | untested |
-| 4 | `gemini/gemini-3.8-flash` | NOT OK (FAIL) |
+| 4 | `gemini/gemini-3.8-flash` | FAIL |
 | 5 | `openai/kimi-k3` | untested |
 | 6 | `groq/qwen/qwen3.8-27b` | OK |
 | 7 | `openai/glm-5.3` | untested |
@@ -538,11 +538,11 @@ Smoke: OK via cloudflare-playground/deepseek-ai/deepseek-v4-pro-0813
 | 16 | `nvidia/deepseek-ai/deepseek-coder-6.7b-instruct` | untested |
 | 17 | `cline/deepseek/deepseek-v4.1-flash` | untested |
 | 18 | `cline/deepseek/deepseek-v4.1-flash:batch` | untested |
-| 19 | `nvidia/deepseek-ai/deepseek-v4.1-flash` | NOT OK (FAIL) |
+| 19 | `nvidia/deepseek-ai/deepseek-v4.1-flash` | FAIL |
 | 20 | `cline/deepseek/deepseek-v3.2` | untested |
 | 21 | `cline/deepseek/deepseek-v3.2-exp` | untested |
 | 22 | `kiro/deepseek-3.2` | untested |
-| 23 | `xkiro/deepseek/deepseek-v3.2` | NOT OK (FAIL) |
+| 23 | `xkiro/deepseek/deepseek-v3.2` | FAIL |
 | 24 | `cline/deepseek/deepseek-chat-v3.1` | untested |
 | 25 | `cline/deepseek/deepseek-v3.1-terminus` | untested |
 | 26 | `xkiro/deepseek/deepseek-chat-v3.1` | untested |
@@ -550,7 +550,7 @@ Smoke: OK via cloudflare-playground/deepseek-ai/deepseek-v4-pro-0813
 | 28 | `cline/deepseek/deepseek-v4-pro` | untested |
 | 29 | `cline/deepseek/deepseek-v4-pro-0813` | untested |
 | 30 | `cline/~deepseek/deepseek-pro-latest` | untested |
-| 31 | `xkiro/deepseek/deepseek-v4-pro` | NOT OK (FAIL) |
+| 31 | `xkiro/deepseek/deepseek-v4-pro` | FAIL |
 | 32 | `cfp/deepseek-ai/deepseek-r1-distill-qwen-32b` | untested |
 | 33 | `cfp/deepseek-ai/deepseek-v4-flash-0731` | untested |
 | 34 | `cline/deepseek/deepseek-chat` | untested |
@@ -562,7 +562,7 @@ Smoke: OK via cloudflare-playground/deepseek-ai/deepseek-v4-pro-0813
 | 40 | `cline/deepseek/deepseek-v4-flash-vision-exp` | untested |
 | 41 | `cline/~deepseek/deepseek-flash-latest` | untested |
 | 42 | `cline/~deepseek/deepseek-v4-flash-latest` | untested |
-| 43 | `xkiro/deepseek/deepseek-v4-flash` | NOT OK (FAIL) |
+| 43 | `xkiro/deepseek/deepseek-v4-flash` | FAIL |
 | 44 | `auto/best-coding` | router (live) |
 
 <a id="combo-gemini-best"></a>
@@ -575,7 +575,7 @@ Smoke: OK via antigravity/gemini-3.8-flash-low
 | 1 | `gemini/gemini-3.7-flash` | OK |
 | 2 | `agy/gemini-3.8-flash-low` | untested |
 | 3 | `cline/google/gemini-3.8-flash` | untested |
-| 4 | `gemini/gemini-3.8-flash` | NOT OK (FAIL) |
+| 4 | `gemini/gemini-3.8-flash` | FAIL |
 | 5 | `agy/gemini-3.7-flash-low` | untested |
 | 6 | `cline/google/gemini-3.7-flash` | untested |
 | 7 | `agy/gemini-3.6-flash-low` | untested |
@@ -589,7 +589,7 @@ Smoke: OK via antigravity/gemini-3.8-flash-low
 | 15 | `agy/gemini-3.1-flash-lite` | untested |
 | 16 | `antigravity/gemini-3.1-flash-lite` | untested |
 | 17 | `cline/google/gemini-3.1-flash-lite` | untested |
-| 18 | `gemini/gemini-3.1-flash-lite` | NOT OK (FAIL) |
+| 18 | `gemini/gemini-3.1-flash-lite` | FAIL |
 | 19 | `agy/gemini-3-flash` | untested |
 | 20 | `antigravity/gemini-3-flash` | untested |
 | 21 | `gemini/gemini-3-flash-preview` | untested |
@@ -614,10 +614,10 @@ Smoke: OK via cloudflare-playground/google/gemma-4-26b-a4b-it
 | 2 | `cline/google/gemma-4-26b-a4b-it` | untested |
 | 3 | `cline/google/gemma-4-26b-a4b-it:free` | untested |
 | 4 | `cline/google/gemma-4-31b-it` | untested |
-| 5 | `cline/google/gemma-4-31b-it:free` | NOT OK (FAIL-500) |
+| 5 | `cline/google/gemma-4-31b-it:free` | FAIL |
 | 6 | `nvidia/google/gemma-4-31b-it` | untested |
 | 7 | `openrouter/google/gemma-4-26b-a4b-it:free` | untested |
-| 8 | `openrouter/google/gemma-4-31b-it:free` | NOT OK (FAIL-429) |
+| 8 | `openrouter/google/gemma-4-31b-it:free` | FAIL |
 | 9 | `cline/google/gemma-3-12b-it` | untested |
 | 10 | `cline/google/gemma-3-27b-it` | untested |
 | 11 | `cline/google/gemma-3-4b-it` | untested |
@@ -627,7 +627,7 @@ Smoke: OK via cloudflare-playground/google/gemma-4-26b-a4b-it
 | 15 | `nvidia/google/codegemma-1.1-7b` | untested |
 | 16 | `cfp/aisingapore/gemma-sea-lion-v4-27b-it` | untested |
 | 17 | `ddgw/tinfoil/gemma4-31b` | untested |
-| 18 | `nvidia/google/codegemma-7b` | NOT OK (FAIL) |
+| 18 | `nvidia/google/codegemma-7b` | FAIL |
 | 19 | `nvidia/google/gemma-2b` | untested |
 | 20 | `nvidia/google/recurrentgemma-2b` | untested |
 | 21 | `auto/best-coding` | router (live) |
@@ -656,8 +656,8 @@ Smoke: FAIL: timed out
 | 15 | `nvidia/z-ai/glm-5.3-flash` | untested |
 | 16 | `zai-web/glm-5.3` | untested |
 | 17 | `zai-web/glm-5.3-flash` | untested |
-| 18 | `zai-web/glm-5.3-flash-low` | NOT OK (FAIL) |
-| 19 | `zai-web/glm-5.3-low` | NOT OK (FAIL) |
+| 18 | `zai-web/glm-5.3-flash-low` | FAIL |
+| 19 | `zai-web/glm-5.3-low` | FAIL |
 | 20 | `zai-web/glm-5.2-max` | untested |
 | 21 | `zai-web/glm-5.2-high` | untested |
 | 22 | `aug/glm-5.2` | untested |
@@ -726,13 +726,13 @@ Smoke: OK via codex/gpt-6-luna
 | 38 | `cline/openai/gpt-6-sol` | untested |
 | 39 | `cline/openai/gpt-6-sol:batch` | untested |
 | 40 | `codex/gpt-6-astra` | untested |
-| 41 | `codex/gpt-6-sol` | NOT OK (FAIL) |
+| 41 | `codex/gpt-6-sol` | FAIL |
 | 42 | `codex/gpt-6-astra-medium` | untested |
 | 43 | `codex/gpt-6-luna-medium` | untested |
 | 44 | `codex/gpt-6-sol-medium` | untested |
-| 45 | `codex/gpt-6-astra-low` | NOT OK (FAIL) |
+| 45 | `codex/gpt-6-astra-low` | FAIL |
 | 46 | `codex/gpt-6-luna-low` | OK |
-| 47 | `codex/gpt-6-sol-low` | NOT OK (FAIL) |
+| 47 | `codex/gpt-6-sol-low` | FAIL |
 | 48 | `codex/gpt-5.6-luna-max` | untested |
 | 49 | `codex/gpt-5.6-sol-max` | untested |
 | 50 | `codex/gpt-5.6-sol-ultra` | untested |
@@ -755,9 +755,9 @@ Smoke: OK via codex/gpt-6-luna
 | 67 | `cline/openai/gpt-5.6-sol:batch` | untested |
 | 68 | `cline/openai/gpt-5.6-terra` | untested |
 | 69 | `cline/openai/gpt-5.6-terra:batch` | untested |
-| 70 | `codex/gpt-5.6-sol` | NOT OK (FAIL) |
+| 70 | `codex/gpt-5.6-sol` | FAIL |
 | 71 | `ddgw/gpt-5.6-luna` | untested |
-| 72 | `kiro/gpt-5.6-luna` | NOT OK (FAIL) |
+| 72 | `kiro/gpt-5.6-luna` | FAIL |
 | 73 | `kiro/gpt-5.6-sol` | untested |
 | 74 | `kiro/gpt-5.6-terra` | untested |
 | 75 | `codex/gpt-5.6-luna-medium` | untested |
@@ -836,8 +836,8 @@ Smoke: OK via grok-cli/grok-4.7
 | 13 | `cline/x-ai/grok-4.3:batch` | untested |
 | 14 | `cline/x-ai/grok-build-0.1` | untested |
 | 15 | `cline/~x-ai/grok-latest` | untested |
-| 16 | `grok-web/expert` | NOT OK (FAIL-403) |
-| 17 | `grok-web/heavy` | NOT OK (FAIL-403) |
+| 16 | `grok-web/expert` | FAIL |
+| 17 | `grok-web/heavy` | FAIL |
 | 18 | `auto/best-coding` | router (live) |
 
 <a id="combo-keep-trying"></a>
@@ -850,7 +850,7 @@ Smoke: OK via openrouter/nvidia/nemotron-3-super-120b-a12b:free
 | 1 | `kilocode/nvidia/nemotron-3-ultra-550b-a55b:free` | OK |
 | 2 | `openrouter/nvidia/nemotron-3-super-120b-a12b:free` | OK |
 | 3 | `groq/openai/gpt-oss-120b` | OK |
-| 4 | `gemini/gemini-3.8-flash` | NOT OK (FAIL) |
+| 4 | `gemini/gemini-3.8-flash` | FAIL |
 | 5 | `auto/best-coding` | router (live) |
 
 <a id="combo-kilocode-best"></a>
@@ -902,7 +902,7 @@ Smoke: FAIL: HTTP Error 503: Service Unavailable
 |---|-------|-----|
 | 1 | `kiro/glm-5` | OK |
 | 2 | `kiro/qwen3-coder-next` | OK |
-| 3 | `kiro/claude-sonnet-4.5` | NOT OK (FAIL-429) |
+| 3 | `kiro/claude-sonnet-4.5` | FAIL |
 | 4 | `kiro/claude-haiku-4.5` | untested |
 | 5 | `kiro/deepseek-3.2` | untested |
 | 6 | `kiro/minimax-m2.5` | untested |
@@ -977,7 +977,7 @@ Smoke: OK via codestral/codestral-latest
 | 16 | `literouter/ministral-3-8b-instruct:free` | untested |
 | 17 | `nvidia/mistralai/mistral-large-2-instruct` | untested |
 | 18 | `nvidia/mistralai/mistral-7b-instruct-v0.3` | untested |
-| 19 | `nvidia/mistralai/codestral-22b-instruct-v0.1` | NOT OK (FAIL) |
+| 19 | `nvidia/mistralai/codestral-22b-instruct-v0.1` | FAIL |
 | 20 | `nvidia/mistralai/mixtral-8x22b-v0.1` | untested |
 | 21 | `cline/cognitivecomputations/dolphin-mistral-24b-venice-edition` | untested |
 | 22 | `cline/mistralai/codestral-2508` | untested |
@@ -1037,7 +1037,7 @@ Smoke: OK via kilocode/nvidia/nemotron-3.5-content-safety:free
 | 7 | `kilocode/nvidia/nemotron-3-super-120b-a12b:free` | OK |
 | 8 | `ollama-cloud/nemotron-3-super` | OK |
 | 9 | `openrouter/nvidia/nemotron-3-super-120b-a12b:free` | OK |
-| 10 | `nvidia/nvidia/nemotron-4-340b-instruct` | NOT OK (FAIL) |
+| 10 | `nvidia/nvidia/nemotron-4-340b-instruct` | FAIL |
 | 11 | `nvidia/nvidia/nemotron-4-340b-reward` | untested |
 | 12 | `cline/nvidia/nemotron-3.5-content-safety` | untested |
 | 13 | `cline/nvidia/nemotron-3.5-content-safety:free` | untested |
@@ -1049,7 +1049,7 @@ Smoke: OK via kilocode/nvidia/nemotron-3.5-content-safety:free
 | 19 | `nvidia/nvidia/llama-3.1-nemotron-51b-instruct` | untested |
 | 20 | `nvidia/nvidia/llama-3.1-nemotron-70b-instruct` | untested |
 | 21 | `cline/nvidia/nemotron-3-ultra-550b-a55b` | untested |
-| 22 | `nvidia/nvidia/nemotron-3-ultra-550b-a55b` | NOT OK (FAIL) |
+| 22 | `nvidia/nvidia/nemotron-3-ultra-550b-a55b` | FAIL |
 | 23 | `cfp/nvidia/nemotron-3-120b-a12b` | untested |
 | 24 | `cline/nvidia/nemotron-3-super-120b-a12b` | untested |
 | 25 | `cline/nvidia/nemotron-3-super-120b-a12b:free` | untested |
@@ -1086,7 +1086,7 @@ Smoke: OK via openrouter/nvidia/nemotron-3.5-lightning:free
 | 4 | `openrouter/poolside/laguna-s-2.1:free` | OK |
 | 5 | `openrouter/apodex/apodex-1.1-mini:free` | OK |
 | 6 | `openrouter/cohere/north-mini-code:free` | OK |
-| 7 | `openrouter/google/gemma-4-31b-it:free` | NOT OK (FAIL-429) |
+| 7 | `openrouter/google/gemma-4-31b-it:free` | FAIL |
 | 8 | `openrouter/liquid/lfm-2.5-2.6b:free` | untested |
 | 9 | `openrouter/poolside/laguna-xs-2.1:free` | untested |
 | 10 | `auto/best-coding` | router (live) |
@@ -1098,64 +1098,49 @@ Smoke: OK via cloudflare-playground/qwen/qwen2.5-coder-32b-instruct
 
 | # | Model | OK? |
 |---|-------|-----|
-| 1 | `xkiro/qwen/qwen3.8-max:free` | OK |
-| 2 | `groq/qwen/qwen3.8-27b` | OK |
-| 3 | `xkiro/qwen/qwen3.7-max:free` | OK |
-| 4 | `xkiro/qwen/qwen3.5-plus:free` | OK |
-| 5 | `xkiro/qwen/qwen3-max:free` | OK |
-| 6 | `cline/qwen/qwen3-coder-next` | OK |
-| 7 | `kiro/qwen3-coder-next` | OK |
-| 8 | `xkiro/qwen/qwen3-coder-plus:free` | OK |
-| 9 | `xkiro/qwen/qwen-plus-2025-07-28:free` | OK |
-| 10 | `cline/qwen/qwen3.8-max-0902` | untested |
-| 11 | `cline/qwen/qwen3.8-max-prime` | untested |
-| 12 | `cline/qwen/qwen3.8-2.4t-a95b` | untested |
-| 13 | `cline/qwen/qwen3.8-27b` | untested |
-| 14 | `cline/qwen/qwen3.8-flash` | untested |
-| 15 | `cline/qwen/qwen3.8-omni-flash` | untested |
-| 16 | `cline/qwen/qwen3.7-max` | untested |
-| 17 | `cline/qwen/qwen3.7-flash` | untested |
-| 18 | `cline/qwen/qwen3.7-plus` | untested |
-| 19 | `xkiro/qwen/qwen3.7-plus:free` | OK |
-| 20 | `cline/qwen/qwen3.6-27b` | untested |
-| 21 | `cline/qwen/qwen3.6-35b-a3b` | untested |
-| 22 | `cline/qwen/qwen3.6-flash` | untested |
-| 23 | `cline/qwen/qwen3.6-plus` | untested |
-| 24 | `xkiro/qwen/qwen3.6-27b:free` | OK |
-| 25 | `xkiro/qwen/qwen3.6-35b-a3b:free` | untested |
-| 26 | `xkiro/qwen/qwen3.6-plus:free` | untested |
-| 27 | `cline/qwen/qwen3.5-122b-a10b` | untested |
-| 28 | `cline/qwen/qwen3.5-27b` | untested |
-| 29 | `cline/qwen/qwen3.5-35b-a3b` | untested |
-| 30 | `cline/qwen/qwen3.5-397b-a17b` | untested |
-| 31 | `cline/qwen/qwen3.5-9b` | untested |
-| 32 | `cline/qwen/qwen3.5-flash-02-23` | untested |
-| 33 | `cline/qwen/qwen3.5-plus-02-15` | untested |
-| 34 | `cline/qwen/qwen3.5-plus-20260420` | untested |
-| 35 | `xkiro/qwen/qwen3.5-397b-a17b:free` | untested |
-| 36 | `xkiro/qwen/qwen3.5-flash:free` | OK |
-| 37 | `xkiro/qwen/qwen3.5-omni-flash:free` | untested |
-| 38 | `xkiro/qwen/qwen3.5-omni-plus:free` | untested |
-| 39 | `cfp/qwen/qwen2.5-coder-32b-instruct` | untested |
-| 40 | `cline/qwen/qwen-2.5-72b-instruct` | untested |
-| 41 | `cline/qwen/qwen-2.5-7b-instruct` | untested |
-| 42 | `cline/qwen/qwen-2.5-coder-32b-instruct` | untested |
-| 43 | `cfp/qwen/qwen3-30b-a3b-fp8` | untested |
-| 44 | `cfp/qwen/qwq-32b` | untested |
-| 45 | `cline/qwen/qwen-plus` | untested |
-| 46 | `cline/qwen/qwen3-14b` | untested |
-| 47 | `cline/qwen/qwen3-235b-a22b-2507` | untested |
-| 48 | `cline/qwen/qwen3-235b-a22b-thinking-2507` | untested |
-| 49 | `cline/qwen/qwen3-30b-a3b` | untested |
-| 50 | `cline/qwen/qwen3-30b-a3b-instruct-2507` | untested |
-| 51 | `cline/qwen/qwen3-32b` | untested |
-| 52 | `cline/qwen/qwen3-coder` | untested |
-| 53 | `cline/qwen/qwen3-coder-30b-a3b-instruct` | untested |
-| 54 | `cline/qwen/qwen3-coder-flash` | untested |
-| 55 | `cline/qwen/qwen3-next-80b-a3b-instruct` | untested |
-| 56 | `cline/qwen/qwen3-next-80b-a3b-thinking` | untested |
-| 57 | `xkiro/qwen/qwen3-omni-flash:free` | untested |
-| 58 | `auto/best-coding` | router (live) |
+| 1 | `groq/qwen/qwen3.8-27b` | OK |
+| 2 | `cline/qwen/qwen3-coder-next` | OK |
+| 3 | `kiro/qwen3-coder-next` | OK |
+| 4 | `cline/qwen/qwen3.8-max-0902` | untested |
+| 5 | `cline/qwen/qwen3.8-max-prime` | untested |
+| 6 | `cline/qwen/qwen3.8-2.4t-a95b` | untested |
+| 7 | `cline/qwen/qwen3.8-27b` | untested |
+| 8 | `cline/qwen/qwen3.8-flash` | untested |
+| 9 | `cline/qwen/qwen3.8-omni-flash` | untested |
+| 10 | `cline/qwen/qwen3.7-max` | untested |
+| 11 | `cline/qwen/qwen3.7-flash` | untested |
+| 12 | `cline/qwen/qwen3.7-plus` | untested |
+| 13 | `cline/qwen/qwen3.6-27b` | untested |
+| 14 | `cline/qwen/qwen3.6-35b-a3b` | untested |
+| 15 | `cline/qwen/qwen3.6-flash` | untested |
+| 16 | `cline/qwen/qwen3.6-plus` | untested |
+| 17 | `cline/qwen/qwen3.5-122b-a10b` | untested |
+| 18 | `cline/qwen/qwen3.5-27b` | untested |
+| 19 | `cline/qwen/qwen3.5-35b-a3b` | untested |
+| 20 | `cline/qwen/qwen3.5-397b-a17b` | untested |
+| 21 | `cline/qwen/qwen3.5-9b` | untested |
+| 22 | `cline/qwen/qwen3.5-flash-02-23` | untested |
+| 23 | `cline/qwen/qwen3.5-plus-02-15` | untested |
+| 24 | `cline/qwen/qwen3.5-plus-20260420` | untested |
+| 25 | `cfp/qwen/qwen2.5-coder-32b-instruct` | untested |
+| 26 | `cline/qwen/qwen-2.5-72b-instruct` | untested |
+| 27 | `cline/qwen/qwen-2.5-7b-instruct` | untested |
+| 28 | `cline/qwen/qwen-2.5-coder-32b-instruct` | untested |
+| 29 | `cfp/qwen/qwen3-30b-a3b-fp8` | untested |
+| 30 | `cfp/qwen/qwq-32b` | untested |
+| 31 | `cline/qwen/qwen-plus` | untested |
+| 32 | `cline/qwen/qwen3-14b` | untested |
+| 33 | `cline/qwen/qwen3-235b-a22b-2507` | untested |
+| 34 | `cline/qwen/qwen3-235b-a22b-thinking-2507` | untested |
+| 35 | `cline/qwen/qwen3-30b-a3b` | untested |
+| 36 | `cline/qwen/qwen3-30b-a3b-instruct-2507` | untested |
+| 37 | `cline/qwen/qwen3-32b` | untested |
+| 38 | `cline/qwen/qwen3-coder` | untested |
+| 39 | `cline/qwen/qwen3-coder-30b-a3b-instruct` | untested |
+| 40 | `cline/qwen/qwen3-coder-flash` | untested |
+| 41 | `cline/qwen/qwen3-next-80b-a3b-instruct` | untested |
+| 42 | `cline/qwen/qwen3-next-80b-a3b-thinking` | untested |
+| 43 | `auto/best-coding` | router (live) |
 
 <a id="combo-steady-coding"></a>
 ### combo/steady-coding · [back to list](#8-combo-catalog-live)
@@ -1165,7 +1150,7 @@ Smoke: FAIL: HTTP Error 403: Forbidden
 | # | Model | OK? |
 |---|-------|-----|
 | 1 | `groq/openai/gpt-oss-120b` | OK |
-| 2 | `gemini/gemini-3.8-flash` | NOT OK (FAIL) |
+| 2 | `gemini/gemini-3.8-flash` | FAIL |
 | 3 | `auto/best-coding` | router (live) |
 
 <a id="combo-trae-best"></a>
@@ -1205,4 +1190,4 @@ Smoke: FAIL: HTTP Error 403: Forbidden
 | 17 | `xkiro/mistralai/ministral-3b` | OK |
 | 18 | `xkiro/sensenova/sensenova-6.8-flash-lite` | OK |
 
-_Showing 740 of 742 legs (2 terminal-dead rows removed)_
+_Showing 725 of 727 legs (2 terminal-dead rows removed)_
