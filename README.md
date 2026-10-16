@@ -233,7 +233,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | [`combo/trae-best`](#combotrae-best) | 3 |
 | [`combo/xkiro-best`](#comboxkiro-best) | 18 |
 
-<a id="combo-all-best"></a>
+<a id="comboallbest"></a>
 <a id="comboall-best"></a>
 ### combo/all-best · [back to list](#8-combo-catalog-live)
 
@@ -372,7 +372,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 130 | `morph/morph-v3-fast` | OK |
 | 131 | `auto/best-coding` | router (live) |
 
-<a id="combo-apinex-best"></a>
+<a id="comboapinexbest"></a>
 <a id="comboapinex-best"></a>
 ### combo/apinex-best · [back to list](#8-combo-catalog-live)
 
@@ -389,7 +389,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 8 | `openai/free/deepseek-v4-flash-0731` | FAIL |
 | 9 | `auto/best-coding` | router (live) |
 
-<a id="combo-claude-best"></a>
+<a id="comboclaudebest"></a>
 <a id="comboclaude-best"></a>
 ### combo/claude-best · [back to list](#8-combo-catalog-live)
 
@@ -430,7 +430,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 32 | `claude-web/claude-haiku-4-5-20251001-low` | FAIL |
 | 33 | `auto/best-coding` | router (live) |
 
-<a id="combo-claude-code"></a>
+<a id="comboclaudecode"></a>
 <a id="comboclaude-code"></a>
 ### combo/claude-code · [back to list](#8-combo-catalog-live)
 
@@ -442,7 +442,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 3 | `gemini/gemini-3.8-flash` | FAIL |
 | 4 | `auto/best-coding` | router (live) |
 
-<a id="combo-claude-fast"></a>
+<a id="comboclaudefast"></a>
 <a id="comboclaude-fast"></a>
 ### combo/claude-fast · [back to list](#8-combo-catalog-live)
 
@@ -454,7 +454,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 3 | `auto/best-fast` | router (live) |
 | 4 | `auto/best-coding` | router (live) |
 
-<a id="combo-claude-max"></a>
+<a id="comboclaudemax"></a>
 <a id="comboclaude-max"></a>
 ### combo/claude-max · [back to list](#8-combo-catalog-live)
 
@@ -467,7 +467,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 4 | `gemini/gemini-3.8-flash` | FAIL |
 | 5 | `auto/best-coding` | router (live) |
 
-<a id="combo-cleanapis-best"></a>
+<a id="combocleanapisbest"></a>
 <a id="combocleanapis-best"></a>
 ### combo/cleanapis-best · [back to list](#8-combo-catalog-live)
 
@@ -499,7 +499,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 23 | `openai/free/mimo-v2.6-pro` | FAIL |
 | 24 | `auto/best-coding` | router (live) |
 
-<a id="combo-codex-best"></a>
+<a id="combocodexbest"></a>
 <a id="combocodex-best"></a>
 ### combo/codex-best · [back to list](#8-combo-catalog-live)
 
@@ -512,7 +512,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 4 | `codex/gpt-5.5` | OK |
 | 5 | `auto/best-coding` | router (live) |
 
-<a id="combo-deepseek-best"></a>
+<a id="combodeepseekbest"></a>
 <a id="combodeepseek-best"></a>
 ### combo/deepseek-best · [back to list](#8-combo-catalog-live)
 
@@ -564,7 +564,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 43 | `xkiro/deepseek/deepseek-v4-flash` | FAIL |
 | 44 | `auto/best-coding` | router (live) |
 
-<a id="combo-gemini-best"></a>
+<a id="combogeminibest"></a>
 <a id="combogemini-best"></a>
 ### combo/gemini-best · [back to list](#8-combo-catalog-live)
 
@@ -602,7 +602,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 29 | `cline/~google/gemini-flash-latest` | untested |
 | 30 | `auto/best-coding` | router (live) |
 
-<a id="combo-gemma-best"></a>
+<a id="combogemmabest"></a>
 <a id="combogemma-best"></a>
 ### combo/gemma-best · [back to list](#8-combo-catalog-live)
 
@@ -631,7 +631,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 20 | `nvidia/google/recurrentgemma-2b` | FAIL |
 | 21 | `auto/best-coding` | router (live) |
 
-<a id="combo-glm-best"></a>
+<a id="comboglmbest"></a>
 <a id="comboglm-best"></a>
 ### combo/glm-best · [back to list](#8-combo-catalog-live)
 
@@ -678,7 +678,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 38 | `cline/~z-ai/glm-latest` | untested |
 | 39 | `auto/best-coding` | router (live) |
 
-<a id="combo-gpt-best"></a>
+<a id="combogptbest"></a>
 <a id="combogpt-best"></a>
 ### combo/gpt-best · [back to list](#8-combo-catalog-live)
 
@@ -812,7 +812,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 125 | `cline/openai/gpt-4o-mini:batch` | untested |
 | 126 | `auto/best-coding` | router (live) |
 
-<a id="combo-grok-best"></a>
+<a id="combogrokbest"></a>
 <a id="combogrok-best"></a>
 ### combo/grok-best · [back to list](#8-combo-catalog-live)
 
@@ -838,7 +838,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 17 | `grok-web/heavy` | FAIL |
 | 18 | `auto/best-coding` | router (live) |
 
-<a id="combo-keep-trying"></a>
+<a id="combokeeptrying"></a>
 <a id="combokeep-trying"></a>
 ### combo/keep-trying · [back to list](#8-combo-catalog-live)
 
@@ -851,7 +851,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 4 | `gemini/gemini-3.8-flash` | FAIL |
 | 5 | `auto/best-coding` | router (live) |
 
-<a id="combo-kilocode-best"></a>
+<a id="combokilocodebest"></a>
 <a id="combokilocode-best"></a>
 ### combo/kilocode-best · [back to list](#8-combo-catalog-live)
 
@@ -866,7 +866,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 6 | `kilocode/cohere/north-mini-code:free` | OK |
 | 7 | `auto/best-coding` | router (live) |
 
-<a id="combo-kimi-best"></a>
+<a id="combokimibest"></a>
 <a id="combokimi-best"></a>
 ### combo/kimi-best · [back to list](#8-combo-catalog-live)
 
@@ -891,7 +891,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 16 | `nvidia/moonshotai/kimi-k3` | FAIL |
 | 17 | `auto/best-coding` | router (live) |
 
-<a id="combo-kiro-best"></a>
+<a id="combokirobest"></a>
 <a id="combokiro-best"></a>
 ### combo/kiro-best · [back to list](#8-combo-catalog-live)
 
@@ -906,7 +906,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 6 | `kiro/minimax-m2.1` | FAIL |
 | 7 | `auto/best-coding` | router (live) |
 
-<a id="combo-literouter-best"></a>
+<a id="comboliterouterbest"></a>
 <a id="comboliterouter-best"></a>
 ### combo/literouter-best · [back to list](#8-combo-catalog-live)
 
@@ -921,7 +921,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 6 | `literouter/gpt-oss-120b:free` | OK |
 | 7 | `literouter/qwen3-coder-next:free` | OK |
 
-<a id="combo-llama-best"></a>
+<a id="combollamabest"></a>
 <a id="combollama-best"></a>
 ### combo/llama-best · [back to list](#8-combo-catalog-live)
 
@@ -949,7 +949,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 19 | `nvidia/meta/llama2-70b` | FAIL |
 | 20 | `auto/best-coding` | router (live) |
 
-<a id="combo-mistral-best"></a>
+<a id="combomistralbest"></a>
 <a id="combomistral-best"></a>
 ### combo/mistral-best · [back to list](#8-combo-catalog-live)
 
@@ -1007,7 +1007,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 49 | `xkiro/mistralai/ministral-8b` | OK |
 | 50 | `auto/best-coding` | router (live) |
 
-<a id="combo-nara-best"></a>
+<a id="combonarabest"></a>
 <a id="combonara-best"></a>
 ### combo/nara-best · [back to list](#8-combo-catalog-live)
 
@@ -1018,7 +1018,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 2 | `nara/nemotron-3.5-lightning-free` | OK |
 | 3 | `auto/best-coding` | router (live) |
 
-<a id="combo-nvidia-best"></a>
+<a id="combonvidiabest"></a>
 <a id="combonvidia-best"></a>
 ### combo/nvidia-best · [back to list](#8-combo-catalog-live)
 
@@ -1059,7 +1059,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 32 | `nvidia/nvidia/nemotron-parse` | FAIL |
 | 33 | `auto/best-coding` | router (live) |
 
-<a id="combo-ollama-best"></a>
+<a id="comboollamabest"></a>
 <a id="comboollama-best"></a>
 ### combo/ollama-best · [back to list](#8-combo-catalog-live)
 
@@ -1070,7 +1070,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 2 | `ollama-cloud/gemma4:31b` | OK |
 | 3 | `auto/best-coding` | router (live) |
 
-<a id="combo-openrouter-best"></a>
+<a id="comboopenrouterbest"></a>
 <a id="comboopenrouter-best"></a>
 ### combo/openrouter-best · [back to list](#8-combo-catalog-live)
 
@@ -1088,7 +1088,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 9 | `openrouter/poolside/laguna-xs-2.1:free` | OK |
 | 10 | `auto/best-coding` | router (live) |
 
-<a id="combo-qwen-best"></a>
+<a id="comboqwenbest"></a>
 <a id="comboqwen-best"></a>
 ### combo/qwen-best · [back to list](#8-combo-catalog-live)
 
@@ -1137,7 +1137,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 40 | `cline/qwen/qwen3-next-80b-a3b-thinking` | untested |
 | 41 | `auto/best-coding` | router (live) |
 
-<a id="combo-steady-coding"></a>
+<a id="combosteadycoding"></a>
 <a id="combosteady-coding"></a>
 ### combo/steady-coding · [back to list](#8-combo-catalog-live)
 
@@ -1148,7 +1148,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 2 | `gemini/gemini-3.8-flash` | FAIL |
 | 3 | `auto/best-coding` | router (live) |
 
-<a id="combo-trae-best"></a>
+<a id="combotraebest"></a>
 <a id="combotrae-best"></a>
 ### combo/trae-best · [back to list](#8-combo-catalog-live)
 
@@ -1159,7 +1159,7 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 | 2 | `trae/gpt-5.2` | OK |
 | 3 | `auto/best-coding` | router (live) |
 
-<a id="combo-xkiro-best"></a>
+<a id="comboxkirobest"></a>
 <a id="comboxkiro-best"></a>
 ### combo/xkiro-best · [back to list](#8-combo-catalog-live)
 
