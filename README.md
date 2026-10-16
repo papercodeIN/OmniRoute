@@ -145,6 +145,7 @@ Legend: ✅ tested answering · ⏳ quota-flaky (recovers) · ❌ dead/paid · �
 | devin / openference / muse-spark-web | connections removed |
 | xai-oauth / zed-hosted / zenmux(-free) / clinepass | connected, marginal use |
 | qoder / cerebras / siliconflow / together / pollinations | cataloged free tiers, not yet connected |
+| exa-search / zenmux-free | connected utility providers (search / free pool) |
 
 
 
