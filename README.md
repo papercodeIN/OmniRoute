@@ -152,7 +152,7 @@ Legend: ✅ tested answering · ⏳ quota-flaky (recovers) · ❌ dead/paid · �
 ## Provider status snapshot (2026-10-17)
 
 135 connections, 42 families.
-Failing now: glm-best (timeout), trae-best (503 dead conn),
+Failing now: trae-best (503 dead conn),
 xkiro/literouter/apinex-best (403 throttled), claude-code/max/fast
 + steady-coding (429/403 quota wave). Inactive conns (27): kimi x2,
 trae, adobe, lmarena, copilot-web, 3x token-refresh-failed
@@ -640,45 +640,45 @@ _Per-model probe status 2026-10-17: **OK** = answered live, **FAIL** = failed pr
 
 | # | Model | OK? |
 |---|-------|-----|
-| 1 | `openai/glm-5.3` | OK |
-| 2 | `cline/z-ai/glm-5.3` | OK |
-| 3 | `zai-web/glm-5.2` | OK |
-| 4 | `kiro/glm-5` | OK |
-| 5 | `zai-web/glm-5.3-flash-max` | FAIL |
-| 6 | `zai-web/glm-5.3-max` | FAIL |
-| 7 | `zai-web/glm-5.3-flash-high` | FAIL |
-| 8 | `zai-web/glm-5.3-high` | FAIL |
-| 9 | `cline/z-ai/glm-5.3-flash` | untested |
-| 10 | `cline/z-ai/glm-5.3-flash:batch` | untested |
-| 11 | `cline/z-ai/glm-5.3-flashx` | untested |
-| 12 | `cline/z-ai/glm-5.3-prime` | untested |
-| 13 | `cline/z-ai/glm-5.3:batch` | untested |
-| 14 | `nvidia/z-ai/glm-5.3` | FAIL |
-| 15 | `nvidia/z-ai/glm-5.3-flash` | OK |
-| 16 | `zai-web/glm-5.3` | FAIL |
-| 17 | `zai-web/glm-5.3-flash` | FAIL |
-| 18 | `zai-web/glm-5.3-flash-low` | FAIL |
-| 19 | `zai-web/glm-5.3-low` | FAIL |
-| 20 | `zai-web/glm-5.2-max` | FAIL |
-| 21 | `zai-web/glm-5.2-high` | FAIL |
-| 22 | `aug/glm-5.2` | untested |
-| 23 | `cfp/zai-org/glm-5.2` | OK |
-| 24 | `cline/z-ai/glm-5.2` | OK |
-| 25 | `cline/z-ai/glm-5.1` | untested |
-| 26 | `cline/z-ai/glm-5-turbo` | untested |
-| 27 | `cfp/zai-org/glm-4.7-flash` | OK |
-| 28 | `cline/z-ai/glm-4.7` | untested |
-| 29 | `cline/z-ai/glm-4.7-flash` | untested |
-| 30 | `cline/z-ai/glm-4.6` | untested |
-| 31 | `cline/z-ai/glm-4.6v` | untested |
-| 32 | `cline/z-ai/glm-4.5` | untested |
-| 33 | `cline/z-ai/glm-4.5-air` | untested |
-| 34 | `cline/z-ai/glm-4.5v` | untested |
-| 35 | `cline/z-ai/glm-5` | untested |
-| 36 | `cline/z-ai/glm-5v-turbo` | untested |
-| 37 | `cline/~z-ai/glm-flash-latest` | untested |
-| 38 | `cline/~z-ai/glm-latest` | untested |
-| 39 | `auto/best-coding` | router (live) |
+| 1 | `cfp/zai-org/glm-4.7-flash` | OK  |
+| 2 | `cfp/zai-org/glm-5.2` | OK  |
+| 3 | `auto/best-coding` | router (live) |
+| 4 | `cline/z-ai/glm-5.3` | FAIL 402 credits |
+| 5 | `cline/z-ai/glm-5.3-flash` | FAIL 402 credits |
+| 6 | `cline/z-ai/glm-5.3-flash:batch` | FAIL 402 credits |
+| 7 | `cline/z-ai/glm-5.3-flashx` | FAIL 402 credits |
+| 8 | `cline/z-ai/glm-5.3-prime` | FAIL 402 credits |
+| 9 | `cline/z-ai/glm-5.3:batch` | FAIL 402 credits |
+| 10 | `cline/z-ai/glm-5.2` | FAIL 402 credits |
+| 11 | `cline/z-ai/glm-5.1` | FAIL 402 credits |
+| 12 | `cline/z-ai/glm-5-turbo` | FAIL 402 credits |
+| 13 | `cline/z-ai/glm-4.7` | FAIL 402 credits |
+| 14 | `cline/z-ai/glm-4.7-flash` | FAIL 402 credits |
+| 15 | `cline/z-ai/glm-4.6` | FAIL 402 credits |
+| 16 | `cline/z-ai/glm-4.6v` | FAIL 402 credits |
+| 17 | `cline/z-ai/glm-4.5` | FAIL 402 credits |
+| 18 | `cline/z-ai/glm-4.5-air` | FAIL 402 credits |
+| 19 | `cline/z-ai/glm-4.5v` | FAIL 402 credits |
+| 20 | `cline/z-ai/glm-5` | FAIL 402 credits |
+| 21 | `cline/z-ai/glm-5v-turbo` | FAIL 402 credits |
+| 22 | `cline/~z-ai/glm-flash-latest` | FAIL 402 credits |
+| 23 | `cline/~z-ai/glm-latest` | FAIL 402 credits |
+| 24 | `kiro/glm-5` | FAIL 429 quota |
+| 25 | `aug/glm-5.2` | FAIL 502 |
+| 26 | `zai-web/glm-5.2` | FAIL timeout |
+| 27 | `zai-web/glm-5.3-flash-max` | FAIL timeout |
+| 28 | `zai-web/glm-5.3-max` | FAIL timeout |
+| 29 | `zai-web/glm-5.3-flash-high` | FAIL timeout |
+| 30 | `zai-web/glm-5.3-high` | FAIL timeout |
+| 31 | `nvidia/z-ai/glm-5.3` | FAIL timeout |
+| 32 | `nvidia/z-ai/glm-5.3-flash` | FAIL timeout |
+| 33 | `zai-web/glm-5.3` | FAIL timeout |
+| 34 | `zai-web/glm-5.3-flash` | FAIL timeout |
+| 35 | `zai-web/glm-5.3-flash-low` | FAIL timeout |
+| 36 | `zai-web/glm-5.3-low` | FAIL timeout |
+| 37 | `zai-web/glm-5.2-max` | FAIL timeout |
+| 38 | `zai-web/glm-5.2-high` | FAIL timeout |
+| 39 | `openai/glm-5.3` | FAIL 404 |
 
 <a id="combogpt-best"></a>
 ### combo/gpt-best - [back to list](#8-combo-catalog-live)
