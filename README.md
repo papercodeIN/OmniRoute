@@ -157,41 +157,6 @@ Legend: ✅ tested answering · ⏳ quota-flaky (recovers) · ❌ dead/paid · �
 
 **xkiro policy:** xkiro models are used **only in `xkiro-best`**. 39 xkiro legs were removed from `all-best` (-18), `qwen-best` (-9), `mistral-best` (-8) and `deepseek-best` (-4).
 
-**Working legs per combo (OK / testable):**
-
-| Combo | OK / testable |
-|---|---|
-| `combo/all-best` | 64 / 167 |
-| `combo/apinex-best` | 1 / 8 |
-| `combo/claude-best` | 0 / 33 |
-| `combo/claude-code` | 1 / 2 |
-| `combo/claude-fast` | 1 / 2 |
-| `combo/claude-max` | 1 / 2 |
-| `combo/cleanapis-best` | 3 / 23 |
-| `combo/codex-best` | 3 / 4 |
-| `combo/deepseek-best` | 7 / 46 |
-| `combo/gemini-best` | 13 / 33 |
-| `combo/gemma-best` | 2 / 21 |
-| `combo/glm-best` | 3 / 41 |
-| `combo/gpt-best` | 19 / 126 |
-| `combo/grok-best` | 4 / 17 |
-| `combo/keep-trying` | 1 / 4 |
-| `combo/kilocode-best` | 0 / 6 |
-| `combo/kimi-best` | 1 / 18 |
-| `combo/kiro-best` | 0 / 7 |
-| `combo/literouter-best` | 1 / 7 |
-| `combo/llama-best` | 4 / 23 |
-| `combo/mistral-best` | 6 / 44 |
-| `combo/nara-best` | 1 / 2 |
-| `combo/nvidia-best` | 2 / 30 |
-| `combo/ollama-best` | 2 / 2 |
-| `combo/openrouter-best` | 0 / 9 |
-| `combo/qwen-best` | 4 / 45 |
-| `combo/spark-best` | 0 / 5 |
-| `combo/steady-coding` | 1 / 2 |
-| `combo/trae-best` | 0 / 2 |
-| `combo/xkiro-best` | 18 / 18 |
-
 Durable failures (401/402/404) are auto-disabled; transient ones (429/5xx/timeout) recover.
 
 ## 5. Automation (all in `%USERPROFILE%\.config\opencode\`)
