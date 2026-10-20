@@ -151,9 +151,11 @@ Legend: ✅ tested answering · ⏳ quota-flaky (recovers) · ❌ dead/paid · �
 
 ## Provider status snapshot (2026-10-20)
 
-**Full combo probe (today, live):** 30 combos, 335 unique provider/model legs tested via `test-all` - **94 OK**, 211 error, 3 slow, 27 no active connection.
+**Full combo probe (today, live):** 31 combos, 357 unique provider/model legs tested via `test-all` - **115 OK**, 212 error, 3 slow, 27 no active connection.
 
-**Groq (today):** 7 active accounts; 5 of 11 catalogue models pass `test-all`. `groq-best` is now the only combo carrying Groq - `qwen/qwen3.8-27b`, `openai/gpt-oss-120b`, `openai/gpt-oss-20b`, `openai/gpt-oss-safeguard-20b`, `allam-2-7b`, then `auto/best-coding`. Groq legs were removed from gpt-best, qwen-best, all-best, cleanapis-best, apinex-best, claude-code, claude-max, claude-fast, steady-coding and keep-trying. The other 6 Groq models are TTS, prompt-guard and Whisper (not chat).
+**Cloudflare Workers AI added (today):** 1 active account (`bmnakum111`), free tier 10K Neurons/day. The account lists 73 models, 39 of them text generation; all 39 were probed through chat completions - **24 OK**. `cloudflare-best` carries the 22 general chat models (best first, `auto/best-coding` last); `llama-guard-3-8b` and the phone model are excluded. 15 newer models (`gpt-oss-120b` works, but `kimi-k2.7-code`, `glm-5.3`, `deepseek-v4*`, `llama-3.2-11b-vision` and others) return upstream 403 on this account. Combo legs use the `cloudflare-ai/@cf/...` prefix because `test-all` mis-routes bare `@cf/...` IDs as provider `@cf`.
+
+**Groq (today):** 7 active accounts; 5 of 11 catalogue models pass `test-all`. `groq-best` is the only combo carrying Groq - `qwen/qwen3.8-27b`, `openai/gpt-oss-120b`, `openai/gpt-oss-20b`, `openai/gpt-oss-safeguard-20b`, `allam-2-7b`, then `auto/best-coding`. Groq legs were removed from gpt-best, qwen-best, all-best, cleanapis-best, apinex-best, claude-code, claude-max, claude-fast, steady-coding and keep-trying. The other 6 Groq models are TTS, prompt-guard and Whisper (not chat).
 
 **Cline removed:** the Cline provider was removed (not working) and its 250 legs were dropped from the combos.
 
@@ -208,7 +210,7 @@ Key rules encoded: 401/402 = durable-dead (auto-disable), 403/429/5xx = transien
 
 ## 8. Combo catalog (live)
 
-_Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); **FAIL ...** = latest `test-all` result; **untested** = no result today. Every leg is listed in priority order: OK first, untested next, failed last; `auto/*` fallback stays at the end. xkiro legs appear only in `xkiro-best`; groq legs only in `groq-best`._
+_Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); **FAIL ...** = latest `test-all` result; **untested** = no result today. Every leg is listed in priority order: OK first, untested next, failed last; `auto/*` fallback stays at the end. xkiro legs appear only in `xkiro-best`; groq legs only in `groq-best`; cloudflare legs use the `cloudflare-ai/@cf/...` prefix._
 
 | Combo | Legs | OK / testable |
 |---|---|---|
@@ -219,6 +221,7 @@ _Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); *
 | [`combo/claude-fast`](#comboclaude-fast) | 3 | 0 / 1 |
 | [`combo/claude-max`](#comboclaude-max) | 4 | 0 / 1 |
 | [`combo/cleanapis-best`](#combocleanapis-best) | 21 | 3 / 20 |
+| [`combo/cloudflare-best`](#combocloudflare-best) | 23 | 22 / 22 |
 | [`combo/codex-best`](#combocodex-best) | 5 | 3 / 4 |
 | [`combo/deepseek-best`](#combodeepseek-best) | 29 | 7 / 28 |
 | [`combo/gemini-best`](#combogemini-best) | 23 | 13 / 22 |
@@ -520,6 +523,37 @@ _Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); *
 | 19 | `openai/deepseek-v4-pro-max` | FAIL error |
 | 20 | `gemini/gemini-3.7-flash` | FAIL error |
 | 21 | `auto/best-coding` | untested |
+
+<a id="combocloudflare-best"></a>
+### combo/cloudflare-best - [back to list](#8-combo-catalog-live)
+
+**Working legs today:** 22 / 22 testable
+
+| # | Model | Status |
+|---|-------|--------|
+| 1 | `cloudflare-ai/@cf/openai/gpt-oss-120b` | OK |
+| 2 | `cloudflare-ai/@cf/nvidia/nemotron-3-120b-a12b` | OK |
+| 3 | `cloudflare-ai/@cf/qwen/qwen3.8-27b` | OK |
+| 4 | `cloudflare-ai/@cf/zai-org/glm-4.7-flash` | OK |
+| 5 | `cloudflare-ai/@cf/meta/llama-3.3-70b-instruct-fp8-fast` | OK |
+| 6 | `cloudflare-ai/@cf/qwen/qwen3-30b-a3b-fp8` | OK |
+| 7 | `cloudflare-ai/@cf/google/gemma-4-26b-a4b-it` | OK |
+| 8 | `cloudflare-ai/@cf/deepseek-ai/deepseek-r1-distill-qwen-32b` | OK |
+| 9 | `cloudflare-ai/@cf/qwen/qwq-32b` | OK |
+| 10 | `cloudflare-ai/@cf/qwen/qwen2.5-coder-32b-instruct` | OK |
+| 11 | `cloudflare-ai/@cf/meta/llama-4-scout-17b-16e-instruct` | OK |
+| 12 | `cloudflare-ai/@cf/aisingapore/gemma-sea-lion-v4-27b-it` | OK |
+| 13 | `cloudflare-ai/@cf/mistralai/mistral-small-3.1-24b-instruct` | OK |
+| 14 | `cloudflare-ai/@cf/ibm-granite/granite-4.0-h-micro` | OK |
+| 15 | `cloudflare-ai/@cf/openai/gpt-oss-20b` | OK |
+| 16 | `cloudflare-ai/@cf/meta/llama-3.1-8b-instruct-fp8` | OK |
+| 17 | `cloudflare-ai/@cf/mistral/mistral-7b-instruct-v0.2-lora` | OK |
+| 18 | `cloudflare-ai/@cf/meta/llama-3.2-3b-instruct` | OK |
+| 19 | `cloudflare-ai/@cf/google/gemma-7b-it-lora` | OK |
+| 20 | `cloudflare-ai/@cf/meta-llama/llama-2-7b-chat-hf-lora` | OK |
+| 21 | `cloudflare-ai/@cf/google/gemma-2b-it-lora` | OK |
+| 22 | `cloudflare-ai/@cf/meta/llama-3.2-1b-instruct` | OK |
+| 23 | `auto/best-coding` | untested |
 
 <a id="combocodex-best"></a>
 ### combo/codex-best - [back to list](#8-combo-catalog-live)
