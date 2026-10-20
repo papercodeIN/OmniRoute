@@ -63,7 +63,7 @@ Refresh picker anytime (double-click):
 
 - OpenCode model picker → provider **OmniRoute** → pick a `combo/*` (top of list)
 - Default daily driver: **`combo/all-best`** (~130 models, Claude-first priority, fails through everything alive)
-- Brand combos: `claude-best`, `gemini-best`, `gpt-best`, `grok-best`, `deepseek-best`, `qwen-best`, `nvidia-best`, `mistral-best`, `glm-best`, `kimi-best`, `llama-best`, `gemma-best`, `openrouter/kilocode/codex/xkiro/ollama/kiro/literouter/apinex/nara/cleanapis-best`, `keep-trying`, `steady-coding`, `claude-code/max/fast`
+- Brand combos: `claude-best`, `gemini-best`, `gpt-best`, `grok-best`, `groq-best`, `cloudflare-best`, `deepseek-best`, `qwen-best`, `nvidia-best`, `mistral-best`, `glm-best`, `kimi-best`, `llama-best`, `gemma-best`, `openrouter/kilocode/codex/xkiro/ollama/kiro/literouter/apinex/nara/cleanapis-best`, `keep-trying`, `claude-code/max/fast`
 - Single models: `auto/*` routes fan out across all healthy providers
 
 Rules learned the hard way:
@@ -151,11 +151,11 @@ Legend: ✅ tested answering · ⏳ quota-flaky (recovers) · ❌ dead/paid · �
 
 ## Provider status snapshot (2026-10-20)
 
-**Full combo probe (today, live):** 31 combos, 357 unique provider/model legs tested via `test-all` - **115 OK**, 212 error, 3 slow, 27 no active connection.
+**Full combo probe (today, live):** 29 combos, 357 unique provider/model legs tested via `test-all` - **116 OK**, 211 error, 3 slow, 27 no active connection.
 
-**Cloudflare Workers AI added (today):** 1 active account (`bmnakum111`), free tier 10K Neurons/day. The account lists 73 models, 39 of them text generation; all 39 were probed through chat completions - **24 OK**. `cloudflare-best` carries the 22 general chat models (best first, `auto/best-coding` last); `llama-guard-3-8b` and the phone model are excluded. 15 newer models (`gpt-oss-120b` works, but `kimi-k2.7-code`, `glm-5.3`, `deepseek-v4*`, `llama-3.2-11b-vision` and others) return upstream 403 on this account. Combo legs use the `cloudflare-ai/@cf/...` prefix because `test-all` mis-routes bare `@cf/...` IDs as provider `@cf`.
+**Cloudflare Workers AI added (today):** 1 active account (`bmnakum111`), free tier 10K Neurons/day. The account lists 73 models, 39 of them text generation; all 39 were probed through chat completions - **24 OK**. `cloudflare-best` carries the 22 general chat models (best first, `auto/best-coding` last); `llama-guard-3-8b` and the phone model are excluded. 15 newer models (`kimi-k2.7-code`, `glm-5.3`, `deepseek-v4*`, `llama-3.2-11b-vision` and others) return upstream 403 on this account. Combo legs use the `cloudflare-ai/@cf/...` prefix because `test-all` mis-routes bare `@cf/...` IDs as provider `@cf`.
 
-**Groq (today):** 7 active accounts; 5 of 11 catalogue models pass `test-all`. `groq-best` is the only combo carrying Groq - `qwen/qwen3.8-27b`, `openai/gpt-oss-120b`, `openai/gpt-oss-20b`, `openai/gpt-oss-safeguard-20b`, `allam-2-7b`, then `auto/best-coding`. Groq legs were removed from gpt-best, qwen-best, all-best, cleanapis-best, apinex-best, claude-code, claude-max, claude-fast, steady-coding and keep-trying. The other 6 Groq models are TTS, prompt-guard and Whisper (not chat).
+**Groq (today):** 7 active accounts; 5 of 11 catalogue models pass `test-all`. `groq-best` is the only combo carrying Groq - `qwen/qwen3.8-27b`, `openai/gpt-oss-120b`, `openai/gpt-oss-20b`, `openai/gpt-oss-safeguard-20b`, `allam-2-7b`, then `auto/best-coding`. The other 6 Groq models are TTS, prompt-guard and Whisper (not chat).
 
 **Cline removed:** the Cline provider was removed (not working) and its 250 legs were dropped from the combos.
 
@@ -167,7 +167,7 @@ Legend: ✅ tested answering · ⏳ quota-flaky (recovers) · ❌ dead/paid · �
 
 **xkiro policy:** xkiro models are used **only in `xkiro-best`**.
 
-**trae-best removed:** Trae is not usable on the free plan and its OmniRoute connection was deleted.
+**Removed combos:** `spark-best` (no working Spark models) and `steady-coding` were deleted; `trae-best` was removed earlier.
 
 Durable failures (401/402/404) are auto-disabled; transient ones (429/5xx/timeout) recover.
 
@@ -242,8 +242,6 @@ _Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); *
 | [`combo/ollama-best`](#comboollama-best) | 3 | 2 / 2 |
 | [`combo/openrouter-best`](#comboopenrouter-best) | 10 | 0 / 9 |
 | [`combo/qwen-best`](#comboqwen-best) | 8 | 3 / 7 |
-| [`combo/spark-best`](#combospark-best) | 1 | 0 / 0 |
-| [`combo/steady-coding`](#combosteady-coding) | 2 | 0 / 1 |
 | [`combo/xkiro-best`](#comboxkiro-best) | 18 | 18 / 18 |
 
 <a id="comboall-best"></a>
@@ -998,25 +996,6 @@ _Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); *
 | 6 | `cfp/qwen/qwen3-30b-a3b-fp8` | no connection |
 | 7 | `cfp/qwen/qwq-32b` | no connection |
 | 8 | `auto/best-coding` | untested |
-
-<a id="combospark-best"></a>
-### combo/spark-best - [back to list](#8-combo-catalog-live)
-
-**Working legs today:** 0 / 0 testable
-
-| # | Model | Status |
-|---|-------|--------|
-| 1 | `auto/best-coding` | untested |
-
-<a id="combosteady-coding"></a>
-### combo/steady-coding - [back to list](#8-combo-catalog-live)
-
-**Working legs today:** 0 / 1 testable
-
-| # | Model | Status |
-|---|-------|--------|
-| 1 | `gemini/gemini-3.8-flash` | FAIL error |
-| 2 | `auto/best-coding` | untested |
 
 <a id="comboxkiro-best"></a>
 ### combo/xkiro-best - [back to list](#8-combo-catalog-live)
