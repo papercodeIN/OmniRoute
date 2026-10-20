@@ -192,7 +192,7 @@ Key rules encoded: 401/402 = durable-dead (auto-disable), 403/429/5xx = transien
 |---------|-------------|
 | Combo 403/401 terminal, stops early | Dead leg first — probe legs, drop 401/402s, interleave providers |
 | "Maximum combo attempts exceeded" | Budget hit — bump `maxGlobalAttempts` (cap 200) |
-| `trae/kimi/deepseek 401` | Token expired — re-auth account, re-probe |
+| `kimi/deepseek 401` | Token expired — re-auth account, re-probe |
 | OpenRouter 403 budget | $0.60 workspace cap spent — add 2nd key or wait reset |
 | Picker missing combos | App restart (reads config once); check JSON validity |
 | Gateway spins (`ECONNREFUSED`) | Gateway down — run `Start OmniRoute.bat`; kill duplicate node processes |
