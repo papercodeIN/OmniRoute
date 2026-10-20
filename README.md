@@ -151,9 +151,11 @@ Legend: ✅ tested answering · ⏳ quota-flaky (recovers) · ❌ dead/paid · �
 
 ## Provider status snapshot (2026-10-20)
 
-**Full combo probe (today, live):** 29 combos, 562 unique provider/model legs tested via `test-all` (8 workers, 40 s timeout) - **82 OK**, 451 error, 2 slow, 27 no active connection.
+**Full combo probe (today, live):** 29 combos, 568 unique provider/model legs tested via `test-all` (8 workers, 40 s timeout) - **94 OK**, 445 error, 2 slow, 27 no active connection.
 
-**New-model scan:** 73 catalogue models not yet in any combo were tested (free/latest models across claude, gpt, grok, gemini, qwen, kimi, glm, deepseek, llama, mistral, nvidia) - **13 OK** and added to their brand combos.
+**Kilocode free-tier probe (today):** 18 free-flagged models tested - **12 OK**, 1 slow, 5 error. The 12 working models (plus 2 fallbacks) are now first in `kilocode-best`; 7 new models were added.
+
+**New-model scan:** 73 catalogue models not yet in any combo were tested - **13 OK** and added to their brand combos.
 
 **xkiro policy:** xkiro models are used **only in `xkiro-best`**. 39 xkiro legs were removed from `all-best` (-18), `qwen-best` (-9), `mistral-best` (-8) and `deepseek-best` (-4).
 
@@ -204,13 +206,13 @@ _Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); *
 
 | Combo | Legs | OK / testable |
 |---|---|---|
-| [`combo/all-best`](#comboall-best) | 169 | 64 / 167 |
+| [`combo/all-best`](#comboall-best) | 169 | 68 / 167 |
 | [`combo/apinex-best`](#comboapinex-best) | 9 | 1 / 8 |
 | [`combo/claude-best`](#comboclaude-best) | 34 | 0 / 33 |
 | [`combo/claude-code`](#comboclaude-code) | 4 | 1 / 2 |
 | [`combo/claude-fast`](#comboclaude-fast) | 4 | 1 / 2 |
 | [`combo/claude-max`](#comboclaude-max) | 5 | 1 / 2 |
-| [`combo/cleanapis-best`](#combocleanapis-best) | 24 | 3 / 23 |
+| [`combo/cleanapis-best`](#combocleanapis-best) | 24 | 6 / 23 |
 | [`combo/codex-best`](#combocodex-best) | 5 | 3 / 4 |
 | [`combo/deepseek-best`](#combodeepseek-best) | 47 | 7 / 46 |
 | [`combo/gemini-best`](#combogemini-best) | 34 | 13 / 33 |
@@ -218,15 +220,15 @@ _Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); *
 | [`combo/glm-best`](#comboglm-best) | 42 | 3 / 41 |
 | [`combo/gpt-best`](#combogpt-best) | 127 | 19 / 126 |
 | [`combo/grok-best`](#combogrok-best) | 18 | 4 / 17 |
-| [`combo/keep-trying`](#combokeep-trying) | 5 | 1 / 4 |
-| [`combo/kilocode-best`](#combokilocode-best) | 7 | 0 / 6 |
+| [`combo/keep-trying`](#combokeep-trying) | 5 | 2 / 4 |
+| [`combo/kilocode-best`](#combokilocode-best) | 14 | 12 / 13 |
 | [`combo/kimi-best`](#combokimi-best) | 19 | 1 / 18 |
 | [`combo/kiro-best`](#combokiro-best) | 8 | 0 / 7 |
 | [`combo/literouter-best`](#comboliterouter-best) | 7 | 1 / 7 |
 | [`combo/llama-best`](#combollama-best) | 24 | 4 / 23 |
 | [`combo/mistral-best`](#combomistral-best) | 45 | 6 / 44 |
 | [`combo/nara-best`](#combonara-best) | 3 | 1 / 2 |
-| [`combo/nvidia-best`](#combonvidia-best) | 31 | 2 / 30 |
+| [`combo/nvidia-best`](#combonvidia-best) | 31 | 4 / 30 |
 | [`combo/ollama-best`](#comboollama-best) | 3 | 2 / 2 |
 | [`combo/openrouter-best`](#comboopenrouter-best) | 10 | 0 / 9 |
 | [`combo/qwen-best`](#comboqwen-best) | 46 | 4 / 45 |
@@ -237,7 +239,7 @@ _Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); *
 <a id="comboall-best"></a>
 ### combo/all-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 64 / 167 testable
+**Working legs today:** 68 / 167 testable
 
 | # | Model | Status |
 |---|-------|--------|
@@ -306,19 +308,19 @@ _Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); *
 | 63 | `nara/laguna-s-2.1` | OK |
 | 64 | `morph/morph-v3-fast` | OK |
 | 65 | `openrouter/nvidia/nemotron-3-super-120b-a12b:free` | FAIL error |
-| 66 | `kilocode/nvidia/nemotron-3.5-lightning:free` | FAIL error |
+| 66 | `kilocode/nvidia/nemotron-3.5-lightning:free` | OK |
 | 67 | `literouter/glm-5:free` | FAIL error |
 | 68 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free` | FAIL error |
-| 69 | `kilocode/poolside/laguna-s-2.1:free` | FAIL error |
+| 69 | `kilocode/poolside/laguna-s-2.1:free` | OK |
 | 70 | `literouter/glm-5.3-flash:free` | FAIL error |
 | 71 | `openrouter/cohere/north-mini-code:free` | FAIL error |
-| 72 | `kilocode/poolside/laguna-xs-2.1:free` | FAIL error |
+| 72 | `kilocode/poolside/laguna-xs-2.1:free` | OK |
 | 73 | `literouter/deepseek-v3.2:free` | FAIL error |
 | 74 | `openrouter/poolside/laguna-s-2.1:free` | FAIL error |
 | 75 | `kilocode/nvidia/nemotron-3-super-120b-a12b:free` | FAIL error |
 | 76 | `literouter/gpt-oss-120b:free` | FAIL error |
 | 77 | `openrouter/poolside/laguna-xs-2.1:free` | FAIL error |
-| 78 | `kilocode/cohere/north-mini-code:free` | FAIL error |
+| 78 | `kilocode/cohere/north-mini-code:free` | OK |
 | 79 | `literouter/kimi-k2.7-code-cheap:free` | FAIL error |
 | 80 | `openrouter/nvidia/nemotron-3.5-lightning:free` | FAIL error |
 | 81 | `literouter/qwen3-coder-next:free` | FAIL error |
@@ -510,7 +512,7 @@ _Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); *
 <a id="combocleanapis-best"></a>
 ### combo/cleanapis-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 3 / 23 testable
+**Working legs today:** 6 / 23 testable
 
 | # | Model | Status |
 |---|-------|--------|
@@ -518,17 +520,17 @@ _Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); *
 | 2 | `groq/qwen/qwen3.8-27b` | OK |
 | 3 | `groq/openai/gpt-oss-20b` | OK |
 | 4 | `openrouter/cohere/north-mini-code:free` | FAIL error |
-| 5 | `kilocode/cohere/north-mini-code:free` | FAIL error |
+| 5 | `kilocode/cohere/north-mini-code:free` | OK |
 | 6 | `openai/free/qwen-3.8-max` | FAIL error |
 | 7 | `openai/free/deepseek-v4.1-flash` | FAIL error |
 | 8 | `openrouter/poolside/laguna-s-2.1:free` | FAIL error |
 | 9 | `openai/free/deepseek-v4-flash-0731` | FAIL error |
-| 10 | `kilocode/poolside/laguna-s-2.1:free` | FAIL error |
+| 10 | `kilocode/poolside/laguna-s-2.1:free` | OK |
 | 11 | `openai/free/deepseek-v4-pro-0813` | FAIL error |
 | 12 | `openai/free/gpt-6-luna` | FAIL error |
 | 13 | `openrouter/poolside/laguna-xs-2.1:free` | FAIL error |
 | 14 | `openai/free/glm-5.3-flash` | FAIL error |
-| 15 | `kilocode/poolside/laguna-xs-2.1:free` | FAIL error |
+| 15 | `kilocode/poolside/laguna-xs-2.1:free` | OK |
 | 16 | `openai/free/mimo-v2.6-pro` | FAIL error |
 | 17 | `openai/claude-sonnet-5` | FAIL error |
 | 18 | `openai/claude-opus-5.5` | FAIL error |
@@ -893,12 +895,12 @@ _Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); *
 <a id="combokeep-trying"></a>
 ### combo/keep-trying - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 1 / 4 testable
+**Working legs today:** 2 / 4 testable
 
 | # | Model | Status |
 |---|-------|--------|
 | 1 | `groq/openai/gpt-oss-120b` | OK |
-| 2 | `kilocode/nvidia/nemotron-3-ultra-550b-a55b:free` | FAIL error |
+| 2 | `kilocode/nvidia/nemotron-3-ultra-550b-a55b:free` | OK |
 | 3 | `openrouter/nvidia/nemotron-3-super-120b-a12b:free` | FAIL error |
 | 4 | `gemini/gemini-3.8-flash` | FAIL error |
 | 5 | `auto/best-coding` | untested |
@@ -906,17 +908,24 @@ _Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); *
 <a id="combokilocode-best"></a>
 ### combo/kilocode-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 0 / 6 testable
+**Working legs today:** 12 / 13 testable
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `kilocode/nvidia/nemotron-3.5-lightning:free` | FAIL error |
-| 2 | `kilocode/nvidia/nemotron-3-ultra-550b-a55b:free` | FAIL error |
-| 3 | `kilocode/nvidia/nemotron-3-super-120b-a12b:free` | FAIL error |
-| 4 | `kilocode/poolside/laguna-s-2.1:free` | FAIL error |
-| 5 | `kilocode/poolside/laguna-xs-2.1:free` | FAIL error |
-| 6 | `kilocode/cohere/north-mini-code:free` | FAIL error |
-| 7 | `auto/best-coding` | untested |
+| 1 | `kilocode/nvidia/nemotron-3.5-super-vl:free` | OK |
+| 2 | `kilocode/reflection/beam-free` | OK |
+| 3 | `kilocode/poolside/laguna-xs-2.1:free` | OK |
+| 4 | `kilocode/nvidia/nemotron-3.5-lightning:free` | OK |
+| 5 | `kilocode/nvidia/nemotron-3.5-content-safety:free` | OK |
+| 6 | `kilocode/openrouter/free` | OK |
+| 7 | `kilocode/cohere/north-mini-code:free` | OK |
+| 8 | `kilocode/minimax/minimax-m3.1-flash:free` | OK |
+| 9 | `kilocode/dots-studio/dots-3-note-preview:free` | OK |
+| 10 | `kilocode/kilo-auto/free` | OK |
+| 11 | `kilocode/nvidia/nemotron-3-ultra-550b-a55b:free` | OK |
+| 12 | `kilocode/poolside/laguna-s-2.1:free` | OK |
+| 13 | `kilocode/nvidia/nemotron-3-super-120b-a12b:free` | FAIL error |
+| 14 | `auto/best-coding` | untested |
 
 <a id="combokimi-best"></a>
 ### combo/kimi-best - [back to list](#8-combo-catalog-live)
@@ -1075,7 +1084,7 @@ _Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); *
 <a id="combonvidia-best"></a>
 ### combo/nvidia-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 2 / 30 testable
+**Working legs today:** 4 / 30 testable
 
 | # | Model | Status |
 |---|-------|--------|
@@ -1084,8 +1093,8 @@ _Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); *
 | 3 | `nvidia/nvidia/nemotron-4-340b-reward` | FAIL timeout |
 | 4 | `nvidia/nvidia/nemotron-nano-3-30b-a3b` | FAIL timeout |
 | 5 | `cline/nvidia/nemotron-3.5-lightning:free` | FAIL error |
-| 6 | `kilocode/nvidia/nemotron-3.5-content-safety:free` | FAIL error |
-| 7 | `kilocode/nvidia/nemotron-3.5-lightning:free` | FAIL error |
+| 6 | `kilocode/nvidia/nemotron-3.5-content-safety:free` | OK |
+| 7 | `kilocode/nvidia/nemotron-3.5-lightning:free` | OK |
 | 8 | `openrouter/nvidia/nemotron-3.5-lightning:free` | FAIL error |
 | 9 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free` | FAIL error |
 | 10 | `kilocode/nvidia/nemotron-3-super-120b-a12b:free` | FAIL error |
