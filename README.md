@@ -153,6 +153,8 @@ Legend: ✅ tested answering · ⏳ quota-flaky (recovers) · ❌ dead/paid · �
 
 **Full combo probe (today, live):** 29 combos, 333 unique provider/model legs tested via `test-all` - **92 OK**, 211 error, 3 slow, 27 no active connection.
 
+**Groq accounts (today):** 7 active Groq connections. 5 of 11 catalogue models pass `test-all`: `allam-2-7b`, `openai/gpt-oss-120b`, `openai/gpt-oss-20b`, `openai/gpt-oss-safeguard-20b`, `qwen/qwen3.8-27b`. The other 6 are TTS, prompt-guard and Whisper models (not chat).
+
 **Cline removed:** the Cline provider was removed (not working). 250 cline legs were dropped from the combos: gpt-best (-68), qwen-best (-37), mistral-best (-27), glm-best (-20), deepseek-best (-18), all-best (-14), gemini-best (-11), llama-best (-11), nvidia-best (-10), grok-best (-9), kimi-best (-9), gemma-best (-8), spark-best (-5), claude-best (-3).
 
 **Grok scan (today):** 45 grok-model candidates across kilocode, literouter, openai, opencode, opencode-zen, openrouter, lmarena, grok-web, t3-web and a custom gateway - **0 OK**. Kilocode 402 (credits), literouter 403 (plus/elite plan), openai 404. `grok-best` stays on `grok-cli`.
