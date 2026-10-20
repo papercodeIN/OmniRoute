@@ -63,7 +63,7 @@ Refresh picker anytime (double-click):
 
 - OpenCode model picker → provider **OmniRoute** → pick a `combo/*` (top of list)
 - Default daily driver: **`combo/all-best`** (~130 models, Claude-first priority, fails through everything alive)
-- Brand combos: `claude-best`, `gemini-best`, `gpt-best`, `grok-best`, `deepseek-best`, `qwen-best`, `nvidia-best`, `mistral-best`, `glm-best`, `kimi-best`, `llama-best`, `gemma-best`, `openrouter/kilocode/trae/codex/xkiro/ollama/kiro/literouter/apinex/nara/cleanapis-best`, `keep-trying`, `steady-coding`, `claude-code/max/fast`
+- Brand combos: `claude-best`, `gemini-best`, `gpt-best`, `grok-best`, `deepseek-best`, `qwen-best`, `nvidia-best`, `mistral-best`, `glm-best`, `kimi-best`, `llama-best`, `gemma-best`, `openrouter/kilocode/codex/xkiro/ollama/kiro/literouter/apinex/nara/cleanapis-best`, `keep-trying`, `steady-coding`, `claude-code/max/fast`
 - Single models: `auto/*` routes fan out across all healthy providers
 
 Rules learned the hard way:
@@ -105,7 +105,7 @@ Legend: ✅ tested answering · ⏳ quota-flaky (recovers) · ❌ dead/paid · �
 | **Grok CLI** ×10 / **Grok Web** ×13 | grok-4.7, fast | ✅ tested |
 | **Kimi (Moonshot)** ×2 | k3, k2d6 | tokens expire — watcher alerts |
 | **DeepSeek Web** ×2 | full 14-model lineup | tokens die ~hourly — watcher + 1-min re-auth script |
-| **Trae / Qoder / Kilo / Kiro / ClinePass** | assorted | mixed health, fail-through covers |
+| **Qoder / Kilo / Kiro / ClinePass** | assorted | mixed health, fail-through covers |
 | **GitHub Copilot** ×2 | claude/gpt via Copilot sub | 400s via gateway (use in IDE instead) |
 | **LMArena / Amazon Q / Ollama-cloud** | arena models | flaky/limited |
 
@@ -151,11 +151,13 @@ Legend: ✅ tested answering · ⏳ quota-flaky (recovers) · ❌ dead/paid · �
 
 ## Provider status snapshot (2026-10-20)
 
-**Full combo probe (today, live):** all 30 combos, 557 unique provider/model legs tested via `test-all` (8 workers, 40 s timeout) - **70 OK**, 455 error, 3 slow, 29 no active connection.
+**Full combo probe (today, live):** 29 combos, 562 unique provider/model legs tested via `test-all` (8 workers, 40 s timeout) - **82 OK**, 451 error, 2 slow, 27 no active connection.
 
 **New-model scan:** 73 catalogue models not yet in any combo were tested (free/latest models across claude, gpt, grok, gemini, qwen, kimi, glm, deepseek, llama, mistral, nvidia) - **13 OK** and added to their brand combos.
 
 **xkiro policy:** xkiro models are used **only in `xkiro-best`**. 39 xkiro legs were removed from `all-best` (-18), `qwen-best` (-9), `mistral-best` (-8) and `deepseek-best` (-4).
+
+**trae-best removed:** Trae is not usable on the free plan and its OmniRoute connection was deleted, so the combo was removed.
 
 Durable failures (401/402/404) are auto-disabled; transient ones (429/5xx/timeout) recover.
 
@@ -230,7 +232,6 @@ _Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); *
 | [`combo/qwen-best`](#comboqwen-best) | 46 | 4 / 45 |
 | [`combo/spark-best`](#combospark-best) | 6 | 0 / 5 |
 | [`combo/steady-coding`](#combosteady-coding) | 3 | 1 / 2 |
-| [`combo/trae-best`](#combotrae-best) | 3 | 0 / 2 |
 | [`combo/xkiro-best`](#comboxkiro-best) | 18 | 18 / 18 |
 
 <a id="comboall-best"></a>
@@ -1216,17 +1217,6 @@ _Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); *
 |---|-------|--------|
 | 1 | `groq/openai/gpt-oss-120b` | OK |
 | 2 | `gemini/gemini-3.8-flash` | FAIL error |
-| 3 | `auto/best-coding` | untested |
-
-<a id="combotrae-best"></a>
-### combo/trae-best - [back to list](#8-combo-catalog-live)
-
-**Working legs today:** 0 / 2 testable
-
-| # | Model | Status |
-|---|-------|--------|
-| 1 | `trae/gpt-5.4` | no connection |
-| 2 | `trae/gpt-5.2` | no connection |
 | 3 | `auto/best-coding` | untested |
 
 <a id="comboxkiro-best"></a>
