@@ -151,13 +151,13 @@ Legend: ✅ tested answering · ⏳ quota-flaky (recovers) · ❌ dead/paid · �
 
 ## Provider status snapshot (2026-10-20)
 
-**Full combo probe (today, live):** 29 combos, 333 unique provider/model legs tested via `test-all` - **92 OK**, 211 error, 3 slow, 27 no active connection.
+**Full combo probe (today, live):** 30 combos, 335 unique provider/model legs tested via `test-all` - **94 OK**, 211 error, 3 slow, 27 no active connection.
 
-**Groq accounts (today):** 7 active Groq connections. 5 of 11 catalogue models pass `test-all`: `allam-2-7b`, `openai/gpt-oss-120b`, `openai/gpt-oss-20b`, `openai/gpt-oss-safeguard-20b`, `qwen/qwen3.8-27b`. The other 6 are TTS, prompt-guard and Whisper models (not chat).
+**Groq (today):** 7 active accounts; 5 of 11 catalogue models pass `test-all`. `groq-best` is now the only combo carrying Groq - `qwen/qwen3.8-27b`, `openai/gpt-oss-120b`, `openai/gpt-oss-20b`, `openai/gpt-oss-safeguard-20b`, `allam-2-7b`, then `auto/best-coding`. Groq legs were removed from gpt-best, qwen-best, all-best, cleanapis-best, apinex-best, claude-code, claude-max, claude-fast, steady-coding and keep-trying. The other 6 Groq models are TTS, prompt-guard and Whisper (not chat).
 
-**Cline removed:** the Cline provider was removed (not working). 250 cline legs were dropped from the combos: gpt-best (-68), qwen-best (-37), mistral-best (-27), glm-best (-20), deepseek-best (-18), all-best (-14), gemini-best (-11), llama-best (-11), nvidia-best (-10), grok-best (-9), kimi-best (-9), gemma-best (-8), spark-best (-5), claude-best (-3).
+**Cline removed:** the Cline provider was removed (not working) and its 250 legs were dropped from the combos.
 
-**Grok scan (today):** 45 grok-model candidates across kilocode, literouter, openai, opencode, opencode-zen, openrouter, lmarena, grok-web, t3-web and a custom gateway - **0 OK**. Kilocode 402 (credits), literouter 403 (plus/elite plan), openai 404. `grok-best` stays on `grok-cli`.
+**Grok scan (today):** 45 grok-model candidates across 10 providers - **0 OK**; `grok-best` stays on `grok-cli` (4 of 17 legs OK).
 
 **Kilocode free-tier probe:** 18 free-flagged models tested - **12 OK**; 7 new models added to `kilocode-best`.
 
@@ -208,25 +208,26 @@ Key rules encoded: 401/402 = durable-dead (auto-disable), 403/429/5xx = transien
 
 ## 8. Combo catalog (live)
 
-_Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); **FAIL ...** = latest `test-all` result; **untested** = no result today. Every leg is listed in priority order: OK first, untested next, failed last; `auto/*` fallback stays at the end. xkiro legs appear only in `xkiro-best`._
+_Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); **FAIL ...** = latest `test-all` result; **untested** = no result today. Every leg is listed in priority order: OK first, untested next, failed last; `auto/*` fallback stays at the end. xkiro legs appear only in `xkiro-best`; groq legs only in `groq-best`._
 
 | Combo | Legs | OK / testable |
 |---|---|---|
-| [`combo/all-best`](#comboall-best) | 155 | 66 / 153 |
-| [`combo/apinex-best`](#comboapinex-best) | 9 | 1 / 8 |
+| [`combo/all-best`](#comboall-best) | 152 | 63 / 150 |
+| [`combo/apinex-best`](#comboapinex-best) | 8 | 0 / 7 |
 | [`combo/claude-best`](#comboclaude-best) | 31 | 0 / 30 |
-| [`combo/claude-code`](#comboclaude-code) | 4 | 1 / 2 |
-| [`combo/claude-fast`](#comboclaude-fast) | 4 | 1 / 2 |
-| [`combo/claude-max`](#comboclaude-max) | 5 | 1 / 2 |
-| [`combo/cleanapis-best`](#combocleanapis-best) | 24 | 6 / 23 |
+| [`combo/claude-code`](#comboclaude-code) | 3 | 0 / 1 |
+| [`combo/claude-fast`](#comboclaude-fast) | 3 | 0 / 1 |
+| [`combo/claude-max`](#comboclaude-max) | 4 | 0 / 1 |
+| [`combo/cleanapis-best`](#combocleanapis-best) | 21 | 3 / 20 |
 | [`combo/codex-best`](#combocodex-best) | 5 | 3 / 4 |
 | [`combo/deepseek-best`](#combodeepseek-best) | 29 | 7 / 28 |
 | [`combo/gemini-best`](#combogemini-best) | 23 | 13 / 22 |
 | [`combo/gemma-best`](#combogemma-best) | 14 | 1 / 13 |
 | [`combo/glm-best`](#comboglm-best) | 22 | 3 / 21 |
-| [`combo/gpt-best`](#combogpt-best) | 59 | 19 / 58 |
+| [`combo/gpt-best`](#combogpt-best) | 57 | 17 / 56 |
 | [`combo/grok-best`](#combogrok-best) | 9 | 4 / 8 |
-| [`combo/keep-trying`](#combokeep-trying) | 5 | 2 / 4 |
+| [`combo/groq-best`](#combogroq-best) | 6 | 5 / 5 |
+| [`combo/keep-trying`](#combokeep-trying) | 4 | 1 / 3 |
 | [`combo/kilocode-best`](#combokilocode-best) | 14 | 12 / 13 |
 | [`combo/kimi-best`](#combokimi-best) | 10 | 1 / 9 |
 | [`combo/kiro-best`](#combokiro-best) | 8 | 0 / 7 |
@@ -237,15 +238,15 @@ _Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); *
 | [`combo/nvidia-best`](#combonvidia-best) | 21 | 3 / 20 |
 | [`combo/ollama-best`](#comboollama-best) | 3 | 2 / 2 |
 | [`combo/openrouter-best`](#comboopenrouter-best) | 10 | 0 / 9 |
-| [`combo/qwen-best`](#comboqwen-best) | 9 | 4 / 8 |
+| [`combo/qwen-best`](#comboqwen-best) | 8 | 3 / 7 |
 | [`combo/spark-best`](#combospark-best) | 1 | 0 / 0 |
-| [`combo/steady-coding`](#combosteady-coding) | 3 | 1 / 2 |
+| [`combo/steady-coding`](#combosteady-coding) | 2 | 0 / 1 |
 | [`combo/xkiro-best`](#comboxkiro-best) | 18 | 18 / 18 |
 
 <a id="comboall-best"></a>
 ### combo/all-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 66 / 153 testable
+**Working legs today:** 63 / 150 testable
 
 | # | Model | Status |
 |---|-------|--------|
@@ -295,132 +296,128 @@ _Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); *
 | 44 | `literouter/deepseek-v3.2` | OK |
 | 45 | `literouter/deepseek-v4-pro-cheap` | OK |
 | 46 | `literouter/glm-5.2` | OK |
-| 47 | `groq/openai/gpt-oss-120b` | OK |
-| 48 | `groq/qwen/qwen3.8-27b` | OK |
-| 49 | `groq/openai/gpt-oss-20b` | OK |
-| 50 | `codestral/codestral-latest` | OK |
-| 51 | `codestral/codestral-2508` | OK |
-| 52 | `codex/gpt-6-luna` | OK |
-| 53 | `mistral/codestral-latest` | OK |
-| 54 | `ollama-cloud/nemotron-3-super` | OK |
-| 55 | `grok-cli/grok-4.7-low` | OK |
-| 56 | `codex/gpt-5.6-luna` | OK |
-| 57 | `ollama-cloud/gemma4:31b` | OK |
-| 58 | `grok-cli/grok-4.7` | OK |
-| 59 | `codex/gpt-5.6-terra` | OK |
-| 60 | `grok-cli/grok-4.7-high` | OK |
-| 61 | `nara/laguna-s-2.1` | OK |
-| 62 | `morph/morph-v3-fast` | OK |
-| 63 | `openrouter/nvidia/nemotron-3-super-120b-a12b:free` | FAIL error |
-| 64 | `kilocode/nvidia/nemotron-3.5-lightning:free` | OK |
-| 65 | `literouter/glm-5:free` | FAIL error |
-| 66 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free` | FAIL error |
-| 67 | `kilocode/poolside/laguna-s-2.1:free` | OK |
-| 68 | `literouter/glm-5.3-flash:free` | FAIL error |
-| 69 | `openrouter/cohere/north-mini-code:free` | FAIL error |
-| 70 | `kilocode/poolside/laguna-xs-2.1:free` | OK |
-| 71 | `literouter/deepseek-v3.2:free` | FAIL error |
-| 72 | `openrouter/poolside/laguna-s-2.1:free` | FAIL error |
-| 73 | `kilocode/nvidia/nemotron-3-super-120b-a12b:free` | FAIL error |
-| 74 | `literouter/gpt-oss-120b:free` | FAIL error |
-| 75 | `openrouter/poolside/laguna-xs-2.1:free` | FAIL error |
-| 76 | `kilocode/cohere/north-mini-code:free` | OK |
-| 77 | `literouter/kimi-k2.7-code-cheap:free` | FAIL error |
-| 78 | `openrouter/nvidia/nemotron-3.5-lightning:free` | FAIL error |
-| 79 | `literouter/qwen3-coder-next:free` | FAIL error |
-| 80 | `literouter/ministral-3b-2512:free` | FAIL error |
-| 81 | `literouter/ministral-3-8b-instruct:free` | FAIL error |
-| 82 | `literouter/deepseek-v4-flash-cheap:free` | FAIL error |
-| 83 | `literouter/deepseek-v4-flash:free` | FAIL error |
-| 84 | `literouter/deepseek-v4.1-flash-cheap:free` | FAIL error |
-| 85 | `literouter/deepseek-v4.1-flash-stable:free` | FAIL error |
-| 86 | `literouter/deepseek-v4.1-flash:free` | FAIL error |
-| 87 | `literouter/gemini-2.5-flash-lite:free` | FAIL error |
-| 88 | `literouter/glm-4.5:free` | FAIL error |
-| 89 | `literouter/glm-4.6:free` | FAIL error |
-| 90 | `literouter/glm-4.7-flash-heretic:free` | FAIL error |
-| 91 | `literouter/glm-4.7-flash:free` | FAIL error |
-| 92 | `literouter/glm-4.7:free` | FAIL error |
-| 93 | `literouter/glm-5.1-cheap:free` | FAIL error |
-| 94 | `literouter/glm-5.1:free` | FAIL error |
-| 95 | `literouter/glm-5.2-cheap:free` | FAIL error |
-| 96 | `literouter/glm-5.2:free` | FAIL error |
-| 97 | `nara/nemotron-3.5-lightning-free` | FAIL error |
-| 98 | `literouter/deepseek-v4-flash` | FAIL error |
-| 99 | `literouter/deepseek-v4-flash-cheap` | FAIL error |
-| 100 | `literouter/deepseek-v4-flash-stable` | FAIL error |
-| 101 | `literouter/deepseek-v4-pro` | FAIL error |
-| 102 | `literouter/deepseek-v4.1-flash` | FAIL error |
-| 103 | `literouter/deepseek-v4.1-flash-cheap` | FAIL error |
-| 104 | `literouter/deepseek-v4.1-flash-stable` | FAIL error |
-| 105 | `literouter/glm-4.5` | FAIL error |
-| 106 | `literouter/glm-4.5-air` | FAIL error |
-| 107 | `literouter/glm-4.6` | FAIL error |
-| 108 | `literouter/glm-4.7` | FAIL error |
-| 109 | `literouter/glm-4.7-flash` | FAIL error |
-| 110 | `literouter/glm-4.7-flash-heretic` | FAIL error |
-| 111 | `literouter/glm-5` | FAIL error |
-| 112 | `literouter/glm-5.1` | FAIL error |
-| 113 | `literouter/glm-5.2-cheap` | FAIL error |
-| 114 | `literouter/glm-5.3` | FAIL error |
-| 115 | `literouter/glm-5.3-cheap` | FAIL error |
-| 116 | `literouter/glm-5.3-flash` | FAIL error |
-| 117 | `literouter/glm-5.3-flash-cheap` | FAIL error |
-| 118 | `literouter/gpt-5-mini` | FAIL error |
-| 119 | `literouter/gpt-5-mini-stable` | FAIL error |
-| 120 | `antigravity/claude-opus-4-6-thinking-low` | FAIL error |
-| 121 | `antigravity/claude-opus-4-6-thinking` | FAIL error |
-| 122 | `antigravity/claude-sonnet-4-6-low` | FAIL error |
-| 123 | `agy/claude-opus-4-6-thinking-low` | FAIL error |
-| 124 | `agy/claude-sonnet-4-6-low` | FAIL error |
-| 125 | `claude-web/claude-opus-4-6` | FAIL error |
-| 126 | `claude-web/claude-sonnet-4-6-low` | FAIL error |
-| 127 | `claude-web/claude-opus-5-low` | FAIL error |
-| 128 | `deepseek-web/deepseek-chat` | FAIL error |
-| 129 | `gemini/gemini-3.8-flash-lite-tts` | FAIL error |
-| 130 | `kiro/qwen3-coder-next` | FAIL error |
-| 131 | `zai-web/glm-5.3` | FAIL error |
-| 132 | `grok-web/fast` | FAIL error |
-| 133 | `deepseek-web/DeepSeek-V3.2` | FAIL error |
-| 134 | `kiro/glm-5` | FAIL error |
-| 135 | `zai-web/glm-5.3-flash` | FAIL error |
-| 136 | `deepseek-web/deepseek-reasoner` | FAIL error |
-| 137 | `codex/gpt-5.5` | FAIL error |
-| 138 | `kiro/deepseek-3.2` | FAIL error |
-| 139 | `zai-web/glm-5.2` | FAIL error |
-| 140 | `grok-cli/grok-4.7-medium` | FAIL timeout |
-| 141 | `deepseek-web/deepseek-v4-flash` | FAIL error |
-| 142 | `kiro/minimax-m2.1` | FAIL error |
-| 143 | `deepseek-web/deepseek-v4-pro` | FAIL error |
-| 144 | `kiro/minimax-m2.5` | FAIL error |
-| 145 | `deepseek-web/deepseek-v4-pro-think` | FAIL error |
-| 146 | `deepseek-web/deepseek-v4-pro-search` | FAIL error |
-| 147 | `deepseek-web/deepseek-v4-pro-think-search` | FAIL error |
-| 148 | `deepseek-web/deepseek-v4-flash-think` | FAIL error |
-| 149 | `deepseek-web/deepseek-v4-flash-search` | FAIL error |
-| 150 | `deepseek-web/deepseek-v4-flash-think-search` | FAIL error |
-| 151 | `deepseek-web/DeepSeek-R1` | FAIL error |
-| 152 | `deepseek-web/DeepSeek-R1-Search` | FAIL error |
-| 153 | `deepseek-web/DeepSeek-Search` | FAIL error |
-| 154 | `auto/coding:free` | untested |
-| 155 | `auto/best-coding` | untested |
+| 47 | `codestral/codestral-latest` | OK |
+| 48 | `codestral/codestral-2508` | OK |
+| 49 | `codex/gpt-6-luna` | OK |
+| 50 | `mistral/codestral-latest` | OK |
+| 51 | `ollama-cloud/nemotron-3-super` | OK |
+| 52 | `grok-cli/grok-4.7-low` | OK |
+| 53 | `codex/gpt-5.6-luna` | OK |
+| 54 | `ollama-cloud/gemma4:31b` | OK |
+| 55 | `grok-cli/grok-4.7` | OK |
+| 56 | `codex/gpt-5.6-terra` | OK |
+| 57 | `grok-cli/grok-4.7-high` | OK |
+| 58 | `nara/laguna-s-2.1` | OK |
+| 59 | `morph/morph-v3-fast` | OK |
+| 60 | `openrouter/nvidia/nemotron-3-super-120b-a12b:free` | FAIL error |
+| 61 | `kilocode/nvidia/nemotron-3.5-lightning:free` | OK |
+| 62 | `literouter/glm-5:free` | FAIL error |
+| 63 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free` | FAIL error |
+| 64 | `kilocode/poolside/laguna-s-2.1:free` | OK |
+| 65 | `literouter/glm-5.3-flash:free` | FAIL error |
+| 66 | `openrouter/cohere/north-mini-code:free` | FAIL error |
+| 67 | `kilocode/poolside/laguna-xs-2.1:free` | OK |
+| 68 | `literouter/deepseek-v3.2:free` | FAIL error |
+| 69 | `openrouter/poolside/laguna-s-2.1:free` | FAIL error |
+| 70 | `kilocode/nvidia/nemotron-3-super-120b-a12b:free` | FAIL error |
+| 71 | `literouter/gpt-oss-120b:free` | FAIL error |
+| 72 | `openrouter/poolside/laguna-xs-2.1:free` | FAIL error |
+| 73 | `kilocode/cohere/north-mini-code:free` | OK |
+| 74 | `literouter/kimi-k2.7-code-cheap:free` | FAIL error |
+| 75 | `openrouter/nvidia/nemotron-3.5-lightning:free` | FAIL error |
+| 76 | `literouter/qwen3-coder-next:free` | FAIL error |
+| 77 | `literouter/ministral-3b-2512:free` | FAIL error |
+| 78 | `literouter/ministral-3-8b-instruct:free` | FAIL error |
+| 79 | `literouter/deepseek-v4-flash-cheap:free` | FAIL error |
+| 80 | `literouter/deepseek-v4-flash:free` | FAIL error |
+| 81 | `literouter/deepseek-v4.1-flash-cheap:free` | FAIL error |
+| 82 | `literouter/deepseek-v4.1-flash-stable:free` | FAIL error |
+| 83 | `literouter/deepseek-v4.1-flash:free` | FAIL error |
+| 84 | `literouter/gemini-2.5-flash-lite:free` | FAIL error |
+| 85 | `literouter/glm-4.5:free` | FAIL error |
+| 86 | `literouter/glm-4.6:free` | FAIL error |
+| 87 | `literouter/glm-4.7-flash-heretic:free` | FAIL error |
+| 88 | `literouter/glm-4.7-flash:free` | FAIL error |
+| 89 | `literouter/glm-4.7:free` | FAIL error |
+| 90 | `literouter/glm-5.1-cheap:free` | FAIL error |
+| 91 | `literouter/glm-5.1:free` | FAIL error |
+| 92 | `literouter/glm-5.2-cheap:free` | FAIL error |
+| 93 | `literouter/glm-5.2:free` | FAIL error |
+| 94 | `nara/nemotron-3.5-lightning-free` | FAIL error |
+| 95 | `literouter/deepseek-v4-flash` | FAIL error |
+| 96 | `literouter/deepseek-v4-flash-cheap` | FAIL error |
+| 97 | `literouter/deepseek-v4-flash-stable` | FAIL error |
+| 98 | `literouter/deepseek-v4-pro` | FAIL error |
+| 99 | `literouter/deepseek-v4.1-flash` | FAIL error |
+| 100 | `literouter/deepseek-v4.1-flash-cheap` | FAIL error |
+| 101 | `literouter/deepseek-v4.1-flash-stable` | FAIL error |
+| 102 | `literouter/glm-4.5` | FAIL error |
+| 103 | `literouter/glm-4.5-air` | FAIL error |
+| 104 | `literouter/glm-4.6` | FAIL error |
+| 105 | `literouter/glm-4.7` | FAIL error |
+| 106 | `literouter/glm-4.7-flash` | FAIL error |
+| 107 | `literouter/glm-4.7-flash-heretic` | FAIL error |
+| 108 | `literouter/glm-5` | FAIL error |
+| 109 | `literouter/glm-5.1` | FAIL error |
+| 110 | `literouter/glm-5.2-cheap` | FAIL error |
+| 111 | `literouter/glm-5.3` | FAIL error |
+| 112 | `literouter/glm-5.3-cheap` | FAIL error |
+| 113 | `literouter/glm-5.3-flash` | FAIL error |
+| 114 | `literouter/glm-5.3-flash-cheap` | FAIL error |
+| 115 | `literouter/gpt-5-mini` | FAIL error |
+| 116 | `literouter/gpt-5-mini-stable` | FAIL error |
+| 117 | `antigravity/claude-opus-4-6-thinking-low` | FAIL error |
+| 118 | `antigravity/claude-opus-4-6-thinking` | FAIL error |
+| 119 | `antigravity/claude-sonnet-4-6-low` | FAIL error |
+| 120 | `agy/claude-opus-4-6-thinking-low` | FAIL error |
+| 121 | `agy/claude-sonnet-4-6-low` | FAIL error |
+| 122 | `claude-web/claude-opus-4-6` | FAIL error |
+| 123 | `claude-web/claude-sonnet-4-6-low` | FAIL error |
+| 124 | `claude-web/claude-opus-5-low` | FAIL error |
+| 125 | `deepseek-web/deepseek-chat` | FAIL error |
+| 126 | `gemini/gemini-3.8-flash-lite-tts` | FAIL error |
+| 127 | `kiro/qwen3-coder-next` | FAIL error |
+| 128 | `zai-web/glm-5.3` | FAIL error |
+| 129 | `grok-web/fast` | FAIL error |
+| 130 | `deepseek-web/DeepSeek-V3.2` | FAIL error |
+| 131 | `kiro/glm-5` | FAIL error |
+| 132 | `zai-web/glm-5.3-flash` | FAIL error |
+| 133 | `deepseek-web/deepseek-reasoner` | FAIL error |
+| 134 | `codex/gpt-5.5` | FAIL error |
+| 135 | `kiro/deepseek-3.2` | FAIL error |
+| 136 | `zai-web/glm-5.2` | FAIL error |
+| 137 | `grok-cli/grok-4.7-medium` | FAIL timeout |
+| 138 | `deepseek-web/deepseek-v4-flash` | FAIL error |
+| 139 | `kiro/minimax-m2.1` | FAIL error |
+| 140 | `deepseek-web/deepseek-v4-pro` | FAIL error |
+| 141 | `kiro/minimax-m2.5` | FAIL error |
+| 142 | `deepseek-web/deepseek-v4-pro-think` | FAIL error |
+| 143 | `deepseek-web/deepseek-v4-pro-search` | FAIL error |
+| 144 | `deepseek-web/deepseek-v4-pro-think-search` | FAIL error |
+| 145 | `deepseek-web/deepseek-v4-flash-think` | FAIL error |
+| 146 | `deepseek-web/deepseek-v4-flash-search` | FAIL error |
+| 147 | `deepseek-web/deepseek-v4-flash-think-search` | FAIL error |
+| 148 | `deepseek-web/DeepSeek-R1` | FAIL error |
+| 149 | `deepseek-web/DeepSeek-R1-Search` | FAIL error |
+| 150 | `deepseek-web/DeepSeek-Search` | FAIL error |
+| 151 | `auto/coding:free` | untested |
+| 152 | `auto/best-coding` | untested |
 
 <a id="comboapinex-best"></a>
 ### combo/apinex-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 1 / 8 testable
+**Working legs today:** 0 / 7 testable
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `groq/openai/gpt-oss-120b` | OK |
-| 2 | `openai/free/gpt-6-luna` | FAIL error |
-| 3 | `openai/free/glm-5.3-flash` | FAIL error |
-| 4 | `openai/free/deepseek-v4.1-flash` | FAIL error |
-| 5 | `openai/free/qwen-3.8-max` | FAIL error |
-| 6 | `openai/free/mimo-v2.6-pro` | FAIL error |
-| 7 | `openai/free/deepseek-v4-pro-0813` | FAIL error |
-| 8 | `openai/free/deepseek-v4-flash-0731` | FAIL error |
-| 9 | `auto/best-coding` | untested |
+| 1 | `openai/free/gpt-6-luna` | FAIL error |
+| 2 | `openai/free/glm-5.3-flash` | FAIL error |
+| 3 | `openai/free/deepseek-v4.1-flash` | FAIL error |
+| 4 | `openai/free/qwen-3.8-max` | FAIL error |
+| 5 | `openai/free/mimo-v2.6-pro` | FAIL error |
+| 6 | `openai/free/deepseek-v4-pro-0813` | FAIL error |
+| 7 | `openai/free/deepseek-v4-flash-0731` | FAIL error |
+| 8 | `auto/best-coding` | untested |
 
 <a id="comboclaude-best"></a>
 ### combo/claude-best - [back to list](#8-combo-catalog-live)
@@ -464,71 +461,65 @@ _Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); *
 <a id="comboclaude-code"></a>
 ### combo/claude-code - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 1 / 2 testable
+**Working legs today:** 0 / 1 testable
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `groq/openai/gpt-oss-120b` | OK |
-| 2 | `gemini/gemini-3.8-flash` | FAIL error |
-| 3 | `auto/claude-sonnet` | untested |
-| 4 | `auto/best-coding` | untested |
+| 1 | `gemini/gemini-3.8-flash` | FAIL error |
+| 2 | `auto/claude-sonnet` | untested |
+| 3 | `auto/best-coding` | untested |
 
 <a id="comboclaude-fast"></a>
 ### combo/claude-fast - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 1 / 2 testable
+**Working legs today:** 0 / 1 testable
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `groq/openai/gpt-oss-120b` | OK |
-| 2 | `gemini/gemini-3.8-flash` | FAIL error |
-| 3 | `auto/best-fast` | untested |
-| 4 | `auto/best-coding` | untested |
+| 1 | `gemini/gemini-3.8-flash` | FAIL error |
+| 2 | `auto/best-fast` | untested |
+| 3 | `auto/best-coding` | untested |
 
 <a id="comboclaude-max"></a>
 ### combo/claude-max - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 1 / 2 testable
+**Working legs today:** 0 / 1 testable
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `groq/openai/gpt-oss-120b` | OK |
-| 2 | `gemini/gemini-3.8-flash` | FAIL error |
-| 3 | `auto/claude-opus` | untested |
-| 4 | `auto/claude-sonnet` | untested |
-| 5 | `auto/best-coding` | untested |
+| 1 | `gemini/gemini-3.8-flash` | FAIL error |
+| 2 | `auto/claude-opus` | untested |
+| 3 | `auto/claude-sonnet` | untested |
+| 4 | `auto/best-coding` | untested |
 
 <a id="combocleanapis-best"></a>
 ### combo/cleanapis-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 6 / 23 testable
+**Working legs today:** 3 / 20 testable
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `groq/openai/gpt-oss-120b` | OK |
-| 2 | `groq/qwen/qwen3.8-27b` | OK |
-| 3 | `groq/openai/gpt-oss-20b` | OK |
-| 4 | `openrouter/cohere/north-mini-code:free` | FAIL error |
-| 5 | `kilocode/cohere/north-mini-code:free` | OK |
-| 6 | `openai/free/qwen-3.8-max` | FAIL error |
-| 7 | `openai/free/deepseek-v4.1-flash` | FAIL error |
-| 8 | `openrouter/poolside/laguna-s-2.1:free` | FAIL error |
-| 9 | `openai/free/deepseek-v4-flash-0731` | FAIL error |
-| 10 | `kilocode/poolside/laguna-s-2.1:free` | OK |
-| 11 | `openai/free/deepseek-v4-pro-0813` | FAIL error |
-| 12 | `openai/free/gpt-6-luna` | FAIL error |
-| 13 | `openrouter/poolside/laguna-xs-2.1:free` | FAIL error |
-| 14 | `openai/free/glm-5.3-flash` | FAIL error |
-| 15 | `kilocode/poolside/laguna-xs-2.1:free` | OK |
-| 16 | `openai/free/mimo-v2.6-pro` | FAIL error |
-| 17 | `openai/claude-sonnet-5` | FAIL error |
-| 18 | `openai/claude-opus-5.5` | FAIL error |
-| 19 | `gemini/gemini-3.8-flash` | FAIL error |
-| 20 | `openai/kimi-k3` | FAIL error |
-| 21 | `openai/glm-5.3` | FAIL error |
-| 22 | `openai/deepseek-v4-pro-max` | FAIL error |
-| 23 | `gemini/gemini-3.7-flash` | FAIL error |
-| 24 | `auto/best-coding` | untested |
+| 1 | `openrouter/cohere/north-mini-code:free` | FAIL error |
+| 2 | `kilocode/cohere/north-mini-code:free` | OK |
+| 3 | `openai/free/qwen-3.8-max` | FAIL error |
+| 4 | `openai/free/deepseek-v4.1-flash` | FAIL error |
+| 5 | `openrouter/poolside/laguna-s-2.1:free` | FAIL error |
+| 6 | `openai/free/deepseek-v4-flash-0731` | FAIL error |
+| 7 | `kilocode/poolside/laguna-s-2.1:free` | OK |
+| 8 | `openai/free/deepseek-v4-pro-0813` | FAIL error |
+| 9 | `openai/free/gpt-6-luna` | FAIL error |
+| 10 | `openrouter/poolside/laguna-xs-2.1:free` | FAIL error |
+| 11 | `openai/free/glm-5.3-flash` | FAIL error |
+| 12 | `kilocode/poolside/laguna-xs-2.1:free` | OK |
+| 13 | `openai/free/mimo-v2.6-pro` | FAIL error |
+| 14 | `openai/claude-sonnet-5` | FAIL error |
+| 15 | `openai/claude-opus-5.5` | FAIL error |
+| 16 | `gemini/gemini-3.8-flash` | FAIL error |
+| 17 | `openai/kimi-k3` | FAIL error |
+| 18 | `openai/glm-5.3` | FAIL error |
+| 19 | `openai/deepseek-v4-pro-max` | FAIL error |
+| 20 | `gemini/gemini-3.7-flash` | FAIL error |
+| 21 | `auto/best-coding` | untested |
 
 <a id="combocodex-best"></a>
 ### combo/codex-best - [back to list](#8-combo-catalog-live)
@@ -666,69 +657,67 @@ _Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); *
 <a id="combogpt-best"></a>
 ### combo/gpt-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 19 / 58 testable
+**Working legs today:** 17 / 56 testable
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `groq/openai/gpt-oss-120b` | OK |
-| 2 | `groq/openai/gpt-oss-20b` | OK |
-| 3 | `codex/gpt-6-luna` | OK |
-| 4 | `codex/gpt-5.6-luna` | OK |
-| 5 | `codex/gpt-5.6-terra` | OK |
-| 6 | `codex/gpt-6-luna-max` | OK |
-| 7 | `codex/gpt-6-luna-high` | OK |
-| 8 | `codex/gpt-6-luna-xhigh` | OK |
-| 9 | `codex/gpt-6-luna-medium` | OK |
-| 10 | `codex/gpt-6-luna-low` | OK |
-| 11 | `codex/gpt-5.6-luna-max` | OK |
-| 12 | `codex/gpt-5.6-terra-max` | OK |
-| 13 | `codex/gpt-5.6-luna-high` | OK |
-| 14 | `codex/gpt-5.6-luna-xhigh` | OK |
-| 15 | `codex/gpt-5.6-terra-high` | OK |
-| 16 | `codex/gpt-5.6-terra-xhigh` | OK |
-| 17 | `codex/gpt-5.6-luna-medium` | OK |
-| 18 | `codex/gpt-5.6-luna-low` | OK |
-| 19 | `codex/gpt-5.6-terra-low` | OK |
-| 20 | `codex/gpt-5.5` | FAIL error |
-| 21 | `codex/gpt-6-astra-max` | FAIL error |
-| 22 | `codex/gpt-6-astra-ultra` | FAIL error |
-| 23 | `codex/gpt-6-sol-max` | FAIL error |
-| 24 | `codex/gpt-6-sol-ultra` | FAIL error |
-| 25 | `codex/gpt-6-astra-high` | FAIL error |
-| 26 | `codex/gpt-6-astra-xhigh` | FAIL error |
-| 27 | `codex/gpt-6-sol-high` | FAIL error |
-| 28 | `codex/gpt-6-sol-xhigh` | FAIL error |
-| 29 | `codex/gpt-6-astra` | FAIL error |
-| 30 | `codex/gpt-6-sol` | FAIL error |
-| 31 | `codex/gpt-6-astra-medium` | FAIL error |
-| 32 | `codex/gpt-6-sol-medium` | FAIL error |
-| 33 | `codex/gpt-6-astra-low` | FAIL error |
-| 34 | `codex/gpt-6-sol-low` | FAIL error |
-| 35 | `codex/gpt-5.6-sol-max` | FAIL error |
-| 36 | `codex/gpt-5.6-sol-ultra` | FAIL error |
-| 37 | `codex/gpt-5.6-terra-ultra` | FAIL error |
-| 38 | `codex/gpt-5.6-sol-high` | FAIL error |
-| 39 | `codex/gpt-5.6-sol-xhigh` | FAIL error |
-| 40 | `codex/gpt-5.6-sol` | FAIL error |
-| 41 | `kiro/gpt-5.6-luna` | FAIL error |
-| 42 | `kiro/gpt-5.6-sol` | FAIL error |
-| 43 | `kiro/gpt-5.6-terra` | FAIL error |
-| 44 | `codex/gpt-5.6-sol-medium` | FAIL error |
-| 45 | `codex/gpt-5.6-terra-medium` | FAIL error |
-| 46 | `codex/gpt-5.6-sol-low` | FAIL error |
-| 47 | `codex/gpt-5.5-high` | FAIL error |
-| 48 | `codex/gpt-5.5-xhigh` | FAIL error |
-| 49 | `codex/gpt-5.5-medium` | FAIL error |
-| 50 | `codex/gpt-5.5-low` | FAIL error |
-| 51 | `nvidia/openai/gpt-oss-20b` | FAIL error |
-| 52 | `agy/gpt-oss-120b-medium` | FAIL error |
-| 53 | `antigravity/gpt-oss-120b-medium` | FAIL error |
-| 54 | `ddgw/gpt-5.6-luna` | no connection |
-| 55 | `ddgw/gpt-5.4-mini` | no connection |
-| 56 | `cfp/openai/gpt-oss-120b` | no connection |
-| 57 | `cfp/openai/gpt-oss-20b` | no connection |
-| 58 | `ddgw/tinfoil/gpt-oss-120b` | no connection |
-| 59 | `auto/best-coding` | untested |
+| 1 | `codex/gpt-6-luna` | OK |
+| 2 | `codex/gpt-5.6-luna` | OK |
+| 3 | `codex/gpt-5.6-terra` | OK |
+| 4 | `codex/gpt-6-luna-max` | OK |
+| 5 | `codex/gpt-6-luna-high` | OK |
+| 6 | `codex/gpt-6-luna-xhigh` | OK |
+| 7 | `codex/gpt-6-luna-medium` | OK |
+| 8 | `codex/gpt-6-luna-low` | OK |
+| 9 | `codex/gpt-5.6-luna-max` | OK |
+| 10 | `codex/gpt-5.6-terra-max` | OK |
+| 11 | `codex/gpt-5.6-luna-high` | OK |
+| 12 | `codex/gpt-5.6-luna-xhigh` | OK |
+| 13 | `codex/gpt-5.6-terra-high` | OK |
+| 14 | `codex/gpt-5.6-terra-xhigh` | OK |
+| 15 | `codex/gpt-5.6-luna-medium` | OK |
+| 16 | `codex/gpt-5.6-luna-low` | OK |
+| 17 | `codex/gpt-5.6-terra-low` | OK |
+| 18 | `codex/gpt-5.5` | FAIL error |
+| 19 | `codex/gpt-6-astra-max` | FAIL error |
+| 20 | `codex/gpt-6-astra-ultra` | FAIL error |
+| 21 | `codex/gpt-6-sol-max` | FAIL error |
+| 22 | `codex/gpt-6-sol-ultra` | FAIL error |
+| 23 | `codex/gpt-6-astra-high` | FAIL error |
+| 24 | `codex/gpt-6-astra-xhigh` | FAIL error |
+| 25 | `codex/gpt-6-sol-high` | FAIL error |
+| 26 | `codex/gpt-6-sol-xhigh` | FAIL error |
+| 27 | `codex/gpt-6-astra` | FAIL error |
+| 28 | `codex/gpt-6-sol` | FAIL error |
+| 29 | `codex/gpt-6-astra-medium` | FAIL error |
+| 30 | `codex/gpt-6-sol-medium` | FAIL error |
+| 31 | `codex/gpt-6-astra-low` | FAIL error |
+| 32 | `codex/gpt-6-sol-low` | FAIL error |
+| 33 | `codex/gpt-5.6-sol-max` | FAIL error |
+| 34 | `codex/gpt-5.6-sol-ultra` | FAIL error |
+| 35 | `codex/gpt-5.6-terra-ultra` | FAIL error |
+| 36 | `codex/gpt-5.6-sol-high` | FAIL error |
+| 37 | `codex/gpt-5.6-sol-xhigh` | FAIL error |
+| 38 | `codex/gpt-5.6-sol` | FAIL error |
+| 39 | `kiro/gpt-5.6-luna` | FAIL error |
+| 40 | `kiro/gpt-5.6-sol` | FAIL error |
+| 41 | `kiro/gpt-5.6-terra` | FAIL error |
+| 42 | `codex/gpt-5.6-sol-medium` | FAIL error |
+| 43 | `codex/gpt-5.6-terra-medium` | FAIL error |
+| 44 | `codex/gpt-5.6-sol-low` | FAIL error |
+| 45 | `codex/gpt-5.5-high` | FAIL error |
+| 46 | `codex/gpt-5.5-xhigh` | FAIL error |
+| 47 | `codex/gpt-5.5-medium` | FAIL error |
+| 48 | `codex/gpt-5.5-low` | FAIL error |
+| 49 | `nvidia/openai/gpt-oss-20b` | FAIL error |
+| 50 | `agy/gpt-oss-120b-medium` | FAIL error |
+| 51 | `antigravity/gpt-oss-120b-medium` | FAIL error |
+| 52 | `ddgw/gpt-5.6-luna` | no connection |
+| 53 | `ddgw/gpt-5.4-mini` | no connection |
+| 54 | `cfp/openai/gpt-oss-120b` | no connection |
+| 55 | `cfp/openai/gpt-oss-20b` | no connection |
+| 56 | `ddgw/tinfoil/gpt-oss-120b` | no connection |
+| 57 | `auto/best-coding` | untested |
 
 <a id="combogrok-best"></a>
 ### combo/grok-best - [back to list](#8-combo-catalog-live)
@@ -747,18 +736,31 @@ _Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); *
 | 8 | `grok-web/heavy` | FAIL error |
 | 9 | `auto/best-coding` | untested |
 
-<a id="combokeep-trying"></a>
-### combo/keep-trying - [back to list](#8-combo-catalog-live)
+<a id="combogroq-best"></a>
+### combo/groq-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 2 / 4 testable
+**Working legs today:** 5 / 5 testable
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `groq/openai/gpt-oss-120b` | OK |
-| 2 | `kilocode/nvidia/nemotron-3-ultra-550b-a55b:free` | OK |
-| 3 | `openrouter/nvidia/nemotron-3-super-120b-a12b:free` | FAIL error |
-| 4 | `gemini/gemini-3.8-flash` | FAIL error |
-| 5 | `auto/best-coding` | untested |
+| 1 | `groq/qwen/qwen3.8-27b` | OK |
+| 2 | `groq/openai/gpt-oss-120b` | OK |
+| 3 | `groq/openai/gpt-oss-20b` | OK |
+| 4 | `groq/openai/gpt-oss-safeguard-20b` | OK |
+| 5 | `groq/allam-2-7b` | OK |
+| 6 | `auto/best-coding` | untested |
+
+<a id="combokeep-trying"></a>
+### combo/keep-trying - [back to list](#8-combo-catalog-live)
+
+**Working legs today:** 1 / 3 testable
+
+| # | Model | Status |
+|---|-------|--------|
+| 1 | `kilocode/nvidia/nemotron-3-ultra-550b-a55b:free` | OK |
+| 2 | `openrouter/nvidia/nemotron-3-super-120b-a12b:free` | FAIL error |
+| 3 | `gemini/gemini-3.8-flash` | FAIL error |
+| 4 | `auto/best-coding` | untested |
 
 <a id="combokilocode-best"></a>
 ### combo/kilocode-best - [back to list](#8-combo-catalog-live)
@@ -950,19 +952,18 @@ _Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); *
 <a id="comboqwen-best"></a>
 ### combo/qwen-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 4 / 8 testable
+**Working legs today:** 3 / 7 testable
 
 | # | Model | Status |
 |---|-------|--------|
 | 1 | `literouter/qwen3-coder:free` | OK |
 | 2 | `literouter/qwen3-32b:free` | OK |
 | 3 | `literouter/qwen3.5-9b:free` | OK |
-| 4 | `groq/qwen/qwen3.8-27b` | OK |
-| 5 | `kiro/qwen3-coder-next` | FAIL error |
-| 6 | `cfp/qwen/qwen2.5-coder-32b-instruct` | no connection |
-| 7 | `cfp/qwen/qwen3-30b-a3b-fp8` | no connection |
-| 8 | `cfp/qwen/qwq-32b` | no connection |
-| 9 | `auto/best-coding` | untested |
+| 4 | `kiro/qwen3-coder-next` | FAIL error |
+| 5 | `cfp/qwen/qwen2.5-coder-32b-instruct` | no connection |
+| 6 | `cfp/qwen/qwen3-30b-a3b-fp8` | no connection |
+| 7 | `cfp/qwen/qwq-32b` | no connection |
+| 8 | `auto/best-coding` | untested |
 
 <a id="combospark-best"></a>
 ### combo/spark-best - [back to list](#8-combo-catalog-live)
@@ -976,13 +977,12 @@ _Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); *
 <a id="combosteady-coding"></a>
 ### combo/steady-coding - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 1 / 2 testable
+**Working legs today:** 0 / 1 testable
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `groq/openai/gpt-oss-120b` | OK |
-| 2 | `gemini/gemini-3.8-flash` | FAIL error |
-| 3 | `auto/best-coding` | untested |
+| 1 | `gemini/gemini-3.8-flash` | FAIL error |
+| 2 | `auto/best-coding` | untested |
 
 <a id="comboxkiro-best"></a>
 ### combo/xkiro-best - [back to list](#8-combo-catalog-live)
