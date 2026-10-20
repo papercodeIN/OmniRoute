@@ -153,15 +153,18 @@ Legend: ✅ tested answering · ⏳ quota-flaky (recovers) · ❌ dead/paid · �
 
 **Probe run (today, live):** 592 `test-all` calls across 275 unique models - **0 OK**, 535 error, 31 rate-limited (429), 26 timeout (30 s). The Claude catalogue (800 entries) remains largely unavailable: quota exhaustion on `agy`/`antigravity`, 401 auth on `claude-web`/`cline`, 404/402 elsewhere.
 
+**xkiro combo probe (today):** all **18/18 legs of `xkiro-best` returned `ok`** via `test-all` (latency 0.9-4.9 s, connections rotated across 12 active accounts). Every Qwen, Mistral and SenseNova leg is healthy.
+
 **Connection health (today):** 2,603 `/api/providers/test` calls - 2,416 returned 200. Healthy: `codex` (40), `grok-cli` (44), `grok-web` (48), `xkiro` (47), `kiro` (33), `codestral` (39), `gemini` (20), `agy` (16), `antigravity` (16), `groq` (16), `mistral` (16), `nara` (16), `claude-web` (11). Failing: `cline` (18 x 401), `openai` (3 x 503), `literouter` (2 x 401), `arcee-ai`/`nvidia` (1 x 401 each).
 
-**Verified working combos today (live 200 traffic):**
+**Verified working combos today:**
 
-| Combo | Working model(s) | Requests |
+| Combo | Working model(s) | Evidence |
 |---|---|---|
-| `codex-best` | `codex/gpt-6-luna` | 388 |
-| `ollama-best` | `ollama-cloud/nemotron-3-super` | 10 |
-| `grok-best` | `grok-cli/grok-4.7` | 2 |
+| `xkiro-best` | all 18 legs | test-all OK |
+| `codex-best` | `codex/gpt-6-luna` | 388 live 200s |
+| `ollama-best` | `ollama-cloud/nemotron-3-super` | 10 live 200s |
+| `grok-best` | `grok-cli/grok-4.7` | 2 live 200s |
 
 All other combos had no successful live request today; their legs are rate-limited, failing, or untested. Durable failures (401/402/404) are auto-disabled; transient ones (429/5xx/timeout) recover.
 
@@ -204,11 +207,11 @@ Key rules encoded: 401/402 = durable-dead (auto-disable), 403/429/5xx = transien
 
 ## 8. Combo catalog (live)
 
-_Updated 2026-10-20. **OK (live)** = verified by a successful 200 response today; **FAIL ...** = latest `test-all` result today; **untested** = no result today. Legs are shown in current priority order (free / preferred providers first)._
+_Updated 2026-10-20. **OK (live)** = verified by a successful 200 response today; **OK (probe)** = passed today's `test-all` probe; **FAIL ...** = latest `test-all` result; **untested** = no result today. Legs are shown in current priority order (free / preferred providers first)._
 
 | Combo | Legs | Verified working today |
 |---|---|---|
-| [`combo/all-best`](#comboall-best) | 143 | `codex/gpt-6-luna`, `grok-cli/grok-4.7`, `ollama-cloud/nemotron-3-super` |
+| [`combo/all-best`](#comboall-best) | 143 | `xkiro/qwen/qwen3-coder-plus:free`, `xkiro/qwen/qwen3-max:free`, `xkiro/qwen/qwen3.8-max:free`, `xkiro/qwen/qwen3.7-max:free`, `xkiro/qwen/qwen3.6-max-preview:free`, `xkiro/qwen/qwen3.5-plus:free` (+10 more) |
 | [`combo/apinex-best`](#comboapinex-best) | 9 | none |
 | [`combo/claude-best`](#comboclaude-best) | 34 | none |
 | [`combo/claude-code`](#comboclaude-code) | 4 | none |
@@ -228,7 +231,7 @@ _Updated 2026-10-20. **OK (live)** = verified by a successful 200 response today
 | [`combo/kiro-best`](#combokiro-best) | 8 | none |
 | [`combo/literouter-best`](#comboliterouter-best) | 7 | none |
 | [`combo/llama-best`](#combollama-best) | 21 | none |
-| [`combo/mistral-best`](#combomistral-best) | 50 | none |
+| [`combo/mistral-best`](#combomistral-best) | 50 | `xkiro/mistralai/mistral-medium-3.5`, `xkiro/mistralai/codestral-2508`, `xkiro/mistralai/mistral-large-2512`, `xkiro/mistralai/mistral-small-2603`, `xkiro/mistralai/devstral-medium`, `xkiro/mistralai/ministral-14b` (+2 more) |
 | [`combo/nara-best`](#combonara-best) | 3 | none |
 | [`combo/nvidia-best`](#combonvidia-best) | 33 | `ollama-cloud/nemotron-3-super` |
 | [`combo/ollama-best`](#comboollama-best) | 3 | `ollama-cloud/nemotron-3-super` |
@@ -237,12 +240,12 @@ _Updated 2026-10-20. **OK (live)** = verified by a successful 200 response today
 | [`combo/spark-best`](#combospark-best) | 6 | none |
 | [`combo/steady-coding`](#combosteady-coding) | 3 | none |
 | [`combo/trae-best`](#combotrae-best) | 3 | none |
-| [`combo/xkiro-best`](#comboxkiro-best) | 18 | none |
+| [`combo/xkiro-best`](#comboxkiro-best) | 18 | all 18 legs OK |
 
 <a id="comboall-best"></a>
 ### combo/all-best - [back to list](#8-combo-catalog-live)
 
-**Verified working today:** `codex/gpt-6-luna`, `grok-cli/grok-4.7`, `ollama-cloud/nemotron-3-super`
+**Verified working today:** `xkiro/qwen/qwen3-coder-plus:free`, `xkiro/qwen/qwen3-max:free`, `xkiro/qwen/qwen3.8-max:free`, `xkiro/qwen/qwen3.7-max:free`, `xkiro/qwen/qwen3.6-max-preview:free`, `xkiro/qwen/qwen3.5-plus:free`, `xkiro/mistralai/codestral-2508`, `xkiro/mistralai/mistral-small-2603`, `xkiro/mistralai/mistral-large-2512`, `xkiro/sensenova/sensenova-6.8-flash-lite`, `xkiro/mistralai/devstral-medium`, `xkiro/mistralai/mistral-medium-3.5`, `xkiro/mistralai/ministral-8b`, `codex/gpt-6-luna`, `ollama-cloud/nemotron-3-super`, `grok-cli/grok-4.7`
 
 | # | Model | Status |
 |---|-------|--------|
@@ -250,7 +253,7 @@ _Updated 2026-10-20. **OK (live)** = verified by a successful 200 response today
 | 2 | `kilocode/nvidia/nemotron-3.5-lightning:free` | untested |
 | 3 | `auto/coding:free` | untested |
 | 4 | `literouter/glm-5:free` | untested |
-| 5 | `xkiro/qwen/qwen3-coder-plus:free` | untested |
+| 5 | `xkiro/qwen/qwen3-coder-plus:free` | OK (probe) |
 | 6 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free` | untested |
 | ... | _137 more legs_ | |
 
@@ -530,16 +533,16 @@ _Updated 2026-10-20. **OK (live)** = verified by a successful 200 response today
 <a id="combomistral-best"></a>
 ### combo/mistral-best - [back to list](#8-combo-catalog-live)
 
-**Verified working today:** none
+**Verified working today:** `xkiro/mistralai/mistral-medium-3.5`, `xkiro/mistralai/codestral-2508`, `xkiro/mistralai/mistral-large-2512`, `xkiro/mistralai/mistral-small-2603`, `xkiro/mistralai/devstral-medium`, `xkiro/mistralai/ministral-14b`, `xkiro/mistralai/ministral-3b`, `xkiro/mistralai/ministral-8b`
 
 | # | Model | Status |
 |---|-------|--------|
 | 1 | `literouter/ministral-3-8b-instruct:free` | untested |
 | 2 | `literouter/ministral-3b-2512:free` | untested |
-| 3 | `xkiro/mistralai/mistral-medium-3.5` | untested |
-| 4 | `xkiro/mistralai/codestral-2508` | untested |
-| 5 | `xkiro/mistralai/mistral-large-2512` | untested |
-| 6 | `xkiro/mistralai/mistral-small-2603` | untested |
+| 3 | `xkiro/mistralai/mistral-medium-3.5` | OK (probe) |
+| 4 | `xkiro/mistralai/codestral-2508` | OK (probe) |
+| 5 | `xkiro/mistralai/mistral-large-2512` | OK (probe) |
+| 6 | `xkiro/mistralai/mistral-small-2603` | OK (probe) |
 | ... | _44 more legs_ | |
 
 <a id="combonara-best"></a>
@@ -648,14 +651,25 @@ _Updated 2026-10-20. **OK (live)** = verified by a successful 200 response today
 <a id="comboxkiro-best"></a>
 ### combo/xkiro-best - [back to list](#8-combo-catalog-live)
 
-**Verified working today:** none
+**Verified working today:** all 18 legs OK
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `xkiro/qwen/qwen3-coder-plus:free` | untested |
-| 2 | `xkiro/qwen/qwen3-max:free` | untested |
-| 3 | `xkiro/qwen/qwen3.8-max:free` | untested |
-| 4 | `xkiro/qwen/qwen3.7-max:free` | untested |
-| 5 | `xkiro/qwen/qwen3.6-max-preview:free` | untested |
-| 6 | `xkiro/qwen/qwen3.5-plus:free` | untested |
-| ... | _12 more legs_ | |
+| 1 | `xkiro/qwen/qwen3-coder-plus:free` | OK (probe) |
+| 2 | `xkiro/qwen/qwen3-max:free` | OK (probe) |
+| 3 | `xkiro/qwen/qwen3.8-max:free` | OK (probe) |
+| 4 | `xkiro/qwen/qwen3.7-max:free` | OK (probe) |
+| 5 | `xkiro/qwen/qwen3.6-max-preview:free` | OK (probe) |
+| 6 | `xkiro/qwen/qwen3.5-plus:free` | OK (probe) |
+| 7 | `xkiro/qwen/qwen3.7-plus:free` | OK (probe) |
+| 8 | `xkiro/qwen/qwen3.6-27b:free` | OK (probe) |
+| 9 | `xkiro/qwen/qwen-plus-2025-07-28:free` | OK (probe) |
+| 10 | `xkiro/mistralai/codestral-2508` | OK (probe) |
+| 11 | `xkiro/mistralai/devstral-medium` | OK (probe) |
+| 12 | `xkiro/mistralai/mistral-large-2512` | OK (probe) |
+| 13 | `xkiro/mistralai/mistral-medium-3.5` | OK (probe) |
+| 14 | `xkiro/mistralai/mistral-small-2603` | OK (probe) |
+| 15 | `xkiro/mistralai/ministral-14b` | OK (probe) |
+| 16 | `xkiro/mistralai/ministral-8b` | OK (probe) |
+| 17 | `xkiro/mistralai/ministral-3b` | OK (probe) |
+| 18 | `xkiro/sensenova/sensenova-6.8-flash-lite` | OK (probe) |
