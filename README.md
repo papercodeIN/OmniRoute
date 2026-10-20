@@ -151,15 +151,17 @@ Legend: ✅ tested answering · ⏳ quota-flaky (recovers) · ❌ dead/paid · �
 
 ## Provider status snapshot (2026-10-20)
 
-**Full combo probe (today, live):** 29 combos, 568 unique provider/model legs tested via `test-all` (8 workers, 40 s timeout) - **94 OK**, 445 error, 2 slow, 27 no active connection.
+**Full combo probe (today, live):** 29 combos, 568 unique provider/model legs tested via `test-all` - **94 OK**, 444 error, 3 slow, 27 no active connection.
 
-**Kilocode free-tier probe (today):** 18 free-flagged models tested - **12 OK**, 1 slow, 5 error. The 12 working models (plus 2 fallbacks) are now first in `kilocode-best`; 7 new models were added.
+**Grok scan (today):** 45 grok-model candidates across kilocode, literouter, openai, opencode, opencode-zen, openrouter, lmarena, grok-web, t3-web and a custom gateway - **0 OK**. Kilocode returns 402 (add credits), literouter 403 (plus/elite plan required), openai 404, others 402/403. No new grok provider is usable; `grok-best` stays on `grok-cli` (4.7 high/low/xhigh/medium).
+
+**Kilocode free-tier probe:** 18 free-flagged models tested - **12 OK**; 7 new models added to `kilocode-best`.
 
 **New-model scan:** 73 catalogue models not yet in any combo were tested - **13 OK** and added to their brand combos.
 
-**xkiro policy:** xkiro models are used **only in `xkiro-best`**. 39 xkiro legs were removed from `all-best` (-18), `qwen-best` (-9), `mistral-best` (-8) and `deepseek-best` (-4).
+**xkiro policy:** xkiro models are used **only in `xkiro-best`**.
 
-**trae-best removed:** Trae is not usable on the free plan and its OmniRoute connection was deleted, so the combo was removed.
+**trae-best removed:** Trae is not usable on the free plan and its OmniRoute connection was deleted.
 
 Durable failures (401/402/404) are auto-disabled; transient ones (429/5xx/timeout) recover.
 
@@ -384,7 +386,7 @@ _Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); *
 | 139 | `codex/gpt-5.5` | FAIL error |
 | 140 | `kiro/deepseek-3.2` | FAIL error |
 | 141 | `zai-web/glm-5.2` | FAIL error |
-| 142 | `grok-cli/grok-4.7-medium` | FAIL error |
+| 142 | `grok-cli/grok-4.7-medium` | FAIL timeout |
 | 143 | `deepseek-web/deepseek-v4-flash` | FAIL error |
 | 144 | `kiro/minimax-m2.1` | FAIL error |
 | 145 | `deepseek-web/deepseek-v4-pro` | FAIL error |
@@ -877,7 +879,7 @@ _Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); *
 | 2 | `grok-cli/grok-4.7-low` | OK |
 | 3 | `grok-cli/grok-4.7-xhigh` | OK |
 | 4 | `grok-cli/grok-4.7` | OK |
-| 5 | `grok-cli/grok-4.7-medium` | FAIL error |
+| 5 | `grok-cli/grok-4.7-medium` | FAIL timeout |
 | 6 | `cline/x-ai/grok-4.5` | FAIL error |
 | 7 | `grok-web/fast` | FAIL error |
 | 8 | `cline/x-ai/grok-4.20` | FAIL error |
