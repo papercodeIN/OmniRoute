@@ -1,7 +1,7 @@
 # Free AI Coding Setup — OmniRoute + OpenCode (Windows)
 
-> One gateway, ~120 provider connections, 27 auto-fallback combos, $0.
-> Generated 2026-10-20. All free tiers verified live on this machine.
+> One gateway, ~120 provider connections, 31 auto-fallback combos, $0.
+> Generated 2026-10-21. All free tiers verified live on this machine.
 
 ---
 
@@ -63,7 +63,7 @@ Refresh picker anytime (double-click):
 
 - OpenCode model picker → provider **OmniRoute** → pick a `combo/*` (top of list)
 - Default daily driver: **`combo/all-best`** (~130 models, Claude-first priority, fails through everything alive)
-- Brand combos: `claude-best`, `gemini-best`, `gpt-best`, `grok-best`, `groq-best`, `cloudflare-best`, `deepseek-best`, `qwen-best`, `nvidia-best`, `mistral-best`, `glm-best`, `kimi-best`, `llama-best`, `gemma-best`, `openrouter/kilocode/codex/xkiro/ollama/kiro/literouter/apinex/nara/cleanapis-best`, `keep-trying`, `claude-code/max/fast`
+- Brand combos: `claude-best`, `gemini-best`, `gpt-best`, `grok-best`, `groq-best`, `cloudflare-best`, `deepseek-best`, `qwen-best`, `nvidia-best`, `mistral-best`, `glm-best`, `kimi-best`, `llama-best`, `gemma-best`, `openrouter/kilocode/codex/xkiro/ollama/kiro/literouter/apinex/nara/cleanapis/free-ai/zerolimitai-best`, `keep-trying`, `claude-code/max/fast`
 - Single models: `auto/*` routes fan out across all healthy providers
 
 Rules learned the hard way:
@@ -149,9 +149,11 @@ Legend: ✅ tested answering · ⏳ quota-flaky (recovers) · ❌ dead/paid · �
 
 
 
-## Provider status snapshot (2026-10-20)
+## Provider status snapshot (2026-10-21)
 
-**Full combo probe (today, live):** 29 combos, 357 unique provider/model legs tested via `test-all` - **116 OK**, 211 error, 3 slow, 27 no active connection.
+**New connections (2026-10-20):** `free-ai` (6 accounts), `zerolimitai` (1), `mistral` (4 more), `groq` (3 more), `kilocode` (1), `claude-web` (1), `cloudflare-ai` (1), `freemodel-dev`, `gemini-web`, `tokenrouter`, `eurouter`, `uc`. Two new provider combos were created: `free-ai-best` (7/7 legs OK) and `zerolimitai-best` (7/7 OK). No combo for `tokenrouter` (every model, including its free one, returns 403 gift-balance/credit-limit), `freemodel-dev` (upstream 401 invalid API key), `gemini-web` (web session unstable - selector timeouts after one success on `gemini-3.1-pro`), `eurouter` and `uc` (connections inactive). Extra accounts on `mistral`, `groq`, `kilocode`, `claude-web` and `cloudflare-ai` are already covered by their existing `*-best` combos.
+
+**Full combo probe (2026-10-20, live):** 29 combos at the time, 357 unique provider/model legs tested via `test-all` - **116 OK**, 211 error, 3 slow, 27 no active connection.
 
 **Cloudflare Workers AI added (today):** 1 active account (`bmnakum111`), free tier 10K Neurons/day. The account lists 73 models, 39 of them text generation; all 39 were probed through chat completions - **24 OK**. `cloudflare-best` carries the 22 general chat models (best first, `auto/best-coding` last); `llama-guard-3-8b` and the phone model are excluded. 15 newer models (`kimi-k2.7-code`, `glm-5.3`, `deepseek-v4*`, `llama-3.2-11b-vision` and others) return upstream 403 on this account. Combo legs use the `cloudflare-ai/@cf/...` prefix because `test-all` mis-routes bare `@cf/...` IDs as provider `@cf`.
 
@@ -210,7 +212,7 @@ Key rules encoded: 401/402 = durable-dead (auto-disable), 403/429/5xx = transien
 
 ## 8. Combo catalog (live)
 
-_Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); **FAIL ...** = latest `test-all` result; **untested** = no result today. Every leg is listed in priority order: OK first, untested next, failed last; `auto/*` fallback stays at the end. xkiro legs appear only in `xkiro-best`; groq legs only in `groq-best`; cloudflare legs use the `cloudflare-ai/@cf/...` prefix._
+_Updated 2026-10-21. **OK** = verified today (live 200 or passing `test-all`); **FAIL ...** = latest `test-all` result; **untested** = no result today. Every leg is listed in priority order: OK first, untested next, failed last; `auto/*` fallback stays at the end. xkiro legs appear only in `xkiro-best`; groq legs only in `groq-best`; cloudflare legs use the `cloudflare-ai/@cf/...` prefix._
 
 | Combo | Legs | OK / testable |
 |---|---|---|
@@ -243,6 +245,8 @@ _Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); *
 | [`combo/openrouter-best`](#comboopenrouter-best) | 10 | 0 / 9 |
 | [`combo/qwen-best`](#comboqwen-best) | 8 | 3 / 7 |
 | [`combo/xkiro-best`](#comboxkiro-best) | 18 | 18 / 18 |
+| [`combo/free-ai-best`](#combofree-ai-best) | 7 | 7 / 7 |
+| [`combo/zerolimitai-best`](#combozerolimitai-best) | 7 | 7 / 7 |
 
 <a id="comboall-best"></a>
 ### combo/all-best - [back to list](#8-combo-catalog-live)
@@ -1022,4 +1026,35 @@ _Updated 2026-10-20. **OK** = verified today (live 200 or passing `test-all`); *
 | 16 | `xkiro/mistralai/ministral-8b` | OK |
 | 17 | `xkiro/mistralai/ministral-3b` | OK |
 | 18 | `xkiro/sensenova/sensenova-6.8-flash-lite` | OK |
+
+<a id="combofree-ai-best"></a>
+### combo/free-ai-best - [back to list](#8-combo-catalog-live)
+
+**Working legs today:** 7 / 7 testable
+
+| # | Model | Status |
+|---|-------|--------|
+| 1 | `free-ai/qwen3-coder` | OK |
+| 2 | `free-ai/qwen-coder` | OK |
+| 3 | `free-ai/qwen7b` | OK |
+| 4 | `free-ai/qwen3-8b` | OK |
+| 5 | `free-ai/mistral` | OK |
+| 6 | `free-ai/deepseek-r1` | OK |
+| 7 | `free-ai/deepseek-r1-7b` | OK |
+
+<a id="combozerolimitai-best"></a>
+### combo/zerolimitai-best - [back to list](#8-combo-catalog-live)
+
+**Working legs today:** 7 / 7 testable
+
+| # | Model | Status |
+|---|-------|--------|
+| 1 | `zerolimitai/auto` | OK |
+| 2 | `zerolimitai/minimax/minimax-m3.1-flash:free` | OK |
+| 3 | `zerolimitai/cohere/north-mini-code:free` | OK |
+| 4 | `zerolimitai/dots-studio/dots-3-note-preview:free` | OK |
+| 5 | `zerolimitai/google/gemma-4-26b-a4b-it:free` | OK |
+| 6 | `zerolimitai/google/gemma-4-31b-it:free` | OK |
+| 7 | `zerolimitai/xingchen-agi/xing4.0-29b-a4b:free` | OK |
+
 
