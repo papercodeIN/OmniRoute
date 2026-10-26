@@ -70,7 +70,7 @@ Refresh picker anytime (double-click):
   - `combo/openrouter-best` — **4/6 nemotron/laguna `:free`**
   - `combo/cleanapis-best` — **5/21 kilocode north-mini-code, poolside laguna `:free`**
   - `combo/codex-best` — **5/6 gpt-6-luna/5.6 family**
-- **Avoid (broken):** `all-best`, `apinex-best`, `claude-*`, `gemma-best`, `groq-best`, `mistral-best`, `nara-best`, `ollama-best`
+- **Avoid (broken):** `all-best`, `claude-*`, `gemma-best`, `groq-best`, `mistral-best`, `nara-best`, `ollama-best`
 - Single models: `auto/*` routes fan out across all healthy providers
 
 Rules learned the hard way:
@@ -242,7 +242,6 @@ _Updated **2026-10-26** (live probe: **423 requests across 22 combos**, then cle
 | [`combo/groq-best`](#combogroq-best) | 6 | **1 / 5** ❌ | 1 working: auto/best-coding only |
 | [`combo/nara-best`](#combonara-best) | 1 | **1 / 0** ⚠️ | only auto/best-coding remains |
 | [`combo/ollama-best`](#comboollama-best) | 1 | **1 / 0** ⚠️ | only auto/best-coding remains |
-| [`combo/apinex-best`](#comboapinex-best) | 1 | **1 / 0** ⚠️ | only auto/best-coding remains |
 | [`combo/claude-fast`](#comboclaude-fast) | 2 | **2 / 0** ✅ | both working: auto/best-fast + auto/best-coding |
 | [`combo/claude-max`](#comboclaude-max) | 3 | **1 / 2** ❌ | 1 working: auto/best-coding only |
 | [`combo/nvidia-best`](#combonvidia-best) | 16 | **16 / 0** ✅ | all working: nvidia/openrouter nemotron `:free` |
@@ -406,22 +405,6 @@ _Updated **2026-10-26** (live probe: **423 requests across 22 combos**, then cle
 | 150 | `deepseek-web/DeepSeek-Search` | FAIL error |
 | 151 | `auto/coding:free` | untested |
 | 152 | `auto/best-coding` | untested |
-
-<a id="comboapinex-best"></a>
-### combo/apinex-best - [back to list](#8-combo-catalog-live)
-
-**Working legs today:** 1 / 8 testable (updated 2026-10-26 — live probe)
-
-| # | Model | Status |
-|---|-------|--------|
-| 1 | `auto/best-coding` | ✅ |
-| 2 | `openai/free/gpt-6-luna` | ❌ |
-| 3 | `openai/free/glm-5.3-flash` | ❌ |
-| 4 | `openai/free/deepseek-v4.1-flash` | ❌ |
-| 5 | `openai/free/qwen-3.8-max` | ❌ |
-| 6 | `openai/free/mimo-v2.6-pro` | ❌ |
-| 7 | `openai/free/deepseek-v4-pro-0813` | ❌ |
-| 8 | `openai/free/deepseek-v4-flash-0731` | ❌ |
 
 <a id="comboclaude-best"></a>
 ### combo/claude-best - [back to list](#8-combo-catalog-live)
