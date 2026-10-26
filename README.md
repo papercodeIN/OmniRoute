@@ -689,19 +689,19 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 <a id="combogrok-best"></a>
 ### combo/grok-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 4 / 8 testable
+**Working legs today:** 2 / 9 testable (updated 2026-10-26 — live probe)
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `grok-cli/grok-4.7-high` | OK |
-| 2 | `grok-cli/grok-4.7-low` | OK |
-| 3 | `grok-cli/grok-4.7-xhigh` | OK |
-| 4 | `grok-cli/grok-4.7` | OK |
-| 5 | `grok-cli/grok-4.7-medium` | FAIL timeout |
-| 6 | `grok-web/fast` | FAIL error |
-| 7 | `grok-web/expert` | FAIL error |
-| 8 | `grok-web/heavy` | FAIL error |
-| 9 | `auto/best-coding` | untested |
+| 1 | `grok-web/fast` | ✅ |
+| 2 | `auto/best-coding` | ✅ |
+| 3 | `grok-cli/grok-4.7-high` | ❌ |
+| 4 | `grok-cli/grok-4.7-low` | ❌ |
+| 5 | `grok-cli/grok-4.7-xhigh` | ❌ |
+| 6 | `grok-cli/grok-4.7` | ❌ |
+| 7 | `grok-cli/grok-4.7-medium` | ❌ |
+| 8 | `grok-web/expert` | ❌ |
+| 9 | `grok-web/heavy` | ❌ |
 
 <a id="combogroq-best"></a>
 ### combo/groq-best - [back to list](#8-combo-catalog-live)
