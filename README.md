@@ -70,7 +70,7 @@ Refresh picker anytime (double-click):
   - `combo/openrouter-best` — **6/7 nemotron/laguna/north-mini-code/lfm `:free`**
   - `combo/cleanapis-best` — **5/21 kilocode north-mini-code, poolside laguna `:free`**
   - `combo/codex-best` — **5/6 gpt-6-luna/5.6 family**
-- **Avoid (broken):** `all-best`, `claude-*`, `gemma-best`, `groq-best`, `mistral-best`, `ollama-best`
+- **Avoid (broken):** `all-best`, `claude-*`, `gemma-best`, `mistral-best`, `ollama-best`
 - Single models: `auto/*` routes fan out across all healthy providers
 
 Rules learned the hard way:
@@ -241,7 +241,7 @@ _Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cle
 | [`combo/gemma-best`](#combogemma-best) | 2 | **1 / 1** ⚠️ | 1 working: ddgw/tinfoil gemma4-31b |
 | [`combo/morph-best`](#combomorph-best) | 2 | **2 / 0** ✅ | **Perfect — both working: morph-v3-fast, morph-v3-large** |
 | [`combo/all-best`](#comboall-best) | 50 | **50 / 0** ✅ | all 50 working: mistral/codex/agy/antigravity/grok |
-| [`combo/groq-best`](#combogroq-best) | 6 | **1 / 5** ❌ | 1 working: auto/best-coding only |
+| [`combo/groq-best`](#combogroq-best) | 6 | **6 / 0** ✅ | **Perfect — all 6 working: qwen3.8-27b, gpt-oss-120b/20b, safeguard-20b, allam-2-7b + auto** |
 | [`combo/ollama-best`](#comboollama-best) | 1 | **1 / 0** ⚠️ | only auto/best-coding remains |
 | [`combo/claude-fast`](#comboclaude-fast) | 2 | **2 / 0** ✅ | both working: auto/best-fast + auto/best-coding |
 | [`combo/claude-max`](#comboclaude-max) | 3 | **1 / 2** ❌ | 1 working: auto/best-coding only |
@@ -647,16 +647,16 @@ _Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cle
 <a id="combogroq-best"></a>
 ### combo/groq-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 1 / 6 testable (updated 2026-10-26 — live probe)
+**Working legs today:** 6 / 6 testable (updated 2026-10-26 — live probe)
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `auto/best-coding` | ✅ |
-| 2 | `groq/qwen/qwen3.8-27b` | ❌ |
-| 3 | `groq/openai/gpt-oss-120b` | ❌ |
-| 4 | `groq/openai/gpt-oss-20b` | ❌ |
-| 5 | `groq/openai/gpt-oss-safeguard-20b` | ❌ |
-| 6 | `groq/allam-2-7b` | ❌ |
+| 1 | `groq/qwen/qwen3.8-27b` | ✅ |
+| 2 | `groq/openai/gpt-oss-120b` | ✅ |
+| 3 | `groq/openai/gpt-oss-20b` | ✅ |
+| 4 | `groq/openai/gpt-oss-safeguard-20b` | ✅ |
+| 5 | `groq/allam-2-7b` | ✅ |
+| 6 | `auto/best-coding` | ✅ |
 
 <a id="combokilocode-best"></a>
 ### combo/kilocode-best - [back to list](#8-combo-catalog-live)
