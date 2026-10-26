@@ -1,7 +1,7 @@
 # Free AI Coding Setup — OmniRoute + OpenCode (Windows)
 
 > One gateway, ~120 provider connections, 31 auto-fallback combos, $0.
-> **Live probe 2026-10-26: 423 requests across 22 combos, 185 ✅ working, 252 ❌ failed. 16/22 combos have ≥1 working leg; xkiro-best 26/26, free-ai-best 6/6, gemini-best 11/11, morph-best 2/2, agy-antigravity-best 15/15, grok-best 7/7 perfect.** All free tiers verified live on this machine.
+> **Live probe 2026-10-26: 423 requests across 22 combos, 196 ✅ working, 252 ❌ failed. 16/22 combos have ≥1 working leg; xkiro-best 26/26, free-ai-best 6/6, gemini-best 11/11, morph-best 2/2, agy-antigravity-best 15/15, grok-best 7/7, cloudflare-best 19/19 perfect.** All free tiers verified live on this machine.
 
 ---
 
@@ -233,7 +233,7 @@ _Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cle
 | [`combo/openrouter-best`](#comboopenrouter-best) | 7 | **6 / 1** ✅ | 6 working: nemotron/laguna/north-mini-code/lfm `:free` |
 | [`combo/cleanapis-best`](#combocleanapis-best) | 4 | **4 / 0** ✅ | all working: openrouter north-mini-code/laguna `:free` |
 | [`combo/codex-best`](#combocodex-best) | 5 | **4 / 1** ⚡ | 4 working: gpt-6-luna, 5.6-terra, 5.6-luna + auto |
-| [`combo/cloudflare-best`](#combocloudflare-best) | 8 | **8 / 0** ✅ | **Perfect — 8 working: 3 code/reasoning + 5 general** |
+| [`combo/cloudflare-best`](#combocloudflare-best) | 19 | **19 / 0** ✅ | **Perfect — 19 working: 6 code/reasoning + 13 general (cloudflare-ai + cfp)** |
 | [`combo/nvidia-best`](#combonvidia-best) | 7 | **7 / 0** ✅ | **all working: nvidia/openrouter/kilocode nemotron `:free`** |
 | [`combo/claude-best`](#comboclaude-best) | 5 | **5 / 0** ✅ | **5 working: antigravity/agy opus-4.6/sonnet-4.6** |
 | [`combo/grok-best`](#combogrok-best) | 7 | **7 / 0** ✅ | **all working: 5 grok-cli + grok-web/fast + auto** |
@@ -489,22 +489,33 @@ _Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cle
 <a id="combocloudflare-best"></a>
 ### combo/cloudflare-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 8 / 8 testable (updated 2026-10-26 — live probe)
+**Working legs today:** 19 / 19 testable (updated 2026-10-26 — live probe)
 
 **Coding-optimized order:** Code/Reasoning → General
 
-| # | Model | Category | Status |
-|---|-------|----------|--------|
-| 1 | `cloudflare-ai/@cf/qwen/qwen2.5-coder-32b-instruct` | Code | ✅ **Best for coding** |
-| 2 | `cloudflare-ai/@cf/qwen/qwq-32b` | Code/Reasoning | ✅ |
-| 3 | `cloudflare-ai/@cf/deepseek-ai/deepseek-r1-distill-qwen-32b` | Code/Reasoning | ✅ |
-| 4 | `cloudflare-ai/@cf/mistral/mistral-7b-instruct-v0.2-lora` | General | ✅ |
-| 5 | `cloudflare-ai/@cf/meta/llama-3.3-70b-instruct-fp8-fast` | General | ✅ |
-| 6 | `cloudflare-ai/@cf/google/gemma-4-26b-a4b-it` | General | ✅ |
-| 7 | `cloudflare-ai/@cf/meta/llama-3.2-3b-instruct` | General | ✅ |
-| 8 | `cloudflare-ai/@cf/mistral/mistral-7b-instruct-v0.2-lora` | General | ✅ |
+| # | Model | Provider | Category | Status |
+|---|-------|----------|----------|--------|
+| 1 | `cloudflare-ai/@cf/qwen/qwen2.5-coder-32b-instruct` | cloudflare-ai | Code | ✅ **Best for coding** |
+| 2 | `cloudflare-ai/@cf/qwen/qwq-32b` | cloudflare-ai | Code/Reasoning | ✅ |
+| 3 | `cloudflare-ai/@cf/deepseek-ai/deepseek-r1-distill-qwen-32b` | cloudflare-ai | Code/Reasoning | ✅ |
+| 4 | `cfp/qwen/qwq-32b` | cfp | Code/Reasoning | ✅ |
+| 5 | `cfp/qwen/qwen3-30b-a3b-fp8` | cfp | Code/Reasoning | ✅ |
+| 6 | `cfp/deepseek-ai/deepseek-r1-distill-qwen-32b` | cfp | Code/Reasoning | ✅ |
+| 7 | `cfp/mistralai/mistral-small-3.1-24b-instruct` | cfp | Code/General | ✅ |
+| 8 | `cfp/mistralai/mistral-small-2409` | cfp | General | ✅ |
+| 9 | `cloudflare-ai/@cf/qwen/qwq-32b` | cloudflare-ai | Code/Reasoning | ✅ |
+| 10 | `cloudflare-ai/@cf/deepseek-ai/deepseek-r1-distill-qwen-32b` | cloudflare-ai | Code/Reasoning | ✅ |
+| 11 | `cloudflare-ai/@cf/mistral/mistral-7b-instruct-v0.2-lora` | cloudflare-ai | General | ✅ |
+| 12 | `cloudflare-ai/@cf/meta/llama-3.3-70b-instruct-fp8-fast` | cloudflare-ai | General | ✅ |
+| 13 | `cloudflare-ai/@cf/google/gemma-4-26b-a4b-it` | cloudflare-ai | General | ✅ |
+| 14 | `cfp/google/gemma-4-26b-a4b-it` | cfp | General | ✅ |
+| 15 | `cfp/aisingapore/gemma-sea-lion-v4-27b-it` | cfp | General | ✅ |
+| 16 | `cfp/mistralai/mistral-small-3.1-24b-instruct` | cfp | General | ✅ |
+| 17 | `cfp/mistralai/mistral-small-2409` | cfp | General | ✅ |
+| 18 | `cloudflare-ai/@cf/meta/llama-3.2-3b-instruct` | cloudflare-ai | General | ✅ |
+| 19 | `cloudflare-ai/@cf/mistral/mistral-7b-instruct-v0.2-lora` | cloudflare-ai | General | ✅ |
 
-*Removed (FAIL):* `cloudflare-ai/@cf/zai-org/glm-4.7-flash`
+*Removed (FAIL):* `cloudflare-ai/@cf/zai-org/glm-4.7-flash`, `cfp/qwen/qwen2.5-coder-32b-instruct`, `cfp/deepseek-ai/deepseek-v4-pro-0813`, `cfp/deepseek-ai/deepseek-v4-flash-0731`, `cfp/zai-org/glm-4.7-flash`, `cfp/mistralai/mistral-nemo:free`, `cfp/mistralai/pixtral-12b:free`, `cfp/meta-llama/llama-3.3-70b-instruct-fp8-fast`
 
 <a id="combocodex-best"></a>
 ### combo/codex-best - [back to list](#8-combo-catalog-live)
