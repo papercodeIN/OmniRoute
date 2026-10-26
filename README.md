@@ -835,28 +835,28 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 <a id="combomistral-best"></a>
 ### combo/mistral-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 6 / 17 testable
+**Working legs today:** 3 / 18 testable (updated 2026-10-26 — live probe)
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `mistral/ministral-3b-latest` | OK |
-| 2 | `mistral/mistral-code-latest` | OK |
-| 3 | `mistral/ministral-8b-latest` | OK |
-| 4 | `codestral/codestral-latest` | OK |
-| 5 | `codestral/codestral-2508` | OK |
-| 6 | `mistral/codestral-latest` | OK |
-| 7 | `literouter/ministral-3-8b-instruct:free` | FAIL error |
-| 8 | `literouter/ministral-3b-2512:free` | FAIL error |
-| 9 | `nvidia/mistralai/mistral-large-2-instruct` | FAIL error |
-| 10 | `nvidia/mistralai/mistral-7b-instruct-v0.3` | FAIL error |
-| 11 | `nvidia/mistralai/codestral-22b-instruct-v0.1` | FAIL error |
-| 12 | `nvidia/mistralai/mixtral-8x22b-v0.1` | FAIL error |
-| 13 | `nvidia/mistralai/mistral-large` | FAIL error |
-| 14 | `nvidia/nv-mistralai/mistral-nemo-12b-instruct` | FAIL error |
-| 15 | `nvidia/nvidia/mistral-nemo-minitron-8b-8k-instruct` | FAIL error |
-| 16 | `cfp/mistralai/mistral-small-3.1-24b-instruct` | no connection |
-| 17 | `ddgw/mistral-small-2603` | no connection |
-| 18 | `auto/best-coding` | untested |
+| 1 | `cfp/mistralai/mistral-small-3.1-24b-instruct` | ✅ |
+| 2 | `ddgw/mistral-small-2603` | ✅ |
+| 3 | `auto/best-coding` | ✅ |
+| 4 | `mistral/ministral-3b-latest` | ❌ |
+| 5 | `mistral/mistral-code-latest` | ❌ |
+| 6 | `mistral/ministral-8b-latest` | ❌ |
+| 7 | `codestral/codestral-latest` | ❌ |
+| 8 | `codestral/codestral-2508` | ❌ |
+| 9 | `mistral/codestral-latest` | ❌ |
+| 10 | `literouter/ministral-3-8b-instruct:free` | ❌ |
+| 11 | `literouter/ministral-3b-2512:free` | ❌ |
+| 12 | `nvidia/mistralai/mistral-large-2-instruct` | ❌ |
+| 13 | `nvidia/mistralai/mistral-7b-instruct-v0.3` | ❌ |
+| 14 | `nvidia/mistralai/codestral-22b-instruct-v0.1` | ❌ |
+| 15 | `nvidia/mistralai/mixtral-8x22b-v0.1` | ❌ |
+| 16 | `nvidia/mistralai/mistral-large` | ❌ |
+| 17 | `nvidia/nv-mistralai/mistral-nemo-12b-instruct` | ❌ |
+| 18 | `nvidia/nvidia/mistral-nemo-minitron-8b-8k-instruct` | ❌ |
 
 <a id="combonara-best"></a>
 ### combo/nara-best - [back to list](#8-combo-catalog-live)
