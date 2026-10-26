@@ -1,7 +1,7 @@
 # Free AI Coding Setup — OmniRoute + OpenCode (Windows)
 
 > One gateway, ~120 provider connections, 31 auto-fallback combos, $0.
-> **Live probe 2026-10-26: 423 requests across 23 combos, 186 ✅ working, 252 ❌ failed. 16/23 combos have ≥1 working leg; xkiro-best 26/26, free-ai-best 6/6, gemini-best 11/11, morph-best 2/2, agy-antigravity-best 15/15, grok-best 7/7 perfect.** All free tiers verified live on this machine.
+> **Live probe 2026-10-26: 423 requests across 22 combos, 185 ✅ working, 252 ❌ failed. 16/22 combos have ≥1 working leg; xkiro-best 26/26, free-ai-best 6/6, gemini-best 11/11, morph-best 2/2, agy-antigravity-best 15/15, grok-best 7/7 perfect.** All free tiers verified live on this machine.
 
 ---
 
@@ -70,7 +70,7 @@ Refresh picker anytime (double-click):
   - `combo/openrouter-best` — **6/7 nemotron/laguna/north-mini-code/lfm `:free`**
   - `combo/cleanapis-best` — **5/21 kilocode north-mini-code, poolside laguna `:free`**
   - `combo/codex-best` — **5/6 gpt-6-luna/5.6 family**
-- **Avoid (broken):** `all-best`, `claude-*`, `gemma-best`, `groq-best`, `mistral-best`, `nara-best`, `ollama-best`
+- **Avoid (broken):** `all-best`, `claude-*`, `gemma-best`, `groq-best`, `mistral-best`, `ollama-best`
 - Single models: `auto/*` routes fan out across all healthy providers
 
 Rules learned the hard way:
@@ -234,7 +234,7 @@ _Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cle
 | [`combo/cleanapis-best`](#combocleanapis-best) | 4 | **4 / 0** ✅ | all working: openrouter north-mini-code/laguna `:free` |
 | [`combo/codex-best`](#combocodex-best) | 5 | **4 / 1** ⚡ | 4 working: gpt-6-luna, 5.6-terra, 5.6-luna + auto |
 | [`combo/cloudflare-best`](#combocloudflare-best) | 7 | **6 / 1** ✅ | 6 working: llama-3.3-70b, gemma-4-26b, deepseek-r1-distill, qwq-32b, qwen2.5-coder, llama-3.2-3b |
-| [`combo/nvidia-best`](#combonvidia-best) | 16 | **16 / 0** ✅ | all working: nvidia/openrouter nemotron `:free` |
+| [`combo/nvidia-best`](#combonvidia-best) | 7 | **7 / 0** ✅ | **all working: nvidia/openrouter/kilocode nemotron `:free`** |
 | [`combo/claude-best`](#comboclaude-best) | 5 | **5 / 0** ✅ | **5 working: antigravity/agy opus-4.6/sonnet-4.6** |
 | [`combo/grok-best`](#combogrok-best) | 7 | **7 / 0** ✅ | **all working: 5 grok-cli + grok-web/fast + auto** |
 | [`combo/mistral-best`](#combomistral-best) | 14 | **14 / 0** ✅ | all working: mistral/codestral + auto |
@@ -242,7 +242,6 @@ _Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cle
 | [`combo/morph-best`](#combomorph-best) | 2 | **2 / 0** ✅ | **Perfect — both working: morph-v3-fast, morph-v3-large** |
 | [`combo/all-best`](#comboall-best) | 50 | **50 / 0** ✅ | all 50 working: mistral/codex/agy/antigravity/grok |
 | [`combo/groq-best`](#combogroq-best) | 6 | **1 / 5** ❌ | 1 working: auto/best-coding only |
-| [`combo/nara-best`](#combonara-best) | 1 | **1 / 0** ⚠️ | only auto/best-coding remains |
 | [`combo/ollama-best`](#comboollama-best) | 1 | **1 / 0** ⚠️ | only auto/best-coding remains |
 | [`combo/claude-fast`](#comboclaude-fast) | 2 | **2 / 0** ✅ | both working: auto/best-fast + auto/best-coding |
 | [`combo/claude-max`](#comboclaude-max) | 3 | **1 / 2** ❌ | 1 working: auto/best-coding only |
@@ -672,45 +671,22 @@ _Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cle
 | 17 | `nvidia/nv-mistralai/mistral-nemo-12b-instruct` | ❌ |
 | 18 | `nvidia/nvidia/mistral-nemo-minitron-8b-8k-instruct` | ❌ |
 
-<a id="combonara-best"></a>
-### combo/nara-best - [back to list](#8-combo-catalog-live)
-
-**Working legs today:** 1 / 2 testable
-
-| # | Model | Status |
-|---|-------|--------|
-| 1 | `nara/laguna-s-2.1` | OK |
-| 2 | `nara/nemotron-3.5-lightning-free` | FAIL error |
-| 3 | `auto/best-coding` | untested |
-
 <a id="combonvidia-best"></a>
 ### combo/nvidia-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 7 / 21 testable (updated 2026-10-26 — live probe)
+**Working legs today:** 7 / 7 testable (updated 2026-10-26 — live probe)
 
-| # | Model | Status |
-|---|-------|--------|
-| 1 | `kilocode/nvidia/nemotron-3.5-content-safety:free` | ✅ |
-| 2 | `kilocode/nvidia/nemotron-3.5-lightning:free` | ✅ |
-| 3 | `openrouter/nvidia/nemotron-3.5-lightning:free` | ✅ |
-| 4 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free` | ✅ |
-| 5 | `openrouter/nvidia/nemotron-3.5-content-safety:free` | ✅ |
-| 6 | `nvidia/nvidia/nemotron-3.5-content-safety` | ✅ |
-| 7 | `auto/best-coding` | ✅ |
-| 8 | `ollama-cloud/nemotron-3-super` | ❌ |
-| 9 | `nvidia/nvidia/nemotron-4-340b-reward` | ❌ |
-| 10 | `nvidia/nvidia/nemotron-nano-3-30b-a3b` | ❌ |
-| 11 | `openrouter/nvidia/nemotron-3.5-lightning:free` | ❌ |
-| 12 | `openrouter/nvidia/nemotron-3-super-120b-a12b:free` | ❌ |
-| 13 | `kilocode/nvidia/nemotron-3-super-120b-a12b:free` | ❌ |
-| 14 | `openrouter/nvidia/nemotron-3-super-120b-a12b:free` | ❌ |
-| 15 | `nvidia/nvidia/nemotron-4-340b-instruct` | ❌ |
-| 16 | `nvidia/nvidia/nemotron-3.5-lightning-30b-a3b` | ❌ |
-| 17 | `nvidia/nvidia/llama-3.1-nemotron-ultra-253b-v1` | ❌ |
-| 18 | `nvidia/nvidia/llama-3.1-nemotron-51b-instruct` | ❌ |
-| 19 | `nvidia/nvidia/llama-3.1-nemotron-70b-instruct` | ❌ |
-| 20 | `nvidia/nvidia/nemotron-3-ultra-550b-a55b` | ❌ |
-| 21 | `nvidia/nvidia/nemotron-3-super-120b-a12b` | ❌ |
+| # | Model | Provider | Status |
+|---|-------|----------|--------|
+| 1 | `nvidia/nvidia/nemotron-3.5-content-safety` | nvidia | ✅ |
+| 2 | `openrouter/nvidia/nemotron-3.5-lightning:free` | openrouter | ✅ |
+| 3 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free` | openrouter | ✅ |
+| 4 | `openrouter/nvidia/nemotron-3.5-content-safety:free` | openrouter | ✅ |
+| 5 | `kilocode/nvidia/nemotron-3.5-lightning:free` | kilocode | ✅ |
+| 6 | `kilocode/nvidia/nemotron-3.5-content-safety:free` | kilocode | ✅ |
+| 7 | `auto/best-coding` | auto | ✅ |
+
+*Removed (FAIL):* `nvidia` direct models (4-340b, 3-ultra, 3-super, nano), `openrouter/nvidia/nemotron-3-super-120b-a12b:free`, `kilocode/nvidia/nemotron-3-super-120b-a12b:free`, `ollama-cloud/nemotron-3-super`
 
 <a id="comboollama-best"></a>
 ### combo/ollama-best - [back to list](#8-combo-catalog-live)
