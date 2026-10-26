@@ -237,6 +237,7 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 | [`combo/grok-best`](#combogrok-best) | 9 | **2 / 7** ⚠️ | 2 working: grok-web/fast + auto |
 | [`combo/mistral-best`](#combomistral-best) | 18 | **3 / 15** ⚠️ | 3 working: cfp mistral-small, ddgw mistral-small + auto |
 | [`combo/gemma-best`](#combogemma-best) | 2 | **1 / 1** ⚠️ | 1 working: ddgw/tinfoil gemma4-31b |
+| [`combo/morph-best`](#combomorph-best) | 2 | **2 / 0** ✅ | **Perfect — both working: morph-v3-fast, morph-v3-large** |
 | [`combo/all-best`](#comboall-best) | 152 | **40 / 112** ❌ | 40 working (codex/agy/antigravity/kilocode/openrouter/grok) |
 | [`combo/groq-best`](#combogroq-best) | 6 | **1 / 5** ❌ | 1 working: auto/best-coding only |
 | [`combo/keep-trying`](#combokeep-trying) | 4 | **1 / 3** ❌ | 1 working: auto/best-coding only |
@@ -619,6 +620,16 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 | 1 | `cfp/aisingapore/gemma-sea-lion-v4-27b-it` | ✅ |
 | 2 | `ddgw/tinfoil/gemma4-31b` | ✅ |
 
+<a id="combomorph-best"></a>
+### combo/morph-best - [back to list](#8-combo-catalog-live)
+
+**Working legs today:** 2 / 2 testable (updated 2026-10-26 — live probe)
+
+| # | Model | Status |
+|---|-------|--------|
+| 1 | `morph/morph-v3-fast` | ✅ |
+| 2 | `morph/morph-v3-large` | ✅ |
+
 <a id="comboglm-best"></a>
 ### combo/glm-best - [back to list](#8-combo-catalog-live)
 
@@ -732,24 +743,24 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 <a id="combokilocode-best"></a>
 ### combo/kilocode-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 12 / 13 testable
+**Working legs today:** 10 / 14 testable (updated 2026-10-26 — live probe)
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `kilocode/nvidia/nemotron-3.5-super-vl:free` | OK |
-| 2 | `kilocode/reflection/beam-free` | OK |
-| 3 | `kilocode/poolside/laguna-xs-2.1:free` | OK |
-| 4 | `kilocode/nvidia/nemotron-3.5-lightning:free` | OK |
-| 5 | `kilocode/nvidia/nemotron-3.5-content-safety:free` | OK |
-| 6 | `kilocode/openrouter/free` | OK |
-| 7 | `kilocode/cohere/north-mini-code:free` | OK |
-| 8 | `kilocode/minimax/minimax-m3.1-flash:free` | OK |
-| 9 | `kilocode/dots-studio/dots-3-note-preview:free` | OK |
-| 10 | `kilocode/kilo-auto/free` | OK |
-| 11 | `kilocode/nvidia/nemotron-3-ultra-550b-a55b:free` | OK |
-| 12 | `kilocode/poolside/laguna-s-2.1:free` | OK |
-| 13 | `kilocode/nvidia/nemotron-3-super-120b-a12b:free` | FAIL error |
-| 14 | `auto/best-coding` | untested |
+| 1 | `kilocode/nvidia/nemotron-3.5-super-vl:free` | ✅ |
+| 2 | `kilocode/reflection/beam-free` | ✅ |
+| 3 | `kilocode/poolside/laguna-xs-2.1:free` | ✅ |
+| 4 | `kilocode/nvidia/nemotron-3.5-lightning:free` | ✅ |
+| 5 | `kilocode/nvidia/nemotron-3.5-content-safety:free` | ✅ |
+| 6 | `kilocode/openrouter/free` | ✅ |
+| 7 | `kilocode/cohere/north-mini-code:free` | ✅ |
+| 8 | `kilocode/dots-studio/dots-3-note-preview:free` | ✅ |
+| 9 | `kilocode/poolside/laguna-s-2.1:free` | ✅ |
+| 10 | `auto/best-coding` | ✅ |
+| 11 | `kilocode/minimax/minimax-m3.1-flash:free` | ❌ |
+| 12 | `kilocode/kilo-auto/free` | ❌ |
+| 13 | `kilocode/nvidia/nemotron-3-ultra-550b-a55b:free` | ❌ |
+| 14 | `kilocode/nvidia/nemotron-3-super-120b-a12b:free` | ❌ |
 
 <a id="combokimi-best"></a>
 ### combo/kimi-best - [back to list](#8-combo-catalog-live)
