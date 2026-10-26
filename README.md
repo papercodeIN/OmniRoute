@@ -68,7 +68,7 @@ Refresh picker anytime (double-click):
   - `combo/gemini-best` — **6/6 antigravity/agy flash tiers perfect** 🥇
   - `combo/kilocode-best` — **5/6 nemotron/laguna `:free`**
   - `combo/openrouter-best` — **4/6 nemotron/laguna `:free`**
-  - `combo/cleanapis-best` — **4/6 north-mini-code/laguna `:free`**
+  - `combo/cleanapis-best` — **5/21 kilocode north-mini-code, poolside laguna `:free`**
   - `combo/codex-best` — **5/6 gpt-6-luna/5.6 family**
 - **Avoid (broken):** `all-best`, `apinex-best`, `claude-*`, `gemma-best`, `groq-best`, `mistral-best`, `nara-best`, `ollama-best`
 - Single models: `auto/*` routes fan out across all healthy providers
@@ -229,7 +229,7 @@ _Updated **2026-10-26** (live probe: **423 requests across 22 combos**). **OK** 
 | [`combo/gpt-best`](#combogpt-best) | 27 | **26 / 1** ✅ | **26 working: codex gpt-6/5.6 family + gpt-oss via nvidia/agy/antigravity/ddgw/cfp** |
 | [`combo/kilocode-best`](#combokilocode-best) | 14 | **10 / 4** ⚡ | 10 working: nemotron/beam/laguna/north-mini-code `:free` |
 | [`combo/openrouter-best`](#comboopenrouter-best) | 10 | **6 / 4** ⚡ | 6 working: nemotron/laguna/north-mini-code/lfm `:free` |
-| [`combo/cleanapis-best`](#combocleanapis-best) | 21 | **5 / 16** ⚡ | 5 working: north-mini-code/laguna `:free` |
+| [`combo/cleanapis-best`](#combocleanapis-best) | 21 | **5 / 16** ⚡ | 5 working: kilocode north-mini-code, poolside laguna `:free` |
 | [`combo/codex-best`](#combocodex-best) | 5 | **4 / 1** ⚡ | 4 working: gpt-6-luna, 5.6-terra, 5.6-luna + auto |
 | [`combo/cloudflare-best`](#combocloudflare-best) | 7 | **6 / 1** ✅ | 6 working: llama-3.3-70b, gemma-4-26b, deepseek-r1-distill, qwq-32b, qwen2.5-coder, llama-3.2-3b |
 | [`combo/nvidia-best`](#combonvidia-best) | 21 | **7 / 14** ⚡ | 7 working: nemotron `:free` via kilocode/openrouter |
