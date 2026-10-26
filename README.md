@@ -799,17 +799,17 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 <a id="comboliterouter-best"></a>
 ### combo/literouter-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 1 / 7 testable
+**Working legs today:** 0 / 7 testable (updated 2026-10-26 — live probe)
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `literouter/llama-3.3-70b-instruct-turbo:free` | OK |
-| 2 | `literouter/glm-5.3-flash:free` | FAIL error |
-| 3 | `literouter/deepseek-v3.2:free` | FAIL error |
-| 4 | `literouter/kimi-k2.7-code-cheap:free` | FAIL error |
-| 5 | `literouter/glm-5:free` | FAIL error |
-| 6 | `literouter/gpt-oss-120b:free` | FAIL error |
-| 7 | `literouter/qwen3-coder-next:free` | FAIL error |
+| 1 | `literouter/llama-3.3-70b-instruct-turbo:free` | ❌ |
+| 2 | `literouter/glm-5.3-flash:free` | ❌ |
+| 3 | `literouter/deepseek-v3.2:free` | ❌ |
+| 4 | `literouter/kimi-k2.7-code-cheap:free` | ❌ |
+| 5 | `literouter/glm-5:free` | ❌ |
+| 6 | `literouter/gpt-oss-120b:free` | ❌ |
+| 7 | `literouter/qwen3-coder-next:free` | ❌ |
 
 <a id="combollama-best"></a>
 ### combo/llama-best - [back to list](#8-combo-catalog-live)
