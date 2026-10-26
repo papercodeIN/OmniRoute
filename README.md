@@ -474,13 +474,13 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 <a id="comboclaude-code"></a>
 ### combo/claude-code - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 0 / 1 testable
+**Working legs today:** 0 / 3 testable (updated 2026-10-26 — live probe)
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `gemini/gemini-3.8-flash` | FAIL error |
-| 2 | `auto/claude-sonnet` | untested |
-| 3 | `auto/best-coding` | untested |
+| 1 | `gemini/gemini-3.8-flash` | ❌ |
+| 2 | `auto/claude-sonnet` | ❌ |
+| 3 | `auto/best-coding` | ❌ |
 
 <a id="comboclaude-fast"></a>
 ### combo/claude-fast - [back to list](#8-combo-catalog-live)
