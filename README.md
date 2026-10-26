@@ -901,18 +901,18 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 <a id="comboollama-best"></a>
 ### combo/ollama-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 7 / 7 testable
+**Working legs today:** 1 / 8 testable (updated 2026-10-26 — live probe)
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `ollama-cloud/gemma4:31b` | OK |
-| 2 | `ollama-cloud/nemotron-3-super` | OK |
-| 3 | `ollama-cloud/beam` | OK |
-| 4 | `ollama-cloud/gpt-oss:20b` | OK |
-| 5 | `ollama-cloud/minimax-m3.1-flash` | OK |
-| 6 | `ollama-cloud/nemotron-3-nano:30b` | OK |
-| 7 | `ollama-cloud/nemotron-3-ultra` | OK |
-| 8 | `auto/best-coding` | untested |
+| 1 | `auto/best-coding` | ✅ |
+| 2 | `ollama-cloud/gemma4:31b` | ❌ |
+| 3 | `ollama-cloud/nemotron-3-super` | ❌ |
+| 4 | `ollama-cloud/beam` | ❌ |
+| 5 | `ollama-cloud/gpt-oss:20b` | ❌ |
+| 6 | `ollama-cloud/minimax-m3.1-flash` | ❌ |
+| 7 | `ollama-cloud/nemotron-3-nano:30b` | ❌ |
+| 8 | `ollama-cloud/nemotron-3-ultra` | ❌ |
 
 <a id="comboopenrouter-best"></a>
 ### combo/openrouter-best - [back to list](#8-combo-catalog-live)
