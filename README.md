@@ -872,31 +872,31 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 <a id="combonvidia-best"></a>
 ### combo/nvidia-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 3 / 20 testable
+**Working legs today:** 7 / 21 testable (updated 2026-10-26 — live probe)
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `ollama-cloud/nemotron-3-super` | OK |
-| 2 | `nvidia/nvidia/nemotron-4-340b-reward` | FAIL timeout |
-| 3 | `nvidia/nvidia/nemotron-nano-3-30b-a3b` | FAIL timeout |
-| 4 | `kilocode/nvidia/nemotron-3.5-content-safety:free` | OK |
-| 5 | `kilocode/nvidia/nemotron-3.5-lightning:free` | OK |
-| 6 | `openrouter/nvidia/nemotron-3.5-lightning:free` | FAIL error |
-| 7 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free` | FAIL error |
-| 8 | `kilocode/nvidia/nemotron-3-super-120b-a12b:free` | FAIL error |
-| 9 | `openrouter/nvidia/nemotron-3-super-120b-a12b:free` | FAIL error |
-| 10 | `openrouter/nvidia/nemotron-3.5-content-safety:free` | FAIL error |
-| 11 | `nvidia/nvidia/nemotron-4-340b-instruct` | FAIL error |
-| 12 | `nvidia/nvidia/nemotron-3.5-content-safety` | FAIL error |
-| 13 | `nvidia/nvidia/nemotron-3.5-lightning-30b-a3b` | FAIL error |
-| 14 | `nvidia/nvidia/llama-3.1-nemotron-ultra-253b-v1` | FAIL error |
-| 15 | `nvidia/nvidia/llama-3.1-nemotron-51b-instruct` | FAIL error |
-| 16 | `nvidia/nvidia/llama-3.1-nemotron-70b-instruct` | FAIL error |
-| 17 | `nvidia/nvidia/nemotron-3-ultra-550b-a55b` | FAIL error |
-| 18 | `nvidia/nvidia/nemotron-3-super-120b-a12b` | FAIL error |
-| 19 | `nvidia/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning` | FAIL error |
-| 20 | `cfp/nvidia/nemotron-3-120b-a12b` | no connection |
-| 21 | `auto/best-coding` | untested |
+| 1 | `kilocode/nvidia/nemotron-3.5-content-safety:free` | ✅ |
+| 2 | `kilocode/nvidia/nemotron-3.5-lightning:free` | ✅ |
+| 3 | `openrouter/nvidia/nemotron-3.5-lightning:free` | ✅ |
+| 4 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free` | ✅ |
+| 5 | `openrouter/nvidia/nemotron-3.5-content-safety:free` | ✅ |
+| 6 | `nvidia/nvidia/nemotron-3.5-content-safety` | ✅ |
+| 7 | `auto/best-coding` | ✅ |
+| 8 | `ollama-cloud/nemotron-3-super` | ❌ |
+| 9 | `nvidia/nvidia/nemotron-4-340b-reward` | ❌ |
+| 10 | `nvidia/nvidia/nemotron-nano-3-30b-a3b` | ❌ |
+| 11 | `openrouter/nvidia/nemotron-3.5-lightning:free` | ❌ |
+| 12 | `openrouter/nvidia/nemotron-3-super-120b-a12b:free` | ❌ |
+| 13 | `kilocode/nvidia/nemotron-3-super-120b-a12b:free` | ❌ |
+| 14 | `openrouter/nvidia/nemotron-3-super-120b-a12b:free` | ❌ |
+| 15 | `nvidia/nvidia/nemotron-4-340b-instruct` | ❌ |
+| 16 | `nvidia/nvidia/nemotron-3.5-lightning-30b-a3b` | ❌ |
+| 17 | `nvidia/nvidia/llama-3.1-nemotron-ultra-253b-v1` | ❌ |
+| 18 | `nvidia/nvidia/llama-3.1-nemotron-51b-instruct` | ❌ |
+| 19 | `nvidia/nvidia/llama-3.1-nemotron-70b-instruct` | ❌ |
+| 20 | `nvidia/nvidia/nemotron-3-ultra-550b-a55b` | ❌ |
+| 21 | `nvidia/nvidia/nemotron-3-super-120b-a12b` | ❌ |
 
 <a id="comboollama-best"></a>
 ### combo/ollama-best - [back to list](#8-combo-catalog-live)
