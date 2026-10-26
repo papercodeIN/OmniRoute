@@ -474,32 +474,16 @@ _Updated **2026-10-26** (live probe: **423 requests across 22 combos**, then cle
 <a id="combocleanapis-best"></a>
 ### combo/cleanapis-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 5 / 21 testable (updated 2026-10-26 — live probe)
+**Working legs today:** 4 / 4 testable (updated 2026-10-26 — live probe)
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `kilocode/cohere/north-mini-code:free` | ✅ |
+| 1 | `openrouter/cohere/north-mini-code:free` | ✅ |
 | 2 | `openrouter/poolside/laguna-s-2.1:free` | ✅ |
-| 3 | `kilocode/poolside/laguna-s-2.1:free` | ✅ |
-| 4 | `kilocode/poolside/laguna-xs-2.1:free` | ✅ |
-| 5 | `auto/best-coding` | ✅ |
-| 6 | `openrouter/cohere/north-mini-code:free` | ❌ |
-| 7 | `openai/free/qwen-3.8-max` | ❌ |
-| 8 | `openai/free/deepseek-v4.1-flash` | ❌ |
-| 9 | `openrouter/poolside/laguna-s-2.1:free` | ❌ |
-| 10 | `openai/free/deepseek-v4-flash-0731` | ❌ |
-| 11 | `openai/free/deepseek-v4-pro-0813` | ❌ |
-| 12 | `openai/free/gpt-6-luna` | ❌ |
-| 13 | `openrouter/poolside/laguna-xs-2.1:free` | ❌ |
-| 14 | `openai/free/glm-5.3-flash` | ❌ |
-| 15 | `openai/free/mimo-v2.6-pro` | ❌ |
-| 16 | `openai/claude-sonnet-5` | ❌ |
-| 17 | `openai/claude-opus-5.5` | ❌ |
-| 17 | `gemini/gemini-3.8-flash` | ❌ |
-| 18 | `openai/kimi-k3` | ❌ |
-| 19 | `openai/glm-5.3` | ❌ |
-| 20 | `openai/deepseek-v4-pro-max` | ❌ |
-| 21 | `gemini/gemini-3.7-flash` | ❌ |
+| 3 | `openrouter/poolside/laguna-xs-2.1:free` | ✅ |
+| 4 | `auto/best-coding` | ✅ |
+
+*All models from active providers only (openrouter). Removed 17 models from unconfigured providers (openai/free, kilocode, gemini, openai/claude).*
 
 <a id="combocloudflare-best"></a>
 ### combo/cloudflare-best - [back to list](#8-combo-catalog-live)
