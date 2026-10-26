@@ -432,41 +432,44 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 <a id="comboclaude-best"></a>
 ### combo/claude-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 0 / 30 testable
+**Working legs today:** 5 / 17 testable (updated 2026-10-26 — live probe)
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `openai/claude-opus-5.5` | FAIL error |
-| 2 | `openai/claude-sonnet-5` | FAIL error |
-| 3 | `claude-web/claude-opus-5-low` | FAIL error |
-| 4 | `claude-web/claude-opus-5-high` | FAIL error |
-| 5 | `claude-web/claude-opus-5-xhigh` | FAIL error |
-| 6 | `claude-web/claude-opus-5-medium` | FAIL error |
-| 7 | `antigravity/claude-opus-4-6-thinking` | FAIL error |
-| 8 | `claude-web/claude-opus-4-6` | FAIL error |
-| 9 | `agy/claude-opus-4-6-thinking-low` | FAIL error |
-| 10 | `antigravity/claude-opus-4-6-thinking-low` | FAIL error |
-| 11 | `claude-web/claude-opus-4-6-low` | FAIL error |
-| 12 | `claude-web/claude-opus-4-7-low` | FAIL error |
-| 13 | `claude-web/claude-opus-4-8-low` | FAIL error |
-| 14 | `claude-web/claude-opus-5` | FAIL error |
-| 15 | `claude-web/claude-sonnet-5-high` | FAIL error |
-| 16 | `claude-web/claude-sonnet-5-xhigh` | FAIL error |
-| 17 | `claude-web/claude-sonnet-5-medium` | FAIL error |
-| 18 | `claude-web/claude-sonnet-5-low` | FAIL error |
-| 19 | `kiro/claude-sonnet-4.5` | FAIL error |
-| 20 | `agy/claude-sonnet-4-6` | FAIL error |
-| 21 | `antigravity/claude-sonnet-4-6` | FAIL error |
-| 22 | `claude-web/claude-sonnet-4-6` | FAIL error |
-| 23 | `agy/claude-sonnet-4-6-low` | FAIL error |
-| 24 | `antigravity/claude-sonnet-4-6-low` | FAIL error |
-| 25 | `claude-web/claude-sonnet-4-6-low` | FAIL error |
-| 26 | `claude-web/claude-sonnet-5` | FAIL error |
-| 27 | `claude-web/claude-fable-5-1-low` | FAIL error |
-| 28 | `claude-web/claude-fable-5-low` | FAIL error |
-| 29 | `kiro/claude-haiku-4.5` | FAIL error |
-| 30 | `claude-web/claude-haiku-4-5-20251001-low` | FAIL error |
-| 31 | `auto/best-coding` | untested |
+| 1 | `antigravity/claude-opus-4-6-thinking` | ✅ |
+| 2 | `agy/claude-opus-4-6-thinking` | ✅ |
+| 3 | `antigravity/claude-sonnet-4-6` | ✅ |
+| 4 | `agy/claude-sonnet-4-6` | ✅ |
+| 5 | `auto/best-coding` | ✅ |
+| 6 | `openai/claude-opus-5.5` | ❌ |
+| 7 | `openai/claude-sonnet-5` | ❌ |
+| 8 | `claude-web/claude-opus-5-low` | ❌ |
+| 9 | `claude-web/claude-opus-5-high` | ❌ |
+| 10 | `claude-web/claude-opus-5-xhigh` | ❌ |
+| 11 | `claude-web/claude-opus-5-medium` | ❌ |
+| 12 | `claude-web/claude-opus-4-6` | ❌ |
+| 13 | `agy/claude-opus-4-6-thinking-low` | ❌ |
+| 14 | `antigravity/claude-opus-4-6-thinking-low` | ❌ |
+| 15 | `claude-web/claude-opus-4-6-low` | ❌ |
+| 16 | `claude-web/claude-opus-4-7-low` | ❌ |
+| 17 | `claude-web/claude-opus-4-8-low` | ❌ |
+| 18 | `claude-web/claude-opus-5` | ❌ |
+| 19 | `claude-web/claude-sonnet-5-high` | ❌ |
+| 20 | `claude-web/claude-sonnet-5-xhigh` | ❌ |
+| 21 | `claude-web/claude-sonnet-5-medium` | ❌ |
+| 22 | `claude-web/claude-sonnet-5-low` | ❌ |
+| 22 | `kiro/claude-sonnet-4.5` | ❌ |
+| 23 | `agy/claude-sonnet-4-6` | ❌ |
+| 24 | `antigravity/claude-sonnet-4-6` | ✅ |
+| 25 | `claude-web/claude-sonnet-4-6` | ❌ |
+| 26 | `agy/claude-sonnet-4-6-low` | ❌ |
+| 27 | `antigravity/claude-sonnet-4-6-low` | ❌ |
+| 28 | `claude-web/claude-sonnet-4-6-low` | ❌ |
+| 29 | `claude-web/claude-sonnet-5` | ❌ |
+| 30 | `claude-web/claude-fable-5-1-low` | ❌ |
+| 31 | `claude-web/claude-fable-5-low` | ❌ |
+| 32 | `kiro/claude-haiku-4.5` | ❌ |
+| 33 | `claude-web/claude-haiku-4-5-20251001-low` | ❌ |
 
 <a id="comboclaude-code"></a>
 ### combo/claude-code - [back to list](#8-combo-catalog-live)
