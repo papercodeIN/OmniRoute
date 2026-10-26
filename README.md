@@ -1049,8 +1049,6 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 | 25 | `xkiro/sensenova/sensenova-6.8-flash-lite` | SenseNova | ✅ |
 | 26 | `xkiro/mistralai/ministral-8b` | Ministral | ⚠️ timeout (fallback last) |
 
-**Not on xkiro (all FAIL):** Command A/R/R+/R7B, Aya Expanse/Vision, North Mini/Small, LongCat, TinyAya, BigPickle, SenseNova U1.5, Qwen 3.8 Omni Flash, Qwen 3.7 Flash — these are Cohere/other providers, not hosted on xkiro.
-
 <a id="combofree-ai-best"></a>
 ### combo/free-ai-best - [back to list](#8-combo-catalog-live)
 
@@ -1066,8 +1064,6 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 | 4 | `free-ai/qwen7b` | Qwen 7B | ✅ |
 | 5 | `free-ai/mistral` | Mistral | ✅ |
 | 4 | `free-ai/deepseek-r1-7b` | DeepSeek R1 7B | ✅ |
-
-**Not on free-ai (all FAIL):** qwen3-14b/32b, qwen2.5-coder/7b/32b, llama3.1/3, phi3/3.5, gemma2/7b, codellama, starcoder2, deepseek-coder/v2/v2.5, qwq-32b, qwen2-72b, mistral-nemo/7b, mixtral — these are not hosted on free-ai.
 
 <a id="combozerolimitai-best"></a>
 ### combo/zerolimitai-best - [back to list](#8-combo-catalog-live)
