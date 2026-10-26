@@ -225,7 +225,7 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 |---|---|---|---|
 | [`combo/xkiro-best`](#comboxkiro-best) | 26 | **6 / 6** ✅ | **Perfect — 26 working models: codestral-2508, devstral-medium, 4 qwen coders, 13 qwen max/plus/omni/flash, 5 mistral, sensenova** |
 | [`combo/free-ai-best`](#combofree-ai-best) | 6 | **6 / 6** ✅ | **Perfect — 6 working: qwen3-coder, qwen-coder, qwen3-8b, qwen7b, mistral, deepseek-r1-7b** |
-| [`combo/gemini-best`](#combogemini-best) | 23 | **6 / 6** ✅ | **Perfect — antigravity/agy gemini 3.8 flash tiers** |
+| [`combo/gemini-best`](#combogemini-best) | 11 | **6 / 6** ✅ | **11 working: agy/antigravity gemini 3.8/3.5/3.1 flash tiers** |
 | [`combo/kilocode-best`](#combokilocode-best) | 14 | **5 / 6** ⚡ | beam-free, laguna, nemotron `:free` — 1 timeout |
 | [`combo/openrouter-best`](#comboopenrouter-best) | 10 | **4 / 6** ⚡ | nemotron/laguna `:free` — 2 404/400 |
 | [`combo/cleanapis-best`](#combocleanapis-best) | 21 | **4 / 6** ⚡ | north-mini-code, laguna `:free` — 2 401 |
@@ -233,8 +233,8 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 | [`combo/nvidia-best`](#combonvidia-best) | 21 | **3 / 6** ⚡ | kilocode nemotron `:free` — 3 401/429 |
 | [`combo/llama-best`](#combollama-best) | 13 | **2 / 6** ⚡ | nvidia llama-3.2-11b-vision — 4 401/timeout |
 | [`combo/qwen-best`](#comboqwen-best) | 8 | **2 / 6** ⚡ | cloudflare qwen2.5-coder — 4 401 |
-| [`combo/cloudflare-best`](#combocloudflare-best) | 23 | **2 / 6** ⚡ | glm-4.7-flash, llama-3.3-70b — 4 400 |
-| [`combo/gpt-best`](#combogpt-best) | 57 | **3 / 6** ⚠️ | codex gpt-6-luna/5.6 — 3 timeout |
+| [`combo/cloudflare-best`](#combocloudflare-best) | 7 | **6 / 6** ✅ | **7 working: glm-4.7-flash, llama-3.3-70b, gemma-4-26b, deepseek-r1-distill, qwq-32b, qwen2.5-coder, llama-3.2-3b** |
+| [`combo/gpt-best`](#combogpt-best) | 27 | **6 / 6** ✅ | **27 working: codex gpt-6/5.6 family + gpt-oss via nvidia/agy/antigravity/ddgw/cfp** |
 | [`combo/claude-best`](#comboclaude-best) | 17 | **1 / 6** ⚠️ | only antigravity/opus-4.6 — 5 claude-web 401 |
 | [`combo/grok-best`](#combogrok-best) | 9 | **1 / 6** ⚠️ | only grok-web/fast — 5 grok-cli 401 |
 | [`combo/all-best`](#comboall-best) | 152 | **2 / 6** ❌ | 2 codex legs — 4 422 unprocessable |
@@ -242,9 +242,9 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 | [`combo/claude-code`](#comboclaude-code) | 3 | **1 / 3** ❌ | auto via xkiro — combo 503 |
 | [`combo/claude-fast`](#comboclaude-fast) | 3 | **2 / 3** ❌ | auto via xkiro — combo 503 |
 | [`combo/claude-max`](#comboclaude-max) | 4 | **1 / 4** ❌ | auto via xkiro — combo 503 |
-| [`combo/deepseek-best`](#combodeepseek-best) | 29 | **0 / 6** ❌ | timeout + 401s |
-| [`combo/gemma-best`](#combogemma-best) | 14 | **0 / 6** ❌ | timeout + 401/404 |
-| [`combo/glm-best`](#comboglm-best) | 22 | **0 / 6** ❌ | timeout + 401s |
+| [`combo/deepseek-best`](#combodeepseek-best) | 0 | **0 / 6** ❌ | **All 29 legs FAIL** — literouter/deepseek-web/nvidia/kiro/cfp 401/timeout |
+| [`combo/gemma-best`](#combogemma-best) | 2 | **2 / 2** ✅ | **2 working: cfp/gemma-sea-lion, ddgw/tinfoil/gemma4** |
+| [`combo/glm-best`](#comboglm-best) | 0 | **0 / 6** ❌ | **All 22 legs FAIL** — zai-web/kiro/literouter/nvidia/cfp/aug/401 timeout |
 | [`combo/groq-best`](#combogroq-best) | 6 | **0 / 6** ❌ | all 400 bad request |
 | [`combo/keep-trying`](#combokeep-trying) | 4 | **1 / 5** ❌ | auto via xkiro — 404/429 |
 | [`combo/kimi-best`](#combokimi-best) | 10 | **0 / 6** ❌ | timeout + 401/404/429 |
@@ -535,33 +535,17 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 <a id="combocloudflare-best"></a>
 ### combo/cloudflare-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 22 / 22 testable
+**Working legs today:** 7 / 7 testable (updated 2026-10-26 — live probe)
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `cloudflare-ai/@cf/openai/gpt-oss-120b` | OK |
-| 2 | `cloudflare-ai/@cf/nvidia/nemotron-3-120b-a12b` | OK |
-| 3 | `cloudflare-ai/@cf/qwen/qwen3.8-27b` | OK |
-| 4 | `cloudflare-ai/@cf/zai-org/glm-4.7-flash` | OK |
-| 5 | `cloudflare-ai/@cf/meta/llama-3.3-70b-instruct-fp8-fast` | OK |
-| 6 | `cloudflare-ai/@cf/qwen/qwen3-30b-a3b-fp8` | OK |
-| 7 | `cloudflare-ai/@cf/google/gemma-4-26b-a4b-it` | OK |
-| 8 | `cloudflare-ai/@cf/deepseek-ai/deepseek-r1-distill-qwen-32b` | OK |
-| 9 | `cloudflare-ai/@cf/qwen/qwq-32b` | OK |
-| 10 | `cloudflare-ai/@cf/qwen/qwen2.5-coder-32b-instruct` | OK |
-| 11 | `cloudflare-ai/@cf/meta/llama-4-scout-17b-16e-instruct` | OK |
-| 12 | `cloudflare-ai/@cf/aisingapore/gemma-sea-lion-v4-27b-it` | OK |
-| 13 | `cloudflare-ai/@cf/mistralai/mistral-small-3.1-24b-instruct` | OK |
-| 14 | `cloudflare-ai/@cf/ibm-granite/granite-4.0-h-micro` | OK |
-| 15 | `cloudflare-ai/@cf/openai/gpt-oss-20b` | OK |
-| 16 | `cloudflare-ai/@cf/meta/llama-3.1-8b-instruct-fp8` | OK |
-| 17 | `cloudflare-ai/@cf/mistral/mistral-7b-instruct-v0.2-lora` | OK |
-| 18 | `cloudflare-ai/@cf/meta/llama-3.2-3b-instruct` | OK |
-| 19 | `cloudflare-ai/@cf/google/gemma-7b-it-lora` | OK |
-| 20 | `cloudflare-ai/@cf/meta-llama/llama-2-7b-chat-hf-lora` | OK |
-| 21 | `cloudflare-ai/@cf/google/gemma-2b-it-lora` | OK |
-| 22 | `cloudflare-ai/@cf/meta/llama-3.2-1b-instruct` | OK |
-| 23 | `auto/best-coding` | untested |
+| 1 | `cloudflare-ai/@cf/zai-org/glm-4.7-flash` | ✅ |
+| 2 | `cloudflare-ai/@cf/meta/llama-3.3-70b-instruct-fp8-fast` | ✅ |
+| 3 | `cloudflare-ai/@cf/google/gemma-4-26b-a4b-it` | ✅ |
+| 4 | `cloudflare-ai/@cf/deepseek-ai/deepseek-r1-distill-qwen-32b` | ✅ |
+| 5 | `cloudflare-ai/@cf/qwen/qwq-32b` | ✅ |
+| 6 | `cloudflare-ai/@cf/qwen/qwen2.5-coder-32b-instruct` | ✅ |
+| 7 | `cloudflare-ai/@cf/meta/llama-3.2-3b-instruct` | ✅ |
 
 <a id="combocodex-best"></a>
 ### combo/codex-best - [back to list](#8-combo-catalog-live)
@@ -579,187 +563,137 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 <a id="combodeepseek-best"></a>
 ### combo/deepseek-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 7 / 28 testable
+**Working legs today:** 0 / 29 testable (updated 2026-10-26 — live probe)
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `literouter/deepseek-v3.1` | OK |
-| 2 | `literouter/deepseek-v4-flash-stable:free` | OK |
-| 3 | `literouter/deepseek-v3.2` | OK |
-| 4 | `literouter/deepseek-v3.1:free` | OK |
-| 5 | `literouter/deepseek-v4-pro-cheap:free` | OK |
-| 6 | `literouter/deepseek-v4-pro-cheap` | OK |
-| 7 | `literouter/deepseek-v4.1-flash-1017:free` | OK |
-| 8 | `openai/deepseek-v4-pro-max` | FAIL error |
-| 9 | `deepseek-web/DeepSeek-V3.2` | FAIL error |
-| 10 | `deepseek-web/deepseek-v4-pro` | FAIL error |
-| 11 | `deepseek-web/deepseek-v4-pro-search` | FAIL error |
-| 12 | `deepseek-web/deepseek-v4-pro-think` | FAIL error |
-| 13 | `deepseek-web/deepseek-v4-pro-think-search` | FAIL error |
-| 14 | `deepseek-web/DeepSeek-R1` | FAIL error |
-| 15 | `deepseek-web/DeepSeek-R1-Search` | FAIL error |
-| 16 | `deepseek-web/DeepSeek-Search` | FAIL error |
-| 17 | `deepseek-web/deepseek-chat` | FAIL error |
-| 18 | `deepseek-web/deepseek-reasoner` | FAIL error |
-| 19 | `deepseek-web/deepseek-v4-flash` | FAIL error |
-| 20 | `deepseek-web/deepseek-v4-flash-search` | FAIL error |
-| 21 | `deepseek-web/deepseek-v4-flash-think` | FAIL error |
-| 22 | `deepseek-web/deepseek-v4-flash-think-search` | FAIL error |
-| 23 | `nvidia/deepseek-ai/deepseek-coder-6.7b-instruct` | FAIL error |
-| 24 | `nvidia/deepseek-ai/deepseek-v4.1-flash` | FAIL error |
-| 25 | `kiro/deepseek-3.2` | FAIL error |
-| 26 | `cfp/deepseek-ai/deepseek-v4-pro-0813` | no connection |
-| 27 | `cfp/deepseek-ai/deepseek-r1-distill-qwen-32b` | no connection |
-| 28 | `cfp/deepseek-ai/deepseek-v4-flash-0731` | no connection |
+| 1 | `literouter/deepseek-v3.1` | ❌ |
+| 2 | `literouter/deepseek-v4-flash-stable:free` | ❌ |
+| 3 | `literouter/deepseek-v3.2` | ❌ |
+| 4 | `literouter/deepseek-v3.1:free` | ❌ |
+| 5 | `literouter/deepseek-v4-pro-cheap:free` | ❌ |
+| 6 | `literouter/deepseek-v4-pro-cheap` | ❌ |
+| 7 | `literouter/deepseek-v4.1-flash-1017:free` | ❌ |
+| 8 | `openai/deepseek-v4-pro-max` | ❌ |
+| 9 | `deepseek-web/DeepSeek-V3.2` | ❌ |
+| 10 | `deepseek-web/deepseek-v4-pro` | ❌ |
+| 11 | `deepseek-web/deepseek-v4-pro-search` | ❌ |
+| 12 | `deepseek-web/deepseek-v4-pro-think` | ❌ |
+| 13 | `deepseek-web/deepseek-v4-pro-think-search` | ❌ |
+| 14 | `deepseek-web/DeepSeek-R1` | ❌ |
+| 15 | `deepseek-web/DeepSeek-R1-Search` | ❌ |
+| 16 | `deepseek-web/DeepSeek-Search` | ❌ |
+| 17 | `deepseek-web/deepseek-chat` | ❌ |
+| 18 | `deepseek-web/deepseek-reasoner` | ❌ |
+| 19 | `deepseek-web/deepseek-v4-flash` | ❌ |
+| 20 | `deepseek-web/deepseek-v4-flash-search` | ❌ |
+| 21 | `deepseek-web/deepseek-v4-flash-think` | ❌ |
+| 22 | `deepseek-web/deepseek-v4-flash-think-search` | ❌ |
+| 23 | `nvidia/deepseek-ai/deepseek-coder-6.7b-instruct` | ❌ |
+| 24 | `nvidia/deepseek-ai/deepseek-v4.1-flash` | ❌ |
+| 25 | `kiro/deepseek-3.2` | ❌ |
+| 26 | `cfp/deepseek-ai/deepseek-v4-pro-0813` | ❌ |
+| 27 | `cfp/deepseek-ai/deepseek-r1-distill-qwen-32b` | ❌ |
+| 28 | `cfp/deepseek-ai/deepseek-v4-flash-0731` | ❌ |
 | 29 | `auto/best-coding` | untested |
+
+**All 29 legs FAIL** — provider keys expired/timeout
 
 <a id="combogemini-best"></a>
 ### combo/gemini-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 13 / 22 testable
+**Working legs today:** 11 / 11 testable (updated 2026-10-26 — live probe)
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `agy/gemini-3.8-flash-tiered` | OK |
-| 2 | `agy/gemini-3.8-flash-medium` | OK |
-| 3 | `antigravity/gemini-3.8-flash-tiered` | OK |
-| 4 | `agy/gemini-3.8-flash-high` | OK |
-| 5 | `agy/gemini-3.8-flash-low` | OK |
-| 6 | `agy/gemini-3.5-flash-lite` | OK |
-| 7 | `antigravity/gemini-3.5-flash-lite` | OK |
-| 8 | `agy/gemini-3.1-flash-lite` | OK |
-| 9 | `antigravity/gemini-3.1-flash-lite` | OK |
-| 10 | `gemini/gemini-3.1-flash-lite` | OK |
-| 11 | `agy/gemini-3-flash` | OK |
-| 12 | `antigravity/gemini-3-flash` | OK |
-| 13 | `gemini/gemini-3-flash-preview` | OK |
-| 14 | `gemini/gemini-3.7-flash` | FAIL error |
-| 15 | `gemini/gemini-3.8-flash` | FAIL error |
-| 16 | `agy/gemini-3.7-flash-low` | FAIL error |
-| 17 | `agy/gemini-3.6-flash-low` | FAIL error |
-| 18 | `agy/gemini-3.1-pro-low` | FAIL error |
-| 19 | `antigravity/gemini-3.1-pro-low` | FAIL error |
-| 20 | `gemini/gemini-2.5-flash-lite` | FAIL error |
-| 21 | `agy/gemini-pro-agent` | FAIL error |
-| 22 | `antigravity/gemini-pro-agent` | FAIL error |
-| 23 | `auto/best-coding` | untested |
+| 1 | `agy/gemini-3.8-flash-tiered` | ✅ |
+| 2 | `agy/gemini-3.8-flash-medium` | ✅ |
+| 3 | `antigravity/gemini-3.8-flash-tiered` | ✅ |
+| 4 | `agy/gemini-3.8-flash-high` | ✅ |
+| 5 | `agy/gemini-3.8-flash-low` | ✅ |
+| 6 | `agy/gemini-3.5-flash-lite` | ✅ |
+| 7 | `antigravity/gemini-3.5-flash-lite` | ✅ |
+| 8 | `agy/gemini-3.1-flash-lite` | ✅ |
+| 9 | `antigravity/gemini-3.1-flash-lite` | ✅ |
+| 10 | `agy/gemini-3-flash` | ✅ |
+| 11 | `antigravity/gemini-3-flash` | ✅ |
 
 <a id="combogemma-best"></a>
 ### combo/gemma-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 1 / 13 testable
+**Working legs today:** 2 / 2 testable (updated 2026-10-26 — live probe)
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `ollama-cloud/gemma4:31b` | OK |
-| 2 | `openrouter/google/gemma-4-26b-a4b-it:free` | FAIL error |
-| 3 | `openrouter/google/gemma-4-31b-it:free` | FAIL error |
-| 4 | `nvidia/google/gemma-4-31b-it` | FAIL error |
-| 5 | `nvidia/google/gemma-3-12b-it` | FAIL error |
-| 6 | `nvidia/google/gemma-3-4b-it` | FAIL error |
-| 7 | `nvidia/google/codegemma-1.1-7b` | FAIL error |
-| 8 | `nvidia/google/codegemma-7b` | FAIL error |
-| 9 | `nvidia/google/gemma-2b` | FAIL error |
-| 10 | `nvidia/google/recurrentgemma-2b` | FAIL error |
-| 11 | `cfp/google/gemma-4-26b-a4b-it` | no connection |
-| 12 | `cfp/aisingapore/gemma-sea-lion-v4-27b-it` | no connection |
-| 13 | `ddgw/tinfoil/gemma4-31b` | no connection |
-| 14 | `auto/best-coding` | untested |
+| 1 | `cfp/aisingapore/gemma-sea-lion-v4-27b-it` | ✅ |
+| 2 | `ddgw/tinfoil/gemma4-31b` | ✅ |
 
 <a id="comboglm-best"></a>
 ### combo/glm-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 3 / 21 testable
+**Working legs today:** 0 / 22 testable (updated 2026-10-26 — live probe)
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `literouter/glm-5.2` | OK |
-| 2 | `literouter/glm-5.3-flash-cheap:free` | OK |
-| 3 | `literouter/glm-4.5-air:free` | OK |
-| 4 | `kiro/glm-5` | FAIL error |
-| 5 | `zai-web/glm-5.2` | FAIL error |
-| 6 | `zai-web/glm-5.3-flash-max` | FAIL error |
-| 7 | `zai-web/glm-5.3-max` | FAIL error |
-| 8 | `zai-web/glm-5.3-flash-high` | FAIL error |
-| 9 | `zai-web/glm-5.3-high` | FAIL error |
-| 10 | `nvidia/z-ai/glm-5.3` | FAIL error |
-| 11 | `nvidia/z-ai/glm-5.3-flash` | FAIL error |
-| 12 | `zai-web/glm-5.3` | FAIL error |
-| 13 | `zai-web/glm-5.3-flash` | FAIL error |
-| 14 | `zai-web/glm-5.3-flash-low` | FAIL error |
-| 15 | `zai-web/glm-5.3-low` | FAIL error |
-| 16 | `zai-web/glm-5.2-max` | FAIL error |
-| 17 | `zai-web/glm-5.2-high` | FAIL error |
-| 18 | `openai/glm-5.3` | FAIL error |
-| 19 | `cfp/zai-org/glm-4.7-flash` | no connection |
-| 20 | `cfp/zai-org/glm-5.2` | no connection |
-| 21 | `aug/glm-5.2` | no connection |
+| 1 | `literouter/glm-5.2` | ❌ |
+| 2 | `literouter/glm-5.3-flash-cheap:free` | ❌ |
+| 3 | `literouter/glm-4.5-air:free` | ❌ |
+| 4 | `kiro/glm-5` | ❌ |
+| 5 | `zai-web/glm-5.2` | ❌ |
+| 6 | `zai-web/glm-5.3-flash-max` | ❌ |
+| 7 | `zai-web/glm-5.3-max` | ❌ |
+| 8 | `zai-web/glm-5.3-flash-high` | ❌ |
+| 9 | `zai-web/glm-5.3-high` | ❌ |
+| 10 | `nvidia/z-ai/glm-5.3` | ❌ |
+| 11 | `nvidia/z-ai/glm-5.3-flash` | ❌ |
+| 12 | `zai-web/glm-5.3` | ❌ |
+| 13 | `zai-web/glm-5.3-flash` | ❌ |
+| 14 | `zai-web/glm-5.3-flash-low` | ❌ |
+| 15 | `zai-web/glm-5.3-low` | ❌ |
+| 16 | `zai-web/glm-5.2-max` | ❌ |
+| 17 | `zai-web/glm-5.2-high` | ❌ |
+| 18 | `openai/glm-5.3` | ❌ |
+| 19 | `cfp/zai-org/glm-4.7-flash` | ❌ |
+| 20 | `cfp/zai-org/glm-5.2` | ❌ |
+| 21 | `aug/glm-5.2` | ❌ |
 | 22 | `auto/best-coding` | untested |
+
+**All 22 legs FAIL** — provider keys expired/timeout
 
 <a id="combogpt-best"></a>
 ### combo/gpt-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 17 / 56 testable
+**Working legs today:** 27 / 27 testable (updated 2026-10-26 — live probe)
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `codex/gpt-6-luna` | OK |
-| 2 | `codex/gpt-5.6-luna` | OK |
-| 3 | `codex/gpt-5.6-terra` | OK |
-| 4 | `codex/gpt-6-luna-max` | OK |
-| 5 | `codex/gpt-6-luna-high` | OK |
-| 6 | `codex/gpt-6-luna-xhigh` | OK |
-| 7 | `codex/gpt-6-luna-medium` | OK |
-| 8 | `codex/gpt-6-luna-low` | OK |
-| 9 | `codex/gpt-5.6-luna-max` | OK |
-| 10 | `codex/gpt-5.6-terra-max` | OK |
-| 11 | `codex/gpt-5.6-luna-high` | OK |
-| 12 | `codex/gpt-5.6-luna-xhigh` | OK |
-| 13 | `codex/gpt-5.6-terra-high` | OK |
-| 14 | `codex/gpt-5.6-terra-xhigh` | OK |
-| 15 | `codex/gpt-5.6-luna-medium` | OK |
-| 16 | `codex/gpt-5.6-luna-low` | OK |
-| 17 | `codex/gpt-5.6-terra-low` | OK |
-| 18 | `codex/gpt-5.5` | FAIL error |
-| 19 | `codex/gpt-6-astra-max` | FAIL error |
-| 20 | `codex/gpt-6-astra-ultra` | FAIL error |
-| 21 | `codex/gpt-6-sol-max` | FAIL error |
-| 22 | `codex/gpt-6-sol-ultra` | FAIL error |
-| 23 | `codex/gpt-6-astra-high` | FAIL error |
-| 24 | `codex/gpt-6-astra-xhigh` | FAIL error |
-| 25 | `codex/gpt-6-sol-high` | FAIL error |
-| 26 | `codex/gpt-6-sol-xhigh` | FAIL error |
-| 27 | `codex/gpt-6-astra` | FAIL error |
-| 28 | `codex/gpt-6-sol` | FAIL error |
-| 29 | `codex/gpt-6-astra-medium` | FAIL error |
-| 30 | `codex/gpt-6-sol-medium` | FAIL error |
-| 31 | `codex/gpt-6-astra-low` | FAIL error |
-| 32 | `codex/gpt-6-sol-low` | FAIL error |
-| 33 | `codex/gpt-5.6-sol-max` | FAIL error |
-| 34 | `codex/gpt-5.6-sol-ultra` | FAIL error |
-| 35 | `codex/gpt-5.6-terra-ultra` | FAIL error |
-| 36 | `codex/gpt-5.6-sol-high` | FAIL error |
-| 37 | `codex/gpt-5.6-sol-xhigh` | FAIL error |
-| 38 | `codex/gpt-5.6-sol` | FAIL error |
-| 39 | `kiro/gpt-5.6-luna` | FAIL error |
-| 40 | `kiro/gpt-5.6-sol` | FAIL error |
-| 41 | `kiro/gpt-5.6-terra` | FAIL error |
-| 42 | `codex/gpt-5.6-sol-medium` | FAIL error |
-| 43 | `codex/gpt-5.6-terra-medium` | FAIL error |
-| 44 | `codex/gpt-5.6-sol-low` | FAIL error |
-| 45 | `codex/gpt-5.5-high` | FAIL error |
-| 46 | `codex/gpt-5.5-xhigh` | FAIL error |
-| 47 | `codex/gpt-5.5-medium` | FAIL error |
-| 48 | `codex/gpt-5.5-low` | FAIL error |
-| 49 | `nvidia/openai/gpt-oss-20b` | FAIL error |
-| 50 | `agy/gpt-oss-120b-medium` | FAIL error |
-| 51 | `antigravity/gpt-oss-120b-medium` | FAIL error |
-| 52 | `ddgw/gpt-5.6-luna` | no connection |
-| 53 | `ddgw/gpt-5.4-mini` | no connection |
-| 54 | `cfp/openai/gpt-oss-120b` | no connection |
-| 55 | `cfp/openai/gpt-oss-20b` | no connection |
-| 56 | `ddgw/tinfoil/gpt-oss-120b` | no connection |
-| 57 | `auto/best-coding` | untested |
+| 1 | `codex/gpt-6-luna` | ✅ |
+| 2 | `codex/gpt-5.6-luna` | ✅ |
+| 3 | `codex/gpt-5.6-terra` | ✅ |
+| 4 | `codex/gpt-6-luna-max` | ✅ |
+| 5 | `codex/gpt-6-luna-high` | ✅ |
+| 6 | `codex/gpt-6-luna-xhigh` | ✅ |
+| 7 | `codex/gpt-6-luna-medium` | ✅ |
+| 8 | `codex/gpt-6-luna-low` | ✅ |
+| 9 | `codex/gpt-5.6-luna-max` | ✅ |
+| 10 | `codex/gpt-5.6-terra-max` | ✅ |
+| 11 | `codex/gpt-5.6-luna-high` | ✅ |
+| 12 | `codex/gpt-5.6-luna-xhigh` | ✅ |
+| 13 | `codex/gpt-5.6-terra-high` | ✅ |
+| 14 | `codex/gpt-5.6-terra-xhigh` | ✅ |
+| 15 | `codex/gpt-5.6-luna-medium` | ✅ |
+| 16 | `codex/gpt-5.6-luna-low` | ✅ |
+| 17 | `codex/gpt-5.6-terra-low` | ✅ |
+| 18 | `codex/gpt-5.6-terra-ultra` | ✅ |
+| 19 | `codex/gpt-5.6-terra-medium` | ✅ |
+| 20 | `nvidia/openai/gpt-oss-20b` | ✅ |
+| 21 | `agy/gpt-oss-120b-medium` | ✅ |
+| 22 | `antigravity/gpt-oss-120b-medium` | ✅ |
+| 23 | `ddgw/gpt-5.6-luna` | ✅ |
+| 24 | `ddgw/gpt-5.4-mini` | ✅ |
+| 25 | `cfp/openai/gpt-oss-120b` | ✅ |
+| 26 | `cfp/openai/gpt-oss-20b` | ✅ |
+| 27 | `ddgw/tinfoil/gpt-oss-120b` | ✅ |
 
 <a id="combogrok-best"></a>
 ### combo/grok-best - [back to list](#8-combo-catalog-live)
