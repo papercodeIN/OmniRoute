@@ -1,7 +1,7 @@
 # Free AI Coding Setup — OmniRoute + OpenCode (Windows)
 
 > One gateway, ~120 provider connections, 31 auto-fallback combos, $0.
-> **Live probe 2026-10-26: 423 requests across 30 combos, 171 ✅ working, 252 ❌ failed. 14/30 combos have ≥1 working leg; xkiro-best 26/26, free-ai-best 6/6, gemini-best 11/11, morph-best 2/2 perfect.** All free tiers verified live on this machine.
+> **Live probe 2026-10-26: 423 requests across 22 combos, 171 ✅ working, 252 ❌ failed. 14/22 combos have ≥1 working leg; xkiro-best 26/26, free-ai-best 6/6, gemini-best 11/11, morph-best 2/2 perfect.** All free tiers verified live on this machine.
 
 ---
 
@@ -219,7 +219,7 @@ Key rules encoded: 401/402 = durable-dead (auto-disable), 403/429/5xx = transien
 
 ## 8. Combo catalog (live)
 
-_Updated **2026-10-26** (live probe: **423 requests across 30 combos**). **OK** = combo name + first 5 legs responded 200; **FAIL** = error on combo name or legs (401/403/422/503/timeout). xkiro legs only in `xkiro-best`; groq legs only in `groq-best`; cloudflare legs use `cloudflare-ai/@cf/...` prefix. **Green = daily drivers**, **Yellow = fallback only**, **Red = broken**._
+_Updated **2026-10-26** (live probe: **423 requests across 22 combos**). **OK** = combo name + first 5 legs responded 200; **FAIL** = error on combo name or legs (401/403/422/503/timeout). xkiro legs only in `xkiro-best`; groq legs only in `groq-best`; cloudflare legs use `cloudflare-ai/@cf/...` prefix. **Green = daily drivers**, **Yellow = fallback only**, **Red = broken**._
 
 | Combo | Legs | OK / FAIL | Status |
 |---|---|---|---|
