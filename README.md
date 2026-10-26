@@ -416,18 +416,18 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 <a id="comboapinex-best"></a>
 ### combo/apinex-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 0 / 7 testable
+**Working legs today:** 1 / 8 testable (updated 2026-10-26 — live probe)
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `openai/free/gpt-6-luna` | FAIL error |
-| 2 | `openai/free/glm-5.3-flash` | FAIL error |
-| 3 | `openai/free/deepseek-v4.1-flash` | FAIL error |
-| 4 | `openai/free/qwen-3.8-max` | FAIL error |
-| 5 | `openai/free/mimo-v2.6-pro` | FAIL error |
-| 6 | `openai/free/deepseek-v4-pro-0813` | FAIL error |
-| 7 | `openai/free/deepseek-v4-flash-0731` | FAIL error |
-| 8 | `auto/best-coding` | untested |
+| 1 | `auto/best-coding` | ✅ |
+| 2 | `openai/free/gpt-6-luna` | ❌ |
+| 3 | `openai/free/glm-5.3-flash` | ❌ |
+| 4 | `openai/free/deepseek-v4.1-flash` | ❌ |
+| 5 | `openai/free/qwen-3.8-max` | ❌ |
+| 6 | `openai/free/mimo-v2.6-pro` | ❌ |
+| 7 | `openai/free/deepseek-v4-pro-0813` | ❌ |
+| 8 | `openai/free/deepseek-v4-flash-0731` | ❌ |
 
 <a id="comboclaude-best"></a>
 ### combo/claude-best - [back to list](#8-combo-catalog-live)
