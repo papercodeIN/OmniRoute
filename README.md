@@ -221,38 +221,38 @@ Key rules encoded: 401/402 = durable-dead (auto-disable), 403/429/5xx = transien
 
 _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = combo name + first 5 legs responded 200; **FAIL** = error on combo name or legs (401/403/422/503/timeout). xkiro legs only in `xkiro-best`; groq legs only in `groq-best`; cloudflare legs use `cloudflare-ai/@cf/...` prefix. **Green = daily drivers**, **Yellow = fallback only**, **Red = broken**._
 
-| Combo | Legs | OK / probed | Status |
+| Combo | Legs | OK / FAIL | Status |
 |---|---|---|---|
-| [`combo/xkiro-best`](#comboxkiro-best) | 26 | **6 / 6** ✅ | **Perfect — 26 working models: codestral-2508, devstral-medium, 4 qwen coders, 13 qwen max/plus/omni/flash, 5 mistral, sensenova** |
-| [`combo/free-ai-best`](#combofree-ai-best) | 6 | **6 / 6** ✅ | **Perfect — 6 working: qwen3-coder, qwen-coder, qwen3-8b, qwen7b, mistral, deepseek-r1-7b** |
-| [`combo/gemini-best`](#combogemini-best) | 11 | **6 / 6** ✅ | **11 working: agy/antigravity gemini 3.8/3.5/3.1 flash tiers** |
-| [`combo/kilocode-best`](#combokilocode-best) | 14 | **5 / 6** ⚡ | beam-free, laguna, nemotron `:free` — 1 timeout |
-| [`combo/openrouter-best`](#comboopenrouter-best) | 10 | **4 / 6** ⚡ | nemotron/laguna `:free` — 2 404/400 |
-| [`combo/cleanapis-best`](#combocleanapis-best) | 21 | **4 / 6** ⚡ | north-mini-code, laguna `:free` — 2 401 |
-| [`combo/codex-best`](#combocodex-best) | 5 | **5 / 6** ⚡ | gpt-6-luna, 5.6 family — 1 timeout |
-| [`combo/nvidia-best`](#combonvidia-best) | 21 | **3 / 6** ⚡ | kilocode nemotron `:free` — 3 401/429 |
-| [`combo/llama-best`](#combollama-best) | 13 | **2 / 6** ⚡ | nvidia llama-3.2-11b-vision — 4 401/timeout |
-| [`combo/qwen-best`](#comboqwen-best) | 8 | **2 / 6** ⚡ | cloudflare qwen2.5-coder — 4 401 |
-| [`combo/cloudflare-best`](#combocloudflare-best) | 7 | **6 / 6** ✅ | **7 working: glm-4.7-flash, llama-3.3-70b, gemma-4-26b, deepseek-r1-distill, qwq-32b, qwen2.5-coder, llama-3.2-3b** |
-| [`combo/gpt-best`](#combogpt-best) | 27 | **6 / 6** ✅ | **27 working: codex gpt-6/5.6 family + gpt-oss via nvidia/agy/antigravity/ddgw/cfp** |
-| [`combo/claude-best`](#comboclaude-best) | 17 | **1 / 6** ⚠️ | only antigravity/opus-4.6 — 5 claude-web 401 |
-| [`combo/grok-best`](#combogrok-best) | 9 | **1 / 6** ⚠️ | only grok-web/fast — 5 grok-cli 401 |
-| [`combo/all-best`](#comboall-best) | 152 | **2 / 6** ❌ | 2 codex legs — 4 422 unprocessable |
-| [`combo/apinex-best`](#comboapinex-best) | 8 | **0 / 6** ❌ | 503 + 401s |
-| [`combo/claude-code`](#comboclaude-code) | 3 | **1 / 3** ❌ | auto via xkiro — combo 503 |
-| [`combo/claude-fast`](#comboclaude-fast) | 3 | **2 / 3** ❌ | auto via xkiro — combo 503 |
-| [`combo/claude-max`](#comboclaude-max) | 4 | **1 / 4** ❌ | auto via xkiro — combo 503 |
-| [`combo/deepseek-best`](#combodeepseek-best) | 0 | **0 / 6** ❌ | **All 29 legs FAIL** — literouter/deepseek-web/nvidia/kiro/cfp 401/timeout |
-| [`combo/gemma-best`](#combogemma-best) | 2 | **2 / 2** ✅ | **2 working: cfp/gemma-sea-lion, ddgw/tinfoil/gemma4** |
-| [`combo/glm-best`](#comboglm-best) | 0 | **0 / 6** ❌ | **All 22 legs FAIL** — zai-web/kiro/literouter/nvidia/cfp/aug/401 timeout |
-| [`combo/groq-best`](#combogroq-best) | 6 | **0 / 6** ❌ | all 400 bad request |
-| [`combo/keep-trying`](#combokeep-trying) | 4 | **1 / 5** ❌ | auto via xkiro — 404/429 |
-| [`combo/kimi-best`](#combokimi-best) | 10 | **0 / 6** ❌ | timeout + 401/404/429 |
+| [`combo/xkiro-best`](#comboxkiro-best) | 26 | **26 / 0** ✅ | **Perfect — all 26 working: codestral-2508, devstral-medium, 13 qwen, 5 mistral, sensenova** |
+| [`combo/free-ai-best`](#combofree-ai-best) | 6 | **6 / 0** ✅ | **Perfect — 6 working: qwen3-coder, qwen-coder, qwen3-8b, qwen7b, mistral, deepseek-r1-7b** |
+| [`combo/gemini-best`](#combogemini-best) | 11 | **11 / 0** ✅ | **Perfect — 11 working: agy/antigravity gemini 3.8/3.5/3.1 flash tiers** |
+| [`combo/gpt-best`](#combogpt-best) | 27 | **26 / 1** ✅ | **26 working: codex gpt-6/5.6 family + gpt-oss via nvidia/agy/antigravity/ddgw/cfp** |
+| [`combo/kilocode-best`](#combokilocode-best) | 14 | **10 / 4** ⚡ | 10 working: nemotron/beam/laguna/north-mini-code `:free` |
+| [`combo/openrouter-best`](#comboopenrouter-best) | 10 | **6 / 4** ⚡ | 6 working: nemotron/laguna/north-mini-code/lfm `:free` |
+| [`combo/cleanapis-best`](#combocleanapis-best) | 21 | **5 / 16** ⚡ | 5 working: north-mini-code/laguna `:free` |
+| [`combo/codex-best`](#combocodex-best) | 5 | **4 / 1** ⚡ | 4 working: gpt-6-luna, 5.6 family |
+| [`combo/cloudflare-best`](#combocloudflare-best) | 7 | **6 / 1** ✅ | 6 working: llama-3.3-70b, gemma-4-26b, deepseek-r1-distill, qwq-32b, qwen2.5-coder, llama-3.2-3b |
+| [`combo/nvidia-best`](#combonvidia-best) | 21 | **7 / 14** ⚡ | 7 working: nemotron `:free` via kilocode/openrouter |
+| [`combo/claude-best`](#comboclaude-best) | 17 | **5 / 12** ⚠️ | 5 working: antigravity/agy opus-4.6/sonnet-4.6 |
+| [`combo/grok-best`](#combogrok-best) | 9 | **2 / 7** ⚠️ | 2 working: grok-web/fast + auto |
+| [`combo/qwen-best`](#comboqwen-best) | 8 | **3 / 5** ⚡ | 3 working: cfp qwen3-30b, qwq-32b + auto |
+| [`combo/mistral-best`](#combomistral-best) | 18 | **3 / 15** ⚠️ | 3 working: cfp mistral-small, ddgw mistral-small + auto |
+| [`combo/gemma-best`](#combogemma-best) | 2 | **1 / 1** ⚠️ | 1 working: ddgw/tinfoil gemma4-31b |
+| [`combo/all-best`](#comboall-best) | 152 | **40 / 112** ❌ | 40 working (codex/agy/antigravity/kilocode/openrouter/grok) |
+| [`combo/groq-best`](#combogroq-best) | 6 | **1 / 5** ❌ | 1 working: auto/best-coding only |
+| [`combo/keep-trying`](#combokeep-trying) | 4 | **1 / 3** ❌ | 1 working: auto/best-coding only |
+| [`combo/nara-best`](#combonara-best) | 3 | **1 / 2** ❌ | 1 working: auto/best-coding only |
+| [`combo/ollama-best`](#comboollama-best) | 8 | **1 / 7** ❌ | 1 working: auto/best-coding only |
+| [`combo/apinex-best`](#comboapinex-best) | 8 | **1 / 7** ❌ | 1 working: auto/best-coding only |
+| [`combo/claude-code`](#comboclaude-code) | 3 | **0 / 3** ❌ | all fail: gemini + auto |
+| [`combo/claude-fast`](#comboclaude-fast) | 3 | **2 / 1** ❌ | 2 working: auto/best-fast + auto/best-coding |
+| [`combo/claude-max`](#comboclaude-max) | 4 | **1 / 3** ❌ | 1 working: auto/best-coding only |
+| [`combo/kimi-best`](#combokimi-best) | 10 | **1 / 9** ❌ | 1 working: auto/best-coding only |
+| [`combo/nvidia-best`](#combonvidia-best) | 21 | **7 / 14** ⚡ | 7 working: nemotron `:free` via kilocode/openrouter |
+| [`combo/deepseek-best`](#combodeepseek-best) | 29 | **0 / 29** ❌ | **All 29 FAIL** — keys expired/timeout |
+| [`combo/glm-best`](#comboglm-best) | 22 | **0 / 22** ❌ | **All 22 FAIL** — keys expired/timeout |
+| [`combo/literouter-best`](#comboliterouter-best) | 7 | **0 / 7** ❌ | **All 7 FAIL** — keys expired/timeout |
 | [`combo/kiro-best`](#combokiro-best) | 8 | **0 / 6** ❌ | 503 + 401s |
-| [`combo/literouter-best`](#comboliterouter-best) | 7 | **0 / 6** ❌ | 503 + 401s |
-| [`combo/mistral-best`](#combomistral-best) | 18 | **0 / 6** ❌ | all 422 unprocessable |
-| [`combo/nara-best`](#combonara-best) | 3 | **1 / 4** ❌ | auto via xkiro — 503 + 401s |
-| [`combo/ollama-best`](#comboollama-best) | 8 | **0 / 6** ❌ | 503 + 401s |
 
 <a id="comboall-best"></a>
 ### combo/all-best - [back to list](#8-combo-catalog-live)
