@@ -224,7 +224,7 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 | Combo | Legs | OK / probed | Status |
 |---|---|---|---|
 | [`combo/xkiro-best`](#comboxkiro-best) | 26 | **6 / 6** ✅ | **Perfect — 26 working models: codestral-2508, devstral-medium, 4 qwen coders, 13 qwen max/plus/omni/flash, 5 mistral, sensenova** |
-| [`combo/free-ai-best`](#combofree-ai-best) | 7 | **6 / 6** ✅ | **Perfect — qwen3-coder family works** |
+| [`combo/free-ai-best`](#combofree-ai-best) | 6 | **6 / 6** ✅ | **Perfect — 6 working: qwen3-coder, qwen-coder, qwen3-8b, qwen7b, mistral, deepseek-r1-7b** |
 | [`combo/gemini-best`](#combogemini-best) | 23 | **6 / 6** ✅ | **Perfect — antigravity/agy gemini 3.8 flash tiers** |
 | [`combo/kilocode-best`](#combokilocode-best) | 14 | **5 / 6** ⚡ | beam-free, laguna, nemotron `:free` — 1 timeout |
 | [`combo/openrouter-best`](#comboopenrouter-best) | 10 | **4 / 6** ⚡ | nemotron/laguna `:free` — 2 404/400 |
@@ -1054,17 +1054,20 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 <a id="combofree-ai-best"></a>
 ### combo/free-ai-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 7 / 7 testable
+**Working legs today:** 6 / 6 testable (updated 2026-10-26 — live probe)
 
-| # | Model | Status |
-|---|-------|--------|
-| 1 | `free-ai/qwen3-coder` | OK |
-| 2 | `free-ai/qwen-coder` | OK |
-| 3 | `free-ai/qwen7b` | OK |
-| 4 | `free-ai/qwen3-8b` | OK |
-| 5 | `free-ai/mistral` | OK |
-| 6 | `free-ai/deepseek-r1` | OK |
-| 7 | `free-ai/deepseek-r1-7b` | OK |
+**Coding-optimized order:** Qwen3 Coder (best) → Qwen Coder → Qwen 3 8B → Qwen 7B → Mistral → DeepSeek R1 7B
+
+| # | Model | Category | Status |
+|---|-------|----------|--------|
+| 1 | `free-ai/qwen3-coder` | Code-specialized | ✅ **Best for coding** |
+| 2 | `free-ai/qwen-coder` | Code-specialized | ✅ |
+| 3 | `free-ai/qwen3-8b` | Qwen 8B | ✅ |
+| 4 | `free-ai/qwen7b` | Qwen 7B | ✅ |
+| 5 | `free-ai/mistral` | Mistral | ✅ |
+| 4 | `free-ai/deepseek-r1-7b` | DeepSeek R1 7B | ✅ |
+
+**Not on free-ai (all FAIL):** qwen3-14b/32b, qwen2.5-coder/7b/32b, llama3.1/3, phi3/3.5, gemma2/7b, codellama, starcoder2, deepseek-coder/v2/v2.5, qwq-32b, qwen2-72b, mistral-nemo/7b, mixtral — these are not hosted on free-ai.
 
 <a id="combozerolimitai-best"></a>
 ### combo/zerolimitai-best - [back to list](#8-combo-catalog-live)
