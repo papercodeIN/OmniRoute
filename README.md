@@ -1,7 +1,7 @@
 # Free AI Coding Setup — OmniRoute + OpenCode (Windows)
 
 > One gateway, ~120 provider connections, 31 auto-fallback combos, $0.
-> **Live probe 2026-10-26: 14/31 combos resolve on first leg; xkiro-best 6/6, free-ai-best 6/6, gemini-best 6/6 perfect.** All free tiers verified live on this machine.
+> **Live probe 2026-10-26: 423 models tested, 171 ✅ working, 252 ❌ failed. 14/31 combos have ≥1 working leg; xkiro-best 26/26, free-ai-best 6/6, gemini-best 11/11 perfect.** All free tiers verified live on this machine.
 
 ---
 
