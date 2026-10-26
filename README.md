@@ -765,20 +765,20 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 <a id="combokimi-best"></a>
 ### combo/kimi-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 1 / 9 testable
+**Working legs today:** 1 / 10 testable (updated 2026-10-26 — live probe)
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `literouter/kimi-k2.8` | OK |
-| 2 | `openai/kimi-k3` | FAIL error |
-| 3 | `nvidia/moonshotai/kimi-k2.6` | FAIL error |
-| 4 | `ollama-cloud/kimi-k2.6` | FAIL error |
-| 5 | `nvidia/moonshotai/kimi-k3` | FAIL error |
-| 6 | `aug/kimi-k2.7` | no connection |
-| 7 | `cfp/moonshotai/kimi-k2.7-code` | no connection |
-| 8 | `aug/kimi-k2.6` | no connection |
-| 9 | `cfp/moonshotai/kimi-k2.6` | no connection |
-| 10 | `auto/best-coding` | untested |
+| 1 | `auto/best-coding` | ✅ |
+| 2 | `literouter/kimi-k2.8` | ❌ |
+| 3 | `openai/kimi-k3` | ❌ |
+| 4 | `nvidia/moonshotai/kimi-k2.6` | ❌ |
+| 5 | `ollama-cloud/kimi-k2.6` | ❌ |
+| 6 | `nvidia/moonshotai/kimi-k3` | ❌ |
+| 7 | `aug/kimi-k2.7` | ❌ |
+| 8 | `cfp/moonshotai/kimi-k2.7-code` | ❌ |
+| 9 | `aug/kimi-k2.6` | ❌ |
+| 10 | `cfp/moonshotai/kimi-k2.6` | ❌ |
 
 <a id="combokiro-best"></a>
 ### combo/kiro-best - [back to list](#8-combo-catalog-live)
