@@ -70,7 +70,7 @@ Refresh picker anytime (double-click):
   - `combo/openrouter-best` — **4/6 nemotron/laguna `:free`**
   - `combo/cleanapis-best` — **4/6 north-mini-code/laguna `:free`**
   - `combo/codex-best` — **5/6 gpt-6-luna/5.6 family**
-- **Avoid (broken):** `all-best`, `apinex-best`, `claude-*`, `deepseek-best`, `gemma-best`, `glm-best`, `groq-best`, `mistral-best`, `nara-best`, `ollama-best`
+- **Avoid (broken):** `all-best`, `apinex-best`, `claude-*`, `gemma-best`, `groq-best`, `mistral-best`, `nara-best`, `ollama-best`
 - Single models: `auto/*` routes fan out across all healthy providers
 
 Rules learned the hard way:
@@ -546,45 +546,6 @@ _Updated **2026-10-26** (live probe: **423 requests across 30 combos**). **OK** 
 | 4 | `codex/gpt-5.5` | ❌ |
 | 5 | `auto/best-coding` | ✅ |
 
-<a id="combodeepseek-best"></a>
-### combo/deepseek-best - [back to list](#8-combo-catalog-live)
-
-**Working legs today:** 0 / 29 testable (updated 2026-10-26 — live probe)
-
-| # | Model | Status |
-|---|-------|--------|
-| 1 | `literouter/deepseek-v3.1` | ❌ |
-| 2 | `literouter/deepseek-v4-flash-stable:free` | ❌ |
-| 3 | `literouter/deepseek-v3.2` | ❌ |
-| 4 | `literouter/deepseek-v3.1:free` | ❌ |
-| 5 | `literouter/deepseek-v4-pro-cheap:free` | ❌ |
-| 6 | `literouter/deepseek-v4-pro-cheap` | ❌ |
-| 7 | `literouter/deepseek-v4.1-flash-1017:free` | ❌ |
-| 8 | `openai/deepseek-v4-pro-max` | ❌ |
-| 9 | `deepseek-web/DeepSeek-V3.2` | ❌ |
-| 10 | `deepseek-web/deepseek-v4-pro` | ❌ |
-| 11 | `deepseek-web/deepseek-v4-pro-search` | ❌ |
-| 12 | `deepseek-web/deepseek-v4-pro-think` | ❌ |
-| 13 | `deepseek-web/deepseek-v4-pro-think-search` | ❌ |
-| 14 | `deepseek-web/DeepSeek-R1` | ❌ |
-| 15 | `deepseek-web/DeepSeek-R1-Search` | ❌ |
-| 16 | `deepseek-web/DeepSeek-Search` | ❌ |
-| 17 | `deepseek-web/deepseek-chat` | ❌ |
-| 18 | `deepseek-web/deepseek-reasoner` | ❌ |
-| 19 | `deepseek-web/deepseek-v4-flash` | ❌ |
-| 20 | `deepseek-web/deepseek-v4-flash-search` | ❌ |
-| 21 | `deepseek-web/deepseek-v4-flash-think` | ❌ |
-| 22 | `deepseek-web/deepseek-v4-flash-think-search` | ❌ |
-| 23 | `nvidia/deepseek-ai/deepseek-coder-6.7b-instruct` | ❌ |
-| 24 | `nvidia/deepseek-ai/deepseek-v4.1-flash` | ❌ |
-| 25 | `kiro/deepseek-3.2` | ❌ |
-| 26 | `cfp/deepseek-ai/deepseek-v4-pro-0813` | ❌ |
-| 27 | `cfp/deepseek-ai/deepseek-r1-distill-qwen-32b` | ❌ |
-| 28 | `cfp/deepseek-ai/deepseek-v4-flash-0731` | ❌ |
-| 29 | `auto/best-coding` | untested |
-
-**All 29 legs FAIL** — provider keys expired/timeout
-
 <a id="combogemini-best"></a>
 ### combo/gemini-best - [back to list](#8-combo-catalog-live)
 
@@ -623,38 +584,6 @@ _Updated **2026-10-26** (live probe: **423 requests across 30 combos**). **OK** 
 |---|-------|--------|
 | 1 | `morph/morph-v3-fast` | ✅ |
 | 2 | `morph/morph-v3-large` | ✅ |
-
-<a id="comboglm-best"></a>
-### combo/glm-best - [back to list](#8-combo-catalog-live)
-
-**Working legs today:** 0 / 22 testable (updated 2026-10-26 — live probe)
-
-| # | Model | Status |
-|---|-------|--------|
-| 1 | `literouter/glm-5.2` | ❌ |
-| 2 | `literouter/glm-5.3-flash-cheap:free` | ❌ |
-| 3 | `literouter/glm-4.5-air:free` | ❌ |
-| 4 | `kiro/glm-5` | ❌ |
-| 5 | `zai-web/glm-5.2` | ❌ |
-| 6 | `zai-web/glm-5.3-flash-max` | ❌ |
-| 7 | `zai-web/glm-5.3-max` | ❌ |
-| 8 | `zai-web/glm-5.3-flash-high` | ❌ |
-| 9 | `zai-web/glm-5.3-high` | ❌ |
-| 10 | `nvidia/z-ai/glm-5.3` | ❌ |
-| 11 | `nvidia/z-ai/glm-5.3-flash` | ❌ |
-| 12 | `zai-web/glm-5.3` | ❌ |
-| 13 | `zai-web/glm-5.3-flash` | ❌ |
-| 14 | `zai-web/glm-5.3-flash-low` | ❌ |
-| 15 | `zai-web/glm-5.3-low` | ❌ |
-| 16 | `zai-web/glm-5.2-max` | ❌ |
-| 17 | `zai-web/glm-5.2-high` | ❌ |
-| 18 | `openai/glm-5.3` | ❌ |
-| 19 | `cfp/zai-org/glm-4.7-flash` | ❌ |
-| 20 | `cfp/zai-org/glm-5.2` | ❌ |
-| 21 | `aug/glm-5.2` | ❌ |
-| 22 | `auto/best-coding` | untested |
-
-**All 22 legs FAIL** — provider keys expired/timeout
 
 <a id="combogpt-best"></a>
 ### combo/gpt-best - [back to list](#8-combo-catalog-live)
