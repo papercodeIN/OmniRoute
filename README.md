@@ -485,25 +485,25 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 <a id="comboclaude-fast"></a>
 ### combo/claude-fast - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 0 / 1 testable
+**Working legs today:** 2 / 3 testable (updated 2026-10-26 — live probe)
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `gemini/gemini-3.8-flash` | FAIL error |
-| 2 | `auto/best-fast` | untested |
-| 3 | `auto/best-coding` | untested |
+| 1 | `auto/best-fast` | ✅ |
+| 2 | `auto/best-coding` | ✅ |
+| 3 | `gemini/gemini-3.8-flash` | ❌ |
 
 <a id="comboclaude-max"></a>
 ### combo/claude-max - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 0 / 1 testable
+**Working legs today:** 1 / 4 testable (updated 2026-10-26 — live probe)
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `gemini/gemini-3.8-flash` | FAIL error |
-| 2 | `auto/claude-opus` | untested |
-| 3 | `auto/claude-sonnet` | untested |
-| 4 | `auto/best-coding` | untested |
+| 1 | `auto/best-coding` | ✅ |
+| 2 | `gemini/gemini-3.8-flash` | ❌ |
+| 3 | `auto/claude-opus` | ❌ |
+| 4 | `auto/claude-sonnet` | ❌ |
 
 <a id="combocleanapis-best"></a>
 ### combo/cleanapis-best - [back to list](#8-combo-catalog-live)
