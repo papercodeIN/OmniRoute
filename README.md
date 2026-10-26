@@ -70,7 +70,7 @@ Refresh picker anytime (double-click):
   - `combo/openrouter-best` — **4/6 nemotron/laguna `:free`**
   - `combo/cleanapis-best` — **4/6 north-mini-code/laguna `:free`**
   - `combo/codex-best` — **5/6 gpt-6-luna/5.6 family**
-- **Avoid (broken):** `all-best`, `apinex-best`, `claude-*`, `deepseek-best`, `gemma-best`, `glm-best`, `groq-best`, `keep-trying`, `kimi-best`, `kiro-best`, `literouter-best`, `mistral-best`, `nara-best`, `ollama-best`, `zerolimitai-best`
+- **Avoid (broken):** `all-best`, `apinex-best`, `claude-*`, `deepseek-best`, `gemma-best`, `glm-best`, `groq-best`, `keep-trying`, `kimi-best`, `kiro-best`, `literouter-best`, `mistral-best`, `nara-best`, `ollama-best`
 - Single models: `auto/*` routes fan out across all healthy providers
 
 Rules learned the hard way:
@@ -158,7 +158,7 @@ Legend: ✅ tested answering · ⏳ quota-flaky (recovers) · ❌ dead/paid · �
 
 ## Provider status snapshot (2026-10-21)
 
-**New connections (2026-10-20):** `free-ai` (6 accounts), `zerolimitai` (1), `mistral` (4 more), `groq` (3 more), `kilocode` (1), `claude-web` (1), `cloudflare-ai` (1), `freemodel-dev`, `gemini-web`, `tokenrouter`, `eurouter`, `uc`. Two new provider combos were created: `free-ai-best` (7/7 legs OK) and `zerolimitai-best` (7/7 OK). No combo for `tokenrouter` (every model, including its free one, returns 403 gift-balance/credit-limit), `freemodel-dev` (upstream 401 invalid API key), `gemini-web` (web session unstable - selector timeouts after one success on `gemini-3.1-pro`), `eurouter` and `uc` (connections inactive). Extra accounts on `mistral`, `groq`, `kilocode`, `claude-web` and `cloudflare-ai` are already covered by their existing `*-best` combos.
+**New connections (2026-10-20):** `free-ai` (6 accounts), `zerolimitai` (1), `mistral` (4 more), `groq` (3 more), `kilocode` (1), `claude-web` (1), `cloudflare-ai` (1), `freemodel-dev`, `gemini-web`, `tokenrouter`, `eurouter`, `uc`. Two new provider combos were created: `free-ai-best` (7/7 legs OK) and `zerolimitai-best` (7/7 OK — **later removed: 7-day trial only, no free tier**).
 
 **Full combo probe (2026-10-20, live):** 29 combos at the time, 357 unique provider/model legs tested via `test-all` - **116 OK**, 211 error, 3 slow, 27 no active connection.
 
@@ -253,7 +253,6 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 | [`combo/mistral-best`](#combomistral-best) | 18 | **0 / 6** ❌ | all 422 unprocessable |
 | [`combo/nara-best`](#combonara-best) | 3 | **1 / 4** ❌ | auto via xkiro — 503 + 401s |
 | [`combo/ollama-best`](#comboollama-best) | 8 | **0 / 6** ❌ | 503 + 401s |
-| [`combo/zerolimitai-best`](#combozerolimitai-best) | 7 | **0 / 6** ❌ | 503 + 401s |
 
 <a id="comboall-best"></a>
 ### combo/all-best - [back to list](#8-combo-catalog-live)
@@ -1065,19 +1064,6 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 | 5 | `free-ai/mistral` | Mistral | ✅ |
 | 4 | `free-ai/deepseek-r1-7b` | DeepSeek R1 7B | ✅ |
 
-<a id="combozerolimitai-best"></a>
-### combo/zerolimitai-best - [back to list](#8-combo-catalog-live)
-
-**Working legs today:** 7 / 7 testable
-
-| # | Model | Status |
-|---|-------|--------|
-| 1 | `zerolimitai/auto` | OK |
-| 2 | `zerolimitai/minimax/minimax-m3.1-flash:free` | OK |
-| 3 | `zerolimitai/cohere/north-mini-code:free` | OK |
-| 4 | `zerolimitai/dots-studio/dots-3-note-preview:free` | OK |
-| 5 | `zerolimitai/google/gemma-4-26b-a4b-it:free` | OK |
-| 6 | `zerolimitai/google/gemma-4-31b-it:free` | OK |
-| 7 | `zerolimitai/xingchen-agi/xing4.0-29b-a4b:free` | OK |
+> **⚠️ zerolimitai removed** — Provider offers only a **7-day trial**, no permanent free tier. Combo deleted to avoid wasted attempts.
 
 
