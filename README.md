@@ -70,7 +70,7 @@ Refresh picker anytime (double-click):
   - `combo/openrouter-best` — **4/6 nemotron/laguna `:free`**
   - `combo/cleanapis-best` — **4/6 north-mini-code/laguna `:free`**
   - `combo/codex-best` — **5/6 gpt-6-luna/5.6 family**
-- **Avoid (broken):** `all-best`, `apinex-best`, `claude-*`, `deepseek-best`, `gemma-best`, `glm-best`, `groq-best`, `keep-trying`, `kimi-best`, `kiro-best`, `literouter-best`, `mistral-best`, `nara-best`, `ollama-best`
+- **Avoid (broken):** `all-best`, `apinex-best`, `claude-*`, `deepseek-best`, `gemma-best`, `glm-best`, `groq-best`, `kimi-best`, `kiro-best`, `literouter-best`, `mistral-best`, `nara-best`, `ollama-best`
 - Single models: `auto/*` routes fan out across all healthy providers
 
 Rules learned the hard way:
@@ -240,7 +240,6 @@ _Updated **2026-10-26** (live probe: **423 requests across 30 combos**). **OK** 
 | [`combo/morph-best`](#combomorph-best) | 2 | **2 / 0** ✅ | **Perfect — both working: morph-v3-fast, morph-v3-large** |
 | [`combo/all-best`](#comboall-best) | 152 | **40 / 112** ❌ | 40 working (codex/agy/antigravity/kilocode/openrouter/grok) |
 | [`combo/groq-best`](#combogroq-best) | 6 | **1 / 5** ❌ | 1 working: auto/best-coding only |
-| [`combo/keep-trying`](#combokeep-trying) | 4 | **1 / 3** ❌ | 1 working: auto/best-coding only |
 | [`combo/nara-best`](#combonara-best) | 3 | **1 / 2** ❌ | 1 working: auto/best-coding only |
 | [`combo/ollama-best`](#comboollama-best) | 8 | **1 / 7** ❌ | 1 working: auto/best-coding only |
 | [`combo/apinex-best`](#comboapinex-best) | 8 | **1 / 7** ❌ | 1 working: auto/best-coding only |
@@ -727,18 +726,6 @@ _Updated **2026-10-26** (live probe: **423 requests across 30 combos**). **OK** 
 | 4 | `groq/openai/gpt-oss-20b` | ❌ |
 | 5 | `groq/openai/gpt-oss-safeguard-20b` | ❌ |
 | 6 | `groq/allam-2-7b` | ❌ |
-
-<a id="combokeep-trying"></a>
-### combo/keep-trying - [back to list](#8-combo-catalog-live)
-
-**Working legs today:** 1 / 4 testable (updated 2026-10-26 — live probe)
-
-| # | Model | Status |
-|---|-------|--------|
-| 1 | `auto/best-coding` | ✅ |
-| 2 | `kilocode/nvidia/nemotron-3-ultra-550b-a55b:free` | ❌ |
-| 3 | `openrouter/nvidia/nemotron-3-super-120b-a12b:free` | ❌ |
-| 4 | `gemini/gemini-3.8-flash` | ❌ |
 
 <a id="combokilocode-best"></a>
 ### combo/kilocode-best - [back to list](#8-combo-catalog-live)
