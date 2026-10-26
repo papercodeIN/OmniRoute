@@ -223,7 +223,7 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 
 | Combo | Legs | OK / probed | Status |
 |---|---|---|---|
-| [`combo/xkiro-best`](#comboxkiro-best) | 19 | **6 / 6** ✅ | **Perfect — codestral-2508 + devstral-medium + 4 qwen `:free` + qwen3-vl-plus all work** |
+| [`combo/xkiro-best`](#comboxkiro-best) | 26 | **6 / 6** ✅ | **Perfect — 26 working models: codestral-2508, devstral-medium, 4 qwen coders, 13 qwen max/plus/omni/flash, 5 mistral, sensenova** |
 | [`combo/free-ai-best`](#combofree-ai-best) | 7 | **6 / 6** ✅ | **Perfect — qwen3-coder family works** |
 | [`combo/gemini-best`](#combogemini-best) | 23 | **6 / 6** ✅ | **Perfect — antigravity/agy gemini 3.8 flash tiers** |
 | [`combo/kilocode-best`](#combokilocode-best) | 14 | **5 / 6** ⚡ | beam-free, laguna, nemotron `:free` — 1 timeout |
@@ -1016,31 +1016,40 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 <a id="comboxkiro-best"></a>
 ### combo/xkiro-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 19 / 19 testable (updated 2026-10-26)
+**Working legs today:** 26 / 26 testable (updated 2026-10-26 — live probe)
 
-**Coding-optimized order:** Codestral/Devstral (code-specialized) → Qwen Coder/VL (code+vision) → Qwen Max/Plus (reasoning) → Mistral Large/Medium (general) → Ministral/SenseNova (fast/lightweight)
+**Coding-optimized order:** Codestral/Devstral → Qwen Coder/VL → Qwen Max/Plus/Omni/Flash → Mistral Large/Medium/Small → Ministral/SenseNova (fast/lightweight)
 
-| # | Model | Status |
-|---|-------|--------|
-| 1 | `xkiro/mistralai/codestral-2508` | ✅ **Best for coding** |
-| 2 | `xkiro/mistralai/devstral-medium` | ✅ **Agentic coding** |
-| 3 | `xkiro/qwen/qwen3-coder-plus:free` | ✅ **Code specialist** |
-| 4 | `xkiro/qwen/qwen3-vl-plus:free` | ✅ **Code + vision** |
-| 5 | `xkiro/qwen/qwen3.5-plus:free` | ✅ |
-| 6 | `xkiro/qwen/qwen3.7-plus:free` | ✅ |
-| 7 | `xkiro/qwen/qwen3-max:free` | ✅ |
-| 8 | `xkiro/qwen/qwen3.8-max:free` | ✅ |
-| 9 | `xkiro/qwen/qwen3.7-max:free` | ✅ |
-| 10 | `xkiro/qwen/qwen3.6-max-preview:free` | ✅ |
-| 11 | `xkiro/qwen/qwen-plus-2025-07-28:free` | ✅ |
-| 12 | `xkiro/qwen/qwen3.6-27b:free` | ✅ |
-| 13 | `xkiro/mistralai/mistral-large-2512` | ✅ |
-| 14 | `xkiro/mistralai/mistral-medium-3.5` | ✅ |
-| 15 | `xkiro/mistralai/mistral-small-2603` | ✅ |
-| 16 | `xkiro/mistralai/ministral-14b` | ✅ |
-| 17 | `xkiro/mistralai/ministral-3b` | ✅ |
-| 18 | `xkiro/sensenova/sensenova-6.8-flash-lite` | ✅ |
-| 19 | `xkiro/mistralai/ministral-8b` | ⚠️ timeout (fallback last) |
+| # | Model | Category | Status |
+|---|-------|----------|--------|
+| 1 | `xkiro/mistralai/codestral-2508` | Code-specialized | ✅ **Best for coding** |
+| 2 | `xkiro/mistralai/devstral-medium` | Agentic coding | ✅ **Agentic coding** |
+| 3 | `xkiro/qwen/qwen3-coder-plus:free` | Code specialist | ✅ **Code specialist** |
+| 4 | `xkiro/qwen/qwen3-vl-plus:free` | Code + vision | ✅ **Code + vision** |
+| 5 | `xkiro/qwen/qwen3-max:free` | Qwen Max | ✅ |
+| 6 | `xkiro/qwen/qwen3.8-max:free` | Qwen Max | ✅ |
+| 7 | `xkiro/qwen/qwen3.7-max:free` | Qwen Max | ✅ |
+| 8 | `xkiro/qwen/qwen3.6-max-preview:free` | Qwen Max | ✅ |
+| 9 | `xkiro/qwen/qwen3.6-plus:free` | Qwen Plus | ✅ |
+| 10 | `xkiro/qwen/qwen3.5-plus:free` | Qwen Plus | ✅ |
+| 11 | `xkiro/qwen/qwen3.7-plus:free` | Qwen Plus | ✅ |
+| 12 | `xkiro/qwen/qwen-plus-2025-07-28:free` | Qwen Plus | ✅ |
+| 13 | `xkiro/qwen/qwen3-omni-flash:free` | Qwen Omni/Flash | ✅ |
+| 14 | `xkiro/qwen/qwen3.5-omni-plus:free` | Qwen Omni/Flash | ✅ |
+| 15 | `xkiro/qwen/qwen3.5-omni-flash:free` | Qwen Omni/Flash | ✅ |
+| 16 | `xkiro/qwen/qwen3.6-27b:free` | Qwen 27B | ✅ |
+| 17 | `xkiro/qwen/qwen3.5-397b-a17b:free` | Qwen 397B MoE | ✅ |
+| 18 | `xkiro/qwen/qwen3.6-35b-a3b:free` | Qwen 35B MoE | ✅ |
+| 19 | `xkiro/qwen/qwen3.5-flash:free` | Qwen Flash | ✅ |
+| 20 | `xkiro/mistralai/mistral-large-2512` | Mistral Large | ✅ |
+| 21 | `xkiro/mistralai/mistral-medium-3.5` | Mistral Medium | ✅ |
+| 22 | `xkiro/mistralai/mistral-small-2603` | Mistral Small | ✅ |
+| 23 | `xkiro/mistralai/ministral-14b` | Ministral | ✅ |
+| 24 | `xkiro/mistralai/ministral-3b` | Ministral | ✅ |
+| 25 | `xkiro/sensenova/sensenova-6.8-flash-lite` | SenseNova | ✅ |
+| 26 | `xkiro/mistralai/ministral-8b` | Ministral | ⚠️ timeout (fallback last) |
+
+**Not on xkiro (all FAIL):** Command A/R/R+/R7B, Aya Expanse/Vision, North Mini/Small, LongCat, TinyAya, BigPickle, SenseNova U1.5, Qwen 3.8 Omni Flash, Qwen 3.7 Flash — these are Cohere/other providers, not hosted on xkiro.
 
 <a id="combofree-ai-best"></a>
 ### combo/free-ai-best - [back to list](#8-combo-catalog-live)
