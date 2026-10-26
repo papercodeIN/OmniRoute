@@ -706,16 +706,16 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 <a id="combogroq-best"></a>
 ### combo/groq-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 5 / 5 testable
+**Working legs today:** 1 / 6 testable (updated 2026-10-26 — live probe)
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `groq/qwen/qwen3.8-27b` | OK |
-| 2 | `groq/openai/gpt-oss-120b` | OK |
-| 3 | `groq/openai/gpt-oss-20b` | OK |
-| 4 | `groq/openai/gpt-oss-safeguard-20b` | OK |
-| 5 | `groq/allam-2-7b` | OK |
-| 6 | `auto/best-coding` | untested |
+| 1 | `auto/best-coding` | ✅ |
+| 2 | `groq/qwen/qwen3.8-27b` | ❌ |
+| 3 | `groq/openai/gpt-oss-120b` | ❌ |
+| 4 | `groq/openai/gpt-oss-20b` | ❌ |
+| 5 | `groq/openai/gpt-oss-safeguard-20b` | ❌ |
+| 6 | `groq/allam-2-7b` | ❌ |
 
 <a id="combokeep-trying"></a>
 ### combo/keep-trying - [back to list](#8-combo-catalog-live)
