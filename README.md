@@ -67,7 +67,7 @@ Refresh picker anytime (double-click):
   - `combo/free-ai-best` — **6/6 qwen3-coder family perfect** 🥇
   - `combo/gemini-best` — **6/6 antigravity/agy flash tiers perfect** 🥇
   - `combo/kilocode-best` — **5/6 nemotron/laguna `:free`**
-  - `combo/openrouter-best` — **4/6 nemotron/laguna `:free`**
+  - `combo/openrouter-best` — **6/7 nemotron/laguna/north-mini-code/lfm `:free`**
   - `combo/cleanapis-best` — **5/21 kilocode north-mini-code, poolside laguna `:free`**
   - `combo/codex-best` — **5/6 gpt-6-luna/5.6 family**
 - **Avoid (broken):** `all-best`, `claude-*`, `gemma-best`, `groq-best`, `mistral-best`, `nara-best`, `ollama-best`
@@ -228,7 +228,7 @@ _Updated **2026-10-26** (live probe: **423 requests across 22 combos**, then cle
 | [`combo/gemini-best`](#combogemini-best) | 11 | **11 / 0** ✅ | **Perfect — 11 working: agy/antigravity gemini 3.8/3.5/3.1 flash tiers** |
 | [`combo/gpt-best`](#combogpt-best) | 27 | **26 / 1** ✅ | **26 working: codex gpt-6/5.6 family + gpt-oss via nvidia/agy/antigravity/ddgw/cfp** |
 | [`combo/kilocode-best`](#combokilocode-best) | 1 | **1 / 0** ⚠️ | only auto/best-coding remains |
-| [`combo/openrouter-best`](#comboopenrouter-best) | 10 | **6 / 4** ⚡ | 6 working: nemotron/laguna/north-mini-code/lfm `:free` |
+| [`combo/openrouter-best`](#comboopenrouter-best) | 7 | **6 / 1** ✅ | 6 working: nemotron/laguna/north-mini-code/lfm `:free` |
 | [`combo/cleanapis-best`](#combocleanapis-best) | 4 | **4 / 0** ✅ | all working: openrouter north-mini-code/laguna `:free` |
 | [`combo/codex-best`](#combocodex-best) | 5 | **4 / 1** ⚡ | 4 working: gpt-6-luna, 5.6-terra, 5.6-luna + auto |
 | [`combo/cloudflare-best`](#combocloudflare-best) | 7 | **6 / 1** ✅ | 6 working: llama-3.3-70b, gemma-4-26b, deepseek-r1-distill, qwq-32b, qwen2.5-coder, llama-3.2-3b |
@@ -722,20 +722,19 @@ _Updated **2026-10-26** (live probe: **423 requests across 22 combos**, then cle
 <a id="comboopenrouter-best"></a>
 ### combo/openrouter-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 0 / 9 testable
+**Working legs today:** 6 / 7 testable (updated 2026-10-26 — live probe)
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `openrouter/nvidia/nemotron-3.5-lightning:free` | FAIL error |
-| 2 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free` | FAIL error |
-| 3 | `openrouter/nvidia/nemotron-3-super-120b-a12b:free` | FAIL error |
-| 4 | `openrouter/poolside/laguna-s-2.1:free` | FAIL error |
-| 5 | `openrouter/apodex/apodex-1.1-mini:free` | FAIL error |
-| 6 | `openrouter/cohere/north-mini-code:free` | FAIL error |
-| 7 | `openrouter/google/gemma-4-31b-it:free` | FAIL error |
-| 8 | `openrouter/liquid/lfm-2.5-2.6b:free` | FAIL error |
-| 9 | `openrouter/poolside/laguna-xs-2.1:free` | FAIL error |
-| 10 | `auto/best-coding` | untested |
+| 1 | `openrouter/nvidia/nemotron-3.5-lightning:free` | ✅ |
+| 2 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free` | ✅ |
+| 3 | `openrouter/poolside/laguna-s-2.1:free` | ✅ |
+| 4 | `openrouter/cohere/north-mini-code:free` | ✅ |
+| 5 | `openrouter/liquid/lfm-2.5-2.6b:free` | ✅ |
+| 6 | `openrouter/poolside/laguna-xs-2.1:free` | ✅ |
+| 7 | `auto/best-coding` | ✅ |
+
+*Removed (FAIL):* `openrouter/nvidia/nemotron-3-super-120b-a12b:free`, `openrouter/apodex/apodex-1.1-mini:free`, `openrouter/google/gemma-4-31b-it:free`
 
 <a id="comboxkiro-best"></a>
 ### combo/xkiro-best - [back to list](#8-combo-catalog-live)
