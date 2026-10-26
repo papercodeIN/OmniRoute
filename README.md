@@ -814,23 +814,23 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 <a id="combollama-best"></a>
 ### combo/llama-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 3 / 12 testable
+**Working legs today:** 1 / 13 testable (updated 2026-10-26 — live probe)
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `ollama-cloud/nemotron-3-super` | OK |
-| 2 | `literouter/llama-3.3-70b-instruct-turbo:free` | OK |
-| 3 | `ollama-cloud/gemma4:31b` | OK |
-| 4 | `nvidia/meta/llama-3.2-11b-vision-instruct` | FAIL error |
-| 5 | `nvidia/meta/llama-3.2-90b-vision-instruct` | FAIL error |
-| 6 | `ollama-cloud/minimax-m2.7` | FAIL error |
-| 7 | `nvidia/nvidia/llama3-chatqa-1.5-70b` | FAIL error |
-| 8 | `nvidia/meta/codellama-70b` | FAIL error |
-| 9 | `nvidia/meta/llama2-70b` | FAIL error |
-| 10 | `cfp/meta/llama-4-scout-17b-16e-instruct` | no connection |
-| 11 | `cfp/meta-llama/llama-3.3-70b-instruct-fp8-fast` | no connection |
-| 12 | `cfp/meta/llama-3.1-8b-instruct-fp8` | no connection |
-| 13 | `auto/best-coding` | untested |
+| 1 | `auto/best-coding` | ✅ |
+| 2 | `ollama-cloud/nemotron-3-super` | ❌ |
+| 3 | `literouter/llama-3.3-70b-instruct-turbo:free` | ❌ |
+| 4 | `ollama-cloud/gemma4:31b` | ❌ |
+| 5 | `nvidia/meta/llama-3.2-11b-vision-instruct` | ❌ |
+| 6 | `nvidia/meta/llama-3.2-90b-vision-instruct` | ❌ |
+| 7 | `ollama-cloud/minimax-m2.7` | ❌ |
+| 8 | `nvidia/nvidia/llama3-chatqa-1.5-70b` | ❌ |
+| 9 | `nvidia/meta/codellama-70b` | ❌ |
+| 10 | `nvidia/meta/llama2-70b` | ❌ |
+| 11 | `cfp/meta/llama-4-scout-17b-16e-instruct` | ❌ |
+| 12 | `cfp/meta-llama/llama-3.3-70b-instruct-fp8-fast` | ❌ |
+| 13 | `cfp/meta/llama-3.1-8b-instruct-fp8` | ❌ |
 
 <a id="combomistral-best"></a>
 ### combo/mistral-best - [back to list](#8-combo-catalog-live)
