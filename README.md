@@ -720,14 +720,14 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 <a id="combokeep-trying"></a>
 ### combo/keep-trying - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 1 / 3 testable
+**Working legs today:** 1 / 4 testable (updated 2026-10-26 — live probe)
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `kilocode/nvidia/nemotron-3-ultra-550b-a55b:free` | OK |
-| 2 | `openrouter/nvidia/nemotron-3-super-120b-a12b:free` | FAIL error |
-| 3 | `gemini/gemini-3.8-flash` | FAIL error |
-| 4 | `auto/best-coding` | untested |
+| 1 | `auto/best-coding` | ✅ |
+| 2 | `kilocode/nvidia/nemotron-3-ultra-550b-a55b:free` | ❌ |
+| 3 | `openrouter/nvidia/nemotron-3-super-120b-a12b:free` | ❌ |
+| 4 | `gemini/gemini-3.8-flash` | ❌ |
 
 <a id="combokilocode-best"></a>
 ### combo/kilocode-best - [back to list](#8-combo-catalog-live)
