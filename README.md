@@ -493,29 +493,29 @@ _Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cle
 
 **Coding-optimized order:** Code/Reasoning → General
 
-| # | Model | Provider | Category | Status |
-|---|-------|----------|----------|--------|
-| 1 | `cloudflare-ai/@cf/qwen/qwen2.5-coder-32b-instruct` | cloudflare-ai | Code | ✅ **Best for coding** |
-| 2 | `cloudflare-ai/@cf/qwen/qwq-32b` | cloudflare-ai | Code/Reasoning | ✅ |
-| 3 | `cloudflare-ai/@cf/deepseek-ai/deepseek-r1-distill-qwen-32b` | cloudflare-ai | Code/Reasoning | ✅ |
-| 4 | `cfp/qwen/qwq-32b` | cfp | Code/Reasoning | ✅ |
-| 5 | `cfp/qwen/qwen3-30b-a3b-fp8` | cfp | Code/Reasoning | ✅ |
-| 6 | `cfp/deepseek-ai/deepseek-r1-distill-qwen-32b` | cfp | Code/Reasoning | ✅ |
-| 7 | `cfp/mistralai/mistral-small-3.1-24b-instruct` | cfp | Code/General | ✅ |
-| 8 | `cfp/mistralai/mistral-small-2409` | cfp | General | ✅ |
-| 9 | `cloudflare-ai/@cf/qwen/qwq-32b` | cloudflare-ai | Code/Reasoning | ✅ |
-| 10 | `cloudflare-ai/@cf/deepseek-ai/deepseek-r1-distill-qwen-32b` | cloudflare-ai | Code/Reasoning | ✅ |
-| 11 | `cloudflare-ai/@cf/mistral/mistral-7b-instruct-v0.2-lora` | cloudflare-ai | General | ✅ |
-| 12 | `cloudflare-ai/@cf/meta/llama-3.3-70b-instruct-fp8-fast` | cloudflare-ai | General | ✅ |
-| 13 | `cloudflare-ai/@cf/google/gemma-4-26b-a4b-it` | cloudflare-ai | General | ✅ |
-| 14 | `cfp/google/gemma-4-26b-a4b-it` | cfp | General | ✅ |
-| 15 | `cfp/aisingapore/gemma-sea-lion-v4-27b-it` | cfp | General | ✅ |
-| 16 | `cfp/mistralai/mistral-small-3.1-24b-instruct` | cfp | General | ✅ |
-| 17 | `cfp/mistralai/mistral-small-2409` | cfp | General | ✅ |
-| 18 | `cloudflare-ai/@cf/meta/llama-3.2-3b-instruct` | cloudflare-ai | General | ✅ |
-| 19 | `cloudflare-ai/@cf/mistral/mistral-7b-instruct-v0.2-lora` | cloudflare-ai | General | ✅ |
+| # | Model | Provider | Status |
+|---|-------|----------|--------|
+| 1 | `cloudflare-ai/@cf/qwen/qwen2.5-coder-32b-instruct` | cloudflare-ai | ✅ **Best for coding** |
+| 2 | `cloudflare-ai/@cf/qwen/qwq-32b` | cloudflare-ai | ✅ |
+| 3 | `cloudflare-ai/@cf/deepseek-ai/deepseek-r1-distill-qwen-32b` | cloudflare-ai | ✅ |
+| 4 | `cfp/qwen/qwq-32b` | cfp | ✅ |
+| 5 | `cfp/qwen/qwen3-30b-a3b-fp8` | cfp | ✅ |
+| 6 | `cfp/deepseek-ai/deepseek-r1-distill-qwen-32b` | cfp | ✅ |
+| 7 | `cfp/mistralai/mistral-small-3.1-24b-instruct` | cfp | ✅ |
+| 8 | `cfp/mistralai/mistral-small-2409` | cfp | ✅ |
+| 9 | `cloudflare-ai/@cf/qwen/qwq-32b` | cloudflare-ai | ✅ |
+| 10 | `cloudflare-ai/@cf/deepseek-ai/deepseek-r1-distill-qwen-32b` | cloudflare-ai | ✅ |
+| 11 | `cloudflare-ai/@cf/mistral/mistral-7b-instruct-v0.2-lora` | cloudflare-ai | ✅ |
+| 12 | `cloudflare-ai/@cf/meta/llama-3.3-70b-instruct-fp8-fast` | cloudflare-ai | ✅ |
+| 13 | `cloudflare-ai/@cf/google/gemma-4-26b-a4b-it` | cloudflare-ai | ✅ |
+| 14 | `cfp/google/gemma-4-26b-a4b-it` | cfp | ✅ |
+| 15 | `cfp/aisingapore/gemma-sea-lion-v4-27b-it` | cfp | ✅ |
+| 16 | `cfp/mistralai/mistral-small-3.1-24b-instruct` | cfp | ✅ |
+| 17 | `cfp/mistralai/mistral-small-2409` | cfp | ✅ |
+| 18 | `cloudflare-ai/@cf/meta/llama-3.2-3b-instruct` | cloudflare-ai | ✅ |
+| 19 | `cloudflare-ai/@cf/mistral/mistral-7b-instruct-v0.2-lora` | cloudflare-ai | ✅ |
 
-*Removed (FAIL):* `cloudflare-ai/@cf/zai-org/glm-4.7-flash`, `cfp/qwen/qwen2.5-coder-32b-instruct`, `cfp/deepseek-ai/deepseek-v4-pro-0813`, `cfp/deepseek-ai/deepseek-v4-flash-0731`, `cfp/zai-org/glm-4.7-flash`, `cfp/mistralai/mistral-nemo:free`, `cfp/mistralai/pixtral-12b:free`, `cfp/meta-llama/llama-3.3-70b-instruct-fp8-fast`
+*Removed (FAIL):* `cloudflare-ai/@cf/zai-org/glm-4.7-flash`
 
 <a id="combocodex-best"></a>
 ### combo/codex-best - [back to list](#8-combo-catalog-live)
