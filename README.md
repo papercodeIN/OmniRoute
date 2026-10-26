@@ -230,12 +230,11 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 | [`combo/kilocode-best`](#combokilocode-best) | 14 | **10 / 4** ⚡ | 10 working: nemotron/beam/laguna/north-mini-code `:free` |
 | [`combo/openrouter-best`](#comboopenrouter-best) | 10 | **6 / 4** ⚡ | 6 working: nemotron/laguna/north-mini-code/lfm `:free` |
 | [`combo/cleanapis-best`](#combocleanapis-best) | 21 | **5 / 16** ⚡ | 5 working: north-mini-code/laguna `:free` |
-| [`combo/codex-best`](#combocodex-best) | 5 | **4 / 1** ⚡ | 4 working: gpt-6-luna, 5.6 family |
+| [`combo/codex-best`](#combocodex-best) | 5 | **4 / 1** ⚡ | 4 working: gpt-6-luna, 5.6-terra, 5.6-luna + auto |
 | [`combo/cloudflare-best`](#combocloudflare-best) | 7 | **6 / 1** ✅ | 6 working: llama-3.3-70b, gemma-4-26b, deepseek-r1-distill, qwq-32b, qwen2.5-coder, llama-3.2-3b |
 | [`combo/nvidia-best`](#combonvidia-best) | 21 | **7 / 14** ⚡ | 7 working: nemotron `:free` via kilocode/openrouter |
 | [`combo/claude-best`](#comboclaude-best) | 17 | **5 / 12** ⚠️ | 5 working: antigravity/agy opus-4.6/sonnet-4.6 |
 | [`combo/grok-best`](#combogrok-best) | 9 | **2 / 7** ⚠️ | 2 working: grok-web/fast + auto |
-| [`combo/qwen-best`](#comboqwen-best) | 8 | **3 / 5** ⚡ | 3 working: cfp qwen3-30b, qwq-32b + auto |
 | [`combo/mistral-best`](#combomistral-best) | 18 | **3 / 15** ⚠️ | 3 working: cfp mistral-small, ddgw mistral-small + auto |
 | [`combo/gemma-best`](#combogemma-best) | 2 | **1 / 1** ⚠️ | 1 working: ddgw/tinfoil gemma4-31b |
 | [`combo/all-best`](#comboall-best) | 152 | **40 / 112** ❌ | 40 working (codex/agy/antigravity/kilocode/openrouter/grok) |
@@ -550,15 +549,15 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 <a id="combocodex-best"></a>
 ### combo/codex-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 3 / 4 testable
+**Working legs today:** 4 / 5 testable (updated 2026-10-26 — live probe)
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `codex/gpt-6-luna` | OK |
-| 2 | `codex/gpt-5.6-luna` | OK |
-| 3 | `codex/gpt-5.6-terra` | OK |
-| 4 | `codex/gpt-5.5` | FAIL error |
-| 5 | `auto/best-coding` | untested |
+| 1 | `codex/gpt-6-luna` | ✅ |
+| 2 | `codex/gpt-5.6-luna` | ✅ |
+| 3 | `codex/gpt-5.6-terra` | ✅ |
+| 4 | `codex/gpt-5.5` | ❌ |
+| 5 | `auto/best-coding` | ✅ |
 
 <a id="combodeepseek-best"></a>
 ### combo/deepseek-best - [back to list](#8-combo-catalog-live)
@@ -929,22 +928,6 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 | 8 | `openrouter/liquid/lfm-2.5-2.6b:free` | FAIL error |
 | 9 | `openrouter/poolside/laguna-xs-2.1:free` | FAIL error |
 | 10 | `auto/best-coding` | untested |
-
-<a id="comboqwen-best"></a>
-### combo/qwen-best - [back to list](#8-combo-catalog-live)
-
-**Working legs today:** 3 / 7 testable
-
-| # | Model | Status |
-|---|-------|--------|
-| 1 | `literouter/qwen3-coder:free` | OK |
-| 2 | `literouter/qwen3-32b:free` | OK |
-| 3 | `literouter/qwen3.5-9b:free` | OK |
-| 4 | `kiro/qwen3-coder-next` | FAIL error |
-| 5 | `cfp/qwen/qwen2.5-coder-32b-instruct` | no connection |
-| 6 | `cfp/qwen/qwen3-30b-a3b-fp8` | no connection |
-| 7 | `cfp/qwen/qwq-32b` | no connection |
-| 8 | `auto/best-coding` | untested |
 
 <a id="comboxkiro-best"></a>
 ### combo/xkiro-best - [back to list](#8-combo-catalog-live)
