@@ -243,7 +243,6 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 | [`combo/nara-best`](#combonara-best) | 3 | **1 / 2** ❌ | 1 working: auto/best-coding only |
 | [`combo/ollama-best`](#comboollama-best) | 8 | **1 / 7** ❌ | 1 working: auto/best-coding only |
 | [`combo/apinex-best`](#comboapinex-best) | 8 | **1 / 7** ❌ | 1 working: auto/best-coding only |
-| [`combo/claude-code`](#comboclaude-code) | 3 | **0 / 3** ❌ | all fail: gemini + auto |
 | [`combo/claude-fast`](#comboclaude-fast) | 3 | **2 / 1** ❌ | 2 working: auto/best-fast + auto/best-coding |
 | [`combo/claude-max`](#comboclaude-max) | 4 | **1 / 3** ❌ | 1 working: auto/best-coding only |
 | [`combo/kimi-best`](#combokimi-best) | 10 | **1 / 9** ❌ | 1 working: auto/best-coding only |
@@ -470,17 +469,6 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 | 31 | `claude-web/claude-fable-5-low` | ❌ |
 | 32 | `kiro/claude-haiku-4.5` | ❌ |
 | 33 | `claude-web/claude-haiku-4-5-20251001-low` | ❌ |
-
-<a id="comboclaude-code"></a>
-### combo/claude-code - [back to list](#8-combo-catalog-live)
-
-**Working legs today:** 0 / 3 testable (updated 2026-10-26 — live probe)
-
-| # | Model | Status |
-|---|-------|--------|
-| 1 | `gemini/gemini-3.8-flash` | ❌ |
-| 2 | `auto/claude-sonnet` | ❌ |
-| 3 | `auto/best-coding` | ❌ |
 
 <a id="comboclaude-fast"></a>
 ### combo/claude-fast - [back to list](#8-combo-catalog-live)
