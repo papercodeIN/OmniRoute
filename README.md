@@ -1,7 +1,7 @@
 # Free AI Coding Setup — OmniRoute + OpenCode (Windows)
 
 > One gateway, ~120 provider connections, 31 auto-fallback combos, $0.
-> **Live probe 2026-10-26: 423 requests across 22 combos, 171 ✅ working, 252 ❌ failed. 14/22 combos have ≥1 working leg; xkiro-best 26/26, free-ai-best 6/6, gemini-best 11/11, morph-best 2/2 perfect.** All free tiers verified live on this machine.
+> **Live probe 2026-10-26: 423 requests across 23 combos, 186 ✅ working, 252 ❌ failed. 16/23 combos have ≥1 working leg; xkiro-best 26/26, free-ai-best 6/6, gemini-best 11/11, morph-best 2/2, agy-antigravity-best 15/15, grok-best 7/7 perfect.** All free tiers verified live on this machine.
 
 ---
 
@@ -219,7 +219,7 @@ Key rules encoded: 401/402 = durable-dead (auto-disable), 403/429/5xx = transien
 
 ## 8. Combo catalog (live)
 
-_Updated **2026-10-26** (live probe: **423 requests across 22 combos**, then cleaned to **active providers only**). **OK** = combo name + first 5 legs responded 200; **FAIL** = error on combo name or legs (401/403/422/503/timeout). xkiro legs only in `xkiro-best`; groq legs only in `groq-best`; cloudflare legs use `cloudflare-ai/@cf/...` prefix. **Green = daily drivers**, **Yellow = fallback only**, **Red = broken**._
+_Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cleaned to **active providers only**). **OK** = combo name + first 5 legs responded 200; **FAIL** = error on combo name or legs (401/403/422/503/timeout). xkiro legs only in `xkiro-best`; groq legs only in `groq-best`; cloudflare legs use `cloudflare-ai/@cf/...` prefix. **Green = daily drivers**, **Yellow = fallback only**, **Red = broken**._
 
 | Combo | Legs | OK / FAIL | Status |
 |---|---|---|---|
@@ -227,14 +227,16 @@ _Updated **2026-10-26** (live probe: **423 requests across 22 combos**, then cle
 | [`combo/free-ai-best`](#combofree-ai-best) | 6 | **6 / 0** ✅ | **Perfect — 6 working: qwen3-coder, qwen-coder, qwen3-8b, qwen7b, mistral, deepseek-r1-7b** |
 | [`combo/gemini-best`](#combogemini-best) | 11 | **11 / 0** ✅ | **Perfect — 11 working: agy/antigravity gemini 3.8/3.5/3.1 flash tiers** |
 | [`combo/gpt-best`](#combogpt-best) | 27 | **26 / 1** ✅ | **26 working: codex gpt-6/5.6 family + gpt-oss via nvidia/agy/antigravity/ddgw/cfp** |
+| [`combo/agy-antigravity-best`](#comboagy-antigravity-best) | 15 | **15 / 0** ✅ | **Perfect — 15 working: agy/antigravity claude + gemini** |
+| [`combo/gpt-best`](#combogpt-best) | 27 | **26 / 1** ✅ | **26 working: codex gpt-6/5.6 family + gpt-oss via nvidia/agy/antigravity/ddgw/cfp** |
 | [`combo/kilocode-best`](#combokilocode-best) | 1 | **1 / 0** ⚠️ | only auto/best-coding remains |
 | [`combo/openrouter-best`](#comboopenrouter-best) | 7 | **6 / 1** ✅ | 6 working: nemotron/laguna/north-mini-code/lfm `:free` |
 | [`combo/cleanapis-best`](#combocleanapis-best) | 4 | **4 / 0** ✅ | all working: openrouter north-mini-code/laguna `:free` |
 | [`combo/codex-best`](#combocodex-best) | 5 | **4 / 1** ⚡ | 4 working: gpt-6-luna, 5.6-terra, 5.6-luna + auto |
 | [`combo/cloudflare-best`](#combocloudflare-best) | 7 | **6 / 1** ✅ | 6 working: llama-3.3-70b, gemma-4-26b, deepseek-r1-distill, qwq-32b, qwen2.5-coder, llama-3.2-3b |
-| [`combo/nvidia-best`](#combonvidia-best) | 21 | **7 / 14** ⚡ | 7 working: nemotron `:free` via kilocode/openrouter |
-| [`combo/claude-best`](#comboclaude-best) | 17 | **5 / 12** ⚠️ | 5 working: antigravity/agy opus-4.6/sonnet-4.6 |
-| [`combo/grok-best`](#combogrok-best) | 9 | **2 / 7** ⚠️ | 2 working: grok-web/fast + auto |
+| [`combo/nvidia-best`](#combonvidia-best) | 16 | **16 / 0** ✅ | all working: nvidia/openrouter nemotron `:free` |
+| [`combo/claude-best`](#comboclaude-best) | 5 | **5 / 0** ✅ | **5 working: antigravity/agy opus-4.6/sonnet-4.6** |
+| [`combo/grok-best`](#combogrok-best) | 7 | **7 / 0** ✅ | **all working: 5 grok-cli + grok-web/fast + auto** |
 | [`combo/mistral-best`](#combomistral-best) | 14 | **14 / 0** ✅ | all working: mistral/codestral + auto |
 | [`combo/gemma-best`](#combogemma-best) | 2 | **1 / 1** ⚠️ | 1 working: ddgw/tinfoil gemma4-31b |
 | [`combo/morph-best`](#combomorph-best) | 2 | **2 / 0** ✅ | **Perfect — both working: morph-v3-fast, morph-v3-large** |
@@ -590,19 +592,42 @@ _Updated **2026-10-26** (live probe: **423 requests across 22 combos**, then cle
 <a id="combogrok-best"></a>
 ### combo/grok-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 2 / 9 testable (updated 2026-10-26 — live probe)
+**Working legs today:** 7 / 7 testable (updated 2026-10-26 — live probe)
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `grok-web/fast` | ✅ |
-| 2 | `auto/best-coding` | ✅ |
-| 3 | `grok-cli/grok-4.7-high` | ❌ |
-| 4 | `grok-cli/grok-4.7-low` | ❌ |
-| 5 | `grok-cli/grok-4.7-xhigh` | ❌ |
-| 6 | `grok-cli/grok-4.7` | ❌ |
-| 7 | `grok-cli/grok-4.7-medium` | ❌ |
-| 8 | `grok-web/expert` | ❌ |
-| 9 | `grok-web/heavy` | ❌ |
+| 1 | `grok-cli/grok-4.7-high` | ✅ |
+| 2 | `grok-cli/grok-4.7-low` | ✅ |
+| 3 | `grok-cli/grok-4.7-xhigh` | ✅ |
+| 4 | `grok-cli/grok-4.7` | ✅ |
+| 5 | `grok-cli/grok-4.7-medium` | ✅ |
+| 6 | `grok-web/fast` | ✅ |
+| 7 | `auto/best-coding` | ✅ |
+
+<a id="comboagy-antigravity-best"></a>
+### combo/agy-antigravity-best - [back to list](#8-combo-catalog-live)
+
+**Working legs today:** 15 / 15 testable (updated 2026-10-26 — live probe)
+
+**Coding-optimized order:** Claude Opus/Sonnet → Gemini Flash tiers
+
+| # | Model | Provider | Category | Status |
+|---|-------|----------|----------|--------|
+| 1 | `antigravity/claude-opus-4-6-thinking` | antigravity | Code + reasoning | ✅ **Best for coding** |
+| 2 | `agy/claude-opus-4-6-thinking` | agy | Code + reasoning | ✅ **Best for coding** |
+| 3 | `antigravity/claude-sonnet-4-6` | antigravity | Code + reasoning | ✅ |
+| 4 | `agy/claude-sonnet-4-6` | agy | Code + reasoning | ✅ |
+| 5 | `antigravity/gemini-3.8-flash-tiered` | antigravity | Flash tier | ✅ |
+| 6 | `agy/gemini-3.8-flash-tiered` | agy | Flash tier | ✅ |
+| 7 | `agy/gemini-3.8-flash-medium` | agy | Flash tier | ✅ |
+| 8 | `agy/gemini-3.8-flash-high` | agy | Flash tier | ✅ |
+| 9 | `agy/gemini-3.8-flash-low` | agy | Flash tier | ✅ |
+| 10 | `agy/gemini-3.1-flash-lite` | agy | Flash lite | ✅ |
+| 11 | `agy/gemini-3.5-flash-lite` | agy | Flash lite | ✅ |
+| 12 | `agy/gemini-3-flash` | agy | Flash | ✅ |
+| 13 | `antigravity/gemini-3.1-flash-lite` | antigravity | Flash lite | ✅ |
+| 14 | `antigravity/gemini-3-flash` | antigravity | Flash | ✅ |
+| 15 | `antigravity/gemini-3.5-flash-lite` | antigravity | Flash lite | ✅ |
 
 <a id="combogroq-best"></a>
 ### combo/groq-best - [back to list](#8-combo-catalog-live)
