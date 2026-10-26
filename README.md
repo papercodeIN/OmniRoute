@@ -70,7 +70,7 @@ Refresh picker anytime (double-click):
   - `combo/openrouter-best` — **4/6 nemotron/laguna `:free`**
   - `combo/cleanapis-best` — **4/6 north-mini-code/laguna `:free`**
   - `combo/codex-best` — **5/6 gpt-6-luna/5.6 family**
-- **Avoid (broken):** `all-best`, `apinex-best`, `claude-*`, `deepseek-best`, `gemma-best`, `glm-best`, `groq-best`, `kimi-best`, `kiro-best`, `literouter-best`, `mistral-best`, `nara-best`, `ollama-best`
+- **Avoid (broken):** `all-best`, `apinex-best`, `claude-*`, `deepseek-best`, `gemma-best`, `glm-best`, `groq-best`, `mistral-best`, `nara-best`, `ollama-best`
 - Single models: `auto/*` routes fan out across all healthy providers
 
 Rules learned the hard way:
@@ -245,12 +245,7 @@ _Updated **2026-10-26** (live probe: **423 requests across 30 combos**). **OK** 
 | [`combo/apinex-best`](#comboapinex-best) | 8 | **1 / 7** ❌ | 1 working: auto/best-coding only |
 | [`combo/claude-fast`](#comboclaude-fast) | 3 | **2 / 1** ❌ | 2 working: auto/best-fast + auto/best-coding |
 | [`combo/claude-max`](#comboclaude-max) | 4 | **1 / 3** ❌ | 1 working: auto/best-coding only |
-| [`combo/kimi-best`](#combokimi-best) | 10 | **1 / 9** ❌ | 1 working: auto/best-coding only |
 | [`combo/nvidia-best`](#combonvidia-best) | 21 | **7 / 14** ⚡ | 7 working: nemotron `:free` via kilocode/openrouter |
-| [`combo/deepseek-best`](#combodeepseek-best) | 29 | **0 / 29** ❌ | **All 29 FAIL** — keys expired/timeout |
-| [`combo/glm-best`](#comboglm-best) | 22 | **0 / 22** ❌ | **All 22 FAIL** — keys expired/timeout |
-| [`combo/literouter-best`](#comboliterouter-best) | 7 | **0 / 7** ❌ | **All 7 FAIL** — keys expired/timeout |
-| [`combo/kiro-best`](#combokiro-best) | 8 | **0 / 6** ❌ | 503 + 401s |
 
 <a id="comboall-best"></a>
 ### combo/all-best - [back to list](#8-combo-catalog-live)
@@ -729,95 +724,6 @@ _Updated **2026-10-26** (live probe: **423 requests across 30 combos**). **OK** 
 
 <a id="combokilocode-best"></a>
 ### combo/kilocode-best - [back to list](#8-combo-catalog-live)
-
-**Working legs today:** 10 / 14 testable (updated 2026-10-26 — live probe)
-
-| # | Model | Status |
-|---|-------|--------|
-| 1 | `kilocode/nvidia/nemotron-3.5-super-vl:free` | ✅ |
-| 2 | `kilocode/reflection/beam-free` | ✅ |
-| 3 | `kilocode/poolside/laguna-xs-2.1:free` | ✅ |
-| 4 | `kilocode/nvidia/nemotron-3.5-lightning:free` | ✅ |
-| 5 | `kilocode/nvidia/nemotron-3.5-content-safety:free` | ✅ |
-| 6 | `kilocode/openrouter/free` | ✅ |
-| 7 | `kilocode/cohere/north-mini-code:free` | ✅ |
-| 8 | `kilocode/dots-studio/dots-3-note-preview:free` | ✅ |
-| 9 | `kilocode/poolside/laguna-s-2.1:free` | ✅ |
-| 10 | `auto/best-coding` | ✅ |
-| 11 | `kilocode/minimax/minimax-m3.1-flash:free` | ❌ |
-| 12 | `kilocode/kilo-auto/free` | ❌ |
-| 13 | `kilocode/nvidia/nemotron-3-ultra-550b-a55b:free` | ❌ |
-| 14 | `kilocode/nvidia/nemotron-3-super-120b-a12b:free` | ❌ |
-
-<a id="combokimi-best"></a>
-### combo/kimi-best - [back to list](#8-combo-catalog-live)
-
-**Working legs today:** 1 / 10 testable (updated 2026-10-26 — live probe)
-
-| # | Model | Status |
-|---|-------|--------|
-| 1 | `auto/best-coding` | ✅ |
-| 2 | `literouter/kimi-k2.8` | ❌ |
-| 3 | `openai/kimi-k3` | ❌ |
-| 4 | `nvidia/moonshotai/kimi-k2.6` | ❌ |
-| 5 | `ollama-cloud/kimi-k2.6` | ❌ |
-| 6 | `nvidia/moonshotai/kimi-k3` | ❌ |
-| 7 | `aug/kimi-k2.7` | ❌ |
-| 8 | `cfp/moonshotai/kimi-k2.7-code` | ❌ |
-| 9 | `aug/kimi-k2.6` | ❌ |
-| 10 | `cfp/moonshotai/kimi-k2.6` | ❌ |
-
-<a id="combokiro-best"></a>
-### combo/kiro-best - [back to list](#8-combo-catalog-live)
-
-**Working legs today:** 0 / 8 testable (updated 2026-10-26 — live probe)
-
-| # | Model | Status |
-|---|-------|--------|
-| 1 | `kiro/glm-5` | ❌ |
-| 2 | `kiro/qwen3-coder-next` | ❌ |
-| 3 | `kiro/claude-sonnet-4.5` | ❌ |
-| 4 | `kiro/claude-haiku-4.5` | ❌ |
-| 5 | `kiro/deepseek-3.2` | ❌ |
-| 6 | `kiro/minimax-m2.5` | ❌ |
-| 7 | `kiro/minimax-m2.1` | ❌ |
-| 8 | `auto/best-coding` | ❌ |
-
-<a id="comboliterouter-best"></a>
-### combo/literouter-best - [back to list](#8-combo-catalog-live)
-
-**Working legs today:** 0 / 7 testable (updated 2026-10-26 — live probe)
-
-| # | Model | Status |
-|---|-------|--------|
-| 1 | `literouter/llama-3.3-70b-instruct-turbo:free` | ❌ |
-| 2 | `literouter/glm-5.3-flash:free` | ❌ |
-| 3 | `literouter/deepseek-v3.2:free` | ❌ |
-| 4 | `literouter/kimi-k2.7-code-cheap:free` | ❌ |
-| 5 | `literouter/glm-5:free` | ❌ |
-| 6 | `literouter/gpt-oss-120b:free` | ❌ |
-| 7 | `literouter/qwen3-coder-next:free` | ❌ |
-
-<a id="combollama-best"></a>
-### combo/llama-best - [back to list](#8-combo-catalog-live)
-
-**Working legs today:** 1 / 13 testable (updated 2026-10-26 — live probe)
-
-| # | Model | Status |
-|---|-------|--------|
-| 1 | `auto/best-coding` | ✅ |
-| 2 | `ollama-cloud/nemotron-3-super` | ❌ |
-| 3 | `literouter/llama-3.3-70b-instruct-turbo:free` | ❌ |
-| 4 | `ollama-cloud/gemma4:31b` | ❌ |
-| 5 | `nvidia/meta/llama-3.2-11b-vision-instruct` | ❌ |
-| 6 | `nvidia/meta/llama-3.2-90b-vision-instruct` | ❌ |
-| 7 | `ollama-cloud/minimax-m2.7` | ❌ |
-| 8 | `nvidia/nvidia/llama3-chatqa-1.5-70b` | ❌ |
-| 9 | `nvidia/meta/codellama-70b` | ❌ |
-| 10 | `nvidia/meta/llama2-70b` | ❌ |
-| 11 | `cfp/meta/llama-4-scout-17b-16e-instruct` | ❌ |
-| 12 | `cfp/meta-llama/llama-3.3-70b-instruct-fp8-fast` | ❌ |
-| 13 | `cfp/meta/llama-3.1-8b-instruct-fp8` | ❌ |
 
 <a id="combomistral-best"></a>
 ### combo/mistral-best - [back to list](#8-combo-catalog-live)
