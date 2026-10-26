@@ -783,18 +783,18 @@ _Updated **2026-10-26** (live probe: 178 requests across 31 combos). **OK** = co
 <a id="combokiro-best"></a>
 ### combo/kiro-best - [back to list](#8-combo-catalog-live)
 
-**Working legs today:** 0 / 7 testable
+**Working legs today:** 0 / 8 testable (updated 2026-10-26 — live probe)
 
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `kiro/glm-5` | FAIL error |
-| 2 | `kiro/qwen3-coder-next` | FAIL error |
-| 3 | `kiro/claude-sonnet-4.5` | FAIL error |
-| 4 | `kiro/claude-haiku-4.5` | FAIL error |
-| 5 | `kiro/deepseek-3.2` | FAIL error |
-| 6 | `kiro/minimax-m2.5` | FAIL error |
-| 7 | `kiro/minimax-m2.1` | FAIL error |
-| 8 | `auto/best-coding` | untested |
+| 1 | `kiro/glm-5` | ❌ |
+| 2 | `kiro/qwen3-coder-next` | ❌ |
+| 3 | `kiro/claude-sonnet-4.5` | ❌ |
+| 4 | `kiro/claude-haiku-4.5` | ❌ |
+| 5 | `kiro/deepseek-3.2` | ❌ |
+| 6 | `kiro/minimax-m2.5` | ❌ |
+| 7 | `kiro/minimax-m2.1` | ❌ |
+| 8 | `auto/best-coding` | ❌ |
 
 <a id="comboliterouter-best"></a>
 ### combo/literouter-best - [back to list](#8-combo-catalog-live)
