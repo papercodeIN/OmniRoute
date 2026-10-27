@@ -20,7 +20,8 @@
 
 **Separate files:** [full combo lists](docs/COMBOS.md) ·
 [provider details + signup links](docs/PROVIDERS.md) ·
-[all errors and fixes](docs/TROUBLESHOOTING.md)
+[all errors and fixes](docs/TROUBLESHOOTING.md) ·
+[OpenCode free models — status, rank, limits](docs/OPENCODE-MODEL-STATUS-RANK.md)
 
 ---
 
