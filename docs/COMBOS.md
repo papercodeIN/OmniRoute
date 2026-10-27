@@ -9,18 +9,13 @@ A `priority` combo stops at the **first leg that answers**, so leg order is the 
 
 - [`combo/coding-elite`](#combocoding-elite)
 - [`combo/claude-best`](#comboclaude-best)
-- [`combo/claude-fast`](#comboclaude-fast)
-- [`combo/claude-max`](#comboclaude-max)
-- [`combo/cleanapis-best`](#combocleanapis-best)
 - [`combo/cloudflare-best`](#combocloudflare-best)
 - [`combo/codex-best`](#combocodex-best)
 - [`combo/gemini-best`](#combogemini-best)
-- [`combo/gemma-best`](#combogemma-best)
 - [`combo/morph-best`](#combomorph-best)
 - [`combo/gpt-best`](#combogpt-best)
 - [`combo/grok-best`](#combogrok-best)
 - [`combo/agy-antigravity-best`](#comboagy-antigravity-best)
-- [`combo/groq-best`](#combogroq-best)
 - [`combo/kilocode-best`](#combokilocode-best)
 - [`combo/mistral-best`](#combomistral-best)
 - [`combo/nvidia-best`](#combonvidia-best)
@@ -28,7 +23,6 @@ A `priority` combo stops at the **first leg that answers**, so leg order is the 
 - [`combo/free-ai-best`](#combofree-ai-best)
 
 ---
-
 
 | Combo | Legs | OK / FAIL | Status |
 |---|---|---|---|
@@ -39,21 +33,16 @@ A `priority` combo stops at the **first leg that answers**, so leg order is the 
 | [`combo/agy-antigravity-best`](#comboagy-antigravity-best) | 15 | **15 / 0** ✅ | **Perfect — 15 working: agy/antigravity claude + gemini** |
 | [`combo/kilocode-best`](#combokilocode-best) | 1 | **1 / 0** ⚠️ | only auto/best-coding remains |
 | [`combo/openrouter-best`](#comboopenrouter-best) | 7 | **6 / 1** ✅ | 6 working: nemotron/laguna/north-mini-code/lfm `:free` |
-| [`combo/cleanapis-best`](#combocleanapis-best) | 4 | **4 / 0** ✅ | all working: openrouter north-mini-code/laguna `:free` |
 | [`combo/codex-best`](#combocodex-best) | 5 | **4 / 1** ⚡ | 4 working: gpt-6-luna, 5.6-terra, 5.6-luna + auto |
 | [`combo/cloudflare-best`](#combocloudflare-best) | 19 | **19 / 0** ✅ | **Perfect — 19 working: 6 code/reasoning + 13 general (cloudflare-ai + cfp)** |
 | [`combo/nvidia-best`](#combonvidia-best) | 7 | **7 / 0** ✅ | **all working: nvidia/openrouter/kilocode nemotron `:free`** |
 | [`combo/claude-best`](#comboclaude-best) | 5 | **5 / 0** ✅ | **5 working: antigravity/agy opus-4.6/sonnet-4.6** |
 | [`combo/grok-best`](#combogrok-best) | 7 | **7 / 0** ✅ | **all working: 5 grok-cli + grok-web/fast + auto** |
 | [`combo/mistral-best`](#combomistral-best) | 14 | **14 / 0** ✅ | all working: mistral/codestral + auto |
-| [`combo/gemma-best`](#combogemma-best) | 2 | **1 / 1** ⚠️ | 1 working: ddgw/tinfoil gemma4-31b |
 | [`combo/morph-best`](#combomorph-best) | 2 | **2 / 0** ✅ | **Perfect — both working: morph-v3-fast, morph-v3-large** |
-| [`combo/groq-best`](#combogroq-best) | 6 | **6 / 0** ✅ | **Perfect — all 6 working: qwen3.8-27b, gpt-oss-120b/20b, safeguard-20b, allam-2-7b + auto** |
-| [`combo/claude-fast`](#comboclaude-fast) | 2 | **2 / 0** ✅ | both working: auto/best-fast + auto/best-coding |
-| [`combo/claude-max`](#comboclaude-max) | 3 | **1 / 2** ❌ | 1 working: auto/best-coding only |
 
 <a id="combocoding-elite"></a>
-### combo/coding-elite - [back to list](#combo-index)
+### combo/coding-elite
 
 **Strategy** `priority` · **maxGlobalAttempts** 200 · 29 live legs · created 2026-10-27.
 `priority` = it stops at the first leg that answers, so the order *is* the ranking: subscription agentic models first, free frontier second, small/fast last.
@@ -86,9 +75,7 @@ A `priority` combo stops at the **first leg that answers**, so leg order is the 
 Registered in `opencode.jsonc` as `combo/coding-elite` and bare `coding-elite` (200k ctx / 32k out). Verified 2026-10-27: resolves to `codex/gpt-6-luna`, returns `tool_calls` correctly.
 
 <a id="comboclaude-best"></a>
-### combo/claude-best - [back to list](#combo-index)
-
-**Working legs today:** 5 / 17 testable (updated 2026-10-26 — live probe)
+### combo/claude-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -127,49 +114,8 @@ Registered in `opencode.jsonc` as `combo/coding-elite` and bare `coding-elite` (
 | 32 | `kiro/claude-haiku-4.5` | ❌ |
 | 33 | `claude-web/claude-haiku-4-5-20251001-low` | ❌ |
 
-<a id="comboclaude-fast"></a>
-### combo/claude-fast - [back to list](#combo-index)
-
-**Working legs today:** 2 / 3 testable (updated 2026-10-26 — live probe)
-
-| # | Model | Status |
-|---|-------|--------|
-| 1 | `auto/best-fast` | ✅ |
-| 2 | `auto/best-coding` | ✅ |
-| 3 | `gemini/gemini-3.8-flash` | ❌ |
-
-<a id="comboclaude-max"></a>
-### combo/claude-max - [back to list](#combo-index)
-
-**Working legs today:** 1 / 4 testable (updated 2026-10-26 — live probe)
-
-| # | Model | Status |
-|---|-------|--------|
-| 1 | `auto/best-coding` | ✅ |
-| 2 | `gemini/gemini-3.8-flash` | ❌ |
-| 3 | `auto/claude-opus` | ❌ |
-| 4 | `auto/claude-sonnet` | ❌ |
-
-<a id="combocleanapis-best"></a>
-### combo/cleanapis-best - [back to list](#combo-index)
-
-**Working legs today:** 4 / 4 testable (updated 2026-10-26 — live probe)
-
-| # | Model | Status |
-|---|-------|--------|
-| 1 | `openrouter/cohere/north-mini-code:free` | ✅ |
-| 2 | `openrouter/poolside/laguna-s-2.1:free` | ✅ |
-| 3 | `openrouter/poolside/laguna-xs-2.1:free` | ✅ |
-| 4 | `auto/best-coding` | ✅ |
-
-*All models from active providers only (openrouter). Removed 17 models from unconfigured providers (openai/free, kilocode, gemini, openai/claude).*
-
 <a id="combocloudflare-best"></a>
-### combo/cloudflare-best - [back to list](#combo-index)
-
-**Working legs today:** 19 / 19 testable (updated 2026-10-26 — live probe)
-
-**Coding-optimized order:** Code/Reasoning → General
+### combo/cloudflare-best
 
 | # | Model | Provider | Status |
 |---|-------|----------|--------|
@@ -196,9 +142,7 @@ Registered in `opencode.jsonc` as `combo/coding-elite` and bare `coding-elite` (
 *Removed (FAIL):* `cloudflare-ai/@cf/zai-org/glm-4.7-flash`
 
 <a id="combocodex-best"></a>
-### combo/codex-best - [back to list](#combo-index)
-
-**Working legs today:** 4 / 5 testable (updated 2026-10-26 — live probe)
+### combo/codex-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -209,9 +153,7 @@ Registered in `opencode.jsonc` as `combo/coding-elite` and bare `coding-elite` (
 | 5 | `auto/best-coding` | ✅ |
 
 <a id="combogemini-best"></a>
-### combo/gemini-best - [back to list](#combo-index)
-
-**Working legs today:** 11 / 11 testable (updated 2026-10-26 — live probe)
+### combo/gemini-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -227,20 +169,8 @@ Registered in `opencode.jsonc` as `combo/coding-elite` and bare `coding-elite` (
 | 10 | `agy/gemini-3-flash` | ✅ |
 | 11 | `antigravity/gemini-3-flash` | ✅ |
 
-<a id="combogemma-best"></a>
-### combo/gemma-best - [back to list](#combo-index)
-
-**Working legs today:** 2 / 2 testable (updated 2026-10-26 — live probe)
-
-| # | Model | Status |
-|---|-------|--------|
-| 1 | `cfp/aisingapore/gemma-sea-lion-v4-27b-it` | ✅ |
-| 2 | `ddgw/tinfoil/gemma4-31b` | ✅ |
-
 <a id="combomorph-best"></a>
-### combo/morph-best - [back to list](#combo-index)
-
-**Working legs today:** 2 / 2 testable (updated 2026-10-26 — live probe)
+### combo/morph-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -248,9 +178,7 @@ Registered in `opencode.jsonc` as `combo/coding-elite` and bare `coding-elite` (
 | 2 | `morph/morph-v3-large` | ✅ |
 
 <a id="combogpt-best"></a>
-### combo/gpt-best - [back to list](#combo-index)
-
-**Working legs today:** 27 / 27 testable (updated 2026-10-26 — live probe)
+### combo/gpt-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -283,9 +211,7 @@ Registered in `opencode.jsonc` as `combo/coding-elite` and bare `coding-elite` (
 | 27 | `ddgw/tinfoil/gpt-oss-120b` | ✅ |
 
 <a id="combogrok-best"></a>
-### combo/grok-best - [back to list](#combo-index)
-
-**Working legs today:** 7 / 7 testable (updated 2026-10-26 — live probe)
+### combo/grok-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -298,11 +224,7 @@ Registered in `opencode.jsonc` as `combo/coding-elite` and bare `coding-elite` (
 | 7 | `auto/best-coding` | ✅ |
 
 <a id="comboagy-antigravity-best"></a>
-### combo/agy-antigravity-best - [back to list](#combo-index)
-
-**Working legs today:** 15 / 15 testable (updated 2026-10-26 — live probe)
-
-**Coding-optimized order:** Claude Opus/Sonnet → Gemini Flash tiers
+### combo/agy-antigravity-best
 
 | # | Model | Provider | Category | Status |
 |---|-------|----------|----------|--------|
@@ -322,25 +244,11 @@ Registered in `opencode.jsonc` as `combo/coding-elite` and bare `coding-elite` (
 | 14 | `antigravity/gemini-3-flash` | antigravity | Flash | ✅ |
 | 15 | `antigravity/gemini-3.5-flash-lite` | antigravity | Flash lite | ✅ |
 
-<a id="combogroq-best"></a>
-### combo/groq-best - [back to list](#combo-index)
-
-**Working legs today:** 6 / 6 testable (updated 2026-10-26 — live probe)
-
-| # | Model | Status |
-|---|-------|--------|
-| 1 | `groq/qwen/qwen3.8-27b` | ✅ |
-| 2 | `groq/openai/gpt-oss-120b` | ✅ |
-| 3 | `groq/openai/gpt-oss-20b` | ✅ |
-| 4 | `groq/openai/gpt-oss-safeguard-20b` | ✅ |
-| 5 | `groq/allam-2-7b` | ✅ |
-| 6 | `auto/best-coding` | ✅ |
-
 <a id="combokilocode-best"></a>
-### combo/kilocode-best - [back to list](#combo-index)
+### combo/kilocode-best
 
 <a id="combomistral-best"></a>
-### combo/mistral-best - [back to list](#combo-index)
+### combo/mistral-best
 
 **Strategy** `priority` · **maxGlobalAttempts** 200 · 12 live legs · created 2026-10-27.
 Sorted by coding quality: codestral first (larger/agent-friendly), then mistral-code, then ministral by size.
@@ -361,9 +269,7 @@ Sorted by coding quality: codestral first (larger/agent-friendly), then mistral-
 | 12 | `mistral/ministral-14b-2512` | mistral | ✅ |
 
 <a id="combonvidia-best"></a>
-### combo/nvidia-best - [back to list](#combo-index)
-
-**Working legs today:** 7 / 7 testable (updated 2026-10-26 — live probe)
+### combo/nvidia-best
 
 | # | Model | Provider | Status |
 |---|-------|----------|--------|
@@ -378,9 +284,7 @@ Sorted by coding quality: codestral first (larger/agent-friendly), then mistral-
 *Removed (FAIL):* `nvidia` direct models (4-340b, 3-ultra, 3-super, nano), `openrouter/nvidia/nemotron-3-super-120b-a12b:free`, `kilocode/nvidia/nemotron-3-super-120b-a12b:free`, `ollama-cloud/nemotron-3-super`
 
 <a id="comboopenrouter-best"></a>
-### combo/openrouter-best - [back to list](#combo-index)
-
-**Working legs today:** 6 / 7 testable (updated 2026-10-26 — live probe)
+### combo/openrouter-best
 
 | # | Model | Status |
 |---|-------|--------|
@@ -394,23 +298,9 @@ Sorted by coding quality: codestral first (larger/agent-friendly), then mistral-
 
 *Removed (FAIL):* `openrouter/nvidia/nemotron-3-super-120b-a12b:free`, `openrouter/apodex/apodex-1.1-mini:free`, `openrouter/google/gemma-4-31b-it:free`
 
-
-**Working legs today:** 26 / 26 testable (updated 2026-10-26 — live probe)
-
-**Coding-optimized order:** Codestral/Devstral → Qwen Coder/VL → Qwen Max/Plus/Omni/Flash → Mistral Large/Medium/Small → Ministral/SenseNova (fast/lightweight)
-
-| # | Model | Category | Status |
-|---|-------|----------|--------|
-
 <a id="combofree-ai-best"></a>
-### combo/free-ai-best - [back to list](#combo-index)
+### combo/free-ai-best
 
-**Working legs today:** 6 / 6 testable (updated 2026-10-26 — live probe)
-
-**Coding-optimized order:** Qwen3 Coder (best) → Qwen Coder → Qwen 3 8B → Qwen 7B → Mistral → DeepSeek R1 7B
-
-| # | Model | Category | Status |
-|---|-------|----------|--------|
 | 1 | `free-ai/qwen3-coder` | Code-specialized | ✅ **Best for coding** |
 | 2 | `free-ai/qwen-coder` | Code-specialized | ✅ |
 | 3 | `free-ai/qwen3-8b` | Qwen 8B | ✅ |
@@ -419,5 +309,4 @@ Sorted by coding quality: codestral first (larger/agent-friendly), then mistral-
 | 4 | `free-ai/deepseek-r1-7b` | DeepSeek R1 7B | ✅ |
 
 > **⚠️ zerolimitai removed** — Provider offers only a **7-day trial**, no permanent free tier. Combo deleted to avoid wasted attempts.
-
 
