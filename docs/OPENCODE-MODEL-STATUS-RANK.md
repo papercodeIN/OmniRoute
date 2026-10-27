@@ -2,8 +2,9 @@
 
 > The 9 free models in the OpenCode picker, ranked for **agentic coding** (long-horizon tool use,
 > terminal work, multi-file edits) — not chat quality. **Verified 2026-10-27.**
+> Free tier only — no paid routes, pricing or subscriptions in this file.
 > Complements [README section 4](https://github.com/papercodeIN/OmniRoute#4-coding-model-ranking---best-first-2026-10-27),
-> which ranks models across *all* providers; this file is scraped-down to the free OpenCode tier only.
+> which ranks models across *all* providers; this file is scraped down to the free OpenCode tier.
 
 ---
 
@@ -47,17 +48,17 @@
 
 ## 3. Free-tier limits (OpenCode Zen)
 
-**No numeric limit is published.** Docs say only "free for a limited time" at $0 pricing. What is actually enforced:
+**No numeric limit is published.** Docs say only "free for a limited time" at $0 pricing. What is actually enforced on the free tier:
 
-| Limit | Free tier | Paid equivalent |
-|---|---|---|
-| Price | $0 in / $0 out / $0 cached | pay-as-you-go |
-| Context — DeepSeek V4.1 Flash Free | **200K** | 1M (`deepseek-v4.1-flash`) |
-| Max output — DeepSeek V4.1 Flash Free | **32K** | 384K |
-| Where it runs | **OpenCode app only** | any client |
-| Raw API access | `403 FreeTierError` | allowed |
-| Rate limit | Global, undocumented, **shared across all free models** | per-account quota |
-| End date | none published — can be pulled any day | n/a |
+| Limit | Value |
+|---|---|
+| Price | $0 in / $0 out / $0 cached |
+| Context — DeepSeek V4.1 Flash Free | **200K** |
+| Max output — DeepSeek V4.1 Flash Free | **32K** |
+| Where it runs | **OpenCode app only** |
+| Raw API access | `403 FreeTierError` |
+| Rate limit | Global, undocumented, **shared across all free models** |
+| End date | none published — can be pulled any day |
 
 ### The real constraint: one shared free bucket
 
@@ -71,11 +72,11 @@ switching from DeepSeek to GLM does *not* restore quota if the throttle is globa
 | `403 FreeTierError` | calling from outside the OpenCode app |
 | Multi-day 429s | provider-side incident, not your account (see upstream issues) |
 
-Community estimate for bucket size: **~$1/day of equivalent paid usage** — a few hundred agent turns,
+Community estimate for bucket size: **~$1/day of equivalent usage** — a few hundred agent turns,
 or one or two long refactors. It refills over time (people report a usable chunk again a few days
 later); it is **not** a per-hour request count.
 
-Also expect **cold starts and slow responses at peak** — free traffic is deprioritized behind paid.
+Also expect **cold starts and slow responses at peak** — free traffic is deprioritized.
 
 ---
 
@@ -88,7 +89,7 @@ Also expect **cold starts and slow responses at peak** — free traffic is depri
 | Nemotron 3.5 Super VL Free | **1M** | ctx-rich, vision, agent-poor |
 | Flint 40B Free | 262K | |
 | Nemotron 3.5 Lightning Free | 262K | |
-| DeepSeek V4.1 Flash Free | 200K | paid build gets 1M |
+| DeepSeek V4.1 Flash Free | 200K | free-tier ceiling |
 | GLM-5.3-Flash Free | 200K | |
 | MiMo-V2.6-Flash Free | 200K | |
 | Big Pickle | 200K | rotates |
@@ -120,23 +121,24 @@ Also expect **cold starts and slow responses at peak** — free traffic is depri
 
 ---
 
-## 7. When you hit the wall
+## 7. When the free models throttle
 
-| Escape hatch | Cost | What you get |
-|---|---|---|
-| **`combo/coding-elite`** (this repo) | $0 | routes around dead/throttled free legs automatically — see README §3 |
-| **OpenCode Go** | $10/mo | V4.1 Flash included, ~$80 usage at same token rates |
-| **DeepSeek direct** | $0.15 / $0.60 per 1M off-peak | 1M ctx, no app restriction, best value for full ctx |
-| **OpenCode Zen paid** | pay-as-you-go | `deepseek-v4.1-flash`, same weights, 1M ctx |
-| **`larprouter/deepseek-v4.1-flash`** | free pool | #1 leg of `coding-elite`; 402 = pool credit exhausted, combo falls through |
+| Free fallback | What it gives you |
+|---|---|
+| `combo/coding-elite` (this repo) | routes around dead/throttled legs automatically — see README §3 |
+| `glm-5.3-flash-free` | second-best free agent; only helps if the throttle is model-specific, not global |
+| `mimo-v2.6-flash-free` | third distinct free pool, still agent-capable |
+| `larprouter/deepseek-v4.1-flash` | free pool, #1 leg of `coding-elite`; 402 = pool credit exhausted, combo falls through |
+| `openrouter/poolside/laguna-s-2.1:free` | free, single-file work only |
+| `openrouter/recursive/flint-v1.0:free` | free patch-quality specialist |
 
 ---
 
 ## 8. Notes
 
 - Free `deepseek-v4.1-flash-free` is the **pre-1017 build**. A separate `deepseek-v4.1-flash-1017`
-  entry scores higher (~AA index 45) but is a different model with its own usage accounting.
-- Because the bucket is shared, the "free only" legs in `coding-elite` degrade together — the combo's
-  ordering exists to fall through to *paid/subscription* legs, not to other free ones.
+  entry scores higher (~AA index 45) but is a different free model with its own usage accounting.
+- Because the bucket is shared, free legs degrade together — `coding-elite`'s ordering exists so a
+  request fails *through* the free tier instead of stalling in it.
 - Source pages: [opencode.ai/docs/zen](https://opencode.ai/docs/zen/) ·
   [opencode.ai/data](https://opencode.ai/data/) · vendor cards for DeepSeek, GLM, Beam, MiMo, Flint, Nemotron.
