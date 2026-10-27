@@ -8,7 +8,6 @@ A `priority` combo stops at the **first leg that answers**, so leg order is the 
 ## Combo index
 
 - [`combo/coding-elite`](#combocoding-elite)
-- [`combo/all-best`](#comboall-best)
 - [`combo/claude-best`](#comboclaude-best)
 - [`combo/claude-fast`](#comboclaude-fast)
 - [`combo/claude-max`](#comboclaude-max)
@@ -25,7 +24,6 @@ A `priority` combo stops at the **first leg that answers**, so leg order is the 
 - [`combo/kilocode-best`](#combokilocode-best)
 - [`combo/mistral-best`](#combomistral-best)
 - [`combo/nvidia-best`](#combonvidia-best)
-- [`combo/ollama-best`](#comboollama-best)
 - [`combo/openrouter-best`](#comboopenrouter-best)
 - [`combo/free-ai-best`](#combofree-ai-best)
 
@@ -50,9 +48,7 @@ A `priority` combo stops at the **first leg that answers**, so leg order is the 
 | [`combo/mistral-best`](#combomistral-best) | 14 | **14 / 0** ✅ | all working: mistral/codestral + auto |
 | [`combo/gemma-best`](#combogemma-best) | 2 | **1 / 1** ⚠️ | 1 working: ddgw/tinfoil gemma4-31b |
 | [`combo/morph-best`](#combomorph-best) | 2 | **2 / 0** ✅ | **Perfect — both working: morph-v3-fast, morph-v3-large** |
-| [`combo/all-best`](#comboall-best) | 50 | **50 / 0** ✅ | all 50 working: mistral/codex/agy/antigravity/grok |
 | [`combo/groq-best`](#combogroq-best) | 6 | **6 / 0** ✅ | **Perfect — all 6 working: qwen3.8-27b, gpt-oss-120b/20b, safeguard-20b, allam-2-7b + auto** |
-| [`combo/ollama-best`](#comboollama-best) | 1 | **1 / 0** ⚠️ | only auto/best-coding remains |
 | [`combo/claude-fast`](#comboclaude-fast) | 2 | **2 / 0** ✅ | both working: auto/best-fast + auto/best-coding |
 | [`combo/claude-max`](#comboclaude-max) | 3 | **1 / 2** ❌ | 1 working: auto/best-coding only |
 
@@ -88,166 +84,6 @@ A `priority` combo stops at the **first leg that answers**, so leg order is the 
 | 22 | `auto/best-coding` | - |
 
 Registered in `opencode.jsonc` as `combo/coding-elite` and bare `coding-elite` (200k ctx / 32k out). Verified 2026-10-27: resolves to `codex/gpt-6-luna`, returns `tool_calls` correctly.
-
-<a id="comboall-best"></a>
-### combo/all-best - [back to list](#combo-index)
-
-**Working legs today:** 63 / 150 testable
-
-| # | Model | Status |
-|---|-------|--------|
-| 1 | `mistral/ministral-3b-latest` | OK |
-| 2 | `mistral/mistral-code-latest` | OK |
-| 3 | `mistral/ministral-8b-latest` | OK |
-| 4 | `codex/gpt-5.6-luna-high` | OK |
-| 5 | `codex/gpt-6-luna-low` | OK |
-| 6 | `codex/gpt-5.6-terra-low` | OK |
-| 7 | `codex/gpt-5.6-luna-medium` | OK |
-| 8 | `codex/gpt-5.6-luna-low` | OK |
-| 9 | `gemini/gemini-3-flash-preview` | OK |
-| 10 | `codex/gpt-5.6-terra-xhigh` | OK |
-| 11 | `codex/gpt-5.6-luna-xhigh` | OK |
-| 12 | `codex/gpt-6-luna-max` | OK |
-| 13 | `codex/gpt-5.6-terra-max` | OK |
-| 14 | `agy/gemini-3-flash` | OK |
-| 15 | `codex/gpt-6-luna-high` | OK |
-| 16 | `codex/gpt-6-luna-medium` | OK |
-| 17 | `antigravity/gemini-3.1-flash-lite` | OK |
-| 18 | `codex/gpt-5.6-luna-max` | OK |
-| 19 | `antigravity/gemini-3-flash` | OK |
-| 20 | `literouter/qwen3-coder:free` | OK |
-| 21 | `agy/gemini-3.8-flash-tiered` | OK |
-| 22 | `literouter/qwen3-32b:free` | OK |
-| 23 | `agy/gemini-3.8-flash-medium` | OK |
-| 24 | `antigravity/gemini-3.5-flash-lite` | OK |
-| 25 | `antigravity/gemini-3.8-flash-tiered` | OK |
-| 26 | `agy/gemini-3.1-flash-lite` | OK |
-| 27 | `literouter/deepseek-v4-flash-stable:free` | OK |
-| 28 | `agy/gemini-3.5-flash-lite` | OK |
-| 29 | `codex/gpt-6-luna-xhigh` | OK |
-| 30 | `grok-cli/grok-4.7-xhigh` | OK |
-| 31 | `agy/gemini-3.8-flash-high` | OK |
-| 32 | `agy/gemini-3.8-flash-low` | OK |
-| 33 | `literouter/qwen3.5-9b:free` | OK |
-| 34 | `literouter/deepseek-v4.1-flash-1017:free` | OK |
-| 35 | `literouter/kimi-k2.8` | OK |
-| 36 | `codex/gpt-5.6-terra-high` | OK |
-| 37 | `gemini/gemini-3.1-flash-lite` | OK |
-| 38 | `literouter/llama-3.3-70b-instruct-turbo:free` | OK |
-| 39 | `literouter/deepseek-v3.1:free` | OK |
-| 40 | `literouter/deepseek-v4-pro-cheap:free` | OK |
-| 41 | `literouter/glm-4.5-air:free` | OK |
-| 42 | `literouter/glm-5.3-flash-cheap:free` | OK |
-| 43 | `literouter/deepseek-v3.1` | OK |
-| 44 | `literouter/deepseek-v3.2` | OK |
-| 45 | `literouter/deepseek-v4-pro-cheap` | OK |
-| 46 | `literouter/glm-5.2` | OK |
-| 47 | `codestral/codestral-latest` | OK |
-| 48 | `codestral/codestral-2508` | OK |
-| 49 | `codex/gpt-6-luna` | OK |
-| 50 | `mistral/codestral-latest` | OK |
-| 51 | `ollama-cloud/nemotron-3-super` | OK |
-| 52 | `grok-cli/grok-4.7-low` | OK |
-| 53 | `codex/gpt-5.6-luna` | OK |
-| 54 | `ollama-cloud/gemma4:31b` | OK |
-| 55 | `grok-cli/grok-4.7` | OK |
-| 56 | `codex/gpt-5.6-terra` | OK |
-| 57 | `grok-cli/grok-4.7-high` | OK |
-| 58 | `nara/laguna-s-2.1` | OK |
-| 59 | `morph/morph-v3-fast` | OK |
-| 60 | `openrouter/nvidia/nemotron-3-super-120b-a12b:free` | FAIL error |
-| 61 | `kilocode/nvidia/nemotron-3.5-lightning:free` | OK |
-| 62 | `literouter/glm-5:free` | FAIL error |
-| 63 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free` | FAIL error |
-| 64 | `kilocode/poolside/laguna-s-2.1:free` | OK |
-| 65 | `literouter/glm-5.3-flash:free` | FAIL error |
-| 66 | `openrouter/cohere/north-mini-code:free` | FAIL error |
-| 67 | `kilocode/poolside/laguna-xs-2.1:free` | OK |
-| 68 | `literouter/deepseek-v3.2:free` | FAIL error |
-| 69 | `openrouter/poolside/laguna-s-2.1:free` | FAIL error |
-| 70 | `kilocode/nvidia/nemotron-3-super-120b-a12b:free` | FAIL error |
-| 71 | `literouter/gpt-oss-120b:free` | FAIL error |
-| 72 | `openrouter/poolside/laguna-xs-2.1:free` | FAIL error |
-| 73 | `kilocode/cohere/north-mini-code:free` | OK |
-| 74 | `literouter/kimi-k2.7-code-cheap:free` | FAIL error |
-| 75 | `openrouter/nvidia/nemotron-3.5-lightning:free` | FAIL error |
-| 76 | `literouter/qwen3-coder-next:free` | FAIL error |
-| 77 | `literouter/ministral-3b-2512:free` | FAIL error |
-| 78 | `literouter/ministral-3-8b-instruct:free` | FAIL error |
-| 79 | `literouter/deepseek-v4-flash-cheap:free` | FAIL error |
-| 80 | `literouter/deepseek-v4-flash:free` | FAIL error |
-| 81 | `literouter/deepseek-v4.1-flash-cheap:free` | FAIL error |
-| 82 | `literouter/deepseek-v4.1-flash-stable:free` | FAIL error |
-| 83 | `literouter/deepseek-v4.1-flash:free` | FAIL error |
-| 84 | `literouter/gemini-2.5-flash-lite:free` | FAIL error |
-| 85 | `literouter/glm-4.5:free` | FAIL error |
-| 86 | `literouter/glm-4.6:free` | FAIL error |
-| 87 | `literouter/glm-4.7-flash-heretic:free` | FAIL error |
-| 88 | `literouter/glm-4.7-flash:free` | FAIL error |
-| 89 | `literouter/glm-4.7:free` | FAIL error |
-| 90 | `literouter/glm-5.1-cheap:free` | FAIL error |
-| 91 | `literouter/glm-5.1:free` | FAIL error |
-| 92 | `literouter/glm-5.2-cheap:free` | FAIL error |
-| 93 | `literouter/glm-5.2:free` | FAIL error |
-| 94 | `nara/nemotron-3.5-lightning-free` | FAIL error |
-| 95 | `literouter/deepseek-v4-flash` | FAIL error |
-| 96 | `literouter/deepseek-v4-flash-cheap` | FAIL error |
-| 97 | `literouter/deepseek-v4-flash-stable` | FAIL error |
-| 98 | `literouter/deepseek-v4-pro` | FAIL error |
-| 99 | `literouter/deepseek-v4.1-flash` | FAIL error |
-| 100 | `literouter/deepseek-v4.1-flash-cheap` | FAIL error |
-| 101 | `literouter/deepseek-v4.1-flash-stable` | FAIL error |
-| 102 | `literouter/glm-4.5` | FAIL error |
-| 103 | `literouter/glm-4.5-air` | FAIL error |
-| 104 | `literouter/glm-4.6` | FAIL error |
-| 105 | `literouter/glm-4.7` | FAIL error |
-| 106 | `literouter/glm-4.7-flash` | FAIL error |
-| 107 | `literouter/glm-4.7-flash-heretic` | FAIL error |
-| 108 | `literouter/glm-5` | FAIL error |
-| 109 | `literouter/glm-5.1` | FAIL error |
-| 110 | `literouter/glm-5.2-cheap` | FAIL error |
-| 111 | `literouter/glm-5.3` | FAIL error |
-| 112 | `literouter/glm-5.3-cheap` | FAIL error |
-| 113 | `literouter/glm-5.3-flash` | FAIL error |
-| 114 | `literouter/glm-5.3-flash-cheap` | FAIL error |
-| 115 | `literouter/gpt-5-mini` | FAIL error |
-| 116 | `literouter/gpt-5-mini-stable` | FAIL error |
-| 117 | `antigravity/claude-opus-4-6-thinking-low` | FAIL error |
-| 118 | `antigravity/claude-opus-4-6-thinking` | FAIL error |
-| 119 | `antigravity/claude-sonnet-4-6-low` | FAIL error |
-| 120 | `agy/claude-opus-4-6-thinking-low` | FAIL error |
-| 121 | `agy/claude-sonnet-4-6-low` | FAIL error |
-| 122 | `claude-web/claude-opus-4-6` | FAIL error |
-| 123 | `claude-web/claude-sonnet-4-6-low` | FAIL error |
-| 124 | `claude-web/claude-opus-5-low` | FAIL error |
-| 125 | `deepseek-web/deepseek-chat` | FAIL error |
-| 126 | `gemini/gemini-3.8-flash-lite-tts` | FAIL error |
-| 127 | `kiro/qwen3-coder-next` | FAIL error |
-| 128 | `zai-web/glm-5.3` | FAIL error |
-| 129 | `grok-web/fast` | FAIL error |
-| 130 | `deepseek-web/DeepSeek-V3.2` | FAIL error |
-| 131 | `kiro/glm-5` | FAIL error |
-| 132 | `zai-web/glm-5.3-flash` | FAIL error |
-| 133 | `deepseek-web/deepseek-reasoner` | FAIL error |
-| 134 | `codex/gpt-5.5` | FAIL error |
-| 135 | `kiro/deepseek-3.2` | FAIL error |
-| 136 | `zai-web/glm-5.2` | FAIL error |
-| 137 | `grok-cli/grok-4.7-medium` | FAIL timeout |
-| 138 | `deepseek-web/deepseek-v4-flash` | FAIL error |
-| 139 | `kiro/minimax-m2.1` | FAIL error |
-| 140 | `deepseek-web/deepseek-v4-pro` | FAIL error |
-| 141 | `kiro/minimax-m2.5` | FAIL error |
-| 142 | `deepseek-web/deepseek-v4-pro-think` | FAIL error |
-| 143 | `deepseek-web/deepseek-v4-pro-search` | FAIL error |
-| 144 | `deepseek-web/deepseek-v4-pro-think-search` | FAIL error |
-| 145 | `deepseek-web/deepseek-v4-flash-think` | FAIL error |
-| 146 | `deepseek-web/deepseek-v4-flash-search` | FAIL error |
-| 147 | `deepseek-web/deepseek-v4-flash-think-search` | FAIL error |
-| 148 | `deepseek-web/DeepSeek-R1` | FAIL error |
-| 149 | `deepseek-web/DeepSeek-R1-Search` | FAIL error |
-| 150 | `deepseek-web/DeepSeek-Search` | FAIL error |
-| 151 | `auto/coding:free` | untested |
-| 152 | `auto/best-coding` | untested |
 
 <a id="comboclaude-best"></a>
 ### combo/claude-best - [back to list](#combo-index)
@@ -511,18 +347,18 @@ Sorted by coding quality: codestral first (larger/agent-friendly), then mistral-
 
 | # | Model | Provider | Status |
 |---|-------|----------|--------|
-| 1 | `codestral/codestral-latest` | codestral | OK |
-| 2 | `codestral/codestral-2508` | codestral | OK |
-| 3 | `mistral/codestral-latest` | mistral | OK |
-| 4 | `mistral/codestral-2508` | mistral | OK |
-| 5 | `mistral/mistral-code-latest` | mistral | OK |
-| 6 | `mistral/mistral-code-fim-latest` | mistral | OK |
-| 7 | `mistral/ministral-14b-latest` | mistral | OK |
-| 8 | `mistral/ministral-8b-latest` | mistral | OK |
-| 9 | `mistral/ministral-3b-latest` | mistral | OK |
-| 10 | `mistral/ministral-3b-2512` | mistral | OK |
-| 11 | `mistral/ministral-8b-2512` | mistral | OK |
-| 12 | `mistral/ministral-14b-2512` | mistral | OK |
+| 1 | `codestral/codestral-latest` | codestral | ✅ |
+| 2 | `codestral/codestral-2508` | codestral | ✅ |
+| 3 | `mistral/codestral-latest` | mistral | ✅ |
+| 4 | `mistral/codestral-2508` | mistral | ✅ |
+| 5 | `mistral/mistral-code-latest` | mistral | ✅ |
+| 6 | `mistral/mistral-code-fim-latest` | mistral | ✅ |
+| 7 | `mistral/ministral-14b-latest` | mistral | ✅ |
+| 8 | `mistral/ministral-8b-latest` | mistral | ✅ |
+| 9 | `mistral/ministral-3b-latest` | mistral | ✅ |
+| 10 | `mistral/ministral-3b-2512` | mistral | ✅ |
+| 11 | `mistral/ministral-8b-2512` | mistral | ✅ |
+| 12 | `mistral/ministral-14b-2512` | mistral | ✅ |
 
 <a id="combonvidia-best"></a>
 ### combo/nvidia-best - [back to list](#combo-index)
@@ -540,22 +376,6 @@ Sorted by coding quality: codestral first (larger/agent-friendly), then mistral-
 | 7 | `auto/best-coding` | auto | ✅ |
 
 *Removed (FAIL):* `nvidia` direct models (4-340b, 3-ultra, 3-super, nano), `openrouter/nvidia/nemotron-3-super-120b-a12b:free`, `kilocode/nvidia/nemotron-3-super-120b-a12b:free`, `ollama-cloud/nemotron-3-super`
-
-<a id="comboollama-best"></a>
-### combo/ollama-best - [back to list](#combo-index)
-
-**Working legs today:** 1 / 8 testable (updated 2026-10-26 — live probe)
-
-| # | Model | Status |
-|---|-------|--------|
-| 1 | `auto/best-coding` | ✅ |
-| 2 | `ollama-cloud/gemma4:31b` | ❌ |
-| 3 | `ollama-cloud/nemotron-3-super` | ❌ |
-| 4 | `ollama-cloud/beam` | ❌ |
-| 5 | `ollama-cloud/gpt-oss:20b` | ❌ |
-| 6 | `ollama-cloud/minimax-m3.1-flash` | ❌ |
-| 7 | `ollama-cloud/nemotron-3-nano:30b` | ❌ |
-| 8 | `ollama-cloud/nemotron-3-ultra` | ❌ |
 
 <a id="comboopenrouter-best"></a>
 ### combo/openrouter-best - [back to list](#combo-index)
