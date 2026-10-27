@@ -27,17 +27,14 @@ A `priority` combo stops at the **first leg that answers**, so leg order is the 
 - [`combo/nvidia-best`](#combonvidia-best)
 - [`combo/ollama-best`](#comboollama-best)
 - [`combo/openrouter-best`](#comboopenrouter-best)
-- [`combo/xkiro-best`](#comboxkiro-best)
 - [`combo/free-ai-best`](#combofree-ai-best)
 
 ---
 
-_Updated **2026-10-27**: added `combo/coding-elite` (ranked legs, see the ranking in the README). Previous full sweep: **2026-10-26**, 423 requests across 23 combos, cleaned to **active providers only**. **OK** = combo name + first 5 legs responded 200; **FAIL** = error on combo name or legs (401/403/422/503/timeout). xkiro legs only in `xkiro-best`; groq legs only in `groq-best`; cloudflare legs use `cloudflare-ai/@cf/...` prefix. **Green = daily drivers**, **Yellow = fallback only**, **Red = broken**._
 
 | Combo | Legs | OK / FAIL | Status |
 |---|---|---|---|
 | [`combo/coding-elite`](#combocoding-elite) | 22 | **22 / 0** ✅ | **Best today — ranked legs: deepseek-v4.1-flash (larprouter) → gpt-6-luna-high/max → grok-4.7-xhigh → opus-4.6-thinking → free frontier (laguna, flint, north-mini-code, kimi-k2.7-code, deepseek-v4-pro, glm-5.2) → codestral** |
-| [`combo/xkiro-best`](#comboxkiro-best) | 26 | **26 / 0** ✅ | **Perfect — all 26 working: codestral-2508, devstral-medium, 13 qwen, 5 mistral, sensenova** |
 | [`combo/free-ai-best`](#combofree-ai-best) | 6 | **6 / 0** ✅ | **Perfect — 6 working: qwen3-coder, qwen-coder, qwen3-8b, qwen7b, mistral, deepseek-r1-7b** |
 | [`combo/gemini-best`](#combogemini-best) | 11 | **11 / 0** ✅ | **Perfect — 11 working: agy/antigravity gemini 3.8/3.5/3.1 flash tiers** |
 | [`combo/gpt-best`](#combogpt-best) | 27 | **26 / 1** ✅ | **26 working: codex gpt-6/5.6 family + gpt-oss via nvidia/agy/antigravity/ddgw/cfp** |
@@ -582,8 +579,6 @@ Registered in `opencode.jsonc` as `combo/coding-elite` and bare `coding-elite` (
 
 *Removed (FAIL):* `openrouter/nvidia/nemotron-3-super-120b-a12b:free`, `openrouter/apodex/apodex-1.1-mini:free`, `openrouter/google/gemma-4-31b-it:free`
 
-<a id="comboxkiro-best"></a>
-### combo/xkiro-best - [back to list](#combo-index)
 
 **Working legs today:** 26 / 26 testable (updated 2026-10-26 — live probe)
 
@@ -591,32 +586,6 @@ Registered in `opencode.jsonc` as `combo/coding-elite` and bare `coding-elite` (
 
 | # | Model | Category | Status |
 |---|-------|----------|--------|
-| 1 | `xkiro/mistralai/codestral-2508` | Code-specialized | ✅ **Best for coding** |
-| 2 | `xkiro/mistralai/devstral-medium` | Agentic coding | ✅ **Agentic coding** |
-| 3 | `xkiro/qwen/qwen3-coder-plus:free` | Code specialist | ✅ **Code specialist** |
-| 4 | `xkiro/qwen/qwen3-vl-plus:free` | Code + vision | ✅ **Code + vision** |
-| 5 | `xkiro/qwen/qwen3-max:free` | Qwen Max | ✅ |
-| 6 | `xkiro/qwen/qwen3.8-max:free` | Qwen Max | ✅ |
-| 7 | `xkiro/qwen/qwen3.7-max:free` | Qwen Max | ✅ |
-| 8 | `xkiro/qwen/qwen3.6-max-preview:free` | Qwen Max | ✅ |
-| 9 | `xkiro/qwen/qwen3.6-plus:free` | Qwen Plus | ✅ |
-| 10 | `xkiro/qwen/qwen3.5-plus:free` | Qwen Plus | ✅ |
-| 11 | `xkiro/qwen/qwen3.7-plus:free` | Qwen Plus | ✅ |
-| 12 | `xkiro/qwen/qwen-plus-2025-07-28:free` | Qwen Plus | ✅ |
-| 13 | `xkiro/qwen/qwen3-omni-flash:free` | Qwen Omni/Flash | ✅ |
-| 14 | `xkiro/qwen/qwen3.5-omni-plus:free` | Qwen Omni/Flash | ✅ |
-| 15 | `xkiro/qwen/qwen3.5-omni-flash:free` | Qwen Omni/Flash | ✅ |
-| 16 | `xkiro/qwen/qwen3.6-27b:free` | Qwen 27B | ✅ |
-| 17 | `xkiro/qwen/qwen3.5-397b-a17b:free` | Qwen 397B MoE | ✅ |
-| 18 | `xkiro/qwen/qwen3.6-35b-a3b:free` | Qwen 35B MoE | ✅ |
-| 19 | `xkiro/qwen/qwen3.5-flash:free` | Qwen Flash | ✅ |
-| 20 | `xkiro/mistralai/mistral-large-2512` | Mistral Large | ✅ |
-| 21 | `xkiro/mistralai/mistral-medium-3.5` | Mistral Medium | ✅ |
-| 22 | `xkiro/mistralai/mistral-small-2603` | Mistral Small | ✅ |
-| 23 | `xkiro/mistralai/ministral-14b` | Ministral | ✅ |
-| 24 | `xkiro/mistralai/ministral-3b` | Ministral | ✅ |
-| 25 | `xkiro/sensenova/sensenova-6.8-flash-lite` | SenseNova | ✅ |
-| 26 | `xkiro/mistralai/ministral-8b` | Ministral | ⚠️ timeout (fallback last) |
 
 <a id="combofree-ai-best"></a>
 ### combo/free-ai-best - [back to list](#combo-index)

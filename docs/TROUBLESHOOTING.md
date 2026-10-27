@@ -13,7 +13,6 @@
 | Picker missing combos | App restart (reads config once); check JSON validity |
 | Gateway spins (`ECONNREFUSED`) | Gateway down — run `Start OmniRoute.bat`; kill duplicate node processes |
 | Costs page shows $ | Estimates at list price, not bills (only Anthropic actual) |
-| `xkiro/*` 403 "account suspended" | Multi-account free-tier stacking - appeal or drop the legs |
 | `dva/*` 500 "DEVIN_AGENTIC_HOME must be an absolute path" | Set the env var to an absolute dir inside the bridge sandbox |
 | `zc/*` 502 "spawn zcode ENOENT" | Install the `zcode` CLI |
 | `aug/*` 502 "Auggie CLI not found" | Install `auggie` + `auggie login`, or set `AUGGIE_BIN` |
@@ -36,7 +35,6 @@ These would rank at or near the top - they are blocked by configuration, not by 
 | 7 | `dva/claude-opus-5-max` | Elo 1692 | devin bridge | `DEVIN_AGENTIC_HOME` |
 | 8 | `cxa/gpt-6-sol-max` | Elo 1687 | codex app-server | transport config |
 | 9 | `agy/gemini-4-argon-disabled` | Elo **1678** | id is literally `-disabled` on these accounts | needs Gemini account with Argon access |
-| 10 | `xkiro/qwen/qwen3.8-max:free` + all 39 xkiro ids | Elo **1672** | 403 `account has been suspended for operating multiple accounts` (all 12 accounts) | appeal, or drop xkiro entirely |
 | 11 | `free-ai/*` (501 synced ids, incl. `kimi-k3`) | Elo **1655** for Kimi K3 | every call hangs >100 s | provider dead - remove |
 | 12 | `zc/glm-5.3` / `zc/glm-5.3-max` | GLM 5.3: DeepSWE 66.9 | 502 `spawn zcode ENOENT` | install the `zcode` CLI |
 | 13 | `nvidia/z-ai/glm-5.3` / `glm-5.3-flash` | same weights | timeout >50 s | retry later |

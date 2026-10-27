@@ -9,7 +9,6 @@ Per-provider health, exact model ids and the errors blocking the rest live in
 
 Policies that do not change day to day:
 
-- **xkiro models only in `xkiro-best`.** The provider is suspended right now (multi-account free-tier stacking), so the combo is kept but does not work.
 - **One provider per brand combo** (`cloudflare-best`, `groq-best`, `mistral-best`, ...) so one dead provider cannot poison the others. `all-best` and `coding-elite` interleave on purpose.
 - **Cloudflare legs must use the `cloudflare-ai/@cf/...` prefix** - bare `@cf/...` ids get mis-routed as provider `@cf`.
 - **Removed for good:** `spark-best` (no working Spark models), `steady-coding`, `trae-best`, `zerolimitai-best` (7-day trial only), Cline (250 dead legs).

@@ -86,7 +86,7 @@ Refresh picker anytime (double-click):
 - **Widest net:** `combo/all-best` - fails through everything that is still alive.
 - **Clean brand combos today:** `gpt-best`, `codex-best`, `gemini-best`, `agy-antigravity-best`, `claude-best`, `grok-best`, `nvidia-best`, `mistral-best`, `cloudflare-best`, `groq-best`, `openrouter-best`, `morph-best`.
 - **Free only:** `openrouter-best` / `cleanapis-best` (`:free` legs), or name one directly (`openrouter/poolside/laguna-s-2.1:free`, expires 2026-10-31).
-- **Broken right now (kept for reference):** `xkiro-best` (all accounts suspended), `free-ai-best` (provider dead), `kilocode-best` / `ollama-best` (only `auto` leg left).
+- **Broken right now (kept for reference):** ``free-ai-best` (provider dead), `kilocode-best` / `ollama-best` (only `auto` leg left).
 - **All 22 combos, leg by leg:** [docs/COMBOS.md](docs/COMBOS.md)
 - Single models: `auto/*` routes fan out across all healthy providers.
 
@@ -193,7 +193,7 @@ A dash means the model could not be quizzed today (rate limit, timeout, or paid 
 | **duckduckgo-web** | gpt-5.6-luna, gpt-5.4-mini, claude-haiku-4-5 | 429-prone |
 | **larprouter** | `deepseek-v4.1-flash`, `glm-5.3-flash` | 6/6 stable, 1-9 s (other ids 400/402) |
 | **Morph** | morph-v3-fast / large | edit engine, not a chat brain |
-| **xKiro, free-ai, Devin, z.ai code, Augment** | - | dead or unconfigured today |
+| **free-ai, Devin, z.ai code, Augment** | - | dead or unconfigured today |
 
 Full detail, signup links, costs and dead-provider reasons:
 **[docs/PROVIDERS.md](docs/PROVIDERS.md)**
