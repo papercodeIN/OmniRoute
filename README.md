@@ -1,7 +1,22 @@
 # Free AI Coding Setup — OmniRoute + OpenCode (Windows)
 
-> One gateway, ~120 provider connections, 31 auto-fallback combos, $0.
-> **Live probe 2026-10-26: 423 requests across 22 combos, 196 ✅ working, 252 ❌ failed. 16/22 combos have ≥1 working leg; xkiro-best 26/26, free-ai-best 6/6, gemini-best 11/11, morph-best 2/2, agy-antigravity-best 15/15, grok-best 7/7, cloudflare-best 19/19 perfect.** All free tiers verified live on this machine.
+> One local gateway at `127.0.0.1:20128`, 111 provider connections, 22 combos, $0 for everything used here.
+> **Last verified 2026-10-27** on this machine: 2005 callable model ids, 64 probed one-shot (43 answered).
+> **Best coding combo: `combo/coding-elite`** - 20 ranked legs, GPT-6 Luna high first. Ranking + evidence: [section 8](#8-coding-model-ranking---all-providers-best-first-probed-2026-10-27).
+
+---
+
+## Contents
+
+- [1. Install OmniRoute](#1-install-omniroute)
+- [2. Connect OpenCode to OmniRoute](#2-connect-opencode-to-omniroute)
+- [3. How to use (daily)](#3-how-to-use-daily)
+- [4. Providers + free models (all connected here)](#4-providers--free-models-all-connected-here)
+- [5. Automation (all in `%USERPROFILE%\.config\opencode\`)](#5-automation-all-in-userprofileconfigopencode)
+- [6. Files map](#6-files-map)
+- [7. Troubleshooting](#7-troubleshooting)
+- [8. Coding model ranking - all providers, best first (probed 2026-10-27)](#8-coding-model-ranking---all-providers-best-first-probed-2026-10-27)
+- [9. Combo catalog (live)](#9-combo-catalog-live)
 
 ---
 
@@ -61,22 +76,19 @@ Refresh picker anytime (double-click):
 
 ## 3. How to use (daily)
 
-- OpenCode model picker → provider **OmniRoute** → pick a `combo/*` (top of list)
-- **Daily drivers (live 2026-10-26):**
-  - `combo/xkiro-best` — **6/6 qwen `:free` models perfect** 🥇
-  - `combo/free-ai-best` — **6/6 qwen3-coder family perfect** 🥇
-  - `combo/gemini-best` — **6/6 antigravity/agy flash tiers perfect** 🥇
-  - `combo/kilocode-best` — **5/6 nemotron/laguna `:free`**
-  - `combo/openrouter-best` — **6/7 nemotron/laguna/north-mini-code/lfm `:free`**
-  - `combo/cleanapis-best` — **5/21 kilocode north-mini-code, poolside laguna `:free`**
-  - `combo/codex-best` — **5/6 gpt-6-luna/5.6 family**
-- **Avoid (broken):** `all-best`, `claude-*`, `gemma-best`, `mistral-best`, `ollama-best`
-- Single models: `auto/*` routes fan out across all healthy providers
+- OpenCode model picker → provider **OmniRoute** → pick a `combo/*` (they sort to the top)
+- **Start here for coding:** `combo/coding-elite` - 20 legs, ranked best-first (section 8). `priority` stops at the first leg that answers, so the order *is* the ranking.
+- **Widest net:** `combo/all-best` - fails through everything that is still alive.
+- **Clean brand combos today:** `gpt-best`, `codex-best`, `gemini-best`, `agy-antigravity-best`, `claude-best`, `grok-best`, `nvidia-best`, `mistral-best`, `cloudflare-best`, `groq-best`, `openrouter-best`, `morph-best`.
+- **Free only:** `openrouter-best` / `cleanapis-best` (`:free` legs), or name one directly (`openrouter/poolside/laguna-s-2.1:free`, expires 2026-10-31).
+- **Broken right now (kept for reference):** `xkiro-best` (all accounts suspended), `free-ai-best` (provider dead), `kilocode-best` / `ollama-best` (only `auto` leg left).
+- Single models: `auto/*` routes fan out across all healthy providers.
 
 Rules learned the hard way:
 - **401/402/403-terminal kills a chain** — never put dead/paid legs early; interleave providers
 - Attempt budget is 200/request (max) — big combos are safe
 - Quotas fluctuate hourly — combos route around; single models may 429
+- A `priority` combo stops at the first leg that answers — keep order equal to quality, never alphabetical
 
 ---
 
@@ -156,29 +168,18 @@ Legend: ✅ tested answering · ⏳ quota-flaky (recovers) · ❌ dead/paid · �
 
 
 
-## Provider status snapshot (2026-10-21)
+### Current provider state - policies
 
-**New connections (2026-10-20):** `free-ai` (6 accounts), `zerolimitai` (1), `mistral` (4 more), `groq` (3 more), `kilocode` (1), `claude-web` (1), `cloudflare-ai` (1), `freemodel-dev`, `gemini-web`, `tokenrouter`, `eurouter`, `uc`. Two new provider combos were created: `free-ai-best` (7/7 legs OK) and `zerolimitai-best` (7/7 OK — **later removed: 7-day trial only, no free tier**).
+Per-provider health, exact model ids and the errors blocking the rest live in
+[section 8](#8-coding-model-ranking---all-providers-best-first-probed-2026-10-27) (8.1 = reachable now, 8.2 = blocked with the fix).
 
-**Full combo probe (2026-10-20, live):** 29 combos at the time, 357 unique provider/model legs tested via `test-all` - **116 OK**, 211 error, 3 slow, 27 no active connection.
+Policies that do not change day to day:
 
-**Cloudflare Workers AI added (today):** 1 active account (`bmnakum111`), free tier 10K Neurons/day. The account lists 73 models, 39 of them text generation; all 39 were probed through chat completions - **24 OK**. `cloudflare-best` carries the 22 general chat models (best first, `auto/best-coding` last); `llama-guard-3-8b` and the phone model are excluded. 15 newer models (`kimi-k2.7-code`, `glm-5.3`, `deepseek-v4*`, `llama-3.2-11b-vision` and others) return upstream 403 on this account. Combo legs use the `cloudflare-ai/@cf/...` prefix because `test-all` mis-routes bare `@cf/...` IDs as provider `@cf`.
-
-**Groq (today):** 7 active accounts; 5 of 11 catalogue models pass `test-all`. `groq-best` is the only combo carrying Groq - `qwen/qwen3.8-27b`, `openai/gpt-oss-120b`, `openai/gpt-oss-20b`, `openai/gpt-oss-safeguard-20b`, `allam-2-7b`, then `auto/best-coding`. The other 6 Groq models are TTS, prompt-guard and Whisper (not chat).
-
-**Cline removed:** the Cline provider was removed (not working) and its 250 legs were dropped from the combos.
-
-**Grok scan (today):** 45 grok-model candidates across 10 providers - **0 OK**; `grok-best` stays on `grok-cli` (4 of 17 legs OK).
-
-**Kilocode free-tier probe:** 18 free-flagged models tested - **12 OK**; 7 new models added to `kilocode-best`.
-
-**New-model scan:** 73 catalogue models not yet in any combo were tested - **13 OK** and added to their brand combos.
-
-**xkiro policy:** xkiro models are used **only in `xkiro-best`**.
-
-**Removed combos:** `spark-best` (no working Spark models) and `steady-coding` were deleted; `trae-best` was removed earlier.
-
-Durable failures (401/402/404) are auto-disabled; transient ones (429/5xx/timeout) recover.
+- **xkiro models only in `xkiro-best`.** The provider is suspended right now (multi-account free-tier stacking), so the combo is kept but does not work.
+- **One provider per brand combo** (`cloudflare-best`, `groq-best`, `mistral-best`, ...) so one dead provider cannot poison the others. `all-best` and `coding-elite` interleave on purpose.
+- **Cloudflare legs must use the `cloudflare-ai/@cf/...` prefix** - bare `@cf/...` ids get mis-routed as provider `@cf`.
+- **Removed for good:** `spark-best` (no working Spark models), `steady-coding`, `trae-best`, `zerolimitai-best` (7-day trial only), Cline (250 dead legs).
+- **Durable failures (401/402/404) are auto-disabled; transient ones (429/5xx/timeout) recover on retry.**
 
 ## 5. Automation (all in `%USERPROFILE%\.config\opencode\`)
 
@@ -216,19 +217,132 @@ Key rules encoded: 401/402 = durable-dead (auto-disable), 403/429/5xx = transien
 | Picker missing combos | App restart (reads config once); check JSON validity |
 | Gateway spins (`ECONNREFUSED`) | Gateway down — run `Start OmniRoute.bat`; kill duplicate node processes |
 | Costs page shows $ | Estimates at list price, not bills (only Anthropic actual) |
+| `xkiro/*` 403 "account suspended" | Multi-account free-tier stacking - appeal or drop the legs |
+| `dva/*` 500 "DEVIN_AGENTIC_HOME must be an absolute path" | Set the env var to an absolute dir inside the bridge sandbox |
+| `zc/*` 502 "spawn zcode ENOENT" | Install the `zcode` CLI |
+| `aug/*` 502 "Auggie CLI not found" | Install `auggie` + `auggie login`, or set `AUGGIE_BIN` |
+| `cxa/*` 503 "Codex app-server transport is not configured" | Fill in the app-server url/token |
+| `free-ai/*` hangs ~100 s | Provider dead (6 conns) - drop it |
+| `gw/expert`, `gw/heavy` 403 "SSO cookie may be expired" | Re-paste the Grok `sso` cookie |
 
-## 8. Combo catalog (live)
+## 8. Coding model ranking - all providers, best first (probed 2026-10-27)
 
-_Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cleaned to **active providers only**). **OK** = combo name + first 5 legs responded 200; **FAIL** = error on combo name or legs (401/403/422/503/timeout). xkiro legs only in `xkiro-best`; groq legs only in `groq-best`; cloudflare legs use `cloudflare-ai/@cf/...` prefix. **Green = daily drivers**, **Yellow = fallback only**, **Red = broken**._
+**How this list was built** - four signals, no vibes:
+
+| Signal | Source |
+|---|---|
+| Coding Elo | OmniRoute `model_intelligence`, `category='coding'` (25 scored models, scale ~1630-1814) |
+| Real traffic on this box | `usage_history`, last 30 days - success rate + latency per `provider/model` |
+| Public coding benchmarks | Terminal-Bench 2.1, DeepSWE, SWE-bench Pro/Verified where published |
+| Reachable today? | one-shot `POST /v1/chat/completions` on the exact `/v1/models` id (64 ids probed today) |
+
+Ranking rule: **coding quality first, then "can I call it right now", then reliability.** A #1 model behind a 403 is not a #1 model, so the ranking is split: 8.1 = reachable now (ranked), 8.2 = ranked but blocked today with the exact fix.
+
+### 8.1 Reachable now - ranked best first
+
+| # | Model (call exactly like this) | Route | Why it ranks here | 30-day success | Probe |
+|---|---|---|---|---|---|
+| 1 | `codex/gpt-6-luna-high` | codex | DeepSWE 66.6, best *reliable* agentic coder you own - 6.5k real requests of history | **98.6%** (6463) | OK 3.5 s |
+| 2 | `codex/gpt-6-luna-max` | codex | same weights at max reasoning effort - deeper plans, same subscription | 88.9% (max) | OK 4.4 s |
+| 3 | `gc/grok-4.7-xhigh` | grok-cli | coding Elo 1638 = highest scored model that actually answers; 500k ctx | 85.9% (575) | OK 6.4 s |
+| 4 | `antigravity/claude-opus-4-6-thinking` | antigravity | best Claude generation reachable; strongest on multi-file refactors + review | 63.2% (838) | OK 7.9 s |
+| 5 | `agy/claude-opus-4-6-thinking` | agy | same model, second account pool - free redundancy | - | OK 6.1 s |
+| 6 | `codex/gpt-5.6-luna-high` | codex | previous-gen Luna, high effort - still a solid agent | - | OK 6.9 s |
+| 7 | `codex/gpt-5.6-terra-high` | codex | Terra = code-heavy variant of 5.6 | - | OK 6.7 s |
+| 8 | `codex/gpt-reserve-high` | codex | reserve capacity - keeps working when the main pool is throttled | - | OK 5.3 s |
+| 9 | `cx/gpt-6-luna` | codex (2nd transport) | medium effort, fastest Luna path | 98.6% | OK 3.7 s |
+| 10 | `codex/gpt-6-luna` | codex | default effort | 98.6% | OK 6.7 s |
+| 11 | `grok-cli/grok-4.7` | grok-cli (responses API) | independent transport of #3 | 85.9% | OK 5.1-27 s |
+| 12 | `gc/grok-4.7-high` | grok-cli | mid effort - cheaper on quota than xhigh | - | OK 15.4 s |
+| 13 | `openrouter/poolside/laguna-s-2.1:free` | openrouter | TB2.1 70.2 / DeepSWE 40.4 - best free coding model for single-file work | 85.7% (21) | OK 3.3 s |
+| 14 | `openrouter/recursive/flint-v1.0:free` | openrouter | SWE-bench Pro v2 89.7 / SWE-V 74.2 / TB2.1 54.9 - patch-quality specialist | 66.7% | OK 12.6 s |
+| 15 | `cfp/moonshotai/kimi-k2.7-code` | cloudflare-playground | Kimi K2.7 **code** - 256k ctx on free CF quota | 36.8% (19) | OK 24.9 s |
+| 16 | `cfp/deepseek-ai/deepseek-v4-pro-0813` | cloudflare-playground | DeepSeek V4 Pro weights, free CF quota | - | OK 12.9 s |
+| 17 | `cfp/zai-org/glm-5.2` | cloudflare-playground | GLM 5.2 - strong tool use, free | - | OK 16.9 s |
+| 18 | `cfp/deepseek-ai/deepseek-v4-flash-0731` | cloudflare-playground | V4 Flash - fast, free, good for small edits | - | OK 16.2 s |
+| 19 | `cfp/moonshotai/kimi-k2.6` | cloudflare-playground | previous Kimi, still useful as a 2nd opinion | - | OK 16.8 s |
+| 20 | `openrouter/cohere/north-mini-code:free` | openrouter | code-specialised, small, very consistent | 96.0% (25) | OK 3.4 s |
+| 21 | `openrouter/nvidia/nemotron-3.5-lightning:free` | openrouter | fastest *reliable* free leg; grunt work | 97.4% (117) | OK 2.9 s |
+| 22 | `nvidia/nvidia/nemotron-3-ultra-550b-a55b` | nvidia | TB2.1 ~51-56, huge context, no quota pressure | 60.9% (23) | OK 2.9 s |
+| 23 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free` | openrouter | same weights, free quota | 72.0% (25) | OK 4.1 s |
+| 24 | `cfp/nvidia/nemotron-3-120b-a12b` | cloudflare-playground | mid-size Nemotron, free | - | OK 14.5 s |
+| 25 | `antigravity/gemini-3.8-flash-high` | antigravity | long-context Gemini for reading big repos; weaker at pure codegen | 88.0% (flash-low) | OK 7.0 s |
+| 26 | `codestral/codestral-latest` | codestral | Devstral/Codestral line - FIM + agent, 10 keys pooled | 89.1% (46) | OK 2.6 s |
+| 27 | `mistral/codestral-latest` | mistral | same model, second key pool | 81.8% (22) | OK 2.7 s |
+| 28 | `mistral/codestral-2508` / `codestral/codestral-2508` | mistral / codestral | pinned build, stable behaviour | 66.7-100% | OK 3.0-3.5 s |
+| 29 | `mistral/mistral-code-latest` / `mistral-code-fim-latest` | mistral | code-tuned + fill-in-the-middle | - | OK 2.7 s |
+| 30 | `nvidia/minimaxai/minimax-m3.1-flash` | nvidia | long-context agent model, snappy | - | OK 2.7 s |
+| 31 | `cloudflare-ai/@cf/qwen/qwen2.5-coder-32b-instruct` | cloudflare-ai | small coder, rock solid on CF | 100% (14) | OK 4.1 s |
+| 32 | `cfp/qwen/qwen2.5-coder-32b-instruct` | cloudflare-playground | same model via playground | - | OK 12.8 s |
+| 33 | `cfp/qwen/qwq-32b` / `cloudflare-ai/@cf/qwen/qwq-32b` | cfp / cf | reasoning model, free | - | OK 3.2-15.8 s |
+| 34 | `cfp/qwen/qwen3-30b-a3b-fp8` | cloudflare-playground | MoE 30B, cheap bulk edits | - | OK 14.0 s |
+| 35 | `groq/qwen/qwen3.8-27b` | groq | TB2.1 73.0 / SWE-Pro 61.7 / LCB 90.3 - great brain, throttled pipe | 22.3% (157) | OK 2.5 s |
+| 36 | `ddgw/gpt-5.6-luna` | duckduckgo-web | free GPT-5.6 Luna via web bridge | - | OK 5.9 s |
+| 37 | `ddgw/gpt-5.4-mini` / `ddgw/claude-haiku-4-5` | duckduckgo-web | cheap free legs, 429-prone | - | OK 3.1 s |
+| 38 | `openrouter/xingchen-agi/xing4.0-29b-a4b:free` | openrouter | newest free MoE, 30B-class | - | OK 23.7 s |
+| 39 | `openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free` | openrouter | tiny reasoning model, free | - | OK 3.6 s |
+| 40 | `openrouter/poolside/laguna-xs-2.1:free` | openrouter | small Laguna - fill-in work only | 47.8% (23) | OK 11.4 s |
+
+Also live, narrow use only: `nvidia/nvidia/nemotron-3.5-lightning-30b-a3b` (3.4 s), `cfp/openai/gpt-oss-120b` (9.9 s), `cfp/meta/llama-4-scout-17b-16e-instruct` (8.2 s), `cfp/meta-llama/llama-3.3-70b-instruct-fp8-fast` (10.3 s), `cfp/mistralai/mistral-small-3.1-24b-instruct` (8.2 s), `cloudflare-ai/@cf/zai-org/glm-4.7-flash` (2.9 s), `cloudflare-ai/@cf/deepseek-ai/deepseek-r1-distill-qwen-32b` (3.1 s), `cloudflare-ai/@cf/meta/llama-3.3-70b-instruct-fp8-fast` (2.6 s), `cloudflare-ai/@cf/google/gemma-4-26b-a4b-it` (3.1 s), `openrouter/liquid/lfm-2.5-2.6b:free` (2.8 s), `ddgw/mistral-small-2603` (2.7 s), `gw/fast` (Grok 4.20 web, 3.5 s), `nvidia/stepfun-ai/step-5-preview` (ok but 81 s), `morph/morph-v3-fast` + `morph-v3-large` (edit/apply model, not a chat brain).
+
+### 8.2 Ranked but blocked today (all fixable)
+
+| Would-be rank | Model | Coding signal | Error today | Fix |
+|---|---|---|---|---|
+| 1 | `openrouter/anthropic/claude-opus-5.5-max` | coding Elo **1814** - top of the gateway leaderboard | 403 `Workspace lifetime budget of $0.60 exceeded ... does not reset` | new OpenRouter key/workspace (paid only) |
+| 2 | `cxa/gpt-6-astra-max` | Elo **1788** | 503 `Codex app-server transport is not configured (missing url or token)` | configure the codex app-server transport |
+| 3 | `dva/claude-sonnet-5-xhigh` | Elo **1773** | 500 `DEVIN_AGENTIC_HOME must be an absolute path inside the bridge sandbox` | set `DEVIN_AGENTIC_HOME` |
+| 4 | `cxa/gpt-6.1-sol-max` | Elo **1757** | same as #2 | same as #2 |
+| 5 | `dva/claude-fable-5-1-max` | Elo **1745** | same as #3 | same as #3 |
+| 6 | `openrouter/anthropic/claude-sonnet-5.5-high` | Elo 1716 | 403 budget | OpenRouter budget |
+| 7 | `dva/claude-opus-5-max` | Elo 1692 | devin bridge | `DEVIN_AGENTIC_HOME` |
+| 8 | `cxa/gpt-6-sol-max` | Elo 1687 | codex app-server | transport config |
+| 9 | `agy/gemini-4-argon-disabled` | Elo **1678** | id is literally `-disabled` on these accounts | needs Gemini account with Argon access |
+| 10 | `xkiro/qwen/qwen3.8-max:free` + all 39 xkiro ids | Elo **1672** | 403 `account has been suspended for operating multiple accounts` (all 12 accounts) | appeal, or drop xkiro entirely |
+| 11 | `free-ai/*` (501 synced ids, incl. `kimi-k3`) | Elo **1655** for Kimi K3 | every call hangs >100 s | provider dead - remove |
+| 12 | `zc/glm-5.3` / `zc/glm-5.3-max` | GLM 5.3: DeepSWE 66.9 | 502 `spawn zcode ENOENT` | install the `zcode` CLI |
+| 13 | `nvidia/z-ai/glm-5.3` / `glm-5.3-flash` | same weights | timeout >50 s | retry later |
+| 14 | `aug/opus4.8`, `aug/gpt5.6-sol`, `aug/sonnet5-high`, `aug/fable-5` | Opus 4.8 / GPT-5.6 Sol | 502 `Auggie CLI not found: auggie` | install + `auggie login` |
+| 15 | `dva/swe-1-7`, `dva/kimi-k3-max`, `dva/nemotron-3-ultra-high`, `dva/inkling-max` | SWE-1.7, Kimi K3, Nemotron Ultra, Inkling | devin bridge | `DEVIN_AGENTIC_HOME` |
+| 16 | `openrouter/thinkingmachines/inkling:free` | TB2.1 63.8 | 403 `only available on agentic harnesses` | harness-only endpoint |
+| 17 | `mistral/mistral-medium-3.5`, `mistral-vibe-cli-*`, `magistral-medium` | Mistral medium/vibe | timeout >50 s (only codestral line answers) | retry / drop |
+| 18 | `gw/expert`, `gw/heavy` | Grok 4.20 expert/heavy | 403 `Grok auth failed - SSO cookie may be expired` | re-paste the `sso` cookie |
+| 19 | `antigravity/claude-sonnet-4-6-high`, `-thinking` | Sonnet 4.6 | 400 `not available in the active live catalog` | catalog drift - use the plain id |
+| 20 | `openrouter/google/gemma-4-*:free` | small | 429 all credentials cooling down | rate limited, retry |
+| 21 | `larprouter/*` | - | 400 `not priced or available in this pool` | pool config |
+| 22 | `unc/turboderp/Qwen3.8-27B-exl3` | local exl3 endpoint | 401 `public beta is closed` | needs API key |
+| 23 | `nvidia/poolside/laguna-xs-2.1`, `nvidia/openai/gpt-oss-20b` | - | timeout >50 s | retry later |
+| 24 | `openrouter/meta/muse-spark-1.3-max` | Elo 1656 | 403 budget (old `opencode` pool inactive) | OpenRouter budget / re-auth |
+
+**Three one-line wins:** install `zcode`, set `DEVIN_AGENTIC_HOME`, and re-paste the Grok `sso` cookie. That unlocks GLM 5.3, Opus 5, Sonnet 5.5, Fable 5.1, Kimi K3, SWE-1.7 and Grok 4.20 expert/heavy - seven of the ten best-scored models in the gateway.
+
+### 8.3 What to actually use
+
+- **Agent coding default:** `combo/coding-elite` (registered in `opencode.jsonc`) - 20 live legs, ordered GPT-6 Luna high → Luna max → Grok 4.7 xhigh → Opus 4.6 thinking → free frontier → small/fast fallbacks → `auto/best-coding`.
+- **Free only:** `openrouter/poolside/laguna-s-2.1:free` until **2026-10-31** (free endpoint expires), then `openrouter/recursive/flint-v1.0:free` + `cfp/moonshotai/kimi-k2.7-code`.
+- **Closest to DeepSeek V4.1 Flash** (DeepSWE 74.2 / TB2.1 90.6): nothing reachable here matches it. Nearest live: `codex/gpt-6-luna-high` (DeepSWE 66.6) and `gc/grok-4.7-xhigh`.
+- **Re-probe before trusting this file:**
+
+```powershell
+$k = $env:OMNIROUTE_API_KEY
+$b = @{ model = "codex/gpt-6-luna-high"; messages = @(@{ role = "user"; content = "Reply with exactly: OK" }); max_tokens = 16 } | ConvertTo-Json -Depth 5
+(Invoke-WebRequest "http://localhost:20128/v1/chat/completions" -Method POST -Headers @{ Authorization = "Bearer $k" } -ContentType "application/json" -Body $b -UseBasicParsing).Content
+```
+
+Signals move weekly (xkiro suspension, the Laguna expiry, the OpenRouter cap). The *shape* of this list does not: subscription agentic models first, free frontier second, everything else is grunt work.
+
+## 9. Combo catalog (live)
+
+_Updated **2026-10-27**: added `combo/coding-elite` (ranked legs, see section 8). Previous full sweep: **2026-10-26**, 423 requests across 23 combos, cleaned to **active providers only**. **OK** = combo name + first 5 legs responded 200; **FAIL** = error on combo name or legs (401/403/422/503/timeout). xkiro legs only in `xkiro-best`; groq legs only in `groq-best`; cloudflare legs use `cloudflare-ai/@cf/...` prefix. **Green = daily drivers**, **Yellow = fallback only**, **Red = broken**._
 
 | Combo | Legs | OK / FAIL | Status |
 |---|---|---|---|
+| [`combo/coding-elite`](#combocoding-elite) | 20 | **20 / 0** ✅ | **Best today — ranked legs: gpt-6-luna-high/max → grok-4.7-xhigh → opus-4.6-thinking → free frontier (laguna, flint, north-mini-code, kimi-k2.7-code, deepseek-v4-pro, glm-5.2) → codestral** |
 | [`combo/xkiro-best`](#comboxkiro-best) | 26 | **26 / 0** ✅ | **Perfect — all 26 working: codestral-2508, devstral-medium, 13 qwen, 5 mistral, sensenova** |
 | [`combo/free-ai-best`](#combofree-ai-best) | 6 | **6 / 0** ✅ | **Perfect — 6 working: qwen3-coder, qwen-coder, qwen3-8b, qwen7b, mistral, deepseek-r1-7b** |
 | [`combo/gemini-best`](#combogemini-best) | 11 | **11 / 0** ✅ | **Perfect — 11 working: agy/antigravity gemini 3.8/3.5/3.1 flash tiers** |
 | [`combo/gpt-best`](#combogpt-best) | 27 | **26 / 1** ✅ | **26 working: codex gpt-6/5.6 family + gpt-oss via nvidia/agy/antigravity/ddgw/cfp** |
 | [`combo/agy-antigravity-best`](#comboagy-antigravity-best) | 15 | **15 / 0** ✅ | **Perfect — 15 working: agy/antigravity claude + gemini** |
-| [`combo/gpt-best`](#combogpt-best) | 27 | **26 / 1** ✅ | **26 working: codex gpt-6/5.6 family + gpt-oss via nvidia/agy/antigravity/ddgw/cfp** |
 | [`combo/kilocode-best`](#combokilocode-best) | 1 | **1 / 0** ⚠️ | only auto/best-coding remains |
 | [`combo/openrouter-best`](#comboopenrouter-best) | 7 | **6 / 1** ✅ | 6 working: nemotron/laguna/north-mini-code/lfm `:free` |
 | [`combo/cleanapis-best`](#combocleanapis-best) | 4 | **4 / 0** ✅ | all working: openrouter north-mini-code/laguna `:free` |
@@ -245,10 +359,40 @@ _Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cle
 | [`combo/ollama-best`](#comboollama-best) | 1 | **1 / 0** ⚠️ | only auto/best-coding remains |
 | [`combo/claude-fast`](#comboclaude-fast) | 2 | **2 / 0** ✅ | both working: auto/best-fast + auto/best-coding |
 | [`combo/claude-max`](#comboclaude-max) | 3 | **1 / 2** ❌ | 1 working: auto/best-coding only |
-| [`combo/nvidia-best`](#combonvidia-best) | 16 | **16 / 0** ✅ | all working: nvidia/openrouter nemotron `:free` |
+
+<a id="combocoding-elite"></a>
+### combo/coding-elite - [back to list](#9-combo-catalog-live)
+
+**Strategy** `priority` · **maxGlobalAttempts** 200 · 20 live legs · created 2026-10-27.
+`priority` = it stops at the first leg that answers, so the order *is* the ranking: subscription agentic models first, free frontier second, small/fast last.
+
+| # | Model | 30-day success |
+|---|-------|----------------|
+| 1 | `codex/gpt-6-luna-high` | 98.6% |
+| 2 | `codex/gpt-6-luna-max` | 88.9% |
+| 3 | `gc/grok-4.7-xhigh` | 85.9% |
+| 4 | `antigravity/claude-opus-4-6-thinking` | 63.2% |
+| 5 | `agy/claude-opus-4-6-thinking` | - |
+| 6 | `cx/gpt-6-luna` | 98.6% |
+| 7 | `codex/gpt-6-luna` | 98.6% |
+| 8 | `grok-cli/grok-4.7` | 85.9% |
+| 9 | `openrouter/poolside/laguna-s-2.1:free` | 85.7% |
+| 10 | `openrouter/recursive/flint-v1.0:free` | 66.7% |
+| 11 | `openrouter/cohere/north-mini-code:free` | 96.0% |
+| 12 | `cfp/moonshotai/kimi-k2.7-code` | 36.8% |
+| 13 | `cfp/deepseek-ai/deepseek-v4-pro-0813` | - |
+| 14 | `cfp/zai-org/glm-5.2` | - |
+| 15 | `openrouter/nvidia/nemotron-3.5-lightning:free` | 97.4% |
+| 16 | `nvidia/nvidia/nemotron-3-ultra-550b-a55b` | 60.9% |
+| 17 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free` | 72.0% |
+| 18 | `mistral/codestral-latest` | 81.8% |
+| 19 | `groq/qwen/qwen3.8-27b` | 22.3% |
+| 20 | `auto/best-coding` | - |
+
+Registered in `opencode.jsonc` as `combo/coding-elite` and bare `coding-elite` (200k ctx / 32k out). Verified 2026-10-27: resolves to `codex/gpt-6-luna`, returns `tool_calls` correctly.
 
 <a id="comboall-best"></a>
-### combo/all-best - [back to list](#8-combo-catalog-live)
+### combo/all-best - [back to list](#9-combo-catalog-live)
 
 **Working legs today:** 63 / 150 testable
 
@@ -408,7 +552,7 @@ _Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cle
 | 152 | `auto/best-coding` | untested |
 
 <a id="comboclaude-best"></a>
-### combo/claude-best - [back to list](#8-combo-catalog-live)
+### combo/claude-best - [back to list](#9-combo-catalog-live)
 
 **Working legs today:** 5 / 17 testable (updated 2026-10-26 — live probe)
 
@@ -450,7 +594,7 @@ _Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cle
 | 33 | `claude-web/claude-haiku-4-5-20251001-low` | ❌ |
 
 <a id="comboclaude-fast"></a>
-### combo/claude-fast - [back to list](#8-combo-catalog-live)
+### combo/claude-fast - [back to list](#9-combo-catalog-live)
 
 **Working legs today:** 2 / 3 testable (updated 2026-10-26 — live probe)
 
@@ -461,7 +605,7 @@ _Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cle
 | 3 | `gemini/gemini-3.8-flash` | ❌ |
 
 <a id="comboclaude-max"></a>
-### combo/claude-max - [back to list](#8-combo-catalog-live)
+### combo/claude-max - [back to list](#9-combo-catalog-live)
 
 **Working legs today:** 1 / 4 testable (updated 2026-10-26 — live probe)
 
@@ -473,7 +617,7 @@ _Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cle
 | 4 | `auto/claude-sonnet` | ❌ |
 
 <a id="combocleanapis-best"></a>
-### combo/cleanapis-best - [back to list](#8-combo-catalog-live)
+### combo/cleanapis-best - [back to list](#9-combo-catalog-live)
 
 **Working legs today:** 4 / 4 testable (updated 2026-10-26 — live probe)
 
@@ -487,7 +631,7 @@ _Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cle
 *All models from active providers only (openrouter). Removed 17 models from unconfigured providers (openai/free, kilocode, gemini, openai/claude).*
 
 <a id="combocloudflare-best"></a>
-### combo/cloudflare-best - [back to list](#8-combo-catalog-live)
+### combo/cloudflare-best - [back to list](#9-combo-catalog-live)
 
 **Working legs today:** 19 / 19 testable (updated 2026-10-26 — live probe)
 
@@ -518,7 +662,7 @@ _Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cle
 *Removed (FAIL):* `cloudflare-ai/@cf/zai-org/glm-4.7-flash`
 
 <a id="combocodex-best"></a>
-### combo/codex-best - [back to list](#8-combo-catalog-live)
+### combo/codex-best - [back to list](#9-combo-catalog-live)
 
 **Working legs today:** 4 / 5 testable (updated 2026-10-26 — live probe)
 
@@ -531,7 +675,7 @@ _Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cle
 | 5 | `auto/best-coding` | ✅ |
 
 <a id="combogemini-best"></a>
-### combo/gemini-best - [back to list](#8-combo-catalog-live)
+### combo/gemini-best - [back to list](#9-combo-catalog-live)
 
 **Working legs today:** 11 / 11 testable (updated 2026-10-26 — live probe)
 
@@ -550,7 +694,7 @@ _Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cle
 | 11 | `antigravity/gemini-3-flash` | ✅ |
 
 <a id="combogemma-best"></a>
-### combo/gemma-best - [back to list](#8-combo-catalog-live)
+### combo/gemma-best - [back to list](#9-combo-catalog-live)
 
 **Working legs today:** 2 / 2 testable (updated 2026-10-26 — live probe)
 
@@ -560,7 +704,7 @@ _Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cle
 | 2 | `ddgw/tinfoil/gemma4-31b` | ✅ |
 
 <a id="combomorph-best"></a>
-### combo/morph-best - [back to list](#8-combo-catalog-live)
+### combo/morph-best - [back to list](#9-combo-catalog-live)
 
 **Working legs today:** 2 / 2 testable (updated 2026-10-26 — live probe)
 
@@ -570,7 +714,7 @@ _Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cle
 | 2 | `morph/morph-v3-large` | ✅ |
 
 <a id="combogpt-best"></a>
-### combo/gpt-best - [back to list](#8-combo-catalog-live)
+### combo/gpt-best - [back to list](#9-combo-catalog-live)
 
 **Working legs today:** 27 / 27 testable (updated 2026-10-26 — live probe)
 
@@ -605,7 +749,7 @@ _Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cle
 | 27 | `ddgw/tinfoil/gpt-oss-120b` | ✅ |
 
 <a id="combogrok-best"></a>
-### combo/grok-best - [back to list](#8-combo-catalog-live)
+### combo/grok-best - [back to list](#9-combo-catalog-live)
 
 **Working legs today:** 7 / 7 testable (updated 2026-10-26 — live probe)
 
@@ -620,7 +764,7 @@ _Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cle
 | 7 | `auto/best-coding` | ✅ |
 
 <a id="comboagy-antigravity-best"></a>
-### combo/agy-antigravity-best - [back to list](#8-combo-catalog-live)
+### combo/agy-antigravity-best - [back to list](#9-combo-catalog-live)
 
 **Working legs today:** 15 / 15 testable (updated 2026-10-26 — live probe)
 
@@ -645,7 +789,7 @@ _Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cle
 | 15 | `antigravity/gemini-3.5-flash-lite` | antigravity | Flash lite | ✅ |
 
 <a id="combogroq-best"></a>
-### combo/groq-best - [back to list](#8-combo-catalog-live)
+### combo/groq-best - [back to list](#9-combo-catalog-live)
 
 **Working legs today:** 6 / 6 testable (updated 2026-10-26 — live probe)
 
@@ -659,10 +803,10 @@ _Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cle
 | 6 | `auto/best-coding` | ✅ |
 
 <a id="combokilocode-best"></a>
-### combo/kilocode-best - [back to list](#8-combo-catalog-live)
+### combo/kilocode-best - [back to list](#9-combo-catalog-live)
 
 <a id="combomistral-best"></a>
-### combo/mistral-best - [back to list](#8-combo-catalog-live)
+### combo/mistral-best - [back to list](#9-combo-catalog-live)
 
 **Working legs today:** 3 / 18 testable (updated 2026-10-26 — live probe)
 
@@ -688,7 +832,7 @@ _Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cle
 | 18 | `nvidia/nvidia/mistral-nemo-minitron-8b-8k-instruct` | ❌ |
 
 <a id="combonvidia-best"></a>
-### combo/nvidia-best - [back to list](#8-combo-catalog-live)
+### combo/nvidia-best - [back to list](#9-combo-catalog-live)
 
 **Working legs today:** 7 / 7 testable (updated 2026-10-26 — live probe)
 
@@ -705,7 +849,7 @@ _Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cle
 *Removed (FAIL):* `nvidia` direct models (4-340b, 3-ultra, 3-super, nano), `openrouter/nvidia/nemotron-3-super-120b-a12b:free`, `kilocode/nvidia/nemotron-3-super-120b-a12b:free`, `ollama-cloud/nemotron-3-super`
 
 <a id="comboollama-best"></a>
-### combo/ollama-best - [back to list](#8-combo-catalog-live)
+### combo/ollama-best - [back to list](#9-combo-catalog-live)
 
 **Working legs today:** 1 / 8 testable (updated 2026-10-26 — live probe)
 
@@ -721,7 +865,7 @@ _Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cle
 | 8 | `ollama-cloud/nemotron-3-ultra` | ❌ |
 
 <a id="comboopenrouter-best"></a>
-### combo/openrouter-best - [back to list](#8-combo-catalog-live)
+### combo/openrouter-best - [back to list](#9-combo-catalog-live)
 
 **Working legs today:** 6 / 7 testable (updated 2026-10-26 — live probe)
 
@@ -738,7 +882,7 @@ _Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cle
 *Removed (FAIL):* `openrouter/nvidia/nemotron-3-super-120b-a12b:free`, `openrouter/apodex/apodex-1.1-mini:free`, `openrouter/google/gemma-4-31b-it:free`
 
 <a id="comboxkiro-best"></a>
-### combo/xkiro-best - [back to list](#8-combo-catalog-live)
+### combo/xkiro-best - [back to list](#9-combo-catalog-live)
 
 **Working legs today:** 26 / 26 testable (updated 2026-10-26 — live probe)
 
@@ -774,7 +918,7 @@ _Updated **2026-10-26** (live probe: **423 requests across 23 combos**, then cle
 | 26 | `xkiro/mistralai/ministral-8b` | Ministral | ⚠️ timeout (fallback last) |
 
 <a id="combofree-ai-best"></a>
-### combo/free-ai-best - [back to list](#8-combo-catalog-live)
+### combo/free-ai-best - [back to list](#9-combo-catalog-live)
 
 **Working legs today:** 6 / 6 testable (updated 2026-10-26 — live probe)
 
