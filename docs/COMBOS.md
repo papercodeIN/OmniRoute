@@ -506,28 +506,23 @@ Registered in `opencode.jsonc` as `combo/coding-elite` and bare `coding-elite` (
 <a id="combomistral-best"></a>
 ### combo/mistral-best - [back to list](#combo-index)
 
-**Working legs today:** 3 / 18 testable (updated 2026-10-26 — live probe)
+**Strategy** `priority` · **maxGlobalAttempts** 200 · 12 live legs · created 2026-10-27.
+Sorted by coding quality: codestral first (larger/agent-friendly), then mistral-code, then ministral by size.
 
-| # | Model | Status |
-|---|-------|--------|
-| 1 | `cfp/mistralai/mistral-small-3.1-24b-instruct` | ✅ |
-| 2 | `ddgw/mistral-small-2603` | ✅ |
-| 3 | `auto/best-coding` | ✅ |
-| 4 | `mistral/ministral-3b-latest` | ❌ |
-| 5 | `mistral/mistral-code-latest` | ❌ |
-| 6 | `mistral/ministral-8b-latest` | ❌ |
-| 7 | `codestral/codestral-latest` | ❌ |
-| 8 | `codestral/codestral-2508` | ❌ |
-| 9 | `mistral/codestral-latest` | ❌ |
-| 10 | `literouter/ministral-3-8b-instruct:free` | ❌ |
-| 11 | `literouter/ministral-3b-2512:free` | ❌ |
-| 12 | `nvidia/mistralai/mistral-large-2-instruct` | ❌ |
-| 13 | `nvidia/mistralai/mistral-7b-instruct-v0.3` | ❌ |
-| 14 | `nvidia/mistralai/codestral-22b-instruct-v0.1` | ❌ |
-| 15 | `nvidia/mistralai/mixtral-8x22b-v0.1` | ❌ |
-| 16 | `nvidia/mistralai/mistral-large` | ❌ |
-| 17 | `nvidia/nv-mistralai/mistral-nemo-12b-instruct` | ❌ |
-| 18 | `nvidia/nvidia/mistral-nemo-minitron-8b-8k-instruct` | ❌ |
+| # | Model | Provider | Status |
+|---|-------|----------|--------|
+| 1 | `codestral/codestral-latest` | codestral | OK |
+| 2 | `codestral/codestral-2508` | codestral | OK |
+| 3 | `mistral/codestral-latest` | mistral | OK |
+| 4 | `mistral/codestral-2508` | mistral | OK |
+| 5 | `mistral/mistral-code-latest` | mistral | OK |
+| 6 | `mistral/mistral-code-fim-latest` | mistral | OK |
+| 7 | `mistral/ministral-14b-latest` | mistral | OK |
+| 8 | `mistral/ministral-8b-latest` | mistral | OK |
+| 9 | `mistral/ministral-3b-latest` | mistral | OK |
+| 10 | `mistral/ministral-3b-2512` | mistral | OK |
+| 11 | `mistral/ministral-8b-2512` | mistral | OK |
+| 12 | `mistral/ministral-14b-2512` | mistral | OK |
 
 <a id="combonvidia-best"></a>
 ### combo/nvidia-best - [back to list](#combo-index)
