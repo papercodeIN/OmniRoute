@@ -36,7 +36,7 @@ _Updated **2026-10-27**: added `combo/coding-elite` (ranked legs, see the rankin
 
 | Combo | Legs | OK / FAIL | Status |
 |---|---|---|---|
-| [`combo/coding-elite`](#combocoding-elite) | 22 | **22 / 0** ✅ | **Best today — ranked legs: gpt-6-luna-high/max → grok-4.7-xhigh → opus-4.6-thinking → free frontier (laguna, flint, north-mini-code, kimi-k2.7-code, deepseek-v4-pro, glm-5.2) → codestral** |
+| [`combo/coding-elite`](#combocoding-elite) | 22 | **22 / 0** ✅ | **Best today — ranked legs: deepseek-v4.1-flash (larprouter) → gpt-6-luna-high/max → grok-4.7-xhigh → opus-4.6-thinking → free frontier (laguna, flint, north-mini-code, kimi-k2.7-code, deepseek-v4-pro, glm-5.2) → codestral** |
 | [`combo/xkiro-best`](#comboxkiro-best) | 26 | **26 / 0** ✅ | **Perfect — all 26 working: codestral-2508, devstral-medium, 13 qwen, 5 mistral, sensenova** |
 | [`combo/free-ai-best`](#combofree-ai-best) | 6 | **6 / 0** ✅ | **Perfect — 6 working: qwen3-coder, qwen-coder, qwen3-8b, qwen7b, mistral, deepseek-r1-7b** |
 | [`combo/gemini-best`](#combogemini-best) | 11 | **11 / 0** ✅ | **Perfect — 11 working: agy/antigravity gemini 3.8/3.5/3.1 flash tiers** |
