@@ -316,12 +316,14 @@ Sorted by coding quality: codestral first (larger/agent-friendly), then mistral-
 <a id="combofree-ai-best"></a>
 ### combo/free-ai-best
 
+| # | Model | Category | Status |
+|---|-------|----------|--------|
 | 1 | `free-ai/qwen3-coder` | Code-specialized | ✅ **Best for coding** |
 | 2 | `free-ai/qwen-coder` | Code-specialized | ✅ |
 | 3 | `free-ai/qwen3-8b` | Qwen 8B | ✅ |
 | 4 | `free-ai/qwen7b` | Qwen 7B | ✅ |
 | 5 | `free-ai/mistral` | Mistral | ✅ |
-| 4 | `free-ai/deepseek-r1-7b` | DeepSeek R1 7B | ✅ |
+| 6 | `free-ai/deepseek-r1-7b` | DeepSeek R1 7B | ✅ |
 
 > **⚠️ zerolimitai removed** — Provider offers only a **7-day trial**, no permanent free tier. Combo deleted to avoid wasted attempts.
 
