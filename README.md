@@ -115,48 +115,55 @@ A model needs both. Sorted by coding quality first, then reliability.
 
 | # | Model | Coding quiz | Why it ranks here | 30-day success |
 |---|---|---|---|---|
-| 1 | `larprouter/deepseek-v4.1-flash` | **100** | DeepSWE 74.2 / TB2.1 90.6 - strongest coding brain reachable; reasoning model, 1-5 s | 6/6 today |
-| 2 | `codex/gpt-6-luna-high` | **100** | DeepSWE 66.6, best *reliable* agentic coder you own - 6.5k real requests of history | **98.6%** (6463) |
-| 3 | `codex/gpt-6-luna-max` | **100** | same weights at max reasoning effort - deeper plans, same subscription | 88.9% (max) |
-| 4 | `gc/grok-4.7-xhigh` | **100** | coding Elo 1638 = highest scored model that actually answers; 500k ctx | 85.9% (575) |
-| 5 | `antigravity/claude-opus-4-6-thinking` | **100** | best Claude generation reachable; strongest on multi-file refactors + review | 63.2% (838) |
-| 6 | `agy/claude-opus-4-6-thinking` | **100** | same model, second account pool - free redundancy | - |
-| 7 | `larprouter/glm-5.3-flash` | **100** | GLM 5.3 flash on the free pool - DeepSWE 66.9 family, fast and stable | 5/5 today |
-| 8 | `codex/gpt-5.6-luna-high` | **100** | previous-gen Luna, high effort - still a solid agent | - |
-| 9 | `codex/gpt-5.6-terra-high` | **100** | Terra = code-heavy variant of 5.6 | - |
-| 10 | `codex/gpt-reserve-high` | **100** | reserve capacity - keeps working when the main pool is throttled | - |
-| 11 | `cx/gpt-6-luna` | **100** | medium effort, fastest Luna path | 98.6% |
-| 12 | `codex/gpt-6-luna` | **100** | default effort | 98.6% |
-| 13 | `grok-cli/grok-4.7` | **100** | independent transport of #3 | 85.9% |
-| 14 | `gc/grok-4.7-high` | **100** | mid effort - cheaper on quota than xhigh | - |
-| 15 | `openrouter/poolside/laguna-s-2.1:free` | **75** | TB2.1 70.2 / DeepSWE 40.4 - best free coding model for single-file work | 85.7% (21) |
-| 16 | `openrouter/recursive/flint-v1.0:free` | **100** | SWE-bench Pro v2 89.7 / SWE-V 74.2 / TB2.1 54.9 - patch-quality specialist | 66.7% |
-| 17 | `cfp/moonshotai/kimi-k2.7-code` | **75** | Kimi K2.7 **code** - 256k ctx on free CF quota | 36.8% (19) |
-| 18 | `cfp/deepseek-ai/deepseek-v4-pro-0813` | **100** | DeepSeek V4 Pro weights, free CF quota | - |
-| 19 | `cfp/zai-org/glm-5.2` | **100** | GLM 5.2 - strong tool use, free | - |
-| 20 | `cfp/deepseek-ai/deepseek-v4-flash-0731` | **100** | V4 Flash - fast, free, good for small edits | - |
-| 21 | `cfp/moonshotai/kimi-k2.6` | **75** | previous Kimi, still useful as a 2nd opinion | - |
-| 22 | `openrouter/cohere/north-mini-code:free` | **100** | code-specialised, small, very consistent | 96.0% (25) |
-| 23 | `openrouter/nvidia/nemotron-3.5-lightning:free` | 25 | fastest *reliable* free leg; grunt work | 97.4% (117) |
-| 24 | `nvidia/nvidia/nemotron-3-ultra-550b-a55b` | **100** | TB2.1 ~51-56, huge context, no quota pressure | 60.9% (23) |
-| 25 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free` | **100** | same weights, free quota | 72.0% (25) |
-| 26 | `cfp/nvidia/nemotron-3-120b-a12b` | **100** | mid-size Nemotron, free | - |
-| 27 | `antigravity/gemini-3.8-flash-high` | **100** | long-context Gemini for reading big repos; weaker at pure codegen | 88.0% (flash-low) |
-| 28 | `codestral/codestral-latest` | **75** | Devstral/Codestral line - FIM + agent, 10 keys pooled | 89.1% (46) |
-| 29 | `mistral/codestral-latest` | **75** | same model, second key pool | 81.8% (22) |
-| 30 | `mistral/codestral-2508` / `codestral/codestral-2508` | **75** | pinned build, stable behaviour | 66.7-100% |
-| 31 | `mistral/mistral-code-latest` / `mistral-code-fim-latest` | **75** | code-tuned + fill-in-the-middle | - |
-| 32 | `nvidia/minimaxai/minimax-m3.1-flash` | **75** | long-context agent model, snappy | - |
-| 33 | `cloudflare-ai/@cf/qwen/qwen2.5-coder-32b-instruct` | **75** | small coder, rock solid on CF | 100% (14) |
-| 34 | `cfp/qwen/qwen2.5-coder-32b-instruct` | **92** | same model via playground | - |
-| 35 | `cfp/qwen/qwq-32b` / `cloudflare-ai/@cf/qwen/qwq-32b` | 0 | reasoning model, free | - |
-| 36 | `cfp/qwen/qwen3-30b-a3b-fp8` | 0 | MoE 30B, cheap bulk edits | - |
-| 37 | `groq/qwen/qwen3.8-27b` | **100** | TB2.1 73.0 / SWE-Pro 61.7 / LCB 90.3 - great brain, throttled pipe | 22.3% (157) |
-| 38 | `ddgw/gpt-5.6-luna` | **100** | free GPT-5.6 Luna via web bridge | - |
-| 39 | `ddgw/gpt-5.4-mini` / `ddgw/claude-haiku-4-5` | **100** | cheap free legs, 429-prone | - |
-| 40 | `openrouter/xingchen-agi/xing4.0-29b-a4b:free` | **100** | newest free MoE, 30B-class | - |
-| 41 | `openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free` | 50 | tiny reasoning model, free | - |
-| 42 | `openrouter/poolside/laguna-xs-2.1:free` | 0 | small Laguna - fill-in work only | 47.8% (23) |
+| 1 **100** | DeepSWE 74.2 / TB2.1 90.6 - strongest coding brain reachable; reasoning model, 1-5 s | 6/6 today |
+| 2 **100** | DeepSWE 66.6, best *reliable* agentic coder you own - 6.5k real requests of history | **98.6%** (6463) |
+| 3 **100** | same weights at max reasoning effort - deeper plans, same subscription | 88.9% (max) |
+| 4 **100** | coding Elo 1638 = highest scored model that actually answers; 500k ctx | 85.9% (575) |
+| 5 **100** | best Claude generation reachable; strongest on multi-file refactors + review | 63.2% (838) |
+| 6 **100** | same model, second account pool - free redundancy | - |
+| 7 **100** | GLM 5.3 flash on the free pool - DeepSWE 66.9 family, fast and stable | 5/5 today |
+| 8 **100** | previous-gen Luna, high effort - still a solid agent | - |
+| 9 **100** | Terra = code-heavy variant of 5.6 | - |
+| 10 **100** | reserve capacity - keeps working when the main pool is throttled | - |
+| 11 **100** | medium effort, fastest Luna path | 98.6% |
+| 12 **100** | default effort | 98.6% |
+| 13 **100** | independent transport of #3 | 85.9% |
+| 14 **100** | mid effort - cheaper on quota than xhigh | - |
+| 15 **75** | TB2.1 70.2 / DeepSWE 40.4 - best free coding model for single-file work | 85.7% (21) |
+| 16 **100** | new — Glyph Cluster, ~2 s, tool calls | new |
+| 17 **100** | new — Reflection Beam, ~5 s | new |
+| 18 **100** | new — Dots Preview, ~6 s | new |
+| 19 **100** | new — Nemotron Ultra, 2 s | new |
+| 20 **100** | new — LFM 2.5, ~4 s | new |
+| 21 **100** | new — small, ~2 s | new |
+| 22 **100** | SWE-bench Pro v2 89.7 / SWE-V 74.2 / TB2.1 54.9 - patch-quality specialist | 66.7% |
+| 23 `openrouter/cohere/north-mini-code:free` | **100** | code-specialised, consistent | 96.0% (25) |
+| 24 **75** | Kimi K2.7 **code** - 256k ctx on free CF quota | 36.8% (19) |
+| 25 **100** | DeepSeek V4 Pro weights, free CF quota | - |
+| 26 **100** | GLM 5.2 - strong tool use, free | - |
+| 27 **100** | V4 Flash - fast, free, good for small edits | - |
+| 28 **75** | previous Kimi, still useful as a 2nd opinion | - |
+| 29 **100** | code-specialised, small, very consistent | 96.0% (25) |
+| 30 25 | fastest *reliable* free leg; grunt work | 97.4% (117) |
+| 31 **100** | TB2.1 ~51-56, huge context, no quota pressure | 60.9% (23) |
+| 32 **100** | same weights, free quota | 72.0% (25) |
+| 33 **100** | mid-size Nemotron, free | - |
+| 34 **100** | long-context Gemini for reading big repos; weaker at pure codegen | 88.0% (flash-low) |
+| 35 **75** | Devstral/Codestral line - FIM + agent, 10 keys pooled | 89.1% (46) |
+| 36 **75** | same model, second key pool | 81.8% (22) |
+| 37 **75** | pinned build, stable behaviour | 66.7-100% |
+| 38 **75** | code-tuned + fill-in-the-middle | - |
+| 39 **75** | long-context agent model, snappy | - |
+| 40 **75** | small coder, rock solid on CF | 100% (14) |
+| 41 **92** | same model via playground | - |
+| 42 0 | reasoning model, free | - |
+| 43 0 | MoE 30B, cheap bulk edits | - |
+| 44 **100** | TB2.1 73.0 / SWE-Pro 61.7 / LCB 90.3 - great brain, throttled pipe | 22.3% (157) |
+| 45 **100** | free GPT-5.6 Luna via web bridge | - |
+| 46 **100** | cheap free legs, 429-prone | - |
+| 47 **100** | newest free MoE, 30B-class | - |
+| 48 50 | tiny reasoning model, free | - |
+| 49 0 | small Laguna - fill-in work only | 47.8% (23) |
 
 A dash means the model could not be quizzed today (rate limit, timeout, or paid route blocked).
 

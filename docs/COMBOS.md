@@ -62,7 +62,7 @@ _Updated **2026-10-27**: added `combo/coding-elite` (ranked legs, see the rankin
 <a id="combocoding-elite"></a>
 ### combo/coding-elite - [back to list](#combo-index)
 
-**Strategy** `priority` · **maxGlobalAttempts** 200 · 22 live legs · created 2026-10-27.
+**Strategy** `priority` · **maxGlobalAttempts** 200 · 29 live legs · created 2026-10-27.
 `priority` = it stops at the first leg that answers, so the order *is* the ranking: subscription agentic models first, free frontier second, small/fast last.
 
 | # | Model | 30-day success |

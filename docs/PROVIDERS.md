@@ -20,7 +20,11 @@ Policies that do not change day to day:
   provider is either 400 "not priced or available in this pool" (claude, kimi, qwen) or 402
   "insufficient credit" (glm-5.3, minimax). It does not need a key of its own - the gateway holds it.
 
-## Where the free keys come from
+## Kilocode (new provider, 2 OAuth accounts active)
+- 2 accounts (urviahmnakum, mantra.u.nakum@gmail.com), both active, no errors.
+- 17 ids on /v1/models; 10 answer and score 100 on coding quiz (glyph-cluster, beam-free, dots-preview, nemotron-ultra, lfm, kilo-auto + cohere/north-mini etc). 6 new good legs added to coding-elite at #16-21. 7 others are router/pass-through (openrouter/free) or non-coding (content-safety, super-vl, beam-501b block).
+- All new legs verified with real test cases; tool_calls work on glyph-cluster / beam-free / dots-preview / nemotron-ultra.
+\n## Where the free keys come from
 
 | Provider | Free models | Sign up |
 |---|---|---|
