@@ -36,7 +36,7 @@ _Updated **2026-10-27**: added `combo/coding-elite` (ranked legs, see the rankin
 
 | Combo | Legs | OK / FAIL | Status |
 |---|---|---|---|
-| [`combo/coding-elite`](#combocoding-elite) | 20 | **20 / 0** ✅ | **Best today — ranked legs: gpt-6-luna-high/max → grok-4.7-xhigh → opus-4.6-thinking → free frontier (laguna, flint, north-mini-code, kimi-k2.7-code, deepseek-v4-pro, glm-5.2) → codestral** |
+| [`combo/coding-elite`](#combocoding-elite) | 22 | **22 / 0** ✅ | **Best today — ranked legs: gpt-6-luna-high/max → grok-4.7-xhigh → opus-4.6-thinking → free frontier (laguna, flint, north-mini-code, kimi-k2.7-code, deepseek-v4-pro, glm-5.2) → codestral** |
 | [`combo/xkiro-best`](#comboxkiro-best) | 26 | **26 / 0** ✅ | **Perfect — all 26 working: codestral-2508, devstral-medium, 13 qwen, 5 mistral, sensenova** |
 | [`combo/free-ai-best`](#combofree-ai-best) | 6 | **6 / 0** ✅ | **Perfect — 6 working: qwen3-coder, qwen-coder, qwen3-8b, qwen7b, mistral, deepseek-r1-7b** |
 | [`combo/gemini-best`](#combogemini-best) | 11 | **11 / 0** ✅ | **Perfect — 11 working: agy/antigravity gemini 3.8/3.5/3.1 flash tiers** |
@@ -62,31 +62,33 @@ _Updated **2026-10-27**: added `combo/coding-elite` (ranked legs, see the rankin
 <a id="combocoding-elite"></a>
 ### combo/coding-elite - [back to list](#combo-index)
 
-**Strategy** `priority` · **maxGlobalAttempts** 200 · 20 live legs · created 2026-10-27.
+**Strategy** `priority` · **maxGlobalAttempts** 200 · 22 live legs · created 2026-10-27.
 `priority` = it stops at the first leg that answers, so the order *is* the ranking: subscription agentic models first, free frontier second, small/fast last.
 
 | # | Model | 30-day success |
 |---|-------|----------------|
-| 1 | `codex/gpt-6-luna-high` | 98.6% |
-| 2 | `codex/gpt-6-luna-max` | 88.9% |
-| 3 | `gc/grok-4.7-xhigh` | 85.9% |
-| 4 | `antigravity/claude-opus-4-6-thinking` | 63.2% |
-| 5 | `agy/claude-opus-4-6-thinking` | - |
-| 6 | `cx/gpt-6-luna` | 98.6% |
-| 7 | `codex/gpt-6-luna` | 98.6% |
-| 8 | `grok-cli/grok-4.7` | 85.9% |
-| 9 | `openrouter/poolside/laguna-s-2.1:free` | 85.7% |
-| 10 | `openrouter/recursive/flint-v1.0:free` | 66.7% |
-| 11 | `openrouter/cohere/north-mini-code:free` | 96.0% |
-| 12 | `cfp/moonshotai/kimi-k2.7-code` | 36.8% |
-| 13 | `cfp/deepseek-ai/deepseek-v4-pro-0813` | - |
-| 14 | `cfp/zai-org/glm-5.2` | - |
-| 15 | `openrouter/nvidia/nemotron-3.5-lightning:free` | 97.4% |
-| 16 | `nvidia/nvidia/nemotron-3-ultra-550b-a55b` | 60.9% |
-| 17 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free` | 72.0% |
-| 18 | `mistral/codestral-latest` | 81.8% |
-| 19 | `groq/qwen/qwen3.8-27b` | 22.3% |
-| 20 | `auto/best-coding` | - |
+| 1 | `larprouter/deepseek-v4.1-flash` | 6/6 today |
+| 2 | `codex/gpt-6-luna-high` | 98.6% |
+| 3 | `codex/gpt-6-luna-max` | 88.9% |
+| 4 | `gc/grok-4.7-xhigh` | 85.9% |
+| 5 | `antigravity/claude-opus-4-6-thinking` | 63.2% |
+| 6 | `agy/claude-opus-4-6-thinking` | - |
+| 7 | `larprouter/glm-5.3-flash` | 5/5 today |
+| 8 | `cx/gpt-6-luna` | 98.6% |
+| 9 | `codex/gpt-6-luna` | 98.6% |
+| 10 | `grok-cli/grok-4.7` | 85.9% |
+| 11 | `openrouter/poolside/laguna-s-2.1:free` | 85.7% |
+| 12 | `openrouter/recursive/flint-v1.0:free` | 66.7% |
+| 13 | `openrouter/cohere/north-mini-code:free` | 96.0% |
+| 14 | `cfp/moonshotai/kimi-k2.7-code` | 36.8% |
+| 15 | `cfp/deepseek-ai/deepseek-v4-pro-0813` | - |
+| 16 | `cfp/zai-org/glm-5.2` | - |
+| 17 | `openrouter/nvidia/nemotron-3.5-lightning:free` | 97.4% |
+| 18 | `nvidia/nvidia/nemotron-3-ultra-550b-a55b` | 60.9% |
+| 19 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free` | 72.0% |
+| 20 | `mistral/codestral-latest` | 81.8% |
+| 21 | `groq/qwen/qwen3.8-27b` | 22.3% |
+| 22 | `auto/best-coding` | - |
 
 Registered in `opencode.jsonc` as `combo/coding-elite` and bare `coding-elite` (200k ctx / 32k out). Verified 2026-10-27: resolves to `codex/gpt-6-luna`, returns `tool_calls` correctly.
 

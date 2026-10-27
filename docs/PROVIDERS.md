@@ -15,6 +15,11 @@ Policies that do not change day to day:
 - **Removed for good:** `spark-best` (no working Spark models), `steady-coding`, `trae-best`, `zerolimitai-best` (7-day trial only), Cline (250 dead legs).
 - **Durable failures (401/402/404) are auto-disabled; transient ones (429/5xx/timeout) recover on retry.**
 
+- **larprouter** (`anthropic-compatible-larprouter`, base `https://larprouter.com/v1`) is a
+  free pool: `deepseek-v4.1-flash` and `glm-5.3-flash` answer in 1-9 s, everything else on that
+  provider is either 400 "not priced or available in this pool" (claude, kimi, qwen) or 402
+  "insufficient credit" (glm-5.3, minimax). It does not need a key of its own - the gateway holds it.
+
 ## Where the free keys come from
 
 | Provider | Free models | Sign up |

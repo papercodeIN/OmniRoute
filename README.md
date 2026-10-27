@@ -4,7 +4,7 @@
 > used here. **Last verified 2026-10-27**: 2005 callable model ids, 64 probed one-shot
 > (43 answered), 55 models sat the same coding quiz.
 >
-> **Best coding combo: `combo/coding-elite`** - 20 legs, ranked by the table in section 4.
+> **Best coding combo: `combo/coding-elite`** - 22 legs, ranked by the table in section 4.
 
 ---
 
@@ -81,7 +81,7 @@ Refresh picker anytime (double-click):
 ## 3. How to use (daily)
 
 - OpenCode model picker → provider **OmniRoute** → pick a `combo/*` (they sort to the top)
-- **Start here for coding:** `combo/coding-elite` - 20 legs, ranked best-first (section 4). `priority` stops at the first leg that answers, so the order *is* the ranking.
+- **Start here for coding:** `combo/coding-elite` - 22 legs, ranked best-first (section 4). `priority` stops at the first leg that answers, so the order *is* the ranking.
 - **Widest net:** `combo/all-best` - fails through everything that is still alive.
 - **Clean brand combos today:** `gpt-best`, `codex-best`, `gemini-best`, `agy-antigravity-best`, `claude-best`, `grok-best`, `nvidia-best`, `mistral-best`, `cloudflare-best`, `groq-best`, `openrouter-best`, `morph-best`.
 - **Free only:** `openrouter-best` / `cleanapis-best` (`:free` legs), or name one directly (`openrouter/poolside/laguna-s-2.1:free`, expires 2026-10-31).
@@ -114,46 +114,48 @@ A model needs both. Sorted by coding quality first, then reliability.
 
 | # | Model | Coding quiz | Why it ranks here | 30-day success |
 |---|---|---|---|---|
-| 1 | `codex/gpt-6-luna-high` | **100** | DeepSWE 66.6, best *reliable* agentic coder you own - 6.5k real requests of history | **98.6%** (6463) |
-| 2 | `codex/gpt-6-luna-max` | **100** | same weights at max reasoning effort - deeper plans, same subscription | 88.9% (max) |
-| 3 | `gc/grok-4.7-xhigh` | **100** | coding Elo 1638 = highest scored model that actually answers; 500k ctx | 85.9% (575) |
-| 4 | `antigravity/claude-opus-4-6-thinking` | **100** | best Claude generation reachable; strongest on multi-file refactors + review | 63.2% (838) |
-| 5 | `agy/claude-opus-4-6-thinking` | **100** | same model, second account pool - free redundancy | - |
-| 6 | `codex/gpt-5.6-luna-high` | **100** | previous-gen Luna, high effort - still a solid agent | - |
-| 7 | `codex/gpt-5.6-terra-high` | **100** | Terra = code-heavy variant of 5.6 | - |
-| 8 | `codex/gpt-reserve-high` | **100** | reserve capacity - keeps working when the main pool is throttled | - |
-| 9 | `cx/gpt-6-luna` | **100** | medium effort, fastest Luna path | 98.6% |
-| 10 | `codex/gpt-6-luna` | **100** | default effort | 98.6% |
-| 11 | `grok-cli/grok-4.7` | **100** | independent transport of #3 | 85.9% |
-| 12 | `gc/grok-4.7-high` | **100** | mid effort - cheaper on quota than xhigh | - |
-| 13 | `openrouter/poolside/laguna-s-2.1:free` | **75** | TB2.1 70.2 / DeepSWE 40.4 - best free coding model for single-file work | 85.7% (21) |
-| 14 | `openrouter/recursive/flint-v1.0:free` | **100** | SWE-bench Pro v2 89.7 / SWE-V 74.2 / TB2.1 54.9 - patch-quality specialist | 66.7% |
-| 15 | `cfp/moonshotai/kimi-k2.7-code` | **75** | Kimi K2.7 **code** - 256k ctx on free CF quota | 36.8% (19) |
-| 16 | `cfp/deepseek-ai/deepseek-v4-pro-0813` | **100** | DeepSeek V4 Pro weights, free CF quota | - |
-| 17 | `cfp/zai-org/glm-5.2` | **100** | GLM 5.2 - strong tool use, free | - |
-| 18 | `cfp/deepseek-ai/deepseek-v4-flash-0731` | **100** | V4 Flash - fast, free, good for small edits | - |
-| 19 | `cfp/moonshotai/kimi-k2.6` | **75** | previous Kimi, still useful as a 2nd opinion | - |
-| 20 | `openrouter/cohere/north-mini-code:free` | **100** | code-specialised, small, very consistent | 96.0% (25) |
-| 21 | `openrouter/nvidia/nemotron-3.5-lightning:free` | 25 | fastest *reliable* free leg; grunt work | 97.4% (117) |
-| 22 | `nvidia/nvidia/nemotron-3-ultra-550b-a55b` | **100** | TB2.1 ~51-56, huge context, no quota pressure | 60.9% (23) |
-| 23 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free` | **100** | same weights, free quota | 72.0% (25) |
-| 24 | `cfp/nvidia/nemotron-3-120b-a12b` | **100** | mid-size Nemotron, free | - |
-| 25 | `antigravity/gemini-3.8-flash-high` | **100** | long-context Gemini for reading big repos; weaker at pure codegen | 88.0% (flash-low) |
-| 26 | `codestral/codestral-latest` | **75** | Devstral/Codestral line - FIM + agent, 10 keys pooled | 89.1% (46) |
-| 27 | `mistral/codestral-latest` | **75** | same model, second key pool | 81.8% (22) |
-| 28 | `mistral/codestral-2508` / `codestral/codestral-2508` | **75** | pinned build, stable behaviour | 66.7-100% |
-| 29 | `mistral/mistral-code-latest` / `mistral-code-fim-latest` | **75** | code-tuned + fill-in-the-middle | - |
-| 30 | `nvidia/minimaxai/minimax-m3.1-flash` | **75** | long-context agent model, snappy | - |
-| 31 | `cloudflare-ai/@cf/qwen/qwen2.5-coder-32b-instruct` | **75** | small coder, rock solid on CF | 100% (14) |
-| 32 | `cfp/qwen/qwen2.5-coder-32b-instruct` | **92** | same model via playground | - |
-| 33 | `cfp/qwen/qwq-32b` / `cloudflare-ai/@cf/qwen/qwq-32b` | 0 | reasoning model, free | - |
-| 34 | `cfp/qwen/qwen3-30b-a3b-fp8` | 0 | MoE 30B, cheap bulk edits | - |
-| 35 | `groq/qwen/qwen3.8-27b` | **100** | TB2.1 73.0 / SWE-Pro 61.7 / LCB 90.3 - great brain, throttled pipe | 22.3% (157) |
-| 36 | `ddgw/gpt-5.6-luna` | **100** | free GPT-5.6 Luna via web bridge | - |
-| 37 | `ddgw/gpt-5.4-mini` / `ddgw/claude-haiku-4-5` | **100** | cheap free legs, 429-prone | - |
-| 38 | `openrouter/xingchen-agi/xing4.0-29b-a4b:free` | **100** | newest free MoE, 30B-class | - |
-| 39 | `openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free` | 50 | tiny reasoning model, free | - |
-| 40 | `openrouter/poolside/laguna-xs-2.1:free` | 0 | small Laguna - fill-in work only | 47.8% (23) |
+| 1 | `larprouter/deepseek-v4.1-flash` | **100** | DeepSWE 74.2 / TB2.1 90.6 - strongest coding brain reachable; reasoning model, 1-5 s | 6/6 today |
+| 2 | `codex/gpt-6-luna-high` | **100** | DeepSWE 66.6, best *reliable* agentic coder you own - 6.5k real requests of history | **98.6%** (6463) |
+| 3 | `codex/gpt-6-luna-max` | **100** | same weights at max reasoning effort - deeper plans, same subscription | 88.9% (max) |
+| 4 | `gc/grok-4.7-xhigh` | **100** | coding Elo 1638 = highest scored model that actually answers; 500k ctx | 85.9% (575) |
+| 5 | `antigravity/claude-opus-4-6-thinking` | **100** | best Claude generation reachable; strongest on multi-file refactors + review | 63.2% (838) |
+| 6 | `agy/claude-opus-4-6-thinking` | **100** | same model, second account pool - free redundancy | - |
+| 7 | `larprouter/glm-5.3-flash` | **100** | GLM 5.3 flash on the free pool - DeepSWE 66.9 family, fast and stable | 5/5 today |
+| 8 | `codex/gpt-5.6-luna-high` | **100** | previous-gen Luna, high effort - still a solid agent | - |
+| 9 | `codex/gpt-5.6-terra-high` | **100** | Terra = code-heavy variant of 5.6 | - |
+| 10 | `codex/gpt-reserve-high` | **100** | reserve capacity - keeps working when the main pool is throttled | - |
+| 11 | `cx/gpt-6-luna` | **100** | medium effort, fastest Luna path | 98.6% |
+| 12 | `codex/gpt-6-luna` | **100** | default effort | 98.6% |
+| 13 | `grok-cli/grok-4.7` | **100** | independent transport of #3 | 85.9% |
+| 14 | `gc/grok-4.7-high` | **100** | mid effort - cheaper on quota than xhigh | - |
+| 15 | `openrouter/poolside/laguna-s-2.1:free` | **75** | TB2.1 70.2 / DeepSWE 40.4 - best free coding model for single-file work | 85.7% (21) |
+| 16 | `openrouter/recursive/flint-v1.0:free` | **100** | SWE-bench Pro v2 89.7 / SWE-V 74.2 / TB2.1 54.9 - patch-quality specialist | 66.7% |
+| 17 | `cfp/moonshotai/kimi-k2.7-code` | **75** | Kimi K2.7 **code** - 256k ctx on free CF quota | 36.8% (19) |
+| 18 | `cfp/deepseek-ai/deepseek-v4-pro-0813` | **100** | DeepSeek V4 Pro weights, free CF quota | - |
+| 19 | `cfp/zai-org/glm-5.2` | **100** | GLM 5.2 - strong tool use, free | - |
+| 20 | `cfp/deepseek-ai/deepseek-v4-flash-0731` | **100** | V4 Flash - fast, free, good for small edits | - |
+| 21 | `cfp/moonshotai/kimi-k2.6` | **75** | previous Kimi, still useful as a 2nd opinion | - |
+| 22 | `openrouter/cohere/north-mini-code:free` | **100** | code-specialised, small, very consistent | 96.0% (25) |
+| 23 | `openrouter/nvidia/nemotron-3.5-lightning:free` | 25 | fastest *reliable* free leg; grunt work | 97.4% (117) |
+| 24 | `nvidia/nvidia/nemotron-3-ultra-550b-a55b` | **100** | TB2.1 ~51-56, huge context, no quota pressure | 60.9% (23) |
+| 25 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free` | **100** | same weights, free quota | 72.0% (25) |
+| 26 | `cfp/nvidia/nemotron-3-120b-a12b` | **100** | mid-size Nemotron, free | - |
+| 27 | `antigravity/gemini-3.8-flash-high` | **100** | long-context Gemini for reading big repos; weaker at pure codegen | 88.0% (flash-low) |
+| 28 | `codestral/codestral-latest` | **75** | Devstral/Codestral line - FIM + agent, 10 keys pooled | 89.1% (46) |
+| 29 | `mistral/codestral-latest` | **75** | same model, second key pool | 81.8% (22) |
+| 30 | `mistral/codestral-2508` / `codestral/codestral-2508` | **75** | pinned build, stable behaviour | 66.7-100% |
+| 31 | `mistral/mistral-code-latest` / `mistral-code-fim-latest` | **75** | code-tuned + fill-in-the-middle | - |
+| 32 | `nvidia/minimaxai/minimax-m3.1-flash` | **75** | long-context agent model, snappy | - |
+| 33 | `cloudflare-ai/@cf/qwen/qwen2.5-coder-32b-instruct` | **75** | small coder, rock solid on CF | 100% (14) |
+| 34 | `cfp/qwen/qwen2.5-coder-32b-instruct` | **92** | same model via playground | - |
+| 35 | `cfp/qwen/qwq-32b` / `cloudflare-ai/@cf/qwen/qwq-32b` | 0 | reasoning model, free | - |
+| 36 | `cfp/qwen/qwen3-30b-a3b-fp8` | 0 | MoE 30B, cheap bulk edits | - |
+| 37 | `groq/qwen/qwen3.8-27b` | **100** | TB2.1 73.0 / SWE-Pro 61.7 / LCB 90.3 - great brain, throttled pipe | 22.3% (157) |
+| 38 | `ddgw/gpt-5.6-luna` | **100** | free GPT-5.6 Luna via web bridge | - |
+| 39 | `ddgw/gpt-5.4-mini` / `ddgw/claude-haiku-4-5` | **100** | cheap free legs, 429-prone | - |
+| 40 | `openrouter/xingchen-agi/xing4.0-29b-a4b:free` | **100** | newest free MoE, 30B-class | - |
+| 41 | `openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free` | 50 | tiny reasoning model, free | - |
+| 42 | `openrouter/poolside/laguna-xs-2.1:free` | 0 | small Laguna - fill-in work only | 47.8% (23) |
 
 A dash means the model could not be quizzed today (rate limit, timeout, or paid route blocked).
 
@@ -161,7 +163,8 @@ A dash means the model could not be quizzed today (rate limit, timeout, or paid 
 
 ### What to actually use
 
-- **Agent coding default:** `combo/coding-elite` - 20 legs, same order as this list.
+- **Agent coding default:** `combo/coding-elite` - 22 legs, same order as this list.
+- **Watch the #1 leg:** `larprouter/deepseek-v4.1-flash` rides a free pool with limited credit - if it starts returning 402, the combo silently falls through to `codex/gpt-6-luna-high`.
 - **Free only:** `openrouter/poolside/laguna-s-2.1:free` until **2026-10-31**, then
   `openrouter/recursive/flint-v1.0:free` + `cfp/moonshotai/kimi-k2.7-code`.
 - **Blocked but worth unlocking** (GLM 5.3, Opus 5, Kimi K3, Grok 4.20 expert): see
@@ -180,6 +183,7 @@ A dash means the model could not be quizzed today (rate limit, timeout, or paid 
 | **NVIDIA NIM** | nemotron-3-ultra, minimax-m3.1-flash, lightning-30b | free, no quota pressure |
 | **Groq** | qwen3.8-27b, gpt-oss-120b | fast, but 22% (rate limits) |
 | **duckduckgo-web** | gpt-5.6-luna, gpt-5.4-mini, claude-haiku-4-5 | 429-prone |
+| **larprouter** | `deepseek-v4.1-flash`, `glm-5.3-flash` | 6/6 stable, 1-9 s (other ids 400/402) |
 | **Morph** | morph-v3-fast / large | edit engine, not a chat brain |
 | **xKiro, free-ai, Devin, z.ai code, Augment** | - | dead or unconfigured today |
 
