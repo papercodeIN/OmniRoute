@@ -15,6 +15,7 @@ A `priority` combo stops at the **first leg that answers**, so leg order is the 
 - [`combo/morph-best`](#combomorph-best)
 - [`combo/gpt-best`](#combogpt-best)
 - [`combo/grok-best`](#combogrok-best)
+- [`combo/groq-best`](#combogroq-best)
 - [`combo/agy-antigravity-best`](#comboagy-antigravity-best)
 - [`combo/kilocode-best`](#combokilocode-best)
 - [`combo/mistral-best`](#combomistral-best)
@@ -297,6 +298,20 @@ Sorted by coding quality: codestral first (larger/agent-friendly), then mistral-
 | 7 | `auto/best-coding` | ✅ |
 
 *Removed (FAIL):* `openrouter/nvidia/nemotron-3-super-120b-a12b:free`, `openrouter/apodex/apodex-1.1-mini:free`, `openrouter/google/gemma-4-31b-it:free`
+
+<a id="combogroq-best"></a>
+### combo/groq-best
+
+**Strategy** `priority` · 6 live legs · sorted by coding quality.
+
+| # | Model | Status |
+|---|-------|--------|
+| 1 | `groq/openai/gpt-oss-120b` | ✅ |
+| 2 | `groq/qwen/qwen3.8-27b` | ✅ |
+| 3 | `groq/openai/gpt-oss-20b` | ✅ |
+| 4 | `groq/openai/gpt-oss-safeguard-20b` | ✅ |
+| 5 | `groq/allam-2-7b` | ✅ |
+| 6 | `auto/best-coding` | ✅ |
 
 <a id="combofree-ai-best"></a>
 ### combo/free-ai-best
