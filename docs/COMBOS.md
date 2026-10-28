@@ -32,7 +32,7 @@ A `priority` combo stops at the **first leg that answers**, so leg order is the 
 | [`combo/gemini-best`](#combogemini-best) | 11 | **11 / 0** ✅ | **Perfect — 11 working: agy/antigravity gemini 3.8/3.5/3.1 flash tiers** |
 | [`combo/gpt-best`](#combogpt-best) | 27 | **26 / 1** ✅ | **26 working: codex gpt-6/5.6 family + gpt-oss via nvidia/agy/antigravity/ddgw/cfp** |
 | [`combo/agy-antigravity-best`](#comboagy-antigravity-best) | 15 | **15 / 0** ✅ | **Perfect — 15 working: agy/antigravity claude + gemini** |
-| [`combo/kilocode-best`](#combokilocode-best) | 1 | **1 / 0** ⚠️ | only auto/best-coding remains |
+| [`combo/kilocode-best`](#combokilocode-best) | 13 | **13 / 0** ✅ | 12 working free legs ranked by coding + auto fallback: poolside/laguna-s → nemotron-3-ultra → cohere/north-mini-code → poolside/laguna-xs → nemotron-3.5-lightning → content-safety → super-vl → kilo-auto/small → openrouter/free → lfm-2.5 → dots-3-note → reflection/beam-free → auto/best-coding |
 | [`combo/openrouter-best`](#comboopenrouter-best) | 7 | **6 / 1** ✅ | 6 working: nemotron/laguna/north-mini-code/lfm `:free` |
 | [`combo/codex-best`](#combocodex-best) | 5 | **4 / 1** ⚡ | 4 working: gpt-6-luna, 5.6-terra, 5.6-luna + auto |
 | [`combo/cloudflare-best`](#combocloudflare-best) | 19 | **19 / 0** ✅ | **Perfect — 19 working: 6 code/reasoning + 13 general (cloudflare-ai + cfp)** |
@@ -247,6 +247,27 @@ Registered in `opencode.jsonc` as `combo/coding-elite` and bare `coding-elite` (
 
 <a id="combokilocode-best"></a>
 ### combo/kilocode-best
+
+**Strategy** `priority` · **maxGlobalAttempts** 200 · 13 live legs · created 2026-10-28.
+Sorted by coding quality: poolside laguna code models first, then the large nemotron reasoners, then small/free fallbacks, ending with `auto/best-coding`.
+
+| # | Model | Provider | Status |
+|---|-------|----------|--------|
+| 1 | `kilocode/poolside/laguna-s-2.1:free` | kilocode | ✅ 🏆 |
+| 2 | `kilocode/nvidia/nemotron-3-ultra-550b-a55b:free` | kilocode | ✅ |
+| 3 | `kilocode/cohere/north-mini-code:free` | kilocode | ✅ |
+| 4 | `kilocode/poolside/laguna-xs-2.1:free` | kilocode | ✅ |
+| 5 | `kilocode/nvidia/nemotron-3.5-lightning:free` | kilocode | ✅ |
+| 6 | `kilocode/nvidia/nemotron-3.5-content-safety:free` | kilocode | ✅ |
+| 7 | `kilocode/nvidia/nemotron-3.5-super-vl:free` | kilocode | ✅ |
+| 8 | `kilocode/kilo-auto/small` | kilocode | ✅ |
+| 9 | `kilocode/openrouter/free` | kilocode | ✅ |
+| 10 | `kilocode/liquid/lfm-2.5-2.6b:free` | kilocode | ✅ |
+| 11 | `kilocode/dots-studio/dots-3-note-preview:free` | kilocode | ✅ |
+| 12 | `kilocode/reflection/beam-free` | kilocode | ✅ |
+| 13 | `auto/best-coding` | auto | ✅ fallback |
+
+Registered in `opencode.jsonc` as `combo/kilocode-best` (available in the OpenCode picker). Verified 2026-10-28: resolves to `kilocode/poolside/laguna-s-2.1:free`, returns text correctly.
 
 <a id="combomistral-best"></a>
 ### combo/mistral-best
