@@ -5,7 +5,7 @@
 Every OmniRoute combo on this machine, with each leg and its 30-day success rate.
 A `priority` combo stops at the **first leg that answers**, so leg order is the ranking.
 
-> **Updated 2026-11-02:** existing combo/model entries are retained. New models are added, and unavailable entries are struck through rather than deleted.
+> **Updated 2026-11-02:** existing combo/model entries are retained. `combo/openrouter-best` was refreshed from the live OpenRouter catalog; new models were added and unavailable legacy entries were struck through rather than deleted.
 
 ## Combo index
 
@@ -37,7 +37,7 @@ A `priority` combo stops at the **first leg that answers**, so leg order is the 
 | [`combo/gpt-best`](#combogpt-best) | 27 | **26 / 1** ✅ | **26 working: codex gpt-6/5.6 family + gpt-oss via nvidia/agy/antigravity/ddgw/cfp** |
 | [`combo/agy-antigravity-best`](#comboagy-antigravity-best) | 15 | **15 / 0** ✅ | **Perfect — 15 working: agy/antigravity claude + gemini** |
 | [`combo/kilocode-best`](#combokilocode-best) | 13 | **13 / 0** ✅ | 12 working free legs ranked by coding + auto fallback: poolside/laguna-s → nemotron-3-ultra → cohere/north-mini-code → poolside/laguna-xs → nemotron-3.5-lightning → content-safety → super-vl → kilo-auto/small → openrouter/free → lfm-2.5 → dots-3-note → reflection/beam-free → auto/best-coding |
-| [`combo/openrouter-best`](#comboopenrouter-best) | 7 | **6 / 1** ✅ | 6 working: nemotron/laguna/north-mini-code/lfm `:free` |
+| [`combo/openrouter-best`](#comboopenrouter-best) | 11 | **11 / 0** ✅ | Updated from the live catalog: north-mini-code, Nemotron variants, Super VL, Nano Omni, Dots, LFM, and auto fallback |
 | [`combo/codex-best`](#combocodex-best) | 5 | **4 / 1** ⚡ | 4 working: gpt-6-luna, 5.6-terra, 5.6-luna + auto |
 | [`combo/cloudflare-best`](#combocloudflare-best) | 19 | **19 / 0** ✅ | **Perfect — 19 working: 6 code/reasoning + 13 general (cloudflare-ai + cfp)** |
 | [`combo/nvidia-best`](#combonvidia-best) | 7 | **7 / 0** ✅ | **all working: nvidia/openrouter/kilocode nemotron `:free`** |
@@ -322,17 +322,25 @@ Sorted by coding quality: codestral first (larger/agent-friendly), then mistral-
 <a id="comboopenrouter-best"></a>
 ### combo/openrouter-best
 
+Updated 2026-11-02 from the live OpenRouter catalog. Coding/reasoning-capable models are listed first; legacy unavailable entries remain struck through for reference.
+
 | # | Model | Status |
 |---|-------|--------|
-| 1 | `openrouter/nvidia/nemotron-3.5-lightning:free` | ✅ |
+| 1 | `openrouter/cohere/north-mini-code:free` | ✅ **Best coding fit** |
 | 2 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free` | ✅ |
-| 3 | ~~`openrouter/poolside/laguna-s-2.1:free`~~ | ❌ unavailable — retained for reference |
-| 4 | `openrouter/cohere/north-mini-code:free` | ✅ |
-| 5 | `openrouter/liquid/lfm-2.5-2.6b:free` | ✅ |
-| 6 | ~~`openrouter/poolside/laguna-xs-2.1:free`~~ | ❌ unavailable — retained for reference |
-| 7 | `auto/best-coding` | ✅ |
+| 3 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free-high` | ✅ |
+| 4 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free-medium` | ✅ |
+| 5 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free-none` | ✅ |
+| 6 | `openrouter/nvidia/nemotron-3.5-lightning:free` | ✅ |
+| 7 | `openrouter/nvidia/nemotron-3.5-super-vl:free` | ✅ |
+| 8 | `openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free` | ✅ |
+| 9 | `openrouter/dots-studio/dots-3-note-preview:free` | ✅ |
+| 10 | `openrouter/liquid/lfm-2.5-2.6b:free` | ✅ |
+| 11 | `auto/best-coding` | ✅ fallback |
+| 12 | ~~`openrouter/poolside/laguna-s-2.1:free`~~ | ❌ unavailable — retained for reference |
+| 13 | ~~`openrouter/poolside/laguna-xs-2.1:free`~~ | ❌ unavailable — retained for reference |
 
-*Removed (FAIL):* `openrouter/nvidia/nemotron-3-super-120b-a12b:free`, `openrouter/apodex/apodex-1.1-mini:free`, `openrouter/google/gemma-4-31b-it:free`
+*Previously reported FAIL entries retained for reference:* `openrouter/nvidia/nemotron-3-super-120b-a12b:free`, `openrouter/apodex/apodex-1.1-mini:free`, `openrouter/google/gemma-4-31b-it:free`
 
 <a id="combogroq-best"></a>
 ### combo/groq-best
