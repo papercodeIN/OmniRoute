@@ -32,7 +32,7 @@ A `priority` combo stops at the **first leg that answers**, so leg order is the 
 |---|---|---|---|
 | [`combo/coding-elite`](#combocoding-elite) | 23 | **21 / 2** ⚠️ | **Best today — existing legs retained; Inception Mercury added; retired/unavailable legs struck through** |
 | [`combo/inceptionai-best`](#comboinceptionai-best) | 1 | **1 / 0** ✅ | **New — `inceptionai/mercury-3` (1M context, reasoning, tool calling)** |
-| [`combo/free-ai-best`](#combofree-ai-best) | 6 | **6 / 0** ✅ | **Perfect — 6 working: qwen3-coder, qwen-coder, qwen3-8b, qwen7b, mistral, deepseek-r1-7b** |
+| [`combo/free-ai-best`](#combofree-ai-best) | 7 | **7 / 0** ✅ | **Working FreeAI models verified live: qwen3-coder, qwen-coder, DeepSeek R1, mistral, qwen3-8b, qwen7b, deepseek-r1-7b** |
 | [`combo/gemini-best`](#combogemini-best) | 11 | **11 / 0** ✅ | **Perfect — 11 working: agy/antigravity gemini 3.8/3.5/3.1 flash tiers** |
 | [`combo/gpt-best`](#combogpt-best) | 27 | **26 / 1** ✅ | **26 working: codex gpt-6/5.6 family + gpt-oss via nvidia/agy/antigravity/ddgw/cfp** |
 | [`combo/agy-antigravity-best`](#comboagy-antigravity-best) | 15 | **15 / 0** ✅ | **Perfect — 15 working: agy/antigravity claude + gemini** |
@@ -359,13 +359,31 @@ Updated 2026-11-02 from the live OpenRouter catalog. Coding/reasoning-capable mo
 <a id="combofree-ai-best"></a>
 ### combo/free-ai-best
 
+Updated 2026-11-02 after live testing through OmniRoute. The previous priority legs `free-ai/moonshotai/kimi-k3` and other frontier FreeAI entries are still documented below, but are excluded from routing because the upstream currently returns HTTP 429/402-style availability failures. The seven models below returned HTTP 200 during verification.
+
 | # | Model | Category | Status |
 |---|-------|----------|--------|
 | 1 | `free-ai/qwen3-coder` | Code-specialized | ✅ **Best for coding** |
 | 2 | `free-ai/qwen-coder` | Code-specialized | ✅ |
-| 3 | `free-ai/qwen3-8b` | Qwen 8B | ✅ |
-| 4 | `free-ai/qwen7b` | Qwen 7B | ✅ |
-| 5 | `free-ai/mistral` | Mistral | ✅ |
-| 6 | `free-ai/deepseek-r1-7b` | DeepSeek R1 7B | ✅ |
+| 3 | `free-ai/deepseek-r1` | DeepSeek reasoning | ✅ |
+| 4 | `free-ai/mistral` | Mistral | ✅ |
+| 5 | `free-ai/qwen3-8b` | Qwen 8B | ✅ |
+| 6 | `free-ai/qwen7b` | Qwen 7B | ✅ |
+| 7 | `free-ai/deepseek-r1-7b` | DeepSeek R1 7B | ✅ |
+
+**Excluded from the live priority combo — retained for reference:**
+
+- ~~`free-ai/moonshotai/kimi-k3`~~ — upstream HTTP 402 reported by the user; live verification also showed the FreeAI pool rate-limited/unavailable.
+- ~~`free-ai/openai/gpt-6.1-terra-pro`~~
+- ~~`free-ai/openai/gpt-6.1-terra`~~
+- ~~`free-ai/deepseek/deepseek-v4-pro-0813`~~
+- ~~`free-ai/z-ai/glm-5.2`~~
+- ~~`free-ai/qwen/qwen3.5-397b-a17b`~~
+- ~~`free-ai/qwen/qwen3.8-27b`~~
+- ~~`free-ai/anthropic/claude-opus-4.1`~~
+- ~~`free-ai/x-ai/grok-4.5`~~
+- ~~`free-ai/google/gemini-3.6-flash`~~
+- ~~`free-ai/mistralai/codestral-2508`~~
+- ~~`free-ai/qwen/qwen3-32b`~~
 
 > **⚠️ zerolimitai unavailable** — Provider offers only a **7-day trial**, no permanent free tier. The historical entry is retained here for reference.
