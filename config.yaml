@@ -1,0 +1,22 @@
+# OmniRoute Combo Updater Configuration
+# Save as config.yaml or config.json
+
+omniroute_url: "http://127.0.0.1:20128"
+api_key: "${OMNIROUTE_API_KEY}"  # Or set via environment variable
+combos_md_path: "docs/COMBOS.md"
+opencode_jsonc_path: "omniroute-migration/opencode.jsonc"
+providers_xlsx_path: "omniroute-providers.xlsx"
+
+# Test settings
+test_timeout: 30          # seconds per model
+test_concurrency: 10      # parallel test requests
+test_prompt: "Say 'OK' if you can respond."
+
+# Auto-discovery settings
+auto_create_combos: true  # Automatically create combos for new providers
+min_models_for_combo: 1   # Minimum models needed to create a combo
+
+# GitHub settings (optional)
+github_repo: ""           # e.g., "username/repo"
+github_branch: "main"
+commit_message_prefix: "chore: update combos.md"
