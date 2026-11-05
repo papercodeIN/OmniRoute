@@ -34,7 +34,7 @@
           }
         },
         "combo/gpt-best": {
-          "name": "GPT Best (all providers)",
+          "name": "GPT Best",
           "attachment": true,
           "reasoning": true,
           "temperature": true,
@@ -58,7 +58,7 @@
           }
         },
         "combo/gemini-best": {
-          "name": "Gemini Best (AGY + Antigravity)",
+          "name": "Gemini Best",
           "attachment": true,
           "reasoning": true,
           "temperature": true,
@@ -118,7 +118,7 @@
           }
         },
         "combo/claude-best": {
-          "name": "Claude Best (antigravity + agy)",
+          "name": "Claude Best",
           "attachment": true,
           "reasoning": true,
           "temperature": true,
@@ -130,7 +130,7 @@
           }
         },
         "combo/coding-elite": {
-          "name": "Coding Elite (subscription + free frontier)",
+          "name": "Coding Elite",
           "attachment": true,
           "reasoning": true,
           "temperature": true,
@@ -142,7 +142,7 @@
           }
         },
         "combo/free-ai-best": {
-          "name": "FreeAI Best (verified)",
+          "name": "Free AI Best",
           "attachment": true,
           "reasoning": true,
           "temperature": true,
@@ -202,7 +202,7 @@
           }
         },
         "combo/inceptionai-best": {
-          "name": "InceptionAI Best",
+          "name": "Inception Labs Best",
           "attachment": true,
           "reasoning": true,
           "temperature": true,
@@ -814,6 +814,18 @@
         },
         "combo/groq-best": {
           "name": "Groq Best",
+          "attachment": true,
+          "reasoning": true,
+          "temperature": true,
+          "tool_call": true,
+          "limit": {
+            "context": 131072,
+            "output": 32768,
+            "input": 131072
+          }
+        },
+        "combo/orcarouter-best": {
+          "name": "OrcaRouter Best",
           "attachment": true,
           "reasoning": true,
           "temperature": true,
