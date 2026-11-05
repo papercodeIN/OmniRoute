@@ -593,7 +593,7 @@ class ComboMarkdownGenerator:
             combo = combos[combo_id]
             working = sum(1 for m in combo.models if results.get(m, TestResult(m, False, 0, "not tested")).success)
             failed = sum(1 for m in combo.models if not results.get(m, TestResult(m, False, 0, "not tested")).success)
-            status_icon = "[OK]" if failed == 0 else ("[WARN]" if working > 0 else "[FAIL]")
+            status_icon = "✅" if failed == 0 else ("⚠️" if working > 0 else "❌")
             lines.append(f"| `{combo.name}` | {len(combo.models)} | {working} | {failed} | {status_icon} |")
         
         lines.append("")
@@ -620,7 +620,7 @@ class ComboMarkdownGenerator:
             
             for i, model_id in enumerate(combo.models, 1):
                 result = results.get(model_id, TestResult(model_id, False, 0, "not tested"))
-                status = "[OK]" if result.success else "[FAIL]"
+                status = "✅" if result.success else "❌"
                 latency = f"{result.latency_ms:.0f}ms" if result.latency_ms > 0 else "-"
                 
                 # Strike through failed models
