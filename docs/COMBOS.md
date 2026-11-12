@@ -19,7 +19,6 @@ A `priority` combo stops at the **first leg that answers**, so leg order is the 
 - [`combo/coding-elite`](#combocoding-elite)
 - [`combo/crowllm-coding`](#combocrowllm-coding)
 - [`combo/free-ai-best`](#combofree-ai-best)
-- [`combo/gemini-best`](#combogemini-best)
 - [`combo/gemini-web-best`](#combogemini-web-best)
 - [`combo/gpt-best`](#combogpt-best)
 - [`combo/grok-best`](#combogrok-best)
@@ -39,7 +38,7 @@ A `priority` combo stops at the **first leg that answers**, so leg order is the 
 
 | Combo | Legs | Working | Failed | Status |
 |---|---:|---:|---:|---|
-| `combo/agy-antigravity-best` | 15 | 15 | 0 | ✅ |
+| `combo/agy-antigravity-best` | 25 | 19 | 6 | ⚠️ |
 | `combo/apinex-best` | 8 | 8 | 0 | ✅ |
 | `combo/beatapi` | 2 | 2 | 0 | ✅ |
 | `combo/claude-best` | 5 | 4 | 1 | ⚠️ |
@@ -49,7 +48,6 @@ A `priority` combo stops at the **first leg that answers**, so leg order is the 
 | `combo/coding-elite` | 56 | 45 | 11 | ⚠️ |
 | `combo/crowllm-coding` | 71 | 54 | 17 | ⚠️ |
 | `combo/free-ai-best` | 7 | 5 | 2 | ⚠️ |
-| `combo/gemini-best` | 11 | 11 | 0 | ✅ |
 | `combo/gemini-web-best` | 3 | 0 | 3 | ❌ |
 | `combo/gpt-best` | 27 | 13 | 14 | ⚠️ |
 | `combo/grok-best` | 7 | 5 | 2 | ⚠️ |
@@ -68,7 +66,7 @@ A `priority` combo stops at the **first leg that answers**, so leg order is the 
 <a id="comboagy-antigravity-best"></a>
 ### combo/agy-antigravity-best
 
-AGY + Antigravity Claude and Gemini
+AGY + Antigravity Claude/Gemini, then all Gemini API models
 
 | # | Model | Status | Latency |
 |---|-------|--------|---------|
@@ -87,6 +85,16 @@ AGY + Antigravity Claude and Gemini
 | 13 | `antigravity/gemini-3.1-flash-lite` | ✅ | 35ms |
 | 14 | `antigravity/gemini-3-flash` | ✅ | 17ms |
 | 15 | `antigravity/gemini-3.5-flash-lite` | ✅ | 59ms |
+| 16 | `gemini/gemini-4-argon` | ✅ | 2196ms |
+| 17 | ~~`gemini/gemini-3.8-flash`~~ | ❌ - Model not found | 168ms |
+| 18 | ~~`gemini/gemini-3.7-flash`~~ | ❌ - Model not found | 194ms |
+| 19 | `gemini/gemini-3.1-pro-preview` | ✅ | 2195ms |
+| 20 | `gemini/gemini-3-flash-preview` | ✅ | 1801ms |
+| 21 | `gemini/gemini-3.1-flash-lite` | ✅ | 38110ms |
+| 22 | ~~`gemini/gemini-2.5-pro`~~ | ❌ - Model not found | 40ms |
+| 23 | ~~`gemini/gemini-2.5-flash`~~ | ❌ - Model not found | 62ms |
+| 24 | ~~`gemini/gemini-2.5-flash-lite`~~ | ❌ - Model not found | 87ms |
+| 25 | ~~`gemini/gemini-3.1-flash-tts-preview`~~ | ❌ - Model not found | 111ms |
 
 <a id="comboapinex-best"></a>
 ### combo/apinex-best
@@ -371,25 +379,6 @@ Completely free models across multiple providers
 | 5 | `free-ai/qwen3-8b` | ✅ | 48ms |
 | 6 | `free-ai/qwen7b` | ✅ | 23ms |
 | 7 | ~~`free-ai/deepseek-r1-7b`~~ | ❌ - Empty response | 1194ms |
-
-<a id="combogemini-best"></a>
-### combo/gemini-best
-
-Best Gemini models via antigravity and agy
-
-| # | Model | Status | Latency |
-|---|-------|--------|---------|
-| 1 | `agy/gemini-3.8-flash-tiered` | ✅ | 39ms |
-| 2 | `agy/gemini-3.8-flash-medium` | ✅ | 31ms |
-| 3 | `antigravity/gemini-3.8-flash-tiered` | ✅ | 17ms |
-| 4 | `agy/gemini-3.8-flash-high` | ✅ | 393ms |
-| 5 | `agy/gemini-3.8-flash-low` | ✅ | 249ms |
-| 6 | `agy/gemini-3.5-flash-lite` | ✅ | 36ms |
-| 7 | `antigravity/gemini-3.5-flash-lite` | ✅ | 59ms |
-| 8 | `agy/gemini-3.1-flash-lite` | ✅ | 55ms |
-| 9 | `antigravity/gemini-3.1-flash-lite` | ✅ | 35ms |
-| 10 | `agy/gemini-3-flash` | ✅ | 39ms |
-| 11 | `antigravity/gemini-3-flash` | ✅ | 17ms |
 
 <a id="combogemini-web-best"></a>
 ### combo/gemini-web-best
