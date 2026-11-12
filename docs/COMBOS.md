@@ -5,13 +5,16 @@
 Every OmniRoute combo on this machine, with each leg and its 30-day success rate.
 A `priority` combo stops at the **first leg that answers**, so leg order is the ranking.
 
-> **Updated 2026-11-05:** Auto-generated from live OmniRoute catalog.
+> **Updated 2026-11-12:** Auto-generated from live OmniRoute catalog; new legs probed 2026-11-12.
 
 ## Combo index
 
 - [`combo/agy-antigravity-best`](#comboagy-antigravity-best)
+- [`combo/apinex-best`](#comboapinex-best)
+- [`combo/beatapi`](#combobeatapi)
 - [`combo/claude-best`](#comboclaude-best)
 - [`combo/cloudflare-best`](#combocloudflare-best)
+- [`combo/coarena-coding`](#combocoarena-coding)
 - [`combo/codex-best`](#combocodex-best)
 - [`combo/coding-elite`](#combocoding-elite)
 - [`combo/free-ai-best`](#combofree-ai-best)
@@ -20,12 +23,14 @@ A `priority` combo stops at the **first leg that answers**, so leg order is the 
 - [`combo/gpt-best`](#combogpt-best)
 - [`combo/grok-best`](#combogrok-best)
 - [`combo/groq-best`](#combogroq-best)
+- [`combo/image-best`](#comboimage-best)
 - [`combo/inceptionai-best`](#comboinceptionai-best)
 - [`combo/kilocode-best`](#combokilocode-best)
 - [`combo/mistral-best`](#combomistral-best)
 - [`combo/morph-best`](#combomorph-best)
 - [`combo/nvidia-best`](#combonvidia-best)
 - [`combo/ollama-cloud-best`](#comboollama-cloud-best)
+- [`combo/openadapter-best`](#comboopenadapter-best)
 - [`combo/openrouter-best`](#comboopenrouter-best)
 - [`combo/orcarouter-best`](#comboorcarouter-best)
 
@@ -34,22 +39,27 @@ A `priority` combo stops at the **first leg that answers**, so leg order is the 
 | Combo | Legs | Working | Failed | Status |
 |---|---:|---:|---:|---|
 | `combo/agy-antigravity-best` | 15 | 15 | 0 | ✅ |
+| `combo/apinex-best` | 8 | 8 | 0 | ✅ |
+| `combo/beatapi` | 2 | 2 | 0 | ✅ |
 | `combo/claude-best` | 5 | 4 | 1 | ⚠️ |
 | `combo/cloudflare-best` | 15 | 12 | 3 | ⚠️ |
+| `combo/coarena-coding` | 18 | 18 | 0 | ✅ |
 | `combo/codex-best` | 30 | 15 | 15 | ⚠️ |
-| `combo/coding-elite` | 56 | 46 | 10 | ⚠️ |
+| `combo/coding-elite` | 56 | 45 | 11 | ⚠️ |
 | `combo/free-ai-best` | 7 | 5 | 2 | ⚠️ |
 | `combo/gemini-best` | 11 | 11 | 0 | ✅ |
 | `combo/gemini-web-best` | 3 | 0 | 3 | ❌ |
 | `combo/gpt-best` | 27 | 13 | 14 | ⚠️ |
 | `combo/grok-best` | 7 | 5 | 2 | ⚠️ |
 | `combo/groq-best` | 6 | 3 | 3 | ⚠️ |
+| `combo/image-best` | 10 | 0 | 0 | ⚠️ |
 | `combo/inceptionai-best` | 1 | 0 | 1 | ❌ |
 | `combo/kilocode-best` | 11 | 2 | 9 | ⚠️ |
 | `combo/mistral-best` | 12 | 12 | 0 | ✅ |
 | `combo/morph-best` | 2 | 0 | 2 | ❌ |
 | `combo/nvidia-best` | 7 | 1 | 6 | ⚠️ |
 | `combo/ollama-cloud-best` | 4 | 1 | 3 | ⚠️ |
+| `combo/openadapter-best` | 37 | 10 | 27 | ⚠️ |
 | `combo/openrouter-best` | 11 | 4 | 7 | ⚠️ |
 | `combo/orcarouter-best` | 4 | 0 | 4 | ❌ |
 
@@ -75,6 +85,32 @@ AGY + Antigravity Claude and Gemini
 | 13 | `antigravity/gemini-3.1-flash-lite` | ✅ | 35ms |
 | 14 | `antigravity/gemini-3-flash` | ✅ | 17ms |
 | 15 | `antigravity/gemini-3.5-flash-lite` | ✅ | 59ms |
+
+<a id="comboapinex-best"></a>
+### combo/apinex-best
+
+Apinex free-tier models
+
+| # | Model | Status | Latency |
+|---|-------|--------|---------|
+| 1 | `apinex/free/deepseek-v4-pro-0813` | ✅ | 1538ms |
+| 2 | `apinex/free/kimi-k3` | ✅ | 4754ms |
+| 3 | `apinex/free/glm-5.3-flash` | ✅ | 2796ms |
+| 4 | `apinex/free/muse-spark-1.3` | ✅ | 3974ms |
+| 5 | `apinex/free/deepseek-v4.1-flash` | ✅ | 4306ms |
+| 6 | `apinex/free/gpt-6-luna` | ✅ | 7736ms |
+| 7 | `apinex/free/gemini-3.8-flash` | ✅ | 4641ms |
+| 8 | `apinex/free/deepseek-v4-flash-0731` | ✅ | 3610ms |
+
+<a id="combobeatapi"></a>
+### combo/beatapi
+
+BeatAPI — DeepSeek + GLM 5.3 Flash
+
+| # | Model | Status | Latency |
+|---|-------|--------|---------|
+| 1 | `BEATAPI/deepseek-v4.1-flash-free` | ✅ | 8477ms |
+| 2 | `BEATAPI/glm-5.3-flash-free` | ✅ | 1173ms |
 
 <a id="comboclaude-best"></a>
 ### combo/claude-best
@@ -111,6 +147,32 @@ Cloudflare Workers AI + CFP models
 | 13 | `cfp/mistralai/mistral-small-3.1-24b-instruct` | ✅ | 476ms |
 | 14 | `cloudflare-ai/@cf/meta/llama-3.2-3b-instruct` | ✅ | 88ms |
 | 15 | `cloudflare-ai/@cf/mistral/mistral-7b-instruct-v0.2-lora` | ✅ | 1183ms |
+
+<a id="combocoarena-coding"></a>
+### combo/coarena-coding
+
+Coarena (openai-compatible-chat-65e418e6) models ranked by coding capability, best first. Ranked 2026-11-12 from published coding benchmarks (FrontierCode 2.0, SWE-bench Pro, DeepSWE v1.1, Terminal-Bench 2.1/4.0, FrontierSWE v2).
+
+| # | Model | Status | Latency |
+|---|-------|--------|---------|
+| 1 | `coarena/claude-fable-5-2` | ✅ | 2335ms |
+| 2 | `coarena/claude-opus-5-5` | ✅ | 759ms |
+| 3 | `coarena/claude-fable-5-1` | ✅ | 739ms |
+| 4 | `coarena/claude-fable-5` | ✅ | 2345ms |
+| 5 | `coarena/kimi-k3-1-pro` | ✅ | 2152ms |
+| 6 | `coarena/qwen3-8-2-4t-a95b` | ✅ | 5812ms |
+| 7 | `coarena/claude-sonnet-5-5` | ✅ | 968ms |
+| 8 | `coarena/gemini-4-carbon` | ✅ | 5325ms |
+| 9 | `coarena/kimi-k3` | ✅ | 1726ms |
+| 10 | `coarena/gemini-4-argon` | ✅ | 12931ms |
+| 11 | `coarena/gemini-3-8-flash` | ✅ | 2188ms |
+| 12 | `coarena/deepseek-v4-1-flash-1017` | ✅ | 721ms |
+| 13 | `coarena/hy4` | ✅ | 1967ms |
+| 14 | `coarena/glm-5-3-flash` | ✅ | 4725ms |
+| 15 | `coarena/mimo-v2-6-pro` | ✅ | 5184ms |
+| 16 | `coarena/grok-4-7` | ✅ | 1201ms |
+| 17 | `coarena/minimax-m3-1-flash` | ✅ | 2079ms |
+| 18 | `coarena/claude-haiku-5-5` | ✅ | 937ms |
 
 <a id="combocodex-best"></a>
 ### combo/codex-best
@@ -179,7 +241,7 @@ Daily driver - best coding models ranked by quality
 | 20 | `openadapter/0G-DeepSeek-v4-Flash` | ✅ | 4191ms |
 | 21 | ~~`openadapter/DeepSeek-V4.1-Flash`~~ | ❌ - Empty response | 4317ms |
 | 22 | `openadapter/DeepSeek-V4-Flash` | ✅ | 4084ms |
-| 23 | ~~`openadapter/0G-DeepSeek-V3`~~ | ❌ - HTTP 503: {"error":{"message":"[openadapter/0G-DeepSeek-V3]  | 14824ms |
+| 23 | ~~`openadapter/0G-DeepSeek-V3`~~ | ❌ - HTTP 503: {"error":{"message":"[openadapter/0G-DeepSeek-V3] | 14824ms |
 | 24 | ~~`openadapter/Qwen3.8-27B`~~ | ❌ - Empty response | 7360ms |
 | 25 | ~~`openadapter/Kimi-K2-Think`~~ | ❌ | - |
 | 26 | ~~`openadapter/GLM-5.3-Flash`~~ | ❌ - Empty response | 5851ms |
@@ -187,7 +249,7 @@ Daily driver - best coding models ranked by quality
 | 28 | ~~`openadapter/MiMo-V2.6-Pro`~~ | ❌ - Empty response | 13706ms |
 | 29 | `openadapter/MiMo-V2.6-Flash` | ✅ | 1924ms |
 | 30 | `openadapter/gpt-oss-120b` | ✅ | 1018ms |
-| 31 | `openadapter/Llama-3.1-405B` | ✅ | 54ms |
+| 31 | ~~`openadapter/Llama-3.3-70B`~~ | ❌ - HTTP 404: Model not found | 85ms |
 | 32 | `antigravity/gemini-3.8-flash-tiered` | ✅ | 17ms |
 | 33 | `antigravity/gemini-3.8-flash-medium` | ✅ | 63ms |
 | 34 | `antigravity/gemini-3.8-flash-high` | ✅ | 61ms |
@@ -202,14 +264,14 @@ Daily driver - best coding models ranked by quality
 | 43 | `nvidia/poolside/laguna-xs-2.1` | ✅ | 48ms |
 | 44 | `mistral/ministral-14b-latest` | ✅ | 16ms |
 | 45 | `openadapter/MiMo-V2.5-Pro` | ✅ | 1716ms |
-| 46 | ~~`mistral/mistral-large-4`~~ | ❌ - HTTP 400: {"object":"error","message":"top_p must be 1 when  | 853ms |
+| 46 | ~~`mistral/mistral-large-4`~~ | ❌ - HTTP 400: {"object":"error","message":"top_p must be 1 when | 853ms |
 | 47 | `cloudflare-ai/@cf/meta/llama-3.3-70b-instruct-fp8-fast` | ✅ | 15ms |
 | 48 | `cloudflare-ai/@cf/qwen/qwq-32b` | ✅ | 23ms |
 | 49 | `antigravity/gemini-3-flash` | ✅ | 17ms |
 | 50 | `ollama-cloud/gemma4:31b` | ✅ | 17ms |
 | 51 | `openadapter/Gemma-4-31B-TEE` | ✅ | 68ms |
 | 52 | `openadapter/Hermes-4-14B` | ✅ | 453ms |
-| 53 | ~~`openadapter/gemma-4-31b-it`~~ | ❌ - HTTP 503: {"error":{"message":"[openadapter/gemma-4-31b-it]  | 18623ms |
+| 53 | ~~`openadapter/gemma-4-31b-it`~~ | ❌ - HTTP 503: {"error":{"message":"[openadapter/gemma-4-31b-it] | 18623ms |
 | 54 | `mistral/ministral-8b-latest` | ✅ | 40ms |
 | 55 | ~~`openadapter/Gemma-3-27B`~~ | ❌ - HTTP 503: {"error":{"message":"[openadapter/Gemma-3-27B] [50 | 12802ms |
 | 56 | `free-ai/mistral` | ✅ | 39ms |
@@ -323,6 +385,24 @@ Groq fast inference models
 | 5 | `groq/allam-2-7b` | ✅ | 46ms |
 | 6 | ~~`auto/best-coding`~~ | ❌ | - |
 
+<a id="comboimage-best"></a>
+### combo/image-best
+
+Unified auto-failover combo for image generation across all connected providers
+
+| # | Model | Status | Latency |
+|---|-------|--------|---------|
+| 1 | `antigravity/gemini-3.1-flash-image` | ⚠️ untested | - |
+| 2 | `cloudflare-ai/@cf/black-forest-labs/flux-1-schnell` | ⚠️ untested | - |
+| 3 | `nvidia/black-forest-labs/flux.1-schnell` | ⚠️ untested | - |
+| 4 | `openrouter/google/gemini-3.1-flash-image-preview` | ⚠️ untested | - |
+| 5 | `openrouter/black-forest-labs/flux.2-flex` | ⚠️ untested | - |
+| 6 | `openrouter/black-forest-labs/flux.2-pro` | ⚠️ untested | - |
+| 7 | `codex/gpt-image-2.5-flare` | ⚠️ untested | - |
+| 8 | `codex/gpt-image-2.5-sunburst` | ⚠️ untested | - |
+| 9 | `grok-cli/grok-imagine-image` | ⚠️ untested | - |
+| 10 | `grok-cli/grok-imagine-image-quality` | ⚠️ untested | - |
+
 <a id="comboinceptionai-best"></a>
 ### combo/inceptionai-best
 
@@ -407,6 +487,51 @@ Ollama Cloud Nemotron + Gemma
 | 2 | ~~`ollama-cloud/nemotron-3-super`~~ | ❌ - Empty response | 749ms |
 | 3 | ~~`ollama-cloud/beam`~~ | ❌ - HTTP 400: {"error":{"message":"Model 'beam' is not available | 41ms |
 | 4 | `ollama-cloud/gemma4:31b` | ✅ | 17ms |
+
+<a id="comboopenadapter-best"></a>
+### combo/openadapter-best
+
+Open Adapter Provider models ranked for coding capability
+
+| # | Model | Status | Latency |
+|---|-------|--------|---------|
+| 1 | `openadapter/GPT-6-Luna` | ✅ | 87ms |
+| 2 | `openadapter/0G-DeepSeek-v4-Flash` | ✅ | 4191ms |
+| 3 | ~~`openadapter/DeepSeek-V4.1-Flash`~~ | ❌ - Empty response | 4317ms |
+| 4 | `openadapter/DeepSeek-V4-Flash` | ✅ | 4084ms |
+| 5 | ~~`openadapter/0G-DeepSeek-V3`~~ | ❌ - HTTP 503: {"error":{"message":"[openadapter/0G-DeepSeek-V3] | 14824ms |
+| 6 | ~~`openadapter/Llama-3.3-70B`~~ | ❌ - HTTP 404: Model not found | 85ms |
+| 7 | `openadapter/Qwen2.5-Coder` | ✅ | 9459ms |
+| 8 | ~~`openadapter/Qwen3.8-27B`~~ | ❌ - Empty response | 7360ms |
+| 9 | `openadapter/Qwen3-32B` | ✅ | 3598ms |
+| 10 | ~~`openadapter/Qwen3.8-Flash`~~ | ❌ - HTTP 429: quota exhausted | 21379ms |
+| 11 | ~~`openadapter/Mistral-Large`~~ | ❌ - HTTP 429: quota exhausted | 58ms |
+| 12 | ~~`openadapter/GLM-5.3-Flash`~~ | ❌ - Empty response | 5851ms |
+| 13 | ~~`openadapter/GLM-4.7-Flash`~~ | ❌ - HTTP 503: {"error":{"message":"[openadapter/GLM-4.7-Flash] [ | 14903ms |
+| 14 | ~~`openadapter/MiMo-V2.6-Pro`~~ | ❌ - Empty response | 13706ms |
+| 15 | `openadapter/MiMo-V2.6-Flash` | ✅ | 1924ms |
+| 16 | `openadapter/MiMo-V2.5-Pro` | ✅ | 1716ms |
+| 17 | ~~`openadapter/MiMo-V2.5`~~ | ❌ - HTTP 429: quota exhausted | 71ms |
+| 18 | ~~`openadapter/GPT-120-OSS`~~ | ❌ - HTTP 429: quota exhausted | 49ms |
+| 19 | `openadapter/gpt-oss-120b` | ✅ | 1018ms |
+| 20 | ~~`openadapter/MiniMax-M3.1-Flash`~~ | ❌ - HTTP 429: quota exhausted | 49ms |
+| 21 | ~~`openadapter/MiniMax-M2.1`~~ | ❌ - HTTP 429: quota exhausted | 52ms |
+| 22 | ~~`openadapter/gemma-4-31b-it`~~ | ❌ - HTTP 503: {"error":{"message":"[openadapter/gemma-4-31b-it] | 18623ms |
+| 23 | `openadapter/Gemma-4-31B-TEE` | ✅ | 68ms |
+| 24 | ~~`openadapter/Gemma-3-27B`~~ | ❌ - HTTP 503: {"error":{"message":"[openadapter/Gemma-3-27B] [50 | 12802ms |
+| 25 | ~~`openadapter/Gemma-2-27B`~~ | ❌ - HTTP 429: quota exhausted | 42ms |
+| 26 | ~~`openadapter/Phi-4`~~ | ❌ - HTTP 429: quota exhausted | 43ms |
+| 27 | `openadapter/Hermes-4-14B` | ✅ | 453ms |
+| 28 | ~~`openadapter/Gemma-3-12B`~~ | ❌ - HTTP 429: quota exhausted | 346ms |
+| 29 | ~~`openadapter/0GM-1.0-35B-A3B`~~ | ❌ - HTTP 429: quota exhausted | 58ms |
+| 30 | ~~`openadapter/Llama-3.1-8B`~~ | ❌ - HTTP 429: quota exhausted | 49ms |
+| 31 | ~~`openadapter/Qwen3.5-VL`~~ | ❌ - HTTP 429: quota exhausted | 228ms |
+| 32 | ~~`openadapter/DeepSeek-V4-Flash-Vision`~~ | ❌ - HTTP 429: quota exhausted | 122ms |
+| 33 | ~~`openadapter/0G-Qwen-VL`~~ | ❌ - HTTP 429: quota exhausted | 50ms |
+| 34 | ~~`openadapter/auto-pro`~~ | ❌ - HTTP 429: quota exhausted | 289ms |
+| 35 | ~~`openadapter/auto-lite`~~ | ❌ - HTTP 429: quota exhausted | 230ms |
+| 36 | ~~`openadapter/auto-free`~~ | ❌ - HTTP 429: quota exhausted | 59ms |
+| 37 | ~~`openadapter/OA-Robin-Mini-Preview`~~ | ❌ - HTTP 429: quota exhausted | 49ms |
 
 <a id="comboopenrouter-best"></a>
 ### combo/openrouter-best
