@@ -60,7 +60,7 @@ A `priority` combo stops at the **first leg that answers**, so leg order is the 
 | `combo/nvidia-best` | 7 | 1 | 6 | ⚠️ |
 | `combo/ollama-cloud-best` | 4 | 1 | 3 | ⚠️ |
 | `combo/openadapter-best` | 37 | 10 | 27 | ⚠️ |
-| `combo/openrouter-best` | 11 | 4 | 7 | ⚠️ |
+| `combo/openrouter-best` | 14 | 14 | 0 | ✅ |
 | `combo/orcarouter-best` | 4 | 0 | 4 | ❌ |
 
 <a id="comboagy-antigravity-best"></a>
@@ -536,21 +536,24 @@ Open Adapter Provider models ranked for coding capability
 <a id="comboopenrouter-best"></a>
 ### combo/openrouter-best
 
-OpenRouter free coding/reasoning models
+OpenRouter free coding/reasoning models, probed 2026-11-12; all legs answered
 
 | # | Model | Status | Latency |
 |---|-------|--------|---------|
-| 1 | ~~`openrouter/cohere/north-mini-code:free`~~ | ❌ - Empty response | 4129ms |
-| 2 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free` | ✅ | 51ms |
-| 3 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free-high` | ✅ | 35ms |
-| 4 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free-medium` | ✅ | 23ms |
-| 5 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free-none` | ✅ | 17ms |
-| 6 | ~~`openrouter/nvidia/nemotron-3.5-lightning:free`~~ | ❌ - Empty response | 1426ms |
-| 7 | ~~`openrouter/nvidia/nemotron-3.5-super-vl:free`~~ | ❌ - Empty response | 1896ms |
-| 8 | ~~`openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free`~~ | ❌ - Empty response | 1302ms |
-| 9 | ~~`openrouter/dots-studio/dots-3-note-preview:free`~~ | ❌ - Empty response | 1663ms |
-| 10 | ~~`openrouter/liquid/lfm-2.5-2.6b:free`~~ | ❌ - Empty response | 869ms |
-| 11 | ~~`auto/best-coding`~~ | ❌ | - |
+| 1 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free-high` | ✅ | 993ms |
+| 2 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free` | ✅ | 1256ms |
+| 3 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free-medium` | ✅ | 1104ms |
+| 4 | `openrouter/nvidia/nemotron-3-ultra-550b-a55b:free-none` | ✅ | 856ms |
+| 5 | `openrouter/baidu/ernie-5.5-flash-preview:free` | ✅ | 3091ms |
+| 6 | `openrouter/cohere/north-mini-code:free` | ✅ | 2243ms |
+| 7 | `openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free` | ✅ | 2316ms |
+| 8 | `openrouter/nvidia/nemotron-3.5-super-vl:free` | ✅ | 2288ms |
+| 9 | `openrouter/recursive/flint-v1.0:free` | ✅ | 2734ms |
+| 10 | `openrouter/dots-studio/dots-3-note-preview:free` | ✅ | 1114ms |
+| 11 | `openrouter/nvidia/nemotron-3.5-lightning:free` | ✅ | 863ms |
+| 12 | `openrouter/liquid/lfm-2.5-2.6b:free` | ✅ | 2034ms |
+| 13 | `openrouter/liquid/lfm-3-1.7b:free` | ✅ | 1057ms |
+| 14 | `openrouter/openrouter/free` | ✅ | 1244ms |
 
 <a id="comboorcarouter-best"></a>
 ### combo/orcarouter-best
