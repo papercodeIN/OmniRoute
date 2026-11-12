@@ -17,6 +17,7 @@ A `priority` combo stops at the **first leg that answers**, so leg order is the 
 - [`combo/coarena-coding`](#combocoarena-coding)
 - [`combo/codex-best`](#combocodex-best)
 - [`combo/coding-elite`](#combocoding-elite)
+- [`combo/crowllm-coding`](#combocrowllm-coding)
 - [`combo/free-ai-best`](#combofree-ai-best)
 - [`combo/gemini-best`](#combogemini-best)
 - [`combo/gemini-web-best`](#combogemini-web-best)
@@ -46,6 +47,7 @@ A `priority` combo stops at the **first leg that answers**, so leg order is the 
 | `combo/coarena-coding` | 18 | 18 | 0 | ✅ |
 | `combo/codex-best` | 30 | 15 | 15 | ⚠️ |
 | `combo/coding-elite` | 56 | 45 | 11 | ⚠️ |
+| `combo/crowllm-coding` | 71 | 54 | 17 | ⚠️ |
 | `combo/free-ai-best` | 7 | 5 | 2 | ⚠️ |
 | `combo/gemini-best` | 11 | 11 | 0 | ✅ |
 | `combo/gemini-web-best` | 3 | 0 | 3 | ❌ |
@@ -275,6 +277,85 @@ Daily driver - best coding models ranked by quality
 | 54 | `mistral/ministral-8b-latest` | ✅ | 40ms |
 | 55 | ~~`openadapter/Gemma-3-27B`~~ | ❌ - HTTP 503: {"error":{"message":"[openadapter/Gemma-3-27B] [50 | 12802ms |
 | 56 | `free-ai/mistral` | ✅ | 39ms |
+
+<a id="combocrowllm-coding"></a>
+### combo/crowllm-coding
+
+CrowLLM models ranked by coding capability; GLM 5.3 Flash on top. Ranked 2026-11-12 from published coding benchmarks (FrontierCode 2.0, SWE-bench Pro, DeepSWE v1.1, Terminal-Bench 2.1/4.0, FrontierSWE v2).
+
+| # | Model | Status | Latency |
+|---|-------|--------|---------|
+| 1 | `crowllm/glm-5.3-flash:free` | ✅ | 75ms |
+| 2 | `crowllm/caw/glm-5.3-flash:free` | ✅ | 6077ms |
+| 3 | `crowllm/caw/glm-5.3-flash-thinking:free` | ✅ | 20525ms |
+| 4 | `crowllm/qwen-3.8-max:free` | ✅ | 22034ms |
+| 5 | `crowllm/runpod/kimi-k3` | ✅ | 18143ms |
+| 6 | `crowllm/gpt-5.6-sol:free` | ✅ | 21973ms |
+| 7 | `crowllm/o3:free` | ✅ | 19726ms |
+| 8 | `crowllm/gemini-3.1-pro:free` | ✅ | 19752ms |
+| 9 | ~~`crowllm/gemini-3-pro:free`~~ | ❌ - Timeout | - |
+| 10 | `crowllm/grok-4.7:free` | ✅ | 16005ms |
+| 11 | `crowllm/gemini-2.5-pro:free` | ✅ | 19236ms |
+| 12 | `crowllm/deepseek-v4.1-flash:free` | ✅ | 24752ms |
+| 13 | `crowllm/gemini-3.8-flash:free` | ✅ | 15404ms |
+| 14 | `crowllm/hy4:free` | ✅ | 19268ms |
+| 15 | ~~`crowllm/crow-code-limitless:free`~~ | ❌ - Timeout | - |
+| 16 | ~~`crowllm/laguna-s-2.1:free`~~ | ❌ - Timeout | - |
+| 17 | `crowllm/deepseek-v4-flash:free` | ✅ | 57ms |
+| 18 | `crowllm/deepseek-v4.1-flash-uncensored:free` | ✅ | 54ms |
+| 19 | `crowllm/deepseek-v4-flash-0731-thinking:free` | ✅ | 8797ms |
+| 20 | `crowllm/deepseek-v4-flash-0731:free` | ✅ | 24767ms |
+| 21 | `crowllm/deepseek-v4-flash-uncensored:free` | ✅ | 44ms |
+| 22 | `crowllm/nemotron-3-ultra-550b-a55b:free` | ✅ | 18159ms |
+| 23 | `crowllm/nvidia/nemotron-3-ultra-550b-a55b:free` | ✅ | 40ms |
+| 24 | ~~`crowllm/crow-limitless:free`~~ | ❌ - Timeout | - |
+| 25 | `crowllm/laguna-xs-2.1:free` | ✅ | 17123ms |
+| 26 | `crowllm/nvidia/laguna-xs-2.1:free` | ✅ | 15558ms |
+| 27 | ~~`crowllm/qwen-3.5-397b-a17b:free`~~ | ❌ - Timeout | - |
+| 28 | `crowllm/qwen-3.8-27b:free` | ✅ | 18833ms |
+| 29 | `crowllm/qwen3.8-27b-uncensored:free` | ✅ | 53ms |
+| 30 | `crowllm/qwen-3.6-plus:free` | ✅ | 42ms |
+| 31 | `crowllm/k2-horizon-375b-a23b:free` | ✅ | 18096ms |
+| 32 | `crowllm/muse-spark-1.1:free` | ✅ | 54ms |
+| 33 | `crowllm/nvidia/mistral-large-4-1t-a52b:free` | ✅ | 40ms |
+| 34 | `crowllm/mistral-medium-3.5:free` | ✅ | 40ms |
+| 35 | `crowllm/nvidia/minimax-m3.1-flash:free` | ✅ | 38ms |
+| 36 | `crowllm/minimax-m2.5:free` | ✅ | 44ms |
+| 37 | `crowllm/gemini-3.7-flash:free` | ✅ | 74ms |
+| 38 | `crowllm/gemini-3.5-flash:free` | ✅ | 52ms |
+| 39 | `crowllm/gemini-3-flash:free` | ✅ | 27ms |
+| 40 | `crowllm/gemma-4-31b-it:free` | ✅ | 24ms |
+| 41 | `crowllm/nemotron-3.5-super-vl:free` | ✅ | 18244ms |
+| 42 | `crowllm/o4-mini:free` | ✅ | 48ms |
+| 43 | ~~`crowllm/qwen3-8-omni-flash:free`~~ | ❌ - Timeout | - |
+| 44 | `crowllm/grok-4.7-fast:free` | ✅ | 16704ms |
+| 45 | ~~`crowllm/mimo-v2.6-flash:free`~~ | ❌ - Timeout | - |
+| 46 | `crowllm/glm-4.7-flash:free` | ✅ | 18208ms |
+| 47 | ~~`crowllm/glm-4.6v-flash:free`~~ | ❌ - Timeout | - |
+| 48 | ~~`crowllm/hy3:free`~~ | ❌ - Timeout | - |
+| 49 | `crowllm/flint-v1.0:free` | ✅ | 5648ms |
+| 50 | ~~`crowllm/longcat-2.5:free`~~ | ❌ - Timeout | - |
+| 51 | ~~`crowllm/jais-3-mova-36b-a4b:free`~~ | ❌ - Timeout | - |
+| 52 | ~~`crowllm/xing4.0-29b-a4b:free`~~ | ❌ - Timeout | - |
+| 53 | `crowllm/llama-3.3-70b-instruct:free` | ✅ | 4402ms |
+| 54 | ~~`crowllm/llama-3.3-70b:free`~~ | ❌ - Timeout | - |
+| 55 | ~~`crowllm/qwen-3.6-27b:free`~~ | ❌ - Timeout | - |
+| 56 | `crowllm/gpt-4o:free` | ✅ | 12013ms |
+| 57 | ~~`crowllm/agnes-3.0-flash:free`~~ | ❌ - Timeout | - |
+| 58 | ~~`crowllm/agnes-2.5-flash:free`~~ | ❌ - Timeout | - |
+| 59 | ~~`crowllm/openbmb/MiniCPM-V-4.7-35B-A3B-thinking:free`~~ | ❌ - HTTP 400: Unknown model | 9108ms |
+| 60 | `crowllm/openbmb/MiniCPM-V-4.7-35B-A3B:free` | ✅ | 18276ms |
+| 61 | `crowllm/openai/gpt-oss-20b:free` | ✅ | 20031ms |
+| 62 | `crowllm/openai/gpt-oss-safeguard-20b:free` | ✅ | 19692ms |
+| 63 | `crowllm/dots-3-note-preview:free` | ✅ | 21263ms |
+| 64 | `crowllm/crow-uncensored:free` | ✅ | 23303ms |
+| 65 | `crowllm/nvidia/nemotron-3.5-bolt-e4b:free` | ✅ | 15867ms |
+| 66 | `crowllm/gemini-2.0-flash:free` | ✅ | 21475ms |
+| 67 | `crowllm/gpt-4.1-mini:free` | ✅ | 21674ms |
+| 68 | `crowllm/gpt-4o-mini:free` | ✅ | 19079ms |
+| 69 | `crowllm/solar-mini4:free` | ✅ | 20120ms |
+| 70 | `crowllm/MiniCPM-V-4.7-1B:free` | ✅ | 22247ms |
+| 71 | `crowllm/MiniCPM5-2B:free` | ✅ | 19774ms |
 
 <a id="combofree-ai-best"></a>
 ### combo/free-ai-best
